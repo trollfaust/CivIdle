@@ -4,7 +4,8 @@ using UnityEngine;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.Events;
 
-namespace trollschmiede.CivIdle.Resources {
+namespace trollschmiede.CivIdle.Resources
+{
     public class ResourceManager : MonoBehaviour, IEventListener
     {
         #region Singleton
@@ -21,9 +22,9 @@ namespace trollschmiede.CivIdle.Resources {
         }
         #endregion
 
-        [SerializeField] Resource[] allResources;
-        [SerializeField] GameObject resourceDisplayPrefab;
-        [SerializeField] Transform resourceDisplayParent;
+        public Resource[] allResources = null;
+        [SerializeField] GameObject resourceDisplayPrefab = null;
+        [SerializeField] Transform resourceDisplayParent = null;
 
         public void Evoke() { }
         public void Evoke(Resource resource) => ActivateResource(resource);

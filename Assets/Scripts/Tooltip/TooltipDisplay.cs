@@ -9,15 +9,15 @@ namespace trollschmiede.Generic.Tooltip
 {
     public class TooltipDisplay : MonoBehaviour, IEventListener
     {
-        public TextMeshProUGUI titleText;
-        public TextMeshProUGUI tooltipText;
-        public Image image;
-        public TooltipHoverElement hoverElement;
-        public Tooltip tooltip;
+        [SerializeField] TextMeshProUGUI titleText = null;
+        [SerializeField] TextMeshProUGUI tooltipText = null;
+        [SerializeField] Image image = null;
+        public TooltipHoverElement hoverElement = null;
+        [SerializeField] Tooltip tooltip = null;
         public bool isInUse = false;
         public bool isFixed = false;
-        public Color32 highlightColor;
-        [SerializeField] Image background;
+        [SerializeField] Color32 highlightColor = new Color32(0,0,0,0);
+        [SerializeField] Image background = null;
         private Vector3 oldPos;
 
         public void SetTooltip(Tooltip tooltip)

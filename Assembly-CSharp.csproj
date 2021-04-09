@@ -62,8 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GatheringButton.cs" />
     <Compile Include="Assets\Scripts\Events\IEventListener.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\GameEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\GameEventAction.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\GameEventManager.cs" />
+    <Compile Include="Assets\Scripts\Gathering\GatheringButton.cs" />
+    <Compile Include="Assets\Scripts\Gathering\GatheringObject.cs" />
+    <Compile Include="Assets\Scripts\Resources\Requierment.cs" />
+    <Compile Include="Assets\Scripts\Resources\Reset.cs" />
     <Compile Include="Assets\Scripts\Resources\Resource.cs" />
     <Compile Include="Assets\Scripts\Resources\ResourceChancePair.cs" />
     <Compile Include="Assets\Scripts\Resources\ResourceDisplay.cs" />
@@ -75,7 +81,7 @@
     <Compile Include="Assets\Scripts\Tooltip\TooltipHoverElement.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipManager.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipSettings.cs" />
-    <Compile Include="Assets\Test.cs" />
+    <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

@@ -10,19 +10,22 @@ using UnityEngine.UI;
 namespace trollschmiede.CivIdle.UI {
     public class ResourceDisplay : MonoBehaviour, IEventListener
     {
-        public TextMeshProUGUI resourceText;
-        [SerializeField] TooltipHoverElement hoverElement;
-        [SerializeField] Image iconImage;
+        [SerializeField] TextMeshProUGUI resourceText = null;
+        [SerializeField] TooltipHoverElement hoverElement = null;
+        [SerializeField] Image iconImage = null;
 
-        private Resource resource;
+        public Resource resource { get; private set; }
 
         public void Evoke() => resourceText.text = resource.name + ": " + resource.amount.ToString();
-        public void Evoke(Resource resource) => resourceText.text = resource.name + ": " + resource.amount.ToString();
+        public void Evoke(Resource resource)
+        {
+            resourceText.text = resource.name + ": " + ((resource.hasAmountOpen) ? resource.amountOpen.ToString() + "/" : "") + resource.amount.ToString();
+        }
 
         public void SetResource(Resource resource)
         {
             this.resource = resource;
-            resourceText.text = resource.name + ": " + resource.amount.ToString();
+            resourceText.text = resource.name + ": " + ((resource.hasAmountOpen) ? resource.amountOpen.ToString() + "/" : "") + resource.amount.ToString();
             iconImage.sprite = resource.iconSprite;
             hoverElement.SetTooltipName(resource.name);
             StartCoroutine(AddListener(resource));
@@ -43,6 +46,5 @@ namespace trollschmiede.CivIdle.UI {
         }
 
         void OnDisable() => resource.UnregisterListener(this);
-
     }
 }

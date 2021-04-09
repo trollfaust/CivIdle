@@ -11,6 +11,8 @@ namespace trollschmiede.CivIdle.Resources
         public new string name;
         public bool isEnabled;
         public int amount;
+        public bool hasAmountOpen;
+        public int amountOpen;
         public ResourceCategory resourceCategory;
         public ResoureRequierment resoureRequierment;
         public Sprite iconSprite;
@@ -31,7 +33,7 @@ namespace trollschmiede.CivIdle.Resources
             listeners.Remove(listener);
         }
 
-        private void EvokeAll()
+        public void EvokeAll()
         {
             foreach (var listener in listeners)
             {
@@ -43,10 +45,19 @@ namespace trollschmiede.CivIdle.Resources
         public void AmountChange(int value)
         {
             if (value == 0)
-            {
                 return;
-            }
             amount = amount + value;
+            if (hasAmountOpen)
+                amountOpen = amountOpen + value;
+            EvokeAll();
+        }
+
+        public void AmountOpenChange(int value)
+        {
+            if (value == 0)
+                return;
+            if (hasAmountOpen)
+                amountOpen = amountOpen + value;
             EvokeAll();
         }
 

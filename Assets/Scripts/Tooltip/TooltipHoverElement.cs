@@ -11,8 +11,8 @@ namespace trollschmiede.Generic.Tooltip
     public class TooltipHoverElement : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [Header("Setup")]
-        [SerializeField] RectTransform tooltipParent;
-        [SerializeField] TextMeshProUGUI text;
+        [SerializeField] RectTransform tooltipParent = null;
+        [SerializeField] TextMeshProUGUI text = null;
 
         private string tooltipName;
         private bool tooltipFixed = false;

@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   name: Copper
-  isEnabled: 1
-  amount: 1
+  isEnabled: 0
+  amount: 0
+  hasAmountOpen: 0
+  amountOpen: 0
   resourceCategory: 5
   resoureRequierment: 1
   iconSprite: {fileID: 21300000, guid: 197531ea3d4c12a4c9659c3a37cfc9d3, type: 3}
