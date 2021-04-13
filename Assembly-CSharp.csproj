@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Events\IEventListener.cs" />
+    <Compile Include="Assets\Scripts\Events\IGameEventListener.cs" />
+    <Compile Include="Assets\Scripts\Events\IResourceEventListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEventAction.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEventManager.cs" />
@@ -81,7 +83,9 @@
     <Compile Include="Assets\Scripts\Tooltip\TooltipHoverElement.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipManager.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipSettings.cs" />
+    <Compile Include="Assets\Scripts\UI\LogDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
+    <Compile Include="Assets\Scripts\UI\TabSwitch.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

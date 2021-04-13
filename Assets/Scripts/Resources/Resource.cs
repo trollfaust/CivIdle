@@ -16,19 +16,19 @@ namespace trollschmiede.CivIdle.Resources
         public ResourceCategory resourceCategory;
         public ResoureRequierment resoureRequierment;
         public Sprite iconSprite;
-        private List<IEventListener> listeners;
+        private List<IResourceEventListener> listeners;
 
         #region Event Managment
-        public void RegisterListener(IEventListener listener)
+        public void RegisterListener(IResourceEventListener listener)
         {
             if (listeners == null)
             {
-                listeners = new List<IEventListener>();
+                listeners = new List<IResourceEventListener>();
             }
             listeners.Add(listener);
         }
 
-        public void UnregisterListener(IEventListener listener)
+        public void UnregisterListener(IResourceEventListener listener)
         {
             listeners.Remove(listener);
         }

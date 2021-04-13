@@ -17,10 +17,11 @@ namespace trollschmiede.CivIdle.GameEvents
         public float timeBetweenChecks = 1f;
         [Header("Actions")]
         public GameEventAction[] gameEventActions = new GameEventAction[0];
+        public string gameEventText = "";
 
         [HideInInspector]
         public bool isDone;
-        private List<IEventListener> listeners;
+        private List<IGameEventListener> listeners;
         private bool isOnHold = false;
 
         private int repeatCount = 0;
@@ -37,17 +38,22 @@ namespace trollschmiede.CivIdle.GameEvents
             isOnHold = false;
         }
 
+        public string GetGameEventText()
+        {
+            return gameEventText;
+        }
+
         #region Event Managment
-        public void RegisterListener(IEventListener _listener)
+        public void RegisterListener(IGameEventListener _listener)
         {
             if (listeners == null)
             {
-                listeners = new List<IEventListener>();
+                listeners = new List<IGameEventListener>();
             }
             listeners.Add(_listener);
         }
 
-        public void UnregisterListener(IEventListener _listener)
+        public void UnregisterListener(IGameEventListener _listener)
         {
             listeners.Remove(_listener);
         }
@@ -80,7 +86,7 @@ namespace trollschmiede.CivIdle.GameEvents
             {
                 foreach (var listener in listeners)
                 {
-                    listener.Evoke();
+                    listener.Evoke(this);
                 }
             }
             return true;

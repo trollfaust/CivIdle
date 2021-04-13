@@ -8,7 +8,7 @@ using trollschmiede.Generic.Tooltip;
 using UnityEngine.UI;
 
 namespace trollschmiede.CivIdle.UI {
-    public class ResourceDisplay : MonoBehaviour, IEventListener
+    public class ResourceDisplay : MonoBehaviour, IResourceEventListener
     {
         [SerializeField] TextMeshProUGUI resourceText = null;
         [SerializeField] TooltipHoverElement hoverElement = null;

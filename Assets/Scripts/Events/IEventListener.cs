@@ -2,8 +2,9 @@
 
 namespace trollschmiede.CivIdle.Events
 {
-    public interface IEventListener {
+    public interface IEventListener
+    {
         void Evoke();
-        void Evoke(Resource resource);
     }
 }
+

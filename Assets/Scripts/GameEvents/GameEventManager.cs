@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using trollschmiede.CivIdle.Events;
 
 namespace trollschmiede.CivIdle.GameEvents
 {
@@ -45,6 +46,22 @@ namespace trollschmiede.CivIdle.GameEvents
                     }
                 }
                 yield return new WaitForSeconds(1f);
+            }
+        }
+
+        public void RegisterToAllGameEvents(IGameEventListener eventListener)
+        {
+            foreach (var item in gameEvents)
+            {
+                item.RegisterListener(eventListener);
+            }
+        }
+
+        public void UnregisterFromAllGameEvents(IGameEventListener eventListener)
+        {
+            foreach (var item in gameEvents)
+            {
+                item.UnregisterListener(eventListener);
             }
         }
     }

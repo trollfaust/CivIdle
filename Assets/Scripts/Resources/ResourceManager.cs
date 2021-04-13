@@ -6,7 +6,7 @@ using trollschmiede.CivIdle.Events;
 
 namespace trollschmiede.CivIdle.Resources
 {
-    public class ResourceManager : MonoBehaviour, IEventListener
+    public class ResourceManager : MonoBehaviour, IResourceEventListener
     {
         #region Singleton
         public static ResourceManager instance;

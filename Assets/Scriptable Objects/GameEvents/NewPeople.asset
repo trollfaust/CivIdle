@@ -27,4 +27,5 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
     resourceChangeAmountMin: 01000000
     resourceChangeAmountMax: 03000000
+  gameEventText: More People are coming to your Town.
   isDone: 0
