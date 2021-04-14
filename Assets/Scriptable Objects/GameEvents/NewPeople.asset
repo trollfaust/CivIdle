@@ -23,9 +23,10 @@ MonoBehaviour:
   chanceToPass: 10
   timeBetweenChecks: 10
   gameEventActions:
-  - resourcesToChange:
-    - {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
-    resourceChangeAmountMin: 01000000
-    resourceChangeAmountMax: 03000000
-  gameEventText: More People are coming to your Town.
+  - resourcesToChange: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3,
+      type: 2}
+    resourceChangeAmountMin: 1
+    resourceChangeAmountMax: 3
+  gameEventText: Your town is growing, $0 People have joined you.
+  valueSeperator: 36
   isDone: 0

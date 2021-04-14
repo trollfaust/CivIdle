@@ -17,18 +17,23 @@ namespace trollschmiede.CivIdle.GameEvents
         public float timeBetweenChecks = 1f;
         [Header("Actions")]
         public GameEventAction[] gameEventActions = new GameEventAction[0];
+        [Header("User Feedback")]
         public string gameEventText = "";
+        public char valueSeperator;
 
         [HideInInspector]
         public bool isDone;
         private List<IGameEventListener> listeners;
         private bool isOnHold = false;
 
+        private List<int> returnActionValues;
+
         private int repeatCount = 0;
         public void Reset()
         {
             repeatCount = 0;
             isDone = false;
+            isOnHold = false;
         }
 
         public IEnumerator WaitTime()
@@ -40,7 +45,33 @@ namespace trollschmiede.CivIdle.GameEvents
 
         public string GetGameEventText()
         {
-            return gameEventText;
+            string[] cut = gameEventText.Split(valueSeperator);
+            for (int i = 1; i < cut.Length; i++)
+            {
+                string s = cut[i].Substring(0, 1);
+                int x = 0;
+                int.TryParse(s, out x);
+
+                int value = GetValueById(x);
+                value = Mathf.Abs(value);
+                cut[i] = value.ToString() + cut[i].Substring(1);
+            }
+
+            string back = string.Join("", cut);
+
+            return back;
+        }
+
+        private int GetValueById(int i)
+        {
+            try
+            {
+                return returnActionValues[i];
+            }
+            catch (System.Exception)
+            {
+                return 0;
+            }
         }
 
         #region Event Managment
@@ -60,6 +91,7 @@ namespace trollschmiede.CivIdle.GameEvents
 
         public bool Evoke()
         {
+            //Debug.Log("Gameevent " + name + " is Evoked - isDone:" + isDone.ToString() + " - isOnHold: "+ isOnHold.ToString());
             if (isDone || isOnHold)
                 return false;
             if (Random.Range(0,100) > chanceToPass)
@@ -77,9 +109,11 @@ namespace trollschmiede.CivIdle.GameEvents
             if (repeatCountMax <= repeatCount && repeatCountMax != 0)
                 isDone = true;
 
+            returnActionValues = new List<int>();
             foreach (var action in gameEventActions)
             {
-                action.EvokeAction();
+                int i = action.EvokeAction();
+                returnActionValues.Add(i);
             }
 
             if (listeners != null)

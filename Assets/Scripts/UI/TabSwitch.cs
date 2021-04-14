@@ -19,13 +19,17 @@ namespace trollschmiede.CivIdle.UI
                 item.OnOtherTabButton();
             }
 
-            tab.SetActive(true);
+            CanvasGroup group = tab.GetComponent<CanvasGroup>();
+            group.alpha = 1;
+            group.interactable = true;
             buttonImage.color = onColor;
         }
 
         public void OnOtherTabButton()
         {
-            tab.SetActive(false);
+            CanvasGroup group = tab.GetComponent<CanvasGroup>();
+            group.alpha = 0;
+            group.interactable = false;
             buttonImage.color = offColor;
         }
     }

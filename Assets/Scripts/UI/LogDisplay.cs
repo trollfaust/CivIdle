@@ -53,14 +53,15 @@ namespace trollschmiede.CivIdle.UI
                 GameObject item = logDisplayItems[0];
                 logDisplayItems.Remove(item);
                 logDisplayItems.Add(item);
-                item.transform.SetAsLastSibling();
+                item.transform.SetAsFirstSibling();
             } else
             {
                 GameObject newItem = Instantiate(logDisplayItemPrefab, logDisplayContentTransform, false) as GameObject;
                 logDisplayItems.Add(newItem);
                 newItem.GetComponentInChildren<TextMeshProUGUI>().text = text;
+                newItem.transform.SetAsFirstSibling();
             }
-            scrollBar.value = 0;
+            scrollBar.value = 1f;
         }
 
         public void Evoke() { }
