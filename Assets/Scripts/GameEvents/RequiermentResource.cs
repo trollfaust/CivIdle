@@ -18,5 +18,14 @@ namespace trollschmiede.CivIdle.GameEvents
             return false;
         }
 
+        public Resource GetResource()
+        {
+            return resource;
+        }
+
+        public int GetAmount()
+        {
+            return resourceAmount;
+        }
     }
 }

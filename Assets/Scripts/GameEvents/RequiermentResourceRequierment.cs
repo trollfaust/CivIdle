@@ -6,7 +6,7 @@ namespace trollschmiede.CivIdle.GameEvents
     [CreateAssetMenu(fileName = "New Requirement Resource Requierment", menuName = "Scriptable Objects/Game Events/Requierment Resource Requierment")]
     public class RequiermentResourceRequierment : Requierment
     {
-        [SerializeField] ResoureRequierment requierment;
+        [SerializeField] ResoureRequierment requierment = ResoureRequierment.Start;
 
         public override bool CheckRequierment()
         {

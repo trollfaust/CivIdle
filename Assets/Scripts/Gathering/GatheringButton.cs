@@ -10,7 +10,7 @@ namespace trollschmiede.CivIdle.UI
     {
         [SerializeField] Slider slider = null;
         [SerializeField] Button button = null;
-        [SerializeField] TextMeshProUGUI buttonText = null;
+        //[SerializeField] TextMeshProUGUI buttonText = null;
         [SerializeField] float cooldownTime = 5f;
         [SerializeField] ResourceChancePair[] resourcesPairs = new ResourceChancePair[0];
         [SerializeField] bool isManuelGatherable = true;

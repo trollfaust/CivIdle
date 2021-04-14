@@ -6,7 +6,7 @@ namespace trollschmiede.CivIdle.GameEvents
     [CreateAssetMenu(fileName = "New Requirement Technology", menuName = "Scriptable Objects/Game Events/Requierment Technology")]
     public class RequiermentTechnology : Requierment
     {
-        [SerializeField] Technology technology;
+        [SerializeField] Technology technology = null;
 
         public override bool CheckRequierment()
         {

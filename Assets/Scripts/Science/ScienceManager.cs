@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using trollschmiede.CivIdle.UI;
 
 namespace trollschmiede.CivIdle.Science
 {
@@ -18,8 +19,19 @@ namespace trollschmiede.CivIdle.Science
         }
         #endregion
 
-        [SerializeField] Technology[] allTechnologies;
-        List<Technology> doneTechnologies;
+        [SerializeField] Technology[] allTechnologies = new Technology[0];
+        [SerializeField] GameObject techCardPrefab = null;
+        [SerializeField] Transform techCardContainer = null;
+        private List<Technology> doneTechnologies;
+
+        private void Start()
+        {
+            foreach (var item in allTechnologies)
+            {
+                GameObject newGo = Instantiate(techCardPrefab, techCardContainer, false) as GameObject;
+                newGo.GetComponent<TechnologyCardDisplay>().Setup(item);
+            }
+        }
 
 
         public bool CheckTechnology(Technology tech)
@@ -31,10 +43,14 @@ namespace trollschmiede.CivIdle.Science
             return false;
         }
 
-        void ResearchTechnology(Technology tech)
+        public void ResearchTechnology(Technology tech)
         {
             if (tech.Research())
             {
+                if (doneTechnologies == null)
+                {
+                    doneTechnologies = new List<Technology>();
+                }
                 doneTechnologies.Add(tech);
             }
         }

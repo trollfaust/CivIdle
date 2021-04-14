@@ -503,7 +503,8 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8801546102358670080, guid: 0275605ea5c29b841bd0260794059bf5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0275605ea5c29b841bd0260794059bf5, type: 3}
 --- !u!224 &180452043 stripped
 RectTransform:
@@ -918,6 +919,11 @@ PrefabInstance:
       propertyPath: tab
       value: 
       objectReference: {fileID: 2319888}
+    - target: {fileID: 6972452502457111024, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_text
+      value: Science
+      objectReference: {fileID: 0}
     - target: {fileID: 7057164767497490859, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_Color.r
@@ -2981,7 +2987,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11eb7624e07821742bfbaef6abc7ef14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allTechnologies: []
+  allTechnologies:
+  - {fileID: 11400000, guid: bbbd5f2b91d9b6549ac3ce82160f0c4c, type: 2}
+  - {fileID: 11400000, guid: e4d9daaedd047044d8de54413926f7fd, type: 2}
+  techCardPrefab: {fileID: 7146562861746841900, guid: c5187bb5307a81f4ab71ff11ceb678dd,
+    type: 3}
+  techCardContainer: {fileID: 2134653585}
 --- !u!4 &2092433880
 Transform:
   m_ObjectHideFlags: 0
@@ -2996,6 +3007,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2134653584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8036412579963163338, guid: 0275605ea5c29b841bd0260794059bf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 178566550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2134653585 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6841848348129886931, guid: 0275605ea5c29b841bd0260794059bf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 178566550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134653586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134653584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 150}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1001 &2154152361989104968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3118,6 +3165,11 @@ PrefabInstance:
       propertyPath: tab
       value: 
       objectReference: {fileID: 1493039124}
+    - target: {fileID: 6972452502457111024, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_text
+      value: Gathering
+      objectReference: {fileID: 0}
     - target: {fileID: 7057164767497490859, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_Color.r

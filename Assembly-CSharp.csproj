@@ -92,6 +92,8 @@
     <Compile Include="Assets\Scripts\UI\LogDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
     <Compile Include="Assets\Scripts\UI\TabSwitch.cs" />
+    <Compile Include="Assets\Scripts\UI\TechnologyCardDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\TechnologyRequiermentCostDisplay.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
