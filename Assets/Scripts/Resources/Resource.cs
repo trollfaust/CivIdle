@@ -41,6 +41,7 @@ namespace trollschmiede.CivIdle.Resources
             }
         }
         #endregion
+
         #region Resource Changes
         public void AmountChange(int value)
         {
