@@ -32,20 +32,28 @@ namespace trollschmiede.CivIdle.UI
         [SerializeField] int maxLogs = 10;
 
         private List<GameObject> logDisplayItems;
+        private List<GameEvent> gameEvents;
 
         void Start()
         {
             gameEventManager.RegisterToAllGameEvents(this);
             logDisplayItems = new List<GameObject>();
+            gameEvents = new List<GameEvent>();
         }
 
         void OnDisable()
         {
             gameEventManager.UnregisterFromAllGameEvents(this);
+            foreach (var item in gameEvents)
+            {
+                item.UnregisterListener(this);
+            }
         }
 
         public void Evoke(GameEvent gameEvent)
         {
+            if (gameEvent.GetGameEventText() == "")
+                return; 
             string text = gameEvent.GetGameEventText();
 
             if (logDisplayItems.Count >= maxLogs)
@@ -66,5 +74,14 @@ namespace trollschmiede.CivIdle.UI
 
         public void Evoke() { }
 
+        public void RegisterForGameEvent(GameEvent _gameEvent)
+        {
+            if (gameEvents.Contains(_gameEvent))
+            {
+                return;
+            }
+            _gameEvent.RegisterListener(this);
+            gameEvents.Add(_gameEvent);
+        }
     }
 }

@@ -34,6 +34,8 @@ namespace trollschmiede.CivIdle.Resources
             {
                 gameEvent.Reset();
             }
+
+            GatheringManager.instance.Reset();
         }
     }
 }

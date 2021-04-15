@@ -68,6 +68,9 @@
     <Compile Include="Assets\Scripts\GameEvents\Actions\Action.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionGameEventChanceModifier.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceAmount.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceTypeAmount.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockGatheringObject.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockResource.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEventManager.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\Requierment.cs" />
@@ -77,7 +80,9 @@
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentResourceRequierment.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentTechnology.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringButton.cs" />
+    <Compile Include="Assets\Scripts\Gathering\GatheringManager.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObject.cs" />
+    <Compile Include="Assets\Scripts\Gathering\GatheringObjectDisplay.cs" />
     <Compile Include="Assets\Scripts\Resources\Reset.cs" />
     <Compile Include="Assets\Scripts\Resources\Resource.cs" />
     <Compile Include="Assets\Scripts\Resources\ResourceChancePair.cs" />

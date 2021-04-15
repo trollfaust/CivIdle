@@ -22,7 +22,7 @@ namespace trollschmiede.CivIdle.GameEvents
         public string gameEventText = "";
         public char valueSeperator;
 
-        [HideInInspector]
+        //[HideInInspector]
         public bool isDone;
         private List<IGameEventListener> listeners;
         private bool isOnHold = false;
@@ -117,6 +117,7 @@ namespace trollschmiede.CivIdle.GameEvents
         {
             if (isDone || isOnHold)
                 return false;
+
             if (Random.Range(0,100) > chanceToPass)
                 return false;
 
@@ -127,7 +128,7 @@ namespace trollschmiede.CivIdle.GameEvents
                     return false;
                 }
             }
-
+            Debug.Log("GameEvent: " + name + " passed Requierments");
             repeatCount++;
             if (repeatCountMax <= repeatCount && repeatCountMax != 0)
                 isDone = true;

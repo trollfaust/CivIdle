@@ -10,46 +10,39 @@ namespace trollschmiede.CivIdle.UI
     {
         [SerializeField] Slider slider = null;
         [SerializeField] Button button = null;
-        //[SerializeField] TextMeshProUGUI buttonText = null;
-        [SerializeField] float cooldownTime = 5f;
-        [SerializeField] ResourceChancePair[] resourcesPairs = new ResourceChancePair[0];
-        [SerializeField] bool isManuelGatherable = true;
+        [SerializeField] TextMeshProUGUI buttonText = null;
 
         private bool isOnCooldown = false;
         private float startTimestamp;
         private float timePassed;
+        private GatheringObjectDisplay gatheringObjectDisplay;
         private GatheringObject gatheringObject;
 
         public void OnButtonPressed()
         {
+            if (gatheringObjectDisplay == null)
+                return;
             isOnCooldown = true;
             startTimestamp = Time.time;
             timePassed = 0f;
             button.interactable = false;
-            gatheringObject.Gathering();
-        }
-
-        private void Start()
-        {
-            if (!isManuelGatherable)
-            {
-                slider.value = 0;
-                button.interactable = false;
-            }
+            gatheringObjectDisplay.Gathering();
         }
 
         private void Update()
         {
-            if (!isManuelGatherable)
+            if (gatheringObject == null || gatheringObjectDisplay == null)
+                return;
+            if (!gatheringObject.isManuelGatherable)
                 return;
             if (isOnCooldown)
             {
                 timePassed = timePassed + Time.deltaTime;
 
-                float v = (timePassed / cooldownTime);
+                float v = (timePassed / gatheringObject.buttonCooldownTime);
                 slider.value = (v > 1f) ? 1f : v;
 
-                if (Time.time > startTimestamp + cooldownTime)
+                if (Time.time > startTimestamp + gatheringObject.buttonCooldownTime)
                 {
                     isOnCooldown = false;
                     button.interactable = true;
@@ -57,9 +50,17 @@ namespace trollschmiede.CivIdle.UI
             }
         }
 
-        public void SetGatheringObject(GatheringObject gathering)
+        public void SetGatheringObjectDisplay(GatheringObjectDisplay _gatheringObjectDisplay, GatheringObject _gatheringObject)
         {
-            gatheringObject = gathering;
+            gatheringObjectDisplay = _gatheringObjectDisplay;
+            gatheringObject = _gatheringObject;
+
+            if (!gatheringObject.isManuelGatherable)
+            {
+                slider.value = 0;
+                button.interactable = false;
+            }
+            buttonText.text = gatheringObject.buttonName;
         }
 
     }

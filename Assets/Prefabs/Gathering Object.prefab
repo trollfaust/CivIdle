@@ -751,28 +751,7 @@ MonoBehaviour:
   addButton: {fileID: 8302607088577635257}
   substructButton: {fileID: 1449222178310737994}
   gatheringButton: {fileID: 1913909022118984525}
-  resourcesPairs:
-  - resource: {fileID: 11400000, guid: 3ab89ffa2d2b796489c22cf2f5e8cc0d, type: 2}
-    minValue: 0
-    maxValue: 1
-  - resource: {fileID: 11400000, guid: 7eb69ba3b5729a84984e75a96158fcad, type: 2}
-    minValue: 0
-    maxValue: 2
-  - resource: {fileID: 11400000, guid: 0b4ada013579dfb42b7b4aada735a348, type: 2}
-    minValue: 1
-    maxValue: 3
-  - resource: {fileID: 11400000, guid: 1eef26b33b641254180afddc2bcde8fa, type: 2}
-    minValue: 0
-    maxValue: 3
-  - resource: {fileID: 11400000, guid: 7662620a16f391c4b9345e61b8e51978, type: 2}
-    minValue: 0
-    maxValue: 2
-  - resource: {fileID: 11400000, guid: 8f86e182da9013e48853834d5c5b6af5, type: 2}
-    minValue: 1
-    maxValue: 3
-  timeBetweenAutoGathering: 5
   resourcePeople: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
-  peopleNeededToWork: 1
 --- !u!1001 &7258974701345606375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -789,6 +768,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093503333319249678, guid: bcaa662fd59460048a82e2de5ea5933d,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093503333319249678, guid: bcaa662fd59460048a82e2de5ea5933d,
+        type: 3}
+      propertyPath: m_Transition
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9093503334259883025, guid: bcaa662fd59460048a82e2de5ea5933d,
         type: 3}
