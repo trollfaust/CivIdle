@@ -10,13 +10,14 @@ namespace trollschmiede.CivIdle.GameEvents
     {
         [Header("Requirements")]
         public Requierment[] requierments;
+        [Header("Event Setup")]
         [Tooltip("0 = infinite, 1 = one time Event...")]
         public int repeatCountMax;
         [Range(0,100)]
-        public int chanceToPass = 50;
+        public int baseChanceToPass = 50;
         public float timeBetweenChecks = 1f;
         [Header("Actions")]
-        public GameEventAction[] gameEventActions = new GameEventAction[0];
+        public Action[] gameEventActions = new Action[0];
         [Header("User Feedback")]
         public string gameEventText = "";
         public char valueSeperator;
@@ -25,15 +26,18 @@ namespace trollschmiede.CivIdle.GameEvents
         public bool isDone;
         private List<IGameEventListener> listeners;
         private bool isOnHold = false;
+        private int chanceToPass;
 
         private List<int> returnActionValues;
 
         private int repeatCount = 0;
+
         public void Reset()
         {
             repeatCount = 0;
             isDone = false;
             isOnHold = false;
+            chanceToPass = baseChanceToPass;
         }
 
         public IEnumerator WaitTime()
@@ -62,6 +66,21 @@ namespace trollschmiede.CivIdle.GameEvents
             return back;
         }
 
+        /// <summary>
+        /// Modifies the Chance by the multiplier
+        /// </summary>
+        /// <param name="multiplier"></param>
+        public void AddChanceMultiplier(float multiplier)
+        {
+            float f = chanceToPass * multiplier;
+            f = Mathf.RoundToInt(f);
+            if (f > 100f)
+                f = 100f;
+            if (f < 0f)
+                f = 0f;
+            chanceToPass = (int)f;
+        }
+
         private int GetValueById(int i)
         {
             try
@@ -72,6 +91,11 @@ namespace trollschmiede.CivIdle.GameEvents
             {
                 return 0;
             }
+        }
+
+        public int GetCountDone()
+        {
+            return repeatCount;
         }
 
         #region Event Managment

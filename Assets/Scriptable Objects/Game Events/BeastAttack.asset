@@ -15,22 +15,13 @@ MonoBehaviour:
   requierments:
   - {fileID: 11400000, guid: 8278ab8d4b3abd84ab10c898219def88, type: 2}
   repeatCountMax: 0
-  chanceToPass: 5
+  baseChanceToPass: 50
   timeBetweenChecks: 2
   gameEventActions:
-  - resourcesToChange: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3,
-      type: 2}
-    resourceChangeAmountMin: -2
-    resourceChangeAmountMax: 0
-  - resourcesToChange: {fileID: 11400000, guid: 80a1cfd018f21a54aafb07e40d554d8e,
-      type: 2}
-    resourceChangeAmountMin: 2
-    resourceChangeAmountMax: 5
-  - resourcesToChange: {fileID: 11400000, guid: 18842b7cd4ea2e449a7f6850a55bddc5,
-      type: 2}
-    resourceChangeAmountMin: 3
-    resourceChangeAmountMax: 6
+  - {fileID: 11400000, guid: 42c76157c2cb8e3459e9dd5e3a9887db, type: 2}
+  - {fileID: 11400000, guid: 42cbba04ed74daa43b23245828ea5455, type: 2}
+  - {fileID: 11400000, guid: 889e6cdad7a4b7b47a0f96d0264a8975, type: 2}
   gameEventText: A Beast attacked the Town, you lost $0 People but gained $1 Meat
-    and $2 Copper.
+    and $2 Bones.
   valueSeperator: 36
   isDone: 0

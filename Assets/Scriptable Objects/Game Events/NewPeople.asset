@@ -16,13 +16,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 94e2dd8e2e3cef24dbba6647949f26ae, type: 2}
   - {fileID: 11400000, guid: 35abd7735cc9c8a40abd3a653dfeaccb, type: 2}
   repeatCountMax: 0
-  chanceToPass: 10
+  baseChanceToPass: 50
   timeBetweenChecks: 10
   gameEventActions:
-  - resourcesToChange: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3,
-      type: 2}
-    resourceChangeAmountMin: 1
-    resourceChangeAmountMax: 3
+  - {fileID: 11400000, guid: 6dab8007f7baeaa468c9d0085052773b, type: 2}
   gameEventText: Your town is growing, $0 People have joined you.
   valueSeperator: 36
   isDone: 0

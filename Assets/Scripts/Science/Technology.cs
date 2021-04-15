@@ -8,14 +8,28 @@ namespace trollschmiede.CivIdle.Science
     public class Technology : ScriptableObject
     {
         [SerializeField] new string name = "";
-        [SerializeField] Requierment[] requierments = new Requierment[0];
+        [SerializeField] Requierment[] showRequierments = new Requierment[0];
+        [SerializeField] Requierment[] unlockRequierments = new Requierment[0];
         [SerializeField] Sprite sprite = null;
         public bool isDone = false;
 
-        bool CheckRequierments()
+        bool CheckUnlockRequierments()
         {
             bool b = true;
-            foreach (var item in requierments)
+            foreach (var item in unlockRequierments)
+            {
+                if (!item.CheckRequierment())
+                {
+                    b = false;
+                }
+            }
+            return b;
+        }
+
+        public bool CheckShowRequierments()
+        {
+            bool b = true;
+            foreach (var item in showRequierments)
             {
                 if (!item.CheckRequierment())
                 {
@@ -27,7 +41,7 @@ namespace trollschmiede.CivIdle.Science
 
         public bool Research()
         {
-            if (!CheckRequierments())
+            if (!CheckUnlockRequierments())
             {
                 return false;
             }
@@ -35,7 +49,7 @@ namespace trollschmiede.CivIdle.Science
             return true;
         }
 
-        public Requierment[] GetRequierments() => requierments;
+        public Requierment[] GetRequierments() => unlockRequierments;
 
         public string GetName() => name;
 

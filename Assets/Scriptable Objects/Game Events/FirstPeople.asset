@@ -16,13 +16,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 871f866c22c99dc41b354f2af7994417, type: 2}
   - {fileID: 11400000, guid: 5ae1f86c977b91e4186ec7a1b216b34a, type: 2}
   repeatCountMax: 1
-  chanceToPass: 100
+  baseChanceToPass: 50
   timeBetweenChecks: 1
   gameEventActions:
-  - resourcesToChange: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3,
-      type: 2}
-    resourceChangeAmountMin: 1
-    resourceChangeAmountMax: 1
+  - {fileID: 11400000, guid: f4dd38144188d3d41b35c9de8c5064f0, type: 2}
   gameEventText: The first Settler arrived.
   valueSeperator: 36
   isDone: 1

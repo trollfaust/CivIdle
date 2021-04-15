@@ -2993,6 +2993,7 @@ MonoBehaviour:
   techCardPrefab: {fileID: 7146562861746841900, guid: c5187bb5307a81f4ab71ff11ceb678dd,
     type: 3}
   techCardContainer: {fileID: 2134653585}
+  techCardsToChoose: 3
 --- !u!4 &2092433880
 Transform:
   m_ObjectHideFlags: 0
