@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.Events;
 using System.Collections.Generic;
+using System;
 
 namespace trollschmiede.CivIdle.Resources
 {
@@ -13,6 +14,7 @@ namespace trollschmiede.CivIdle.Resources
         public int amount;
         public bool hasAmountOpen;
         public int amountOpen;
+        public int maxAmount;
         public ResourceCategory resourceCategory;
         public ResoureRequierment resoureRequierment;
         public Sprite iconSprite;
@@ -50,6 +52,8 @@ namespace trollschmiede.CivIdle.Resources
             amount = amount + value;
             if (hasAmountOpen)
                 amountOpen = amountOpen + value;
+            if (amount > maxAmount && maxAmount > 0)
+                amount = maxAmount;
             EvokeAll();
         }
 
@@ -59,6 +63,18 @@ namespace trollschmiede.CivIdle.Resources
                 return;
             if (hasAmountOpen)
                 amountOpen = amountOpen + value;
+            EvokeAll();
+        }
+
+        public void MaxAmountChange(int value)
+        {
+            if (value == 0)
+                return;
+            maxAmount = maxAmount + value;
+            if (amount > maxAmount)
+            {
+                amount = maxAmount;
+            }
             EvokeAll();
         }
 

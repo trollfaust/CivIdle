@@ -13,6 +13,10 @@ namespace trollschmiede.CivIdle.GameEvents
         public override int EvokeAction()
         {
             int i = Random.Range(resourceChangeAmountMin, resourceChangeAmountMax + 1);
+            if (resourcesToChange.maxAmount > 0 && resourcesToChange.amount + i > resourcesToChange.maxAmount)
+            {
+                i = resourcesToChange.maxAmount - resourcesToChange.amount;
+            }
             resourcesToChange.AmountChange(i);
             return i;
         }

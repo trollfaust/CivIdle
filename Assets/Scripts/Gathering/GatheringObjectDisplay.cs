@@ -86,7 +86,12 @@ namespace trollschmiede.CivIdle.UI
             {
                 if (ResourceManager.instance.CheckRequirement(pair.resource.resoureRequierment))
                 {
-                    pair.resource.AmountChange(Random.Range(pair.minValue, pair.maxValue + 1));
+                    int value = Random.Range(pair.minValue, pair.maxValue + 1);
+                    if (pair.resource.maxAmount > 0 && pair.resource.amount + value > pair.resource.maxAmount)
+                    {
+                        value = pair.resource.maxAmount - pair.resource.amount;
+                    }
+                    pair.resource.AmountChange(value);
                 }
             }
         }

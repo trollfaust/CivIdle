@@ -39,6 +39,8 @@ namespace trollschmiede.CivIdle.Resources
 
         private void Start()
         {
+            System.Array.Sort(allResources, delegate (Resource x, Resource y) { return x.resourceCategory.CompareTo(y.resourceCategory); });
+
             foreach (var item in allResources)
             {
                 if (item.isEnabled)

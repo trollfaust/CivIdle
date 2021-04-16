@@ -6,7 +6,7 @@ namespace trollschmiede.CivIdle.UI
 {
     public class ResetButton : MonoBehaviour
     {
-        [SerializeField] GameEvent[] gameEvents;
+        [SerializeField] GameEvent[] gameEvents = new GameEvent[0];
         public void OnButtonPressed()
         {
             Reset.ResetData();

@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\GameEvents\Actions\Action.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionGameEventChanceModifier.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceAmount.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceMaxAmount.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceTypeAmount.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockGatheringObject.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockResource.cs" />

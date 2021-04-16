@@ -8,12 +8,23 @@ namespace trollschmiede.CivIdle.GameEvents
     {
         [SerializeField] Resource resource = null;
         [SerializeField] int resourceAmount = 0;
+        [SerializeField] bool isMaxAmount = false;
 
         public override bool CheckRequierment()
         {
-            if (resource.amount >= resourceAmount)
+            if (isMaxAmount)
             {
-                return true;
+                if (resource.amount <= resourceAmount)
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                if (resource.amount >= resourceAmount)
+                {
+                    return true;
+                }
             }
             return false;
         }
