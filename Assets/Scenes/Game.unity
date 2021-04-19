@@ -2943,8 +2943,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allTechnologies:
-  - {fileID: 11400000, guid: bbbd5f2b91d9b6549ac3ce82160f0c4c, type: 2}
-  - {fileID: 11400000, guid: e4d9daaedd047044d8de54413926f7fd, type: 2}
+  - {fileID: 11400000, guid: 520efb576853f5141889753c8043d67c, type: 2}
+  - {fileID: 11400000, guid: 8bafbd2dd18889841b111ce106d50c72, type: 2}
+  - {fileID: 11400000, guid: e310f1dadb4d1904a89805f4dca8cee8, type: 2}
   techCardPrefab: {fileID: 7146562861746841900, guid: c5187bb5307a81f4ab71ff11ceb678dd,
     type: 3}
   techCardContainer: {fileID: 2134653585}

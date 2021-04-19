@@ -6,6 +6,8 @@ namespace trollschmiede.CivIdle.Resources
     public class GatheringObject : ScriptableObject
     {
         public string buttonName = "";
+        [Tooltip("Values should be Negative for Substraction")]
+        public ResourceChancePair[] craftingMaterials = new ResourceChancePair[0];
         public ResourceChancePair[] resourcesPairs = new ResourceChancePair[0];
         public float timeBetweenAutoGathering = 5f;
         public int peopleNeededToWork = 1;

@@ -128,7 +128,6 @@ namespace trollschmiede.CivIdle.GameEvents
                     return false;
                 }
             }
-            Debug.Log("GameEvent: " + name + " passed Requierments");
             repeatCount++;
             if (repeatCountMax <= repeatCount && repeatCountMax != 0)
                 isDone = true;

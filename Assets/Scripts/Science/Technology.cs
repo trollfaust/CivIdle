@@ -10,6 +10,7 @@ namespace trollschmiede.CivIdle.Science
         [SerializeField] new string name = "";
         [SerializeField] Requierment[] showRequierments = new Requierment[0];
         [SerializeField] Requierment[] unlockRequierments = new Requierment[0];
+        [SerializeField] Action[] unlocks = new Action[0];
         [SerializeField] Sprite sprite = null;
         public bool isDone = false;
 
@@ -44,6 +45,10 @@ namespace trollschmiede.CivIdle.Science
             if (!CheckUnlockRequierments())
             {
                 return false;
+            }
+            foreach (Action item in unlocks)
+            {
+                item.EvokeAction();
             }
             isDone = true;
             return true;

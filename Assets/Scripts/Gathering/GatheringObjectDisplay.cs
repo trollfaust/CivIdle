@@ -82,8 +82,28 @@ namespace trollschmiede.CivIdle.UI
         {
             if (gatheringObject == null)
                 return;
+            foreach (ResourceChancePair pair in gatheringObject.craftingMaterials)
+            {
+                if (pair.resource.amount < Mathf.Abs(pair.maxValue))
+                {
+                    return;
+                }
+            }
+            foreach (ResourceChancePair pair in gatheringObject.craftingMaterials)
+            {
+                if (Random.Range(0, 100) > pair.chance)
+                {
+                    continue;
+                }
+                int value = Random.Range(pair.minValue, pair.maxValue + 1);
+                pair.resource.AmountChange(value);
+            }
             foreach (ResourceChancePair pair in gatheringObject.resourcesPairs)
             {
+                if (Random.Range(0, 100) > pair.chance)
+                {
+                    continue;
+                }
                 if (ResourceManager.instance.CheckRequirement(pair.resource.resoureRequierment))
                 {
                     int value = Random.Range(pair.minValue, pair.maxValue + 1);

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc94a16763f09fa4796051f476c68ff0, type: 3}
   m_Name: Drink lost 1
   m_EditorClassIdentifier: 
-  resourceCategory: 1
+  resourceCategory: 2
   amountMin: 1
   amountMax: 1
   faildGameEvent: {fileID: 11400000, guid: 7ff3dd898603497409732750516dc830, type: 2}

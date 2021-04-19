@@ -60,6 +60,10 @@ namespace trollschmiede.CivIdle.Science
 
         public bool CheckTechnology(Technology tech)
         {
+            if (doneTechnologies == null)
+            {
+                doneTechnologies = new List<Technology>();
+            }
             if (doneTechnologies.Contains(tech))
             {
                 return true;

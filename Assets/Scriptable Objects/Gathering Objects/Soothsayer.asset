@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Soothsayer
+  m_EditorClassIdentifier: 
+  buttonName: Soothsayer
+  craftingMaterials: []
+  resourcesPairs:
+  - resource: {fileID: 11400000, guid: cc3c0560b25a72840879e507f6b0f28c, type: 2}
+    minValue: 1
+    maxValue: 1
+    chance: 50
+  timeBetweenAutoGathering: 15
+  peopleNeededToWork: 1
+  isManuelGatherable: 0
+  buttonCooldownTime: 5

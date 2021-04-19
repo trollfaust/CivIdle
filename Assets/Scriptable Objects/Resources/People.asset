@@ -15,9 +15,9 @@ MonoBehaviour:
   id: 0
   name: People
   isEnabled: 1
-  amount: 0
+  amount: 8
   hasAmountOpen: 1
-  amountOpen: 0
+  amountOpen: -1
   maxAmount: 10
   resourceCategory: 0
   resoureRequierment: 0
