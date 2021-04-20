@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.CivIdle.Science;
 
 namespace trollschmiede.CivIdle.Resources
 {
@@ -10,16 +11,7 @@ namespace trollschmiede.CivIdle.Resources
         {
             foreach (var resource in ResourceManager.instance.allResources)
             {
-                resource.amount = 0;
-                resource.amountOpen = 0;
-                if (resource.resoureRequierment != ResoureRequierment.Start)
-                {
-                    resource.isEnabled = false;
-                }
-                else
-                {
-                    resource.EvokeAll();
-                }
+                resource.Reset();
             }
 
             foreach (var resourceDisplay in GameObject.FindObjectsOfType<ResourceDisplay>())
@@ -36,6 +28,8 @@ namespace trollschmiede.CivIdle.Resources
             }
 
             GatheringManager.instance.Reset();
+
+            ScienceManager.instance.Reset();
         }
     }
 }

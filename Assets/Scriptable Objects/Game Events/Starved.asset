@@ -16,8 +16,8 @@ MonoBehaviour:
   repeatCountMax: 0
   baseChanceToPass: 50
   timeBetweenChecks: 1
+  isSpecialTriggered: 1
   gameEventActions:
   - {fileID: 11400000, guid: f033c0f8aedf2b943adfd2e89d4f4037, type: 2}
   gameEventText: You lost $0 People from starvation.
-  valueSeperator: 36
   isDone: 0

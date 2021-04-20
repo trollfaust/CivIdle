@@ -16,12 +16,16 @@ namespace trollschmiede.CivIdle.UI
         {
             foreach (var item in GameObject.FindObjectsOfType<TabSwitch>())
             {
-                item.OnOtherTabButton();
+                if (item != this)
+                {
+                    item.OnOtherTabButton();
+                }
             }
 
             CanvasGroup group = tab.GetComponent<CanvasGroup>();
             group.alpha = 1;
             group.interactable = true;
+            group.blocksRaycasts = true;
             buttonImage.color = onColor;
         }
 
@@ -30,6 +34,7 @@ namespace trollschmiede.CivIdle.UI
             CanvasGroup group = tab.GetComponent<CanvasGroup>();
             group.alpha = 0;
             group.interactable = false;
+            group.blocksRaycasts = false;
             buttonImage.color = offColor;
         }
     }

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Mining
+  m_EditorClassIdentifier: 
+  buttonName: Mining
+  craftingMaterials:
+  - resource: {fileID: 11400000, guid: 6fcfd22040c129d48a31909b2aba6cab, type: 2}
+    minValue: 1
+    maxValue: 1
+    chance: 100
+  resourcesPairs:
+  - resource: {fileID: 11400000, guid: 7662620a16f391c4b9345e61b8e51978, type: 2}
+    minValue: 3
+    maxValue: 8
+    chance: 100
+  - resource: {fileID: 11400000, guid: 3ab89ffa2d2b796489c22cf2f5e8cc0d, type: 2}
+    minValue: 2
+    maxValue: 6
+    chance: 95
+  - resource: {fileID: 11400000, guid: 907796746a54bdc4fabed9790535247a, type: 2}
+    minValue: 1
+    maxValue: 2
+    chance: 60
+  - resource: {fileID: 11400000, guid: 63e1ac5054db563499e17cf3b0acd855, type: 2}
+    minValue: 1
+    maxValue: 2
+    chance: 45
+  - resource: {fileID: 11400000, guid: 333ded80d78af7d47b328729a42deece, type: 2}
+    minValue: 1
+    maxValue: 2
+    chance: 0
+  timeBetweenAutoGathering: 10
+  peopleNeededToWork: 1
+  isManuelGatherable: 1
+  buttonCooldownTime: 30

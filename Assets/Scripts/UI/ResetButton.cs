@@ -1,19 +1,25 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.Resources;
-using trollschmiede.CivIdle.GameEvents;
+using System.Collections;
 
 namespace trollschmiede.CivIdle.UI
 {
     public class ResetButton : MonoBehaviour
     {
-        [SerializeField] GameEvent[] gameEvents = new GameEvent[0];
+        private void Start()
+        {
+            StartCoroutine(OnStartUp());
+        }
+
         public void OnButtonPressed()
         {
             Reset.ResetData();
-            foreach (var item in gameEvents)
-            {
-                item.Reset();
-            }
+        }
+
+        IEnumerator OnStartUp()
+        {
+            yield return new WaitForSeconds(.5f);
+            OnButtonPressed();
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using trollschmiede.CivIdle.Events;
-using trollschmiede.CivIdle.Resources;
 using trollschmiede.CivIdle.GameEvents;
 using TMPro;
 using UnityEngine.UI;
@@ -52,16 +51,19 @@ namespace trollschmiede.CivIdle.UI
 
         public void Evoke(GameEvent gameEvent)
         {
-            if (gameEvent.GetGameEventText() == "")
-                return; 
             string text = gameEvent.GetGameEventText();
+            if (text == "")
+                return; 
 
             if (logDisplayItems.Count >= maxLogs)
             {
                 GameObject item = logDisplayItems[0];
                 logDisplayItems.Remove(item);
                 logDisplayItems.Add(item);
+                item.GetComponentInChildren<TextMeshProUGUI>().text = text;
                 item.transform.SetAsFirstSibling();
+                logDisplayContentTransform.GetComponent<VerticalLayoutGroup>().enabled = false;
+                logDisplayContentTransform.GetComponent<VerticalLayoutGroup>().enabled = true;
             } else
             {
                 GameObject newItem = Instantiate(logDisplayItemPrefab, logDisplayContentTransform, false) as GameObject;

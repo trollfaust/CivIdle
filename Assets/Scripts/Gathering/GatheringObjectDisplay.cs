@@ -42,6 +42,7 @@ namespace trollschmiede.CivIdle.UI
         {
             gatheringObject = _gatheringObject;
             gatheringButton.SetGatheringObjectDisplay(this, gatheringObject);
+            ResourceManager.instance.NewGatheringObj(this);
         }
 
         public void OnAddButtonPressed()
@@ -96,7 +97,7 @@ namespace trollschmiede.CivIdle.UI
                     continue;
                 }
                 int value = Random.Range(pair.minValue, pair.maxValue + 1);
-                pair.resource.AmountChange(value);
+                pair.resource.AmountChange(-value);
             }
             foreach (ResourceChancePair pair in gatheringObject.resourcesPairs)
             {
@@ -114,6 +115,11 @@ namespace trollschmiede.CivIdle.UI
                     pair.resource.AmountChange(value);
                 }
             }
+        }
+
+        public int GetCount()
+        {
+            return count;
         }
     }
 }

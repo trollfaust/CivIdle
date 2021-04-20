@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Digging
+  m_EditorClassIdentifier: 
+  buttonName: Digging
+  craftingMaterials:
+  - resource: {fileID: 11400000, guid: 6fcfd22040c129d48a31909b2aba6cab, type: 2}
+    minValue: 1
+    maxValue: 1
+    chance: 100
+  resourcesPairs:
+  - resource: {fileID: 11400000, guid: a8aa36a8277d2314c9c121113d417bb6, type: 2}
+    minValue: 2
+    maxValue: 6
+    chance: 95
+  - resource: {fileID: 11400000, guid: f6cbfecfea1699448a897e732e96dcb3, type: 2}
+    minValue: 2
+    maxValue: 8
+    chance: 100
+  - resource: {fileID: 11400000, guid: 7662620a16f391c4b9345e61b8e51978, type: 2}
+    minValue: 1
+    maxValue: 3
+    chance: 90
+  - resource: {fileID: 11400000, guid: 3ab89ffa2d2b796489c22cf2f5e8cc0d, type: 2}
+    minValue: 2
+    maxValue: 3
+    chance: 80
+  - resource: {fileID: 11400000, guid: 4491c5dc03c0fc24cab0a2d976f2aa6e, type: 2}
+    minValue: 1
+    maxValue: 2
+    chance: 15
+  timeBetweenAutoGathering: 10
+  peopleNeededToWork: 1
+  isManuelGatherable: 1
+  buttonCooldownTime: 20

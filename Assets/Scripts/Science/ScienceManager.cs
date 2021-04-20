@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using trollschmiede.CivIdle.UI;
+using trollschmiede.CivIdle.GameEvents;
 
 namespace trollschmiede.CivIdle.Science
 {
@@ -35,11 +36,13 @@ namespace trollschmiede.CivIdle.Science
             List<Technology> availableTechs = new List<Technology>();
             foreach (var item in allTechnologies)
             {
-                if (item.CheckShowRequierments())
+                if (item.CheckShowRequierments() && !item.isDone)
                 {
                     availableTechs.Add(item);
                 }
             }
+            if (availableTechs.Count == 0)
+                return;
             HashSet<int> indexes = new HashSet<int>();
             for (int i = 0; i < count; i++)
             {
@@ -81,6 +84,15 @@ namespace trollschmiede.CivIdle.Science
                 }
                 doneTechnologies.Add(tech);
 
+                foreach (Requierment item in tech.GetRequierments())
+                {
+                    if (item is RequiermentResource)
+                    {
+                        RequiermentResource rr = (RequiermentResource)item;
+                        rr.GetResource().AmountChange(-rr.GetAmount());
+                    }
+                }
+
                 foreach (var item in techCardContainer.GetComponentsInChildren<TechnologyCardDisplay>())
                 {
                     Destroy(item.gameObject);
@@ -88,6 +100,19 @@ namespace trollschmiede.CivIdle.Science
 
                 SetTechCards(techCardsToChoose);
             }
+        }
+
+        public void Reset()
+        {
+            foreach (var item in techCardContainer.GetComponentsInChildren<TechnologyCardDisplay>())
+            {
+                Destroy(item.gameObject);
+            }
+            foreach (var item in allTechnologies)
+            {
+                item.isDone = false;
+            }
+            SetTechCards(techCardsToChoose);
         }
     }
 }

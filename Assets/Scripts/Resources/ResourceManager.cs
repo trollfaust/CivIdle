@@ -31,11 +31,20 @@ namespace trollschmiede.CivIdle.Resources
         [SerializeField] float peopleNeedsUpdateTime = 5f;
         [SerializeField] Action[] peopleNeeds = new Action[0];
 
+        private bool isPeopleAmountRunning = false;
         public void Evoke() { }
-        public void Evoke(Resource resource) => ActivateResource(resource);
+        public void Evoke(Resource _resource)
+        {
+            if (_resource == peopleResource && !isPeopleAmountRunning)
+            {
+                StartCoroutine(PeopleAmountCheck());
+            }
+            ActivateResource(_resource);
+        }
 
         private List<ResoureRequierment> requiermentsMeet;
         private float timeStamp;
+        private List<GatheringObjectDisplay> gatheringObjects;
 
         private void Start()
         {
@@ -52,7 +61,6 @@ namespace trollschmiede.CivIdle.Resources
             }
             requiermentsMeet = new List<ResoureRequierment>();
             requiermentsMeet.Add(ResoureRequierment.Start);
-            requiermentsMeet.Add(ResoureRequierment.Flint_Tool);
             timeStamp = Time.time;
         }
 
@@ -79,28 +87,59 @@ namespace trollschmiede.CivIdle.Resources
             }
         }
 
-        public void ActivateResource(Resource resource)
+        public void ActivateResource(Resource _resource)
         {
-            if (!resource.isEnabled)
+            if (!_resource.isEnabled)
             {
-                resource.isEnabled = true;
+                _resource.isEnabled = true;
                 GameObject gO = Instantiate(resourceDisplayPrefab, resourceDisplayParent) as GameObject;
-                gO.GetComponent<ResourceDisplay>().SetResource(resource);
+                gO.GetComponent<ResourceDisplay>().SetResource(_resource);
             }
         }
 
-        public bool CheckRequirement(ResoureRequierment requierment)
+        public bool CheckRequirement(ResoureRequierment _requierment)
         {
-            if (requiermentsMeet.Contains(requierment))
+            if (requiermentsMeet.Contains(_requierment))
             {
                 return true;
             }
             return false;
         }
 
-        public void AddRequierment(ResoureRequierment requierment)
+        public void AddRequierment(ResoureRequierment _requierment)
         {
-            requiermentsMeet.Add(requierment);
+            requiermentsMeet.Add(_requierment);
+        }
+
+        public void NewGatheringObj(GatheringObjectDisplay _gatheringObjectDisplay)
+        {
+            if (gatheringObjects == null)
+            {
+                gatheringObjects = new List<GatheringObjectDisplay>();
+            }
+            gatheringObjects.Add(_gatheringObjectDisplay);
+        }
+
+        IEnumerator PeopleAmountCheck()
+        {
+            isPeopleAmountRunning = true;
+            while (peopleResource.amount > 0 && gatheringObjects != null)
+            {
+                while (peopleResource.amountOpen < 0)
+                {
+                    foreach (var item in gatheringObjects)
+                    {
+                        if (item.GetCount() > 0)
+                        {
+                            item.OnSubstructButtonPressed();
+                            break;
+                        }
+                    }
+                }
+
+                yield return new WaitForSeconds(1f);
+            }
+            isPeopleAmountRunning = false;
         }
     }
 }

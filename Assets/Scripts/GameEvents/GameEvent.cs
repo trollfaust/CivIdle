@@ -16,11 +16,13 @@ namespace trollschmiede.CivIdle.GameEvents
         [Range(0,100)]
         public int baseChanceToPass = 50;
         public float timeBetweenChecks = 1f;
+        public bool isSpecialTriggered = false;
         [Header("Actions")]
         public Action[] gameEventActions = new Action[0];
         [Header("User Feedback")]
         public string gameEventText = "";
-        public char valueSeperator;
+        char valueSeperator = '$';
+        char cutSeperator = '§';
 
         //[HideInInspector]
         public bool isDone;
@@ -58,7 +60,22 @@ namespace trollschmiede.CivIdle.GameEvents
 
                 int value = GetValueById(x);
                 value = Mathf.Abs(value);
-                cut[i] = value.ToString() + cut[i].Substring(1);
+                if (value == 0)
+                {
+                    string[] cutNew = cut[i].Split(cutSeperator);
+                    if (cutNew.Length > 1)
+                    {
+                        cut[i] = string.Join("", cutNew, 1, cutNew.Length - 1);
+                    }
+                }
+                else
+                {
+                    cut[i] = value.ToString() + cut[i].Substring(1);
+                    if (cut[i].IndexOf(cutSeperator) >= 0)
+                    {
+                        cut[i] = cut[i].Remove(cut[i].IndexOf(cutSeperator), 1);
+                    }
+                }
             }
 
             string back = string.Join("", cut);
@@ -115,7 +132,7 @@ namespace trollschmiede.CivIdle.GameEvents
 
         public bool Evoke()
         {
-            if (isDone || isOnHold)
+            if (isDone || isOnHold || isSpecialTriggered)
                 return false;
 
             if (Random.Range(0,100) > chanceToPass)

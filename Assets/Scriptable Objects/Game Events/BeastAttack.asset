@@ -15,13 +15,13 @@ MonoBehaviour:
   requierments:
   - {fileID: 11400000, guid: 8278ab8d4b3abd84ab10c898219def88, type: 2}
   repeatCountMax: 0
-  baseChanceToPass: 10
-  timeBetweenChecks: 30
+  baseChanceToPass: 2
+  timeBetweenChecks: 60
+  isSpecialTriggered: 0
   gameEventActions:
   - {fileID: 11400000, guid: 42c76157c2cb8e3459e9dd5e3a9887db, type: 2}
   - {fileID: 11400000, guid: 42cbba04ed74daa43b23245828ea5455, type: 2}
   - {fileID: 11400000, guid: 889e6cdad7a4b7b47a0f96d0264a8975, type: 2}
   gameEventText: A Beast attacked the Town, you lost $0 People but gained $1 Meat
     and $2 Bones.
-  valueSeperator: 36
   isDone: 0

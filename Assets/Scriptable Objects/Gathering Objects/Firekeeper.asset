@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Firekeeper
+  m_EditorClassIdentifier: 
+  buttonName: Firekeeper
+  craftingMaterials:
+  - resource: {fileID: 11400000, guid: 1eef26b33b641254180afddc2bcde8fa, type: 2}
+    minValue: 5
+    maxValue: 5
+    chance: 100
+  - resource: {fileID: 11400000, guid: 3ab89ffa2d2b796489c22cf2f5e8cc0d, type: 2}
+    minValue: 2
+    maxValue: 2
+    chance: 100
+  resourcesPairs:
+  - resource: {fileID: 11400000, guid: 7965b9c714c1eec468f1338d0c309e97, type: 2}
+    minValue: 1
+    maxValue: 1
+    chance: 100
+  timeBetweenAutoGathering: 15
+  peopleNeededToWork: 1
+  isManuelGatherable: 0
+  buttonCooldownTime: 5

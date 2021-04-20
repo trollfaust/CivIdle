@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de4c1b8f99726d45ad964e9dbd3dc78, type: 3}
+  m_Name: Carving
+  m_EditorClassIdentifier: 
+  name: Carving
+  showRequierments:
+  - {fileID: 11400000, guid: cab3ad4886275be4d87b597643598e72, type: 2}
+  - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
+  - {fileID: 11400000, guid: c7201ef371213654c9a40ad37fd3f9de, type: 2}
+  unlockRequierments:
+  - {fileID: 11400000, guid: 228f4136487f6e04786edba3fd6d7fee, type: 2}
+  unlocks:
+  - {fileID: 11400000, guid: 4084d7bbd8af06048a1291ba686ebc3c, type: 2}
+  - {fileID: 11400000, guid: e3ec9c79374328d4982ef1898f2cddd7, type: 2}
+  sprite: {fileID: 21300000, guid: 8d458c46ab64fd04599078fa8d61ee4e, type: 3}
+  isDone: 1

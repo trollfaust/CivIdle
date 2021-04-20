@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de4c1b8f99726d45ad964e9dbd3dc78, type: 3}
+  m_Name: Tribalism
+  m_EditorClassIdentifier: 
+  name: Tribalism
+  showRequierments:
+  - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
+  - {fileID: 11400000, guid: 8278ab8d4b3abd84ab10c898219def88, type: 2}
+  unlockRequierments:
+  - {fileID: 11400000, guid: 228f4136487f6e04786edba3fd6d7fee, type: 2}
+  unlocks:
+  - {fileID: 11400000, guid: b902990b31b036747b6dd188b9bb03aa, type: 2}
+  sprite: {fileID: 21300000, guid: a8d41444062c32841ab7637a4bdb0420, type: 3}
+  isDone: 0

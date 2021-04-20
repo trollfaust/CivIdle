@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Hunting
+  m_EditorClassIdentifier: 
+  buttonName: Hunting
+  craftingMaterials:
+  - resource: {fileID: 11400000, guid: eb6177abc3f12ea4897813dfe7e7a7d9, type: 2}
+    minValue: 1
+    maxValue: 1
+    chance: 100
+  resourcesPairs:
+  - resource: {fileID: 11400000, guid: 80a1cfd018f21a54aafb07e40d554d8e, type: 2}
+    minValue: 3
+    maxValue: 6
+    chance: 100
+  - resource: {fileID: 11400000, guid: 4491c5dc03c0fc24cab0a2d976f2aa6e, type: 2}
+    minValue: 1
+    maxValue: 2
+    chance: 80
+  - resource: {fileID: 11400000, guid: 73b1bf0dfb50a444f9ec1d84ceb4e95a, type: 2}
+    minValue: 3
+    maxValue: 6
+    chance: 40
+  timeBetweenAutoGathering: 30
+  peopleNeededToWork: 1
+  isManuelGatherable: 0
+  buttonCooldownTime: 5

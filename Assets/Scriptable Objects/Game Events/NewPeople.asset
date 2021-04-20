@@ -20,6 +20,7 @@ MonoBehaviour:
   timeBetweenChecks: 10
   gameEventActions:
   - {fileID: 11400000, guid: 6dab8007f7baeaa468c9d0085052773b, type: 2}
-  gameEventText: Your town is growing, $0 People have joined you.
+  gameEventText: "Your town is growing, $0 People have joined you\xA7."
   valueSeperator: 36
+  cutSeperator: 167
   isDone: 0

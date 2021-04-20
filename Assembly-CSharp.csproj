@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceTypeAmount.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockGatheringObject.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockResource.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockResourceRequierment.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEventManager.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\Requierment.cs" />

@@ -20,5 +20,6 @@ MonoBehaviour:
   unlocks:
   - {fileID: 11400000, guid: 295986988e1319f44abb4d66837bd018, type: 2}
   - {fileID: 11400000, guid: d20f7a3d7d5b3174f9538b4db4d7cabc, type: 2}
+  - {fileID: 11400000, guid: 473b96c81c430c74f9a0ffd7792f34e1, type: 2}
   sprite: {fileID: 21300000, guid: 2d262742dd988f645b1d07c9ef128abb, type: 3}
   isDone: 1

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de4c1b8f99726d45ad964e9dbd3dc78, type: 3}
+  m_Name: Curing
+  m_EditorClassIdentifier: 
+  name: Curing
+  showRequierments:
+  - {fileID: 11400000, guid: 7587b1361e9b2504699bab1e1900ab3a, type: 2}
+  - {fileID: 11400000, guid: 1569a734f09015746b1bdb74bc8ed739, type: 2}
+  unlockRequierments:
+  - {fileID: 11400000, guid: a60eaa2d7bb0cae4db6439921f37acdc, type: 2}
+  unlocks:
+  - {fileID: 11400000, guid: cd4c902dc73f7e24f903b73dfcfe1bb4, type: 2}
+  - {fileID: 11400000, guid: b6b0f9bc4d1433549993b980dd2e7ebe, type: 2}
+  sprite: {fileID: 21300000, guid: 5c65f4d2f1fa0264b901e9753acebb09, type: 3}
+  isDone: 0

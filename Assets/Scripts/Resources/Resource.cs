@@ -15,9 +15,13 @@ namespace trollschmiede.CivIdle.Resources
         public bool hasAmountOpen;
         public int amountOpen;
         public int maxAmount;
+        public int baseMaxAmount;
         public ResourceCategory resourceCategory;
         public ResoureRequierment resoureRequierment;
         public Sprite iconSprite;
+        [Range(0,5f)]
+        public float saturationValue = 0f;
+
         private List<IResourceEventListener> listeners;
 
         #region Event Managment
@@ -82,6 +86,19 @@ namespace trollschmiede.CivIdle.Resources
         {
             isEnabled = true;
             EvokeAll();
+        }
+
+        public void Reset()
+        {
+            maxAmount = baseMaxAmount;
+            amount = 0;
+            amountOpen = 0;
+            isEnabled = false;
+            if (resoureRequierment == ResoureRequierment.Start)
+            {
+                isEnabled = true;
+                EvokeAll();
+            }
         }
         #endregion
     }

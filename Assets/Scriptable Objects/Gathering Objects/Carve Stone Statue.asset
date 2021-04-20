@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Carve Stone Statue
+  m_EditorClassIdentifier: 
+  buttonName: Carve Stone Staues
+  craftingMaterials:
+  - resource: {fileID: 11400000, guid: 7662620a16f391c4b9345e61b8e51978, type: 2}
+    minValue: 5
+    maxValue: 5
+    chance: 100
+  - resource: {fileID: 11400000, guid: eb6177abc3f12ea4897813dfe7e7a7d9, type: 2}
+    minValue: 1
+    maxValue: 1
+    chance: 100
+  resourcesPairs:
+  - resource: {fileID: 11400000, guid: b1c2b94e7cdc5814b93f40283b62e60e, type: 2}
+    minValue: 1
+    maxValue: 1
+    chance: 100
+  timeBetweenAutoGathering: 20
+  peopleNeededToWork: 1
+  isManuelGatherable: 0
+  buttonCooldownTime: 5
