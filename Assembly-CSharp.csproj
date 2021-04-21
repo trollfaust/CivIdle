@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\Resources\ResoureRequierment.cs" />
     <Compile Include="Assets\Scripts\Science\ScienceManager.cs" />
     <Compile Include="Assets\Scripts\Science\Technology.cs" />
+    <Compile Include="Assets\Scripts\Tooltip\ITooltipValueElement.cs" />
     <Compile Include="Assets\Scripts\Tooltip\Tooltip.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipDatabase.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipDisplay.cs" />

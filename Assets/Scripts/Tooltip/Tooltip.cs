@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 namespace trollschmiede.Generic.Tooltip
 {
@@ -7,7 +6,7 @@ namespace trollschmiede.Generic.Tooltip
     public class Tooltip
     {
         public string tooltipName;
-        [TextArea(1, 30)]
+        [TextArea(1, 30)][Tooltip("{valuename} for Values")]
         public string tooltipText;
         public Sprite tooltipImage;
         public string[] triggerWords;

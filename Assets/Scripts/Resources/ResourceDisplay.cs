@@ -27,7 +27,8 @@ namespace trollschmiede.CivIdle.UI {
             this.resource = resource;
             resourceText.text = resource.name + ": " + ((resource.hasAmountOpen) ? resource.amountOpen.ToString() + "/" : "") + resource.amount.ToString();
             iconImage.sprite = resource.iconSprite;
-            hoverElement.SetTooltipName(resource.name);
+            hoverElement.TooltipInitialize(resource.name);
+            hoverElement.SetTooltipValueElement(resource);
             StartCoroutine(AddListener(resource));
         }
 

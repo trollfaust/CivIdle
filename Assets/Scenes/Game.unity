@@ -621,7 +621,7 @@ MonoBehaviour:
   highlightColor: {r: 0.6615831, g: 0.13710396, b: 0.745283, a: 1}
   database:
   - tooltipName: Sticks
-    tooltipText: A basic Crafting Material
+    tooltipText: A basic Crafting Material {amount}
     tooltipImage: {fileID: 0}
     triggerWords: []
   - tooltipName: Stone

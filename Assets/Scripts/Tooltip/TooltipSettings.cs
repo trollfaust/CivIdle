@@ -6,9 +6,11 @@ namespace trollschmiede.Generic.Tooltip
     public class TooltipSettings : ScriptableObject
     {
         public bool useHoverTimerToLock;
-        public float hoverTime;
+        public float hoverTimeToLock;
         public bool useKeyToLock;
         public KeyCode lockKey;
         public KeyCode unlockKey;
+        public float updateTextTime;
+        public int characterWrapLimit;
     }
 }

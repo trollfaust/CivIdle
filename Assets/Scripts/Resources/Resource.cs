@@ -2,11 +2,12 @@
 using trollschmiede.CivIdle.Events;
 using System.Collections.Generic;
 using System;
+using trollschmiede.Generic.Tooltip;
 
 namespace trollschmiede.CivIdle.Resources
 {
     [CreateAssetMenu(fileName = "New Resource", menuName = "Scriptable Objects/Resources/Resource")]
-    public class Resource : ScriptableObject
+    public class Resource : ScriptableObject, ITooltipValueElement
     {
         public int id;
         public new string name;
@@ -99,6 +100,19 @@ namespace trollschmiede.CivIdle.Resources
                 isEnabled = true;
                 EvokeAll();
             }
+        }
+
+        public Dictionary<string, string> GetTooltipValues()
+        {
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+
+            keyValuePairs.Add("name", name);
+            keyValuePairs.Add("amount", amount.ToString());
+            keyValuePairs.Add("amountOpen", amountOpen.ToString());
+            keyValuePairs.Add("maxAmount", maxAmount.ToString());
+            keyValuePairs.Add("saturationValue", saturationValue.ToString());
+
+            return keyValuePairs;
         }
         #endregion
     }

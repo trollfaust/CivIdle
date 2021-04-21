@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: TooltipSettings
   m_EditorClassIdentifier: 
   useHoverTimerToLock: 0
-  hoverTime: 3
+  hoverTimeToLock: 0
   useKeyToLock: 1
   lockKey: 325
   unlockKey: 323
+  updateTextTime: 1
+  characterWrapLimit: 80

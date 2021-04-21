@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 
 namespace trollschmiede.Generic.Tooltip
 {
@@ -19,9 +18,12 @@ namespace trollschmiede.Generic.Tooltip
         }
         #endregion
 
+        [Header("Setup")][Tooltip("Create a TooltipSetting Object and set it here")]
         public TooltipSettings settings;
-        public GameObject tooltipPrefab;
-        public Transform tooltipStorage;
+        [Tooltip("The Prefab for a Tooltip")]
+        [SerializeField] GameObject tooltipPrefab = null;
+        [Tooltip("The Transform where all unused Tooltips go")]
+        [SerializeField] Transform tooltipStorage = null;
 
         private List<GameObject> tooltips;
         private List<GameObject> activeTooltips;
@@ -35,7 +37,7 @@ namespace trollschmiede.Generic.Tooltip
 
         private void Update()
         {
-            if (Input.GetKeyDown(settings.unlockKey)) // Removes all Tooltips if Unlockkey is pressed not over any Tooltip
+            if (Input.GetKeyDown(settings.unlockKey)) // Removes all Tooltips if the Unlock Key is pressed and not over any Tooltip
             {
                 bool isOverAny = false;
                 foreach (var tooltip in activeTooltips)
@@ -54,7 +56,7 @@ namespace trollschmiede.Generic.Tooltip
         }
 
         /// <summary>
-        /// Returns a GameObject which is a Tooltip from Pool or creates a new One
+        /// Returns a GameObject which is a Tooltip from the Pool or creates a new one
         /// </summary>
         /// <returns></returns>
         public GameObject GetNewTooltip()
@@ -77,20 +79,20 @@ namespace trollschmiede.Generic.Tooltip
             return newTooltip;
         }
 
-        public void SetActiveBaseHoverElement(TooltipHoverElement hoverElement)
+        public void SetActiveBaseHoverElement(TooltipHoverElement _hoverElement)
         {
-            baseActiveHoverElement = hoverElement;
+            baseActiveHoverElement = _hoverElement;
         }
 
-        public void RemoveTooltip(GameObject tooltip)
+        public void RemoveTooltip(GameObject _tooltip)
         {
-            tooltip.transform.SetParent(tooltipStorage, false);
-            TooltipDisplay tooltipDisplay = tooltip.GetComponent<TooltipDisplay>();
+            _tooltip.transform.SetParent(tooltipStorage, false);
+            TooltipDisplay tooltipDisplay = _tooltip.GetComponent<TooltipDisplay>();
             tooltipDisplay.isInUse = false;
-            activeTooltips.Remove(tooltip);
+            activeTooltips.Remove(_tooltip);
         }
 
-        public void RemoveAllTooltips() // TODO Base Hoverelement reset!!!
+        public void RemoveAllTooltips() // TODO Base Hoverelement reset (Done?)
         {
             GameObject[] activeTooltipArray = activeTooltips.ToArray();
 
@@ -114,19 +116,19 @@ namespace trollschmiede.Generic.Tooltip
         /// <summary>
         /// Returns the Tooltipdata (Tooltip) for a given String (Name or Triggerword)
         /// </summary>
-        /// <param name="textToTest"></param>
+        /// <param name="_textToTest"></param>
         /// <returns></returns>
-        public Tooltip GetTooltipDataByString (string textToTest)
+        public Tooltip GetTooltipDataByString (string _textToTest)
         {
             foreach (var tooltip in TooltipDatabase.instance.database)
             {
-                if (tooltip.tooltipName == textToTest)
+                if (tooltip.tooltipName == _textToTest)
                 {
                     return tooltip;
                 }
                 foreach (var triggerWord in tooltip.triggerWords)
                 {
-                    if (triggerWord == textToTest)
+                    if (triggerWord == _textToTest)
                     {
                         return tooltip;
                     }
