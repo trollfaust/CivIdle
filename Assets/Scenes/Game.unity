@@ -621,45 +621,356 @@ MonoBehaviour:
   highlightColor: {r: 0.6615831, g: 0.13710396, b: 0.745283, a: 1}
   database:
   - tooltipName: Sticks
-    tooltipText: A basic Crafting Material {amount}
+    tooltipText: 'A basic Crafting Material used for making Fireplaces and Stone-Tools.
+
+      You
+      can get them from Gathering and Wood-Cutting.'
     tooltipImage: {fileID: 0}
     triggerWords: []
   - tooltipName: Stone
-    tooltipText: A basic Crafting Material
+    tooltipText: 'A basic Crafting Material used for making  Flint-Tools, Stone-Tools
+      and Stone-Statues.
+
+      You can get them from Gathering, Digging and Mining.'
     tooltipImage: {fileID: 0}
     triggerWords: []
   - tooltipName: Crafting Material
-    tooltipText: Test Stone stuff
+    tooltipText: 'Different Materials used for crafting.
+
+      Basic: Stone, Sticks,
+      Flint, Bone, Fur, Mud, Clay, Wood'
     tooltipImage: {fileID: 0}
     triggerWords:
     - Crafting
     - Material
-  - tooltipName: Bronze
-    tooltipText: Test Stone stuff
+  - tooltipName: Flint
+    tooltipText: 'A basic Crafting Material used for making  Flint-Tools and Fireplaces.
+
+      You
+      can get them from Gathering, Digging and Mining.'
     tooltipImage: {fileID: 0}
     triggerWords: []
-  - tooltipName: Copper
-    tooltipText: Test Stone stuff
+  - tooltipName: People
+    tooltipText: 'Your People who you can assign to work Tasks.
+
+      You can have
+      a maximum of {maxAmount} People at the Moment.
+
+      Each Person needs Food
+      and Drinks with a value of 2 Saturation every 5 Seconds.'
     tooltipImage: {fileID: 0}
     triggerWords: []
-  - tooltipName: Iron
-    tooltipText: Test Stone stuff
+  - tooltipName: Bone
+    tooltipText: 'A basic Crafting Material used for making Bone-Statues.
+
+      You
+      can get them from Hunting.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Carved Statues
+    tooltipText: 'Made from Stone or Bone with Flint-Tools.
+
+      WIP'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Stone-Statues
+    - Bone-Statues
+  - tooltipName: Clay
+    tooltipText: 'A basic Crafting Material used for making WIP.
+
+      You can get
+      them from Digging.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Cloth
+    tooltipText: 'A Crafting Material used for making Clothing.
+
+      Made from
+      Fur.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Clothing
+    tooltipText: 'WIP
+
+      Made from Cloth.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Cooked Fish
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      Made
+      from Fish with Fireplaces.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Cooked-Fish
+  - tooltipName: Cooked Meat
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      Made
+      from Meat with Fireplaces.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Cooked-Meat
+  - tooltipName: Copper Ore
+    tooltipText: 'An Ore used to be smelted down. (WIP)
+
+      You can get them from
+      Mining.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Copper-Ore
+  - tooltipName: Culture
+    tooltipText: 'A Research Resource used to unlock new Things.
+
+      WIP'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Cured Fish
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      Made
+      from Fish with Fireplaces.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Cured-Fish
+  - tooltipName: Cured Meat
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      Made
+      from Meat with Fireplaces.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Cured-Meat
+  - tooltipName: Faith
+    tooltipText: 'A Research Resource used to unlock new Things.
+
+      You can get
+      this from Soothsayer.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Fireplaces
+    tooltipText: 'A Tool Item used for Cook and Cure Food.
+
+      You can craft them
+      by Firekeeper.'
     tooltipImage: {fileID: 0}
     triggerWords: []
   - tooltipName: Fish
-    tooltipText: Test Stone stuff
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      You
+      can get them from Fishing.'
     tooltipImage: {fileID: 0}
     triggerWords: []
+  - tooltipName: Flint Tools
+    tooltipText: 'A Tool Item used for Carving, Fishing and Hunting.
+
+      You can
+      craft them by Stone-Knapping.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Flint-Tools
+    - Flint-Tool
   - tooltipName: Fruits
-    tooltipText: Test Stone stuff
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      You
+      can get them from Gathering.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Fur
+    tooltipText: 'A basic Crafting Material used for making Cloth.
+
+      You can
+      get them from Hunting.'
     tooltipImage: {fileID: 0}
     triggerWords: []
   - tooltipName: Herbs
-    tooltipText: Test Stone stuff
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      You
+      can get them from Gathering.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Iron Ore
+    tooltipText: 'An Ore used to be smelted down. (WIP)
+
+      You can get them from
+      Mining.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Iron-Ore
+  - tooltipName: Leather
+    tooltipText: TODO
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Iron
+    tooltipText: TODO
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Copper
+    tooltipText: TODO
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Bronze
+    tooltipText: TODO
     tooltipImage: {fileID: 0}
     triggerWords: []
   - tooltipName: Meat
-    tooltipText: Test Stone stuff
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      You
+      can get them from Hunting.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Mud
+    tooltipText: 'A basic Crafting Material used for making Huts. WIP
+
+      You
+      can get them from Digging.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Science
+    tooltipText: 'A Research Resource used to unlock new Things.
+
+      You can get
+      this from Dreamer.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Soft Metal Tools
+    tooltipText: TODO
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Hard Metal Tools
+    tooltipText: TODO
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Stone Tools
+    tooltipText: 'A Tool Item used for Digging, Mining and Wood-Cutting.
+
+      You
+      can craft them by Stone-Tool-Making.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Stone-Tools
+    - Stone-Tool
+  - tooltipName: Tin Ore
+    tooltipText: 'An Ore used to be smelted down. (WIP)
+
+      You can get them from
+      Mining.'
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Tin-Ore
+  - tooltipName: Tin
+    tooltipText: TODO
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Water
+    tooltipText: 'A Drinks item with a Saturation of {saturationValue}.
+
+      You
+      can get them from Gathering.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Wood
+    tooltipText: 'A basic Crafting Material used for making Houses. WIP
+
+      You
+      can get them from Wood-Cutting.'
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Cook
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords:
+    - Cooking
+  - tooltipName: Cure
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Tool
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Research
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Saturation
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Gathering
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Mining
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Carve Bone Statue
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Carve Stone Statue
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Cook Fish
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Cook Meat
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Digging
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Dreamer
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Firekeeper
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Fishing
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Hunting
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Sewing Cloth
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Sewing Fur
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Soothsayer
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Stone Knapping
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Stone Tool Making
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Wood Cutting
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    triggerWords: []
+  - tooltipName: Curiosity
+    tooltipText: TODO
     tooltipImage: {fileID: 0}
     triggerWords: []
 --- !u!1 &359511048
@@ -968,7 +1279,7 @@ PrefabInstance:
     - target: {fileID: 6972452502457111024, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_text
-      value: Science
+      value: Research
       objectReference: {fileID: 0}
     - target: {fileID: 7057164767497490859, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}

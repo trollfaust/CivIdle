@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using trollschmiede.CivIdle.Science;
 using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.Generic.Tooltip;
 
 namespace trollschmiede.CivIdle.UI
 {
@@ -12,6 +13,7 @@ namespace trollschmiede.CivIdle.UI
         [SerializeField] Transform techRequirementDisplayContainer = null;
         [SerializeField] TextMeshProUGUI nameText = null;
         [SerializeField] Image iconImage = null;
+        [SerializeField] TooltipHoverElement hoverElement = null;
 
         private Technology tech;
 
@@ -34,6 +36,9 @@ namespace trollschmiede.CivIdle.UI
 
             iconImage.sprite = technology.GetSprite();
             nameText.text = technology.GetName();
+
+            //hoverElement.SetTooltipValueElement(null);
+            hoverElement.TooltipInitialize(technology.GetName());
         }
 
         public void OnButtonPressed()

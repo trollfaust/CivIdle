@@ -22,7 +22,7 @@ namespace trollschmiede.Generic.Tooltip
         [HideInInspector] public bool isInUse = false;
         [HideInInspector] public bool isFixed = false;
 
-        private Tooltip tooltip = null;
+        public Tooltip tooltip { get; private set; }
         private ITooltipValueElement tooltipValueElement;
         private Vector3 oldPos;
         private float timeStamp;
@@ -112,7 +112,7 @@ namespace trollschmiede.Generic.Tooltip
                 {
                     try
                     {
-                        text.Replace(item.Key, item.Value);
+                        text = text.Replace("{" + item.Key + "}", item.Value);
                     }
                     catch (System.Exception)
                     {

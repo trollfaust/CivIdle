@@ -25,7 +25,7 @@ namespace trollschmiede.Generic.Tooltip
 
         void Update()
         {
-            if (isOverUI && text != null && !hasTooltipOn) // If you have Hovertext and no Tooltip, set Tooltip if available
+            if (isOverUI && text != null /*&& !hasTooltipOn*/) // If you have Hovertext and no Tooltip, set Tooltip if available
             {
                 var wordIndex = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
                 if (wordIndex != -1)
@@ -35,6 +35,10 @@ namespace trollschmiede.Generic.Tooltip
                     Tooltip tooltip = TooltipManager.Instance.GetTooltipDataByString(LastHoveredWord);
                     if (tooltip != null)
                     {
+                        if (currentTooltip != null && tooltip != currentTooltip.GetComponent<TooltipDisplay>().tooltip)
+                        {
+                            RemoveTooltipSelf();
+                        }
                         SetTooltip(tooltip);
                     }
                 }
@@ -58,11 +62,16 @@ namespace trollschmiede.Generic.Tooltip
                 }
                 if (currentTooltip != null) // Remove Tooltip if not needed anymore
                 {
-                    TooltipManager.Instance.RemoveTooltip(currentTooltip);
-                    currentTooltip = null;
-                    hasTooltipOn = false;
+                    RemoveTooltipSelf();
                 }
             }
+        }
+
+        void RemoveTooltipSelf()
+        {
+            TooltipManager.Instance.RemoveTooltip(currentTooltip);
+            currentTooltip = null;
+            hasTooltipOn = false;
         }
 
         IEnumerator StartTooltipLocking(float _timeToWait) //Coroutine for Locking a Tooltip

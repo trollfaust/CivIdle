@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using trollschmiede.CivIdle.Resources;
+using trollschmiede.Generic.Tooltip;
 
 namespace trollschmiede.CivIdle.UI
 {
@@ -14,6 +14,7 @@ namespace trollschmiede.CivIdle.UI
         [SerializeField] Button substructButton = null;
         [SerializeField] GatheringButton gatheringButton = null;
         [SerializeField] Resource resourcePeople = null;
+        [SerializeField] TooltipHoverElement hoverElement = null;
 
         private GatheringObject gatheringObject;
         private int count = 0;
@@ -43,6 +44,8 @@ namespace trollschmiede.CivIdle.UI
             gatheringObject = _gatheringObject;
             gatheringButton.SetGatheringObjectDisplay(this, gatheringObject);
             ResourceManager.instance.NewGatheringObj(this);
+            //hoverElement.SetTooltipValueElement(null);
+            hoverElement.TooltipInitialize(gatheringObject.name);
         }
 
         public void OnAddButtonPressed()

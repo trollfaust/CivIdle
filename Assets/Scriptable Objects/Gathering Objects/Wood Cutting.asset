@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Wood Cutting
   m_EditorClassIdentifier: 
   buttonName: Wood Cutting
-  craftingMaterials: []
+  craftingMaterials:
+  - resource: {fileID: 11400000, guid: 6fcfd22040c129d48a31909b2aba6cab, type: 2}
+    minValue: 1
+    maxValue: 1
+    chance: 100
   resourcesPairs:
   - resource: {fileID: 11400000, guid: 74d23df5ebb808441a0e58966b8d177a, type: 2}
     minValue: 2
