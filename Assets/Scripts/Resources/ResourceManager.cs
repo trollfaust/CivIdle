@@ -26,24 +26,20 @@ namespace trollschmiede.CivIdle.Resources
         public Resource[] allResources = null;
         [SerializeField] GameObject resourceDisplayPrefab = null;
         [SerializeField] Transform resourceDisplayParent = null;
-        [Header("People Managment")]
-        [SerializeField] Resource peopleResource = null;
-        [SerializeField] float peopleNeedsUpdateTime = 5f;
-        [SerializeField] Action[] peopleNeeds = new Action[0];
-
-        private bool isPeopleAmountRunning = false;
+        [SerializeField] PeopleManager peopleManager = null;
+        
         public void Evoke() { }
         public void Evoke(Resource _resource)
         {
-            if (_resource == peopleResource && !isPeopleAmountRunning)
+            if (_resource == peopleManager.peopleResource && !isPeopleAmountRunning)
             {
                 StartCoroutine(PeopleAmountCheck());
             }
             ActivateResource(_resource);
         }
 
+        private bool isPeopleAmountRunning = false;
         private List<ResoureRequierment> requiermentsMeet;
-        private float timeStamp;
         private List<GatheringObjectDisplay> gatheringObjects;
 
         private void Start()
@@ -61,22 +57,6 @@ namespace trollschmiede.CivIdle.Resources
             }
             requiermentsMeet = new List<ResoureRequierment>();
             requiermentsMeet.Add(ResoureRequierment.Start);
-            timeStamp = Time.time;
-        }
-
-        void Update()
-        {
-            if (timeStamp + peopleNeedsUpdateTime <= Time.time)
-            {
-                timeStamp = Time.time;
-                for (int i = 0; i < peopleResource.amount; i++)
-                {
-                    foreach (var item in peopleNeeds)
-                    {
-                        item.EvokeAction();
-                    }
-                }
-            }
         }
 
         void OnDisable()
@@ -123,9 +103,9 @@ namespace trollschmiede.CivIdle.Resources
         IEnumerator PeopleAmountCheck()
         {
             isPeopleAmountRunning = true;
-            while (peopleResource.amount > 0 && gatheringObjects != null)
+            while (peopleManager.peopleResource.amount > 0 && gatheringObjects != null)
             {
-                while (peopleResource.amountOpen < 0)
+                while (peopleManager.peopleResource.amountOpen < 0)
                 {
                     foreach (var item in gatheringObjects)
                     {

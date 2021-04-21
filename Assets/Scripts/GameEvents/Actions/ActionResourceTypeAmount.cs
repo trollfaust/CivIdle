@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.Resources;
 using trollschmiede.CivIdle.UI;
+using System.Collections.Generic;
 
 namespace trollschmiede.CivIdle.GameEvents
 {
@@ -10,38 +11,69 @@ namespace trollschmiede.CivIdle.GameEvents
         [SerializeField] ResourceCategory resourceCategory = ResourceCategory.Other;
         [SerializeField] int amountMin = 0;
         [SerializeField] int amountMax = 0;
-        [SerializeField] GameEvent faildGameEvent = null;
+
+        private List<Resource> resourceOfType;
+        private float savedValue;
 
         public override int EvokeAction()
         {
-            if (LogDisplay.instance != null)
+            float i = 0;
+            resourceOfType = new List<Resource>();
+            foreach (Resource resource in ResourceManager.instance.allResources)
             {
-                LogDisplay.instance.RegisterForGameEvent(faildGameEvent);
+                if (resource.resourceCategory == resourceCategory)
+                {
+                    resourceOfType.Add(resource);
+                    i = i + resource.amount * resource.saturationValue;
+                }
             }
 
-            int amount = Random.Range(amountMin, amountMax + 1);
-            int count = amount;
+            float amount = (float)Random.Range(amountMin, amountMax + 1);
+            float count = Mathf.Abs(amount);
 
-            int i = 0;
-            while (count > 0 && i <= amount + 1)
+            if (i < Mathf.Abs(amount))
             {
-                i++;
-                foreach (Resource resource in ResourceManager.instance.allResources)
+                return 0;
+            }
+
+            count += savedValue;
+            int safeCount = 0;
+            while (count > 0 && safeCount < 20)
+            {
+                safeCount++;
+                int index = Random.Range(0, resourceOfType.Count);
+                if(resourceOfType[index].amount > 0)
                 {
-                    if (count <= 0)
-                        break;
-                    if (resource.resourceCategory == resourceCategory && resource.amount > 0)
+                    resourceOfType[index].AmountChange(Mathf.RoundToInt(Mathf.Sign(amount) * 1));
+                    count = count - resourceOfType[index].saturationValue;
+                    if (count < 0)
                     {
-                        resource.AmountChange(-1);
-                        count--;
+                        savedValue = count;
                     }
                 }
             }
-            if (i > amount && faildGameEvent != null)
+
+            if (safeCount >= 20)
             {
-                faildGameEvent.Evoke();
+                while (count > 0)
+                {
+                    foreach (Resource resource in resourceOfType)
+                    {
+                        if (resource.amount > 0)
+                        {
+                            resource.AmountChange(Mathf.RoundToInt(Mathf.Sign(amount) * 1));
+                            count = count - resource.saturationValue;
+                            if (count < 0)
+                            {
+                                savedValue = count;
+                                break;
+                            }
+                        }
+                    }
+                }
             }
-            return amount;
+
+            return Mathf.RoundToInt(amount);
         }
     }
 }

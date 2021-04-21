@@ -2638,6 +2638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596311940}
   - component: {fileID: 1596311939}
+  - component: {fileID: 1596311941}
   m_Layer: 0
   m_Name: ResourceManager
   m_TagString: Untagged
@@ -2697,11 +2698,7 @@ MonoBehaviour:
   resourceDisplayPrefab: {fileID: 3709490408999646742, guid: 764cc9e50642606408497e8965d555cd,
     type: 3}
   resourceDisplayParent: {fileID: 1765953225}
-  peopleResource: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
-  peopleNeedsUpdateTime: 5
-  peopleNeeds:
-  - {fileID: 11400000, guid: 2bba01ee75d2dd9409e7cc41e3573b2d, type: 2}
-  - {fileID: 11400000, guid: 96882a2ccd9600a4c93c31f5641486b3, type: 2}
+  peopleManager: {fileID: 1596311941}
 --- !u!4 &1596311940
 Transform:
   m_ObjectHideFlags: 0
@@ -2716,6 +2713,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596311941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596311938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ea9e5d737e65446be4c03c7e46fce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peopleResource: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
+  peopleNeedsUpdateTime: 5
+  peopleNeeds:
+  - {fileID: 11400000, guid: 2bba01ee75d2dd9409e7cc41e3573b2d, type: 2}
+  - {fileID: 11400000, guid: 96882a2ccd9600a4c93c31f5641486b3, type: 2}
+  failGameEvent: {fileID: 11400000, guid: 7ff3dd898603497409732750516dc830, type: 2}
 --- !u!224 &1604500786 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,

@@ -17,11 +17,11 @@ MonoBehaviour:
   resourcesPairs:
   - resource: {fileID: 11400000, guid: 8f86e182da9013e48853834d5c5b6af5, type: 2}
     minValue: 2
-    maxValue: 5
+    maxValue: 6
     chance: 100
   - resource: {fileID: 11400000, guid: 0b4ada013579dfb42b7b4aada735a348, type: 2}
-    minValue: 1
-    maxValue: 3
+    minValue: 2
+    maxValue: 5
     chance: 100
   - resource: {fileID: 11400000, guid: 7eb69ba3b5729a84984e75a96158fcad, type: 2}
     minValue: 1

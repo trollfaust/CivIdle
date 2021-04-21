@@ -39,9 +39,13 @@ namespace trollschmiede.CivIdle.GameEvents
                     if (!gameEvent.isDone)
                     {
                         isRunning = true;
-                        if (gameEvent.Evoke())
+                        if (!gameEvent.isSpecialTriggered)
                         {
-                            StartCoroutine(gameEvent.WaitTime());
+                            bool checkGameEvent = gameEvent.Evoke();
+                            if (checkGameEvent)
+                            {
+                                StartCoroutine(gameEvent.WaitTime());
+                            }
                         }
                     }
                 }

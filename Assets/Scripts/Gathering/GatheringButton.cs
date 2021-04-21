@@ -48,6 +48,17 @@ namespace trollschmiede.CivIdle.UI
                     button.interactable = true;
                 }
             }
+            if (!isOnCooldown)
+            {
+                button.interactable = true;
+                foreach (var item in gatheringObject.craftingMaterials)
+                {
+                    if (item.maxValue > item.resource.amount)
+                    {
+                        button.interactable = false;
+                    }
+                }
+            }
         }
 
         public void SetGatheringObjectDisplay(GatheringObjectDisplay _gatheringObjectDisplay, GatheringObject _gatheringObject)

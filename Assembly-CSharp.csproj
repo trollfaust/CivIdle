@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Gathering\GatheringManager.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObject.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObjectDisplay.cs" />
+    <Compile Include="Assets\Scripts\Resources\PeopleManager.cs" />
     <Compile Include="Assets\Scripts\Resources\Reset.cs" />
     <Compile Include="Assets\Scripts\Resources\Resource.cs" />
     <Compile Include="Assets\Scripts\Resources\ResourceChancePair.cs" />

@@ -132,7 +132,7 @@ namespace trollschmiede.CivIdle.GameEvents
 
         public bool Evoke()
         {
-            if (isDone || isOnHold || isSpecialTriggered)
+            if (isDone || isOnHold)
                 return false;
 
             if (Random.Range(0,100) > chanceToPass)
