@@ -23,42 +23,11 @@ namespace trollschmiede.Generic.Tooltip
         [HideInInspector] public bool isFixed = false;
 
         public Tooltip tooltip { get; private set; }
-        private ITooltipValueElement tooltipValueElement;
         private Vector3 oldPos;
         private float timeStamp;
         private bool isInvokedFixed = false;
         private bool isInvokedUnFixed = false;
 
-        /// <summary>
-        /// Setup the Tooltip and Tooltip Value Element for Display
-        /// </summary>
-        /// <param name="_tooltip"></param>
-        /// <param name="_tooltipValueElement"></param>
-        public void SetTooltip(Tooltip _tooltip, ITooltipValueElement _tooltipValueElement)
-        {
-            this.tooltip = _tooltip;
-            this.tooltipValueElement = _tooltipValueElement;
-
-            titleText.text = _tooltip.tooltipName;
-            tooltipImage.sprite = _tooltip.tooltipImage;
-
-            string text = _tooltip.tooltipText;
-            Dictionary<string, string> dict = _tooltipValueElement.GetTooltipValues();
-            foreach (KeyValuePair<string, string> item in dict) 
-            {
-                try
-                {
-                    text = text.Replace("{" + item.Key + "}", item.Value);
-                }
-                catch (System.Exception)
-                {
-                    continue;
-                }
-            }
-
-            tooltipText.text = text;
-            SetLayoutElement();
-        }
         /// <summary>
         /// Setup the Tooltip for Display
         /// </summary>
@@ -69,7 +38,8 @@ namespace trollschmiede.Generic.Tooltip
 
             titleText.text = _tooltip.tooltipName;
             tooltipImage.sprite = _tooltip.tooltipImage;
-            tooltipText.text = _tooltip.tooltipText;
+            tooltipText.text = TextEdit(_tooltip.tooltipText);
+            hoverElement.SetSelfTooltip(_tooltip);
             SetLayoutElement();
         }
 
@@ -81,6 +51,55 @@ namespace trollschmiede.Generic.Tooltip
             int contentLenght = tooltipText.text.Length;
 
             layoutElement.enabled = (titleLenght > TooltipManager.Instance.settings.characterWrapLimit || contentLenght > TooltipManager.Instance.settings.characterWrapLimit) ? true : false;
+        }
+
+        string TextEdit(string text)
+        {
+            if (tooltip.GetTooltipValueElement() != null)
+            {
+                foreach (var dic in tooltip.GetTooltipValueElement())
+                {
+                    Dictionary<string, string> dict = dic.GetTooltipValues();
+                    foreach (KeyValuePair<string, string> item in dict)
+                    {
+                        try
+                        {
+                            text = text.Replace("{" + item.Key + "}", item.Value);
+                        }
+                        catch (System.Exception)
+                        {
+                            continue;
+                        }
+                    }
+                }
+            }
+
+            char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
+            string colorCode = ColorUtility.ToHtmlStringRGB(TooltipManager.Instance.settings.highlightColor);
+
+            string[] words = text.Split(delimiterChars);
+            for (int i = 0; i < words.Length; i++)
+            {
+                string word = words[i];
+                bool selfCheck = false;
+                foreach (var item in tooltip.triggerWords)
+                {
+                    if (item == word)
+                    {
+                        selfCheck = true;
+                        break;
+                    }
+                }
+                if (tooltip.tooltipName == word)
+                    selfCheck = true;
+                if (TooltipDatabase.instance.allTriggerWords.Contains(word) && !selfCheck && word != string.Empty)
+                {
+                    string newWord = "<color=#" + colorCode + ">" + word + "</color>";
+                    text = text.Replace(word, newWord);
+                }
+            }
+
+            return text;
         }
 
         void Update()
@@ -105,21 +124,7 @@ namespace trollschmiede.Generic.Tooltip
 
             timeStamp = Time.time;
             string text = tooltip.tooltipText;
-            if (tooltipValueElement != null)
-            {
-                Dictionary<string, string> dict = tooltipValueElement.GetTooltipValues();
-                foreach (KeyValuePair<string, string> item in dict)
-                {
-                    try
-                    {
-                        text = text.Replace("{" + item.Key + "}", item.Value);
-                    }
-                    catch (System.Exception)
-                    {
-                        continue;
-                    }
-                }
-            }
+            text = TextEdit(text);
             tooltipText.text = text;
         }
 

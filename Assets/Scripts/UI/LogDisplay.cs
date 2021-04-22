@@ -53,7 +53,7 @@ namespace trollschmiede.CivIdle.UI
         {
             string text = gameEvent.GetGameEventText();
             if (text == "")
-                return; 
+                return;
 
             if (logDisplayItems.Count >= maxLogs)
             {
@@ -84,6 +84,16 @@ namespace trollschmiede.CivIdle.UI
             }
             _gameEvent.RegisterListener(this);
             gameEvents.Add(_gameEvent);
+        }
+
+        public void Reset()
+        {
+            foreach (var item in logDisplayContentTransform.GetComponentsInChildren<LogDisplayItem>())
+            {
+                Destroy(item.gameObject);
+            }
+            logDisplayItems = new List<GameObject>();
+            gameEvents = new List<GameEvent>();
         }
     }
 }

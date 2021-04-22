@@ -29,6 +29,15 @@ namespace trollschmiede.CivIdle.GameEvents
             return false;
         }
 
+        public override string GetRequiermentString()
+        {
+            if (isMaxAmount)
+            {
+                return "max " + resourceAmount.ToString() + " of " + resource.name;
+            }
+            return resourceAmount.ToString() + " " + resource.name;
+        }
+
         public Resource GetResource()
         {
             return resource;

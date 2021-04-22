@@ -12,5 +12,7 @@ namespace trollschmiede.Generic.Tooltip
         public KeyCode unlockKey;
         public float updateTextTime;
         public int characterWrapLimit;
+        public float hoverTimeToShow;
+        public Color highlightColor;
     }
 }

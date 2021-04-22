@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.Events;
 using System.Collections.Generic;
-using System;
 using trollschmiede.Generic.Tooltip;
 
 namespace trollschmiede.CivIdle.Resources

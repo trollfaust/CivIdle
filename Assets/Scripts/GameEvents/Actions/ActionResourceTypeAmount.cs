@@ -75,6 +75,10 @@ namespace trollschmiede.CivIdle.GameEvents
 
             return Mathf.RoundToInt(amount);
         }
+        public override string GetActionString()
+        {
+            return "Change Resource Amounts in Category " + resourceCategory.ToString() + " by min " + amountMin.ToString() + " and max " + amountMax.ToString();
+        }
     }
 }
 

@@ -13,6 +13,10 @@ namespace trollschmiede.CivIdle.GameEvents
             GatheringManager.instance.EnableGatheringObject(gatheringObject);
             return 0;
         }
+        public override string GetActionString()
+        {
+            return "Unlocks Work Task " + gatheringObject.name;
+        }
     }
 }
 

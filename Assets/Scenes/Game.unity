@@ -138,7 +138,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1846852664}
+    m_TransformParent: {fileID: 313619597}
     m_Modifications:
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
@@ -158,17 +158,17 @@ PrefabInstance:
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
@@ -198,17 +198,17 @@ PrefabInstance:
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
@@ -218,7 +218,7 @@ PrefabInstance:
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
@@ -228,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
         type: 3}
@@ -263,6 +263,80 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16e95ad93b0c37941a0884257c701a8a, type: 3}
+--- !u!1 &147684964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147684965}
+  - component: {fileID: 147684967}
+  - component: {fileID: 147684966}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &147684965
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147684964}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1674385049}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &147684966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147684964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &147684967
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147684964}
+  m_CullTransparentMesh: 0
 --- !u!1 &161758685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4773645164899371950, guid: 0275605ea5c29b841bd0260794059bf5,
@@ -528,6 +602,161 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 613558303}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &276852204
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1368836638}
+    m_Modifications:
+    - target: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Name
+      value: TabSwitchBuilding
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 258
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877344164619657362, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: tab
+      value: 
+      objectReference: {fileID: 995829690}
+    - target: {fileID: 6972452502457111024, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_text
+      value: Research
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057164767497490859, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057164767497490859, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057164767497490859, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4327e6f31b58b0e45a4c01f1dd42158c, type: 3}
+--- !u!224 &276852205 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+    type: 3}
+  m_PrefabInstance: {fileID: 276852204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &289029705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8036412579963163338, guid: 0275605ea5c29b841bd0260794059bf5,
@@ -558,6 +787,12 @@ MonoBehaviour:
   m_Spacing: {x: 2, y: 2}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!224 &313619597 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6841848348129886931, guid: 0275605ea5c29b841bd0260794059bf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 970790436}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326210276
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9ad3dd3371df14fb5dd1aee77befe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {r: 0.6615831, g: 0.13710396, b: 0.745283, a: 1}
+  allTriggerWords: []
   database:
   - tooltipName: Sticks
     tooltipText: 'A basic Crafting Material used for making Fireplaces and Stone-Tools.
@@ -626,6 +861,8 @@ MonoBehaviour:
       You
       can get them from Gathering and Wood-Cutting.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 1eef26b33b641254180afddc2bcde8fa, type: 2}
     triggerWords: []
   - tooltipName: Stone
     tooltipText: 'A basic Crafting Material used for making  Flint-Tools, Stone-Tools
@@ -633,6 +870,8 @@ MonoBehaviour:
 
       You can get them from Gathering, Digging and Mining.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 7662620a16f391c4b9345e61b8e51978, type: 2}
     triggerWords: []
   - tooltipName: Crafting Material
     tooltipText: 'Different Materials used for crafting.
@@ -640,15 +879,19 @@ MonoBehaviour:
       Basic: Stone, Sticks,
       Flint, Bone, Fur, Mud, Clay, Wood'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
     triggerWords:
     - Crafting
     - Material
+    - Crafting-Material
   - tooltipName: Flint
     tooltipText: 'A basic Crafting Material used for making  Flint-Tools and Fireplaces.
 
       You
       can get them from Gathering, Digging and Mining.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 3ab89ffa2d2b796489c22cf2f5e8cc0d, type: 2}
     triggerWords: []
   - tooltipName: People
     tooltipText: 'Your People who you can assign to work Tasks.
@@ -659,6 +902,8 @@ MonoBehaviour:
       Each Person needs Food
       and Drinks with a value of 2 Saturation every 5 Seconds.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
     triggerWords: []
   - tooltipName: Bone
     tooltipText: 'A basic Crafting Material used for making Bone-Statues.
@@ -666,12 +911,16 @@ MonoBehaviour:
       You
       can get them from Hunting.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 4491c5dc03c0fc24cab0a2d976f2aa6e, type: 2}
     triggerWords: []
   - tooltipName: Carved Statues
     tooltipText: 'Made from Stone or Bone with Flint-Tools.
 
       WIP'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: b1c2b94e7cdc5814b93f40283b62e60e, type: 2}
     triggerWords:
     - Stone-Statues
     - Bone-Statues
@@ -681,6 +930,8 @@ MonoBehaviour:
       You can get
       them from Digging.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: a8aa36a8277d2314c9c121113d417bb6, type: 2}
     triggerWords: []
   - tooltipName: Cloth
     tooltipText: 'A Crafting Material used for making Clothing.
@@ -688,12 +939,16 @@ MonoBehaviour:
       Made from
       Fur.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 3f022975381bc56428a8a2500583fe76, type: 2}
     triggerWords: []
   - tooltipName: Clothing
     tooltipText: 'WIP
 
       Made from Cloth.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 6d578d3220ccca046850ac5d8fbd5e1e, type: 2}
     triggerWords: []
   - tooltipName: Cooked Fish
     tooltipText: 'A Food item with a Saturation of {saturationValue}.
@@ -701,6 +956,8 @@ MonoBehaviour:
       Made
       from Fish with Fireplaces.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 21a20d577383da748ad2e752ddfffb7b, type: 2}
     triggerWords:
     - Cooked-Fish
   - tooltipName: Cooked Meat
@@ -709,6 +966,8 @@ MonoBehaviour:
       Made
       from Meat with Fireplaces.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 4680af781b1e5f440b91a2e28bec7015, type: 2}
     triggerWords:
     - Cooked-Meat
   - tooltipName: Copper Ore
@@ -717,6 +976,8 @@ MonoBehaviour:
       You can get them from
       Mining.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 907796746a54bdc4fabed9790535247a, type: 2}
     triggerWords:
     - Copper-Ore
   - tooltipName: Culture
@@ -724,6 +985,8 @@ MonoBehaviour:
 
       WIP'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 9c927899ba5ffa34381bb79173006d6d, type: 2}
     triggerWords: []
   - tooltipName: Cured Fish
     tooltipText: 'A Food item with a Saturation of {saturationValue}.
@@ -731,6 +994,8 @@ MonoBehaviour:
       Made
       from Fish with Fireplaces.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 559dfec9214dfef4fb0ed80785f9a6a9, type: 2}
     triggerWords:
     - Cured-Fish
   - tooltipName: Cured Meat
@@ -739,6 +1004,8 @@ MonoBehaviour:
       Made
       from Meat with Fireplaces.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 25786b1a1e585074996fd882e1f8f274, type: 2}
     triggerWords:
     - Cured-Meat
   - tooltipName: Faith
@@ -747,6 +1014,8 @@ MonoBehaviour:
       You can get
       this from Soothsayer.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: cc3c0560b25a72840879e507f6b0f28c, type: 2}
     triggerWords: []
   - tooltipName: Fireplaces
     tooltipText: 'A Tool Item used for Cook and Cure Food.
@@ -754,6 +1023,8 @@ MonoBehaviour:
       You can craft them
       by Firekeeper.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 7965b9c714c1eec468f1338d0c309e97, type: 2}
     triggerWords: []
   - tooltipName: Fish
     tooltipText: 'A Food item with a Saturation of {saturationValue}.
@@ -761,6 +1032,8 @@ MonoBehaviour:
       You
       can get them from Fishing.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 30a43612957dcfc448d0e3cbfe94a7b2, type: 2}
     triggerWords: []
   - tooltipName: Flint Tools
     tooltipText: 'A Tool Item used for Carving, Fishing and Hunting.
@@ -768,6 +1041,8 @@ MonoBehaviour:
       You can
       craft them by Stone-Knapping.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: eb6177abc3f12ea4897813dfe7e7a7d9, type: 2}
     triggerWords:
     - Flint-Tools
     - Flint-Tool
@@ -777,6 +1052,8 @@ MonoBehaviour:
       You
       can get them from Gathering.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 7eb69ba3b5729a84984e75a96158fcad, type: 2}
     triggerWords: []
   - tooltipName: Fur
     tooltipText: 'A basic Crafting Material used for making Cloth.
@@ -784,6 +1061,8 @@ MonoBehaviour:
       You can
       get them from Hunting.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 73b1bf0dfb50a444f9ec1d84ceb4e95a, type: 2}
     triggerWords: []
   - tooltipName: Herbs
     tooltipText: 'A Food item with a Saturation of {saturationValue}.
@@ -791,6 +1070,8 @@ MonoBehaviour:
       You
       can get them from Gathering.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 0b4ada013579dfb42b7b4aada735a348, type: 2}
     triggerWords: []
   - tooltipName: Iron Ore
     tooltipText: 'An Ore used to be smelted down. (WIP)
@@ -798,23 +1079,33 @@ MonoBehaviour:
       You can get them from
       Mining.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 333ded80d78af7d47b328729a42deece, type: 2}
     triggerWords:
     - Iron-Ore
   - tooltipName: Leather
     tooltipText: TODO
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: c15f158e1179631429ce1250a4c3e2b6, type: 2}
     triggerWords: []
   - tooltipName: Iron
     tooltipText: TODO
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 3424c14c4b357db408b724fb043a1b8b, type: 2}
     triggerWords: []
   - tooltipName: Copper
     tooltipText: TODO
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 18842b7cd4ea2e449a7f6850a55bddc5, type: 2}
     triggerWords: []
   - tooltipName: Bronze
     tooltipText: TODO
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 6c7bab46a323ff746abaef7e8f6d4c12, type: 2}
     triggerWords: []
   - tooltipName: Meat
     tooltipText: 'A Food item with a Saturation of {saturationValue}.
@@ -822,6 +1113,8 @@ MonoBehaviour:
       You
       can get them from Hunting.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 80a1cfd018f21a54aafb07e40d554d8e, type: 2}
     triggerWords: []
   - tooltipName: Mud
     tooltipText: 'A basic Crafting Material used for making Huts. WIP
@@ -829,6 +1122,8 @@ MonoBehaviour:
       You
       can get them from Digging.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: f6cbfecfea1699448a897e732e96dcb3, type: 2}
     triggerWords: []
   - tooltipName: Science
     tooltipText: 'A Research Resource used to unlock new Things.
@@ -836,21 +1131,33 @@ MonoBehaviour:
       You can get
       this from Dreamer.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 7834aae14dcbd354ab267083c7bc7e16, type: 2}
     triggerWords: []
   - tooltipName: Soft Metal Tools
     tooltipText: TODO
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 03449745ab0924c49b919e313a15666c, type: 2}
     triggerWords: []
   - tooltipName: Hard Metal Tools
     tooltipText: TODO
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 6dfe7673151c5e841b211f37e5a50bbc, type: 2}
     triggerWords: []
   - tooltipName: Stone Tools
-    tooltipText: 'A Tool Item used for Digging, Mining and Wood-Cutting.
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
 
-      You
-      can craft them by Stone-Tool-Making.'
+      Resource:
+      A Tool Item used for Digging, Mining and Wood-Cutting.
+
+      You can craft
+      them by Stone-Tool-Making.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 6fcfd22040c129d48a31909b2aba6cab, type: 2}
+    - {fileID: 11400000, guid: 0ee320a7b9ab3c84dad1ca161c741d5c, type: 2}
     triggerWords:
     - Stone-Tools
     - Stone-Tool
@@ -860,11 +1167,15 @@ MonoBehaviour:
       You can get them from
       Mining.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 63e1ac5054db563499e17cf3b0acd855, type: 2}
     triggerWords:
     - Tin-Ore
   - tooltipName: Tin
     tooltipText: TODO
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 723f93d661560a64985d127d5f8a0efc, type: 2}
     triggerWords: []
   - tooltipName: Water
     tooltipText: 'A Drinks item with a Saturation of {saturationValue}.
@@ -872,6 +1183,8 @@ MonoBehaviour:
       You
       can get them from Gathering.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 8f86e182da9013e48853834d5c5b6af5, type: 2}
     triggerWords: []
   - tooltipName: Wood
     tooltipText: 'A basic Crafting Material used for making Houses. WIP
@@ -879,100 +1192,418 @@ MonoBehaviour:
       You
       can get them from Wood-Cutting.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 74d23df5ebb808441a0e58966b8d177a, type: 2}
     triggerWords: []
-  - tooltipName: Cook
+  - tooltipName: 
     tooltipText: 
     tooltipImage: {fileID: 0}
-    triggerWords:
-    - Cooking
-  - tooltipName: Cure
+    tooltipValueElementObject: []
+    triggerWords: []
+  - tooltipName: 
     tooltipText: 
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
     triggerWords: []
   - tooltipName: Tool
-    tooltipText: 
+    tooltipText: 'A Tool is a Resource which you need for certain Crafting and Gathering
+      Tasks.
+
+      Curently there are Flint-Tools and Stone-Tools.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
     triggerWords: []
   - tooltipName: Research
-    tooltipText: 
+    tooltipText: 'You can research Technologys under the Research Tab.
+
+      To
+      research you need mostly Science, Faith or Culture depending on the Technology.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject: []
+    triggerWords:
+    - researched
   - tooltipName: Saturation
-    tooltipText: 
+    tooltipText: 'The Saturation Value shows how good a given Food or Drink is.
+
+      Each
+      Person in your Tribe needs Food and Drinks with each 2 Saturation per 5 Secounds.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
     triggerWords: []
   - tooltipName: Gathering
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 9a3a5145d8692f541a14efe9ddbe1c89, type: 2}
     triggerWords: []
   - tooltipName: Mining
-    tooltipText: 
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: cec7eb07f41104646bb64b8b219227ec, type: 2}
+    - {fileID: 11400000, guid: 8a94353af30c5074389d70792deed9f7, type: 2}
     triggerWords: []
   - tooltipName: Carve Bone Statue
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 549d7a4cbe1ffbb4cb61f0205d56216b, type: 2}
+    triggerWords:
+    - Carve-Bone-Statues
   - tooltipName: Carve Stone Statue
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 70fc9ed3d367cc14da76b2ba8926c7b6, type: 2}
+    triggerWords:
+    - Carve-Stone-Statues
   - tooltipName: Cook Fish
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 98c6d31dfcb2dd649ac38b6b48b5a9c3, type: 2}
+    triggerWords:
+    - Cook-Fish
   - tooltipName: Cook Meat
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 577e72fd74a124a40bc68cd221404e28, type: 2}
+    triggerWords:
+    - Cook-Meat
   - tooltipName: Digging
-    tooltipText: 
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 054eec9ccc8da49428aea7d3e46a7285, type: 2}
+    - {fileID: 11400000, guid: 9aa46a023299a1d4ba7930900698567b, type: 2}
     triggerWords: []
   - tooltipName: Dreamer
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 6b3f11513d7b3104999921fd9b92c70e, type: 2}
     triggerWords: []
   - tooltipName: Firekeeper
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 3cf734143e3d4d146a3f40436635c7ab, type: 2}
     triggerWords: []
   - tooltipName: Fishing
-    tooltipText: 
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: cf7682c549bd82b4b9ff13e7a378ecc4, type: 2}
+    - {fileID: 11400000, guid: 79cc83cbadb800a44b4d703b999d8e5f, type: 2}
     triggerWords: []
   - tooltipName: Hunting
-    tooltipText: 
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: c61e856ed5e999446a416d740beed26b, type: 2}
+    - {fileID: 11400000, guid: c79542988350b6b4399519fdd646e2f3, type: 2}
     triggerWords: []
   - tooltipName: Sewing Cloth
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: d4650c171df59014faae63f803e395ba, type: 2}
+    triggerWords:
+    - Sewing-Cloth
   - tooltipName: Sewing Fur
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 4f69d983e9dba2f4fbe07ed5662367f1, type: 2}
+    triggerWords:
+    - Sewing-Fur
   - tooltipName: Soothsayer
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 612acba42b22a3c40a6db8eb0976bfa6, type: 2}
     triggerWords: []
   - tooltipName: Stone Knapping
-    tooltipText: 
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 433fbdb7414842c4c954122f894859e8, type: 2}
+    - {fileID: 11400000, guid: e310f1dadb4d1904a89805f4dca8cee8, type: 2}
+    triggerWords:
+    - Stone-Knapping
   - tooltipName: Stone Tool Making
-    tooltipText: 
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
     tooltipImage: {fileID: 0}
-    triggerWords: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 09a616dd10358f446a6b0359ab6f9108, type: 2}
+    triggerWords:
+    - Stone-Tool-Making
   - tooltipName: Wood Cutting
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: af6396565925b48408fdab5602b03b0c, type: 2}
+    - {fileID: 11400000, guid: d961cd9762cd0034fae46052e49bf0cb, type: 2}
+    triggerWords:
+    - Wood-Cutting
+  - tooltipName: Curiosity
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 8bafbd2dd18889841b111ce106d50c72, type: 2}
+    triggerWords: []
+  - tooltipName: Cure Fish
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 994cd3a32972b464b9a505d0ec5ca42f, type: 2}
+    triggerWords:
+    - Cure-Fish
+  - tooltipName: Cure Meat
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 461f4bdebccadce4892363c7aabf219c, type: 2}
+    triggerWords:
+    - Cure-Meat
+  - tooltipName: Believe
+    tooltipText: 'Research: Unlocks Soothsayer for getting Faith. Needs {unlockRequierments}
+      to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 520efb576853f5141889753c8043d67c, type: 2}
+    triggerWords: []
+  - tooltipName: Carving
+    tooltipText: 'Research: Unlocks Carving for getting Carved-Statues. Needs {unlockRequierments}
+      to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 548009eefa9c0cc45adda11515859f47, type: 2}
+    triggerWords: []
+  - tooltipName: Cooking
+    tooltipText: 'Research: Unlocks Cooking for getting Cooked-Food. Needs {unlockRequierments}
+      to unlock.
+
+      With Fireplaces and Cooking researched you can cook Food.
+
+      Which
+      increases the Saturation Value of the Food.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: a8fd907ce05c11240acbef244fe64949, type: 2}
+    triggerWords:
+    - cook
+  - tooltipName: Curing
+    tooltipText: 'Research: Unlocks Curing for getting Cured-Food. Needs {unlockRequierments}
+      to unlock.
+
+      With Fireplaces and Curing researched you can cure Food.
+
+      Which
+      increases the Saturation Value of the Food.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 7f132913726555449b62b422c6e2baa4, type: 2}
+    triggerWords:
+    - cure
+  - tooltipName: 
     tooltipText: 
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
     triggerWords: []
-  - tooltipName: Curiosity
-    tooltipText: TODO
+  - tooltipName: Fire Making
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
     tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 0aa455de633970f4080c8c7545ff64fa, type: 2}
+    triggerWords:
+    - Fire-Making
+  - tooltipName: 
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
     triggerWords: []
+  - tooltipName: 
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
+    triggerWords: []
+  - tooltipName: Language
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 4cf9d96e152bb144eb7d5f8a02b6a327, type: 2}
+    triggerWords: []
+  - tooltipName: 
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
+    triggerWords: []
+  - tooltipName: Sewing
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 17dd9d86c1780c64d81c323daf5f35ef, type: 2}
+    triggerWords: []
+  - tooltipName: Drinks
+    tooltipText: Drinks are needed to keep your People alive.
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
+    triggerWords: []
+  - tooltipName: Food
+    tooltipText: Food is needed to keep your People alive.
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
+    triggerWords: []
+  - tooltipName: Tribalism
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 51ca439c5eda54a468fa6340836bbe07, type: 2}
+    triggerWords: []
+  - tooltipName: 
+    tooltipText: 
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
+    triggerWords: []
+  - tooltipName: Cooked Food
+    tooltipText: 'Cooked Food is Unlocked by Cooking. There are 2 cooked Foods: Cooked-Meat
+      and Cooked-Fish.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
+    triggerWords:
+    - Cooked-Food
+  - tooltipName: Cured Food
+    tooltipText: 'Cured Food is Unlocked by Curing. There are 2 cured Foods: Cured-Meat
+      and Cured-Fish.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
+    triggerWords:
+    - Cured-Food
 --- !u!1 &359511048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1702,149 @@ RectTransform:
   m_AnchoredPosition: {x: 125, y: 0}
   m_SizeDelta: {x: 250, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &428586937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428586938}
+  - component: {fileID: 428586939}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &428586938
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428586937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 837470225}
+  - {fileID: 1186772465}
+  - {fileID: 1994621998}
+  m_Father: {fileID: 313619597}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &428586939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428586937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4a4f77db46b4a4883779534915fb58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1994621999}
+  slider: {fileID: 1186772466}
+  tooltipSettings: {fileID: 11400000, guid: 6dacab8881b77b4499bd0cc5c52efd37, type: 2}
+--- !u!1 &493079695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493079696}
+  - component: {fileID: 493079699}
+  - component: {fileID: 493079698}
+  - component: {fileID: 493079697}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &493079696
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493079695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1376102758}
+  m_Father: {fileID: 313619597}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &493079697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493079695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536a354dcd566ea4fb5365c1d57db50c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1376102759}
+--- !u!114 &493079698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493079695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &493079699
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493079695}
+  m_CullTransparentMesh: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +2184,7 @@ PrefabInstance:
     - target: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_Name
-      value: TabSwitchBuildings
+      value: TabSwitchMenu
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -1450,7 +2224,7 @@ PrefabInstance:
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -1525,7 +2299,7 @@ PrefabInstance:
     - target: {fileID: 6972452502457111024, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_text
-      value: Buildings
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 7057164767497490859, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -1906,7 +2680,555 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837320911}
   m_CullTransparentMesh: 0
+--- !u!1 &837470224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837470225}
+  - component: {fileID: 837470227}
+  - component: {fileID: 837470226}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &837470225
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837470224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 428586938}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -100, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &837470226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837470224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Time to show Tooltip
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &837470227
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837470224}
+  m_CullTransparentMesh: 0
+--- !u!1 &840721549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 840721550}
+  - component: {fileID: 840721554}
+  - component: {fileID: 840721553}
+  - component: {fileID: 840721552}
+  - component: {fileID: 840721551}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &840721550
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840721549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 889108826}
+  m_Father: {fileID: 313619597}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &840721551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840721549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0632ec923226c408beef514db0a955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &840721552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840721549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 840721553}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 840721551}
+        m_MethodName: OnButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &840721553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840721549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &840721554
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840721549}
+  m_CullTransparentMesh: 0
+--- !u!1 &889108825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 889108826}
+  - component: {fileID: 889108828}
+  - component: {fileID: 889108827}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &889108826
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889108825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 840721550}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &889108827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889108825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Quit Game
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &889108828
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889108825}
+  m_CullTransparentMesh: 0
 --- !u!1001 &970790436
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1548410578}
+    m_Modifications:
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773645164899371950, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuTab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773645164899371950, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211171748505879345, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211171748505879345, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211171748505879345, guid: 0275605ea5c29b841bd0260794059bf5,
+        type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0275605ea5c29b841bd0260794059bf5, type: 3}
+--- !u!1001 &995829686
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2043,8 +3365,51 @@ PrefabInstance:
       propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8801546102358670080, guid: 0275605ea5c29b841bd0260794059bf5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0275605ea5c29b841bd0260794059bf5, type: 3}
+--- !u!224 &995829687 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 203023346948155215, guid: 0275605ea5c29b841bd0260794059bf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 995829686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &995829688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8036412579963163338, guid: 0275605ea5c29b841bd0260794059bf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 995829686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &995829689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995829688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 150}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!1 &995829690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4773645164899371950, guid: 0275605ea5c29b841bd0260794059bf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 995829686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1084437830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +3730,106 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128151954}
   m_CullTransparentMesh: 0
+--- !u!1 &1186772464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186772465}
+  - component: {fileID: 1186772466}
+  m_Layer: 5
+  m_Name: Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1186772465
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186772464}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1483865613}
+  - {fileID: 1354600060}
+  - {fileID: 1674385049}
+  m_Father: {fileID: 428586938}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 100, y: 0}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1186772466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186772464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 147684966}
+  m_FillRect: {fileID: 2076285649}
+  m_HandleRect: {fileID: 147684965}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 5
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 428586939}
+        m_MethodName: OnSliderChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1200700793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,6 +3980,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309311353}
   m_CullTransparentMesh: 0
+--- !u!1 &1354600059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354600060}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1354600060
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354600059}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2076285649}
+  m_Father: {fileID: 1186772465}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1356590831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,6 +4097,7 @@ RectTransform:
   m_Children:
   - {fileID: 1604500786}
   - {fileID: 385579034}
+  - {fileID: 276852205}
   - {fileID: 180452043}
   m_Father: {fileID: 1200700794}
   m_RootOrder: 0
@@ -2666,6 +4168,139 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368836637}
+  m_CullTransparentMesh: 0
+--- !u!1 &1376102757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376102758}
+  - component: {fileID: 1376102760}
+  - component: {fileID: 1376102759}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1376102758
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376102757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 493079696}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1376102759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376102757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: v0.0.0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1376102760
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376102757}
   m_CullTransparentMesh: 0
 --- !u!1 &1417839660
 GameObject:
@@ -2817,6 +4452,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418572188}
   m_CullTransparentMesh: 0
+--- !u!1 &1483865612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483865613}
+  - component: {fileID: 1483865615}
+  - component: {fileID: 1483865614}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1483865613
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483865612}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1186772465}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1483865614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483865612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1483865615
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483865612}
+  m_CullTransparentMesh: 0
 --- !u!1 &1483873905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,6 +4639,7 @@ RectTransform:
   m_Children:
   - {fileID: 1493039125}
   - {fileID: 2319889}
+  - {fileID: 995829687}
   - {fileID: 161758686}
   m_Father: {fileID: 1200700794}
   m_RootOrder: 1
@@ -3048,6 +4758,42 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2154152361989104968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1674385048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674385049}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1674385049
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674385048}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 147684965}
+  m_Father: {fileID: 1186772465}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1765953224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,7 +4968,6 @@ RectTransform:
   - {fileID: 403176719}
   - {fileID: 598997656}
   - {fileID: 359511049}
-  - {fileID: 1870010123}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3231,12 +4976,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!224 &1870010123 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1711746414120386800, guid: 16e95ad93b0c37941a0884257c701a8a,
-    type: 3}
-  m_PrefabInstance: {fileID: 90760377}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1987530733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3285,6 +5024,213 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1994621997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994621998}
+  - component: {fileID: 1994622000}
+  - component: {fileID: 1994621999}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1994621998
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994621997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 428586938}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 220, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1994621999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994621997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 1 sec
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1994622000
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994621997}
+  m_CullTransparentMesh: 0
+--- !u!1 &2076285648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076285649}
+  - component: {fileID: 2076285651}
+  - component: {fileID: 2076285650}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2076285649
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076285648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1354600060}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2076285650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076285648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2076285651
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076285648}
+  m_CullTransparentMesh: 0
 --- !u!1 &2092433878
 GameObject:
   m_ObjectHideFlags: 0

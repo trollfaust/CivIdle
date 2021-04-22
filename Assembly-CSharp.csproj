@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LogDisplayItem.cs" />
     <Compile Include="Assets\Scripts\Events\IEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IGameEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IResourceEventListener.cs" />
@@ -102,10 +103,13 @@
     <Compile Include="Assets\Scripts\Tooltip\TooltipManager.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipSettings.cs" />
     <Compile Include="Assets\Scripts\UI\LogDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\QuitButton.cs" />
     <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
     <Compile Include="Assets\Scripts\UI\TabSwitch.cs" />
     <Compile Include="Assets\Scripts\UI\TechnologyCardDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\TechnologyRequiermentCostDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\TooltipTimeSlider.cs" />
+    <Compile Include="Assets\Scripts\UI\VersionNumber.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

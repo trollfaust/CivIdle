@@ -16,6 +16,10 @@ namespace trollschmiede.CivIdle.GameEvents
             resourcesToChange.MaxAmountChange(i);
             return i;
         }
+        public override string GetActionString()
+        {
+            return "Changes " + resourcesToChange.name + " max Amount by min " + resourceChangeAmountMin.ToString() + " and max " + resourceChangeAmountMax.ToString();
+        }
     }
 }
 

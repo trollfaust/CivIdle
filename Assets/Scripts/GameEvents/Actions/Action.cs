@@ -8,5 +8,9 @@ namespace trollschmiede.CivIdle.GameEvents
         {
             return 0;
         }
+        public virtual string GetActionString()
+        {
+            return "";
+        }
     }
 }

@@ -16,5 +16,9 @@ namespace trollschmiede.CivIdle.GameEvents
             }
             return false;
         }
+        public override string GetRequiermentString()
+        {
+            return gameEvent.name + " " + countDone.ToString() + " times happend";
+        }
     }
 }

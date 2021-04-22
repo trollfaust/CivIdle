@@ -13,6 +13,10 @@ namespace trollschmiede.CivIdle.GameEvents
             gameEvent.AddChanceMultiplier(multiplier);
             return 0;
         }
+        public override string GetActionString()
+        {
+            return "Multiplies " + gameEvent.name + " Chance by " + multiplier.ToString();
+        }
     }
 }
 

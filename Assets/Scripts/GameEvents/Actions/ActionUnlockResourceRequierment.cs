@@ -13,6 +13,10 @@ namespace trollschmiede.CivIdle.GameEvents
             ResourceManager.instance.AddRequierment(resoureRequierment);
             return 0;
         }
+        public override string GetActionString()
+        {
+            return "Unlocks Resource Requierment " + resoureRequierment.ToString();
+        }
     }
 }
 

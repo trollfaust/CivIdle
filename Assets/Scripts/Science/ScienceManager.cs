@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.Generic.Tooltip;
 
 namespace trollschmiede.CivIdle.Science
 {
@@ -47,6 +48,16 @@ namespace trollschmiede.CivIdle.Science
             for (int i = 0; i < count; i++)
             {
                 int index = Random.Range(0, availableTechs.Count);
+                int check = (index != 0) ? index - 1 : availableTechs.Count - 1;
+                while (indexes.Contains(index) && index != check)
+                {
+                    index++;
+                    if (index >= availableTechs.Count)
+                    {
+                        index = 0;
+                    }
+                }
+
                 indexes.Add(index);
             }
             foreach (var index in indexes)
@@ -95,7 +106,9 @@ namespace trollschmiede.CivIdle.Science
 
                 foreach (var item in techCardContainer.GetComponentsInChildren<TechnologyCardDisplay>())
                 {
+                    TooltipManager.Instance.RemoveTooltip(item.GetComponent<TooltipHoverElement>().currentTooltip);
                     Destroy(item.gameObject);
+                    //item.gameObject.SetActive(false);
                 }
 
                 SetTechCards(techCardsToChoose);

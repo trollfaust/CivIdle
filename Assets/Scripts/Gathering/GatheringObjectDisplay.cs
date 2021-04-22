@@ -44,7 +44,6 @@ namespace trollschmiede.CivIdle.UI
             gatheringObject = _gatheringObject;
             gatheringButton.SetGatheringObjectDisplay(this, gatheringObject);
             ResourceManager.instance.NewGatheringObj(this);
-            //hoverElement.SetTooltipValueElement(null);
             hoverElement.TooltipInitialize(gatheringObject.name);
         }
 
@@ -102,7 +101,7 @@ namespace trollschmiede.CivIdle.UI
                 int value = Random.Range(pair.minValue, pair.maxValue + 1);
                 pair.resource.AmountChange(-value);
             }
-            foreach (ResourceChancePair pair in gatheringObject.resourcesPairs)
+            foreach (ResourceChancePair pair in gatheringObject.gatheringMaterials)
             {
                 if (Random.Range(0, 100) > pair.chance)
                 {

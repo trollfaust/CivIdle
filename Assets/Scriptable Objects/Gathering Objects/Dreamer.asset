@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonName: Dreamer
   craftingMaterials: []
-  resourcesPairs:
+  gatheringMaterials:
   - resource: {fileID: 11400000, guid: 7834aae14dcbd354ab267083c7bc7e16, type: 2}
     minValue: 1
     maxValue: 1

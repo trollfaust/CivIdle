@@ -27,6 +27,8 @@ namespace trollschmiede.CivIdle.Resources
                 gameEvent.Reset();
             }
 
+            LogDisplay.instance.Reset();
+
             GatheringManager.instance.Reset();
 
             ScienceManager.instance.Reset();

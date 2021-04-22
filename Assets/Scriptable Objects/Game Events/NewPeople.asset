@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: NewPeople
   m_EditorClassIdentifier: 
   requierments:
-  - {fileID: 11400000, guid: 94e2dd8e2e3cef24dbba6647949f26ae, type: 2}
-  - {fileID: 11400000, guid: 35abd7735cc9c8a40abd3a653dfeaccb, type: 2}
+  - {fileID: 11400000, guid: 8f82f61c192a7d34582f289ed02eda9e, type: 2}
+  - {fileID: 11400000, guid: e45abfa59c42ae247843f45137f6e2ba, type: 2}
   repeatCountMax: 0
-  baseChanceToPass: 20
-  timeBetweenChecks: 10
+  baseChanceToPass: 5
+  timeBetweenChecks: 15
+  isSpecialTriggered: 0
   gameEventActions:
   - {fileID: 11400000, guid: 6dab8007f7baeaa468c9d0085052773b, type: 2}
-  gameEventText: "Your town is growing, $0 People have joined you\xA7."
-  valueSeperator: 36
-  cutSeperator: 167
+  gameEventText: "Your Tribe is growing, $0 People have joined you\xA7."
   isDone: 0

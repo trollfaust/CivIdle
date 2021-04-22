@@ -18,15 +18,15 @@ MonoBehaviour:
     minValue: 1
     maxValue: 1
     chance: 100
-  resourcesPairs:
+  gatheringMaterials:
   - resource: {fileID: 11400000, guid: 74d23df5ebb808441a0e58966b8d177a, type: 2}
     minValue: 2
     maxValue: 5
     chance: 100
   - resource: {fileID: 11400000, guid: 1eef26b33b641254180afddc2bcde8fa, type: 2}
-    minValue: 1
+    minValue: 3
     maxValue: 8
-    chance: 95
+    chance: 80
   timeBetweenAutoGathering: 10
   peopleNeededToWork: 1
   isManuelGatherable: 1

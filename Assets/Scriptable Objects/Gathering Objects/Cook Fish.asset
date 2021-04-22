@@ -22,7 +22,7 @@ MonoBehaviour:
     minValue: 1
     maxValue: 1
     chance: 100
-  resourcesPairs:
+  gatheringMaterials:
   - resource: {fileID: 11400000, guid: 21a20d577383da748ad2e752ddfffb7b, type: 2}
     minValue: 2
     maxValue: 2

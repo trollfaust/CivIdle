@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.GameEvents;
-using UnityEngine.UI;
+using trollschmiede.Generic.Tooltip;
+using System.Collections.Generic;
 
 namespace trollschmiede.CivIdle.Science
 {
     [CreateAssetMenu(fileName ="New Technology", menuName = "Scriptable Objects/Science/Technology")]
-    public class Technology : ScriptableObject
+    public class Technology : ScriptableObject, ITooltipValueElement
     {
         [SerializeField] new string name = "";
         [SerializeField] Requierment[] showRequierments = new Requierment[0];
@@ -59,5 +60,38 @@ namespace trollschmiede.CivIdle.Science
         public string GetName() => name;
 
         public Sprite GetSprite() => sprite;
+
+        public Dictionary<string, string> GetTooltipValues()
+        {
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+
+            keyValuePairs.Add("name", name);
+
+            string unlockRequ = "";
+            for (int i = 0; i < unlockRequierments.Length; i++)
+            {
+                Requierment item = (Requierment)unlockRequierments[i];
+                unlockRequ = unlockRequ + item.GetRequiermentString() + ((i == unlockRequierments.Length - 1) ? "" : ", ");
+            }
+            keyValuePairs.Add("unlockRequierments", unlockRequ);
+
+            string showRequ = "";
+            for (int i = 0; i < showRequierments.Length; i++)
+            {
+                Requierment item = (Requierment)showRequierments[i];
+                showRequ = showRequ + item.GetRequiermentString() + ((i == showRequierments.Length - 1) ? "" : ", ");
+            }
+            keyValuePairs.Add("showRequierments", showRequ);
+
+            string unlocksString = "";
+            for (int i = 0; i < unlocks.Length; i++)
+            {
+                Action item = (Action)unlocks[i];
+                unlocksString = unlocksString + item.GetActionString() + ((i == unlocks.Length - 1) ? "" : ", ");
+            }
+            keyValuePairs.Add("unlocks", unlocksString);
+
+            return keyValuePairs;
+        }
     }
 }
