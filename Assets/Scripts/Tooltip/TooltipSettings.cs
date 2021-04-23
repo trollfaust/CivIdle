@@ -14,5 +14,6 @@ namespace trollschmiede.Generic.Tooltip
         public int characterWrapLimit;
         public float hoverTimeToShow;
         public Color highlightColor;
+        public float fadeTime;
     }
 }

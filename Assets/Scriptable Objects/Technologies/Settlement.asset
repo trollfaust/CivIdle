@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de4c1b8f99726d45ad964e9dbd3dc78, type: 3}
+  m_Name: Settlement
+  m_EditorClassIdentifier: 
+  name: Settlement
+  showRequierments:
+  - {fileID: 11400000, guid: 13bfcc0b7f50a194096ac468040ef67f, type: 2}
+  - {fileID: 11400000, guid: f6b1c6d0e544d3c42adc4f55ce0e9b15, type: 2}
+  unlockRequierments:
+  - {fileID: 11400000, guid: 98dab82a2a54faf41abcb3059bd4ec0f, type: 2}
+  unlocks:
+  - {fileID: 11400000, guid: b902990b31b036747b6dd188b9bb03aa, type: 2}
+  sprite: {fileID: 21300000, guid: 644d2c1a10a8591458ee1e97022b0d1e, type: 3}
+  isDone: 0

@@ -33,7 +33,7 @@ namespace trollschmiede.CivIdle.Resources
                 string maxAmount = item.maxValue.ToString();
                 string chance = item.chance.ToString();
 
-                craftingMats = craftingMats + itemName + " " + minAmount + "-" + maxAmount + " at a " + chance + "% Chance" + ((i == craftingMaterials.Length - 1) ? "" : ", ");
+                craftingMats = craftingMats + minAmount + ((maxAmount == minAmount) ? "" : "-" + maxAmount) + " " + itemName + " at a " + chance + "% Chance" + ((i == craftingMaterials.Length - 1) ? "" : ", ");
             }
             keyValuePairs.Add("craftingMaterials", craftingMats);
 
@@ -46,7 +46,7 @@ namespace trollschmiede.CivIdle.Resources
                 string maxAmount = item.maxValue.ToString();
                 string chance = item.chance.ToString();
 
-                gatheringMats = gatheringMats + itemName + " " + minAmount + "-" + maxAmount + " at a " + chance + "% Chance" + ((i == gatheringMaterials.Length - 1) ? "" : ", ");
+                gatheringMats = gatheringMats + minAmount + ((maxAmount == minAmount) ? "": "-" + maxAmount) + " " + itemName + " at a " + chance + "% Chance" + ((i == gatheringMaterials.Length - 1) ? "" : ", ");
             }
             keyValuePairs.Add("gatheringMaterials", gatheringMats);
 

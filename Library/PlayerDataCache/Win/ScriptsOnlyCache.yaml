@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - LogDisplayItem
+    - PauseButton
     - trollschmiede.CivIdle.GameEvents.ActionResourceAmount
     - trollschmiede.CivIdle.GameEvents.ActionResourceMaxAmount
     - trollschmiede.CivIdle.GameEvents.ActionResourceTypeAmount
@@ -14,6 +15,7 @@ ScriptsOnlyBuild:
     - trollschmiede.CivIdle.GameEvents.RequiermentResource
     - trollschmiede.CivIdle.GameEvents.RequiermentResourceCategory
     - trollschmiede.CivIdle.GameEvents.RequiermentTechnology
+    - trollschmiede.CivIdle.Resources.CultureManager
     - trollschmiede.CivIdle.Resources.GatheringManager
     - trollschmiede.CivIdle.Resources.GatheringObject
     - trollschmiede.CivIdle.Resources.PeopleManager
@@ -27,6 +29,7 @@ ScriptsOnlyBuild:
     - trollschmiede.CivIdle.UI.QuitButton
     - trollschmiede.CivIdle.UI.ResetButton
     - trollschmiede.CivIdle.UI.ResourceDisplay
+    - trollschmiede.CivIdle.UI.ResourceDisplayGroup
     - trollschmiede.CivIdle.UI.TabSwitch
     - trollschmiede.CivIdle.UI.TechnologyCardDisplay
     - trollschmiede.CivIdle.UI.TechnologyRequiermentCostDisplay
@@ -56,8 +59,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -95,7 +100,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -160,57 +171,63 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 12896}
+      Script: {instanceID: 12808}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 12968}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13162}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 13164}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13308}
     - Class: 114
-      Script: {instanceID: 13410}
+      Script: {instanceID: 13394}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13408}
     - Class: 114
-      Script: {instanceID: 13712}
+      Script: {instanceID: 13414}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13488}
     - Class: 114
-      Script: {instanceID: 13816}
+      Script: {instanceID: 13716}
     - Class: 114
-      Script: {instanceID: 13890}
+      Script: {instanceID: 13806}
     - Class: 114
-      Script: {instanceID: 13916}
+      Script: {instanceID: 13820}
     - Class: 114
-      Script: {instanceID: 14028}
+      Script: {instanceID: 13894}
     - Class: 114
-      Script: {instanceID: 14032}
+      Script: {instanceID: 13920}
     - Class: 114
-      Script: {instanceID: 14100}
+      Script: {instanceID: 13928}
     - Class: 114
-      Script: {instanceID: 14128}
+      Script: {instanceID: 14014}
     - Class: 114
-      Script: {instanceID: 14298}
+      Script: {instanceID: 14036}
     - Class: 114
-      Script: {instanceID: 14360}
+      Script: {instanceID: 14040}
     - Class: 114
-      Script: {instanceID: 14446}
+      Script: {instanceID: 14108}
     - Class: 114
-      Script: {instanceID: 16960}
+      Script: {instanceID: 14136}
     - Class: 114
-      Script: {instanceID: 16972}
+      Script: {instanceID: 14306}
     - Class: 114
-      Script: {instanceID: 18892}
+      Script: {instanceID: 14368}
     - Class: 114
-      Script: {instanceID: 55246}
+      Script: {instanceID: 14454}
+    - Class: 114
+      Script: {instanceID: 29890}
+    - Class: 114
+      Script: {instanceID: 31778}
+    - Class: 114
+      Script: {instanceID: 39796}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -466,7 +483,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 0a04791700d830bb1bef3a50f950eed5
+      Hash: c6d8250faad23ca90fa179cb5c0c868a
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: GameEvent
@@ -598,10 +615,16 @@ ScriptsOnlyBuild:
     className: ActionResourceTypeAmount
   - hash:
       serializedVersion: 2
-      Hash: b7608d46f5722f52889c46d29e88749e
+      Hash: 7eba9119354bd917928fda68df3fb0d9
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Resources
     className: ResourceManager
+  - hash:
+      serializedVersion: 2
+      Hash: 150479dddd5fb01247b18db0517eeed5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: TooltipTimeSlider
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -664,10 +687,16 @@ ScriptsOnlyBuild:
     className: ActionGameEventChanceModifier
   - hash:
       serializedVersion: 2
-      Hash: 998f91ca23df6e09f7ee562f8732190a
+      Hash: 8b7530a128a57ead1ee0d840cf040a87
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.Generic.Tooltip
     className: TooltipSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LogDisplayItem
   - hash:
       serializedVersion: 2
       Hash: a0a7299ee2076399fcaa4f0b33ce6e0a
@@ -706,7 +735,7 @@ ScriptsOnlyBuild:
     className: SpriteLibraryAsset
   - hash:
       serializedVersion: 2
-      Hash: 6c05dbdcf63864b18d0eaa541569cc76
+      Hash: 97935442aebf4b1f0c7441115792a8f7
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: RequiermentTechnology
@@ -730,7 +759,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: b4c38889aac4efb46c596b117a22f7b2
+      Hash: 691abdc00514be34bcef9c67392073f7
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Resources
     className: Resource
@@ -778,7 +807,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: b00198de97777de0d8b23922ac8b04c4
+      Hash: 1ae1b701485ca6731b77709a129c3ee2
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.Generic.Tooltip
     className: TooltipDisplay
@@ -788,6 +817,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.UI
     className: TabSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: QuitButton
+  - hash:
+      serializedVersion: 2
+      Hash: ee98729079998eb63435f99f41b30b9e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: VersionNumber
   - hash:
       serializedVersion: 2
       Hash: 5a84e6566933454121db82fa025319f1
@@ -930,27 +971,21 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.UI
-    className: QuitButton
-  - hash:
-      serializedVersion: 2
-      Hash: 150479dddd5fb01247b18db0517eeed5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.UI
-    className: TooltipTimeSlider
-  - hash:
-      serializedVersion: 2
-      Hash: ee98729079998eb63435f99f41b30b9e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.UI
-    className: VersionNumber
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: LogDisplayItem
+    className: PauseButton
+  - hash:
+      serializedVersion: 2
+      Hash: 2ff852200466d89bbfdea6e1efa0ae2b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.Resources
+    className: CultureManager
+  - hash:
+      serializedVersion: 2
+      Hash: ac4e519a11abf2055022d305b61e2f83
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: ResourceDisplayGroup
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: E:/Unity/CivIdle/build/InDev-22.04.21a/CivIdle.exe
+  playerPath: E:/Unity/CivIdle/build/InDev-23.04.21a/CivIdle.exe

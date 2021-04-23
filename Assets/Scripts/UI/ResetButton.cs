@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.Resources;
 using System.Collections;
+using trollschmiede.CivIdle.Generic;
 
 namespace trollschmiede.CivIdle.UI
 {

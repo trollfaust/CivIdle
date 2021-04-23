@@ -7,10 +7,15 @@ namespace trollschmiede.CivIdle.GameEvents
     public class RequiermentTechnology : Requierment
     {
         [SerializeField] Technology technology = null;
+        [SerializeField] bool isNotUnlocked = false;
 
         public override bool CheckRequierment()
         {
-            if (ScienceManager.instance.CheckTechnology(technology))
+            if (ScienceManager.instance.CheckTechnology(technology) && !isNotUnlocked)
+            {
+                return true;
+            }
+            else if (!ScienceManager.instance.CheckTechnology(technology) && isNotUnlocked)
             {
                 return true;
             }

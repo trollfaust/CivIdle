@@ -23,6 +23,7 @@ namespace trollschmiede.CivIdle.GameEvents
         public string gameEventText = "";
         char valueSeperator = '$';
         char cutSeperator = '§';
+        public bool emptyIfZero = false;
 
         //[HideInInspector]
         public bool isDone;
@@ -79,6 +80,17 @@ namespace trollschmiede.CivIdle.GameEvents
             }
 
             string back = string.Join("", cut);
+            if (emptyIfZero)
+            {
+                foreach (var item in returnActionValues)
+                {
+                    if (item != 0)
+                    {
+                        return back;
+                    }
+                }
+                return "";
+            }
 
             return back;
         }

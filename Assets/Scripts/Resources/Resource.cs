@@ -21,6 +21,8 @@ namespace trollschmiede.CivIdle.Resources
         public Sprite iconSprite;
         [Range(0,5f)]
         public float saturationValue = 0f;
+        [Range(0,5)]
+        public int cultureValue = 0;
 
         private List<IResourceEventListener> listeners;
 
@@ -110,6 +112,7 @@ namespace trollschmiede.CivIdle.Resources
             keyValuePairs.Add("amountOpen", amountOpen.ToString());
             keyValuePairs.Add("maxAmount", maxAmount.ToString());
             keyValuePairs.Add("saturationValue", saturationValue.ToString());
+            keyValuePairs.Add("cultureValue", cultureValue.ToString());
 
             return keyValuePairs;
         }

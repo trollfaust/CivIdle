@@ -787,6 +787,149 @@ MonoBehaviour:
   m_Spacing: {x: 2, y: 2}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!1 &292913479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292913480}
+  - component: {fileID: 292913484}
+  - component: {fileID: 292913483}
+  - component: {fileID: 292913482}
+  - component: {fileID: 292913481}
+  m_Layer: 5
+  m_Name: PauseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &292913480
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292913479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1107070732}
+  m_Father: {fileID: 313619597}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &292913481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292913479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b1130001cce6548bdc535d9ad1bddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &292913482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292913479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 292913483}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 292913481}
+        m_MethodName: OnButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &292913483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292913479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &292913484
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292913479}
+  m_CullTransparentMesh: 0
 --- !u!224 &313619597 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6841848348129886931, guid: 0275605ea5c29b841bd0260794059bf5,
@@ -917,7 +1060,8 @@ MonoBehaviour:
   - tooltipName: Carved Statues
     tooltipText: 'Made from Stone or Bone with Flint-Tools.
 
-      WIP'
+      Are used every
+      20 Secounds for generating {cultureValue} Culture.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: b1c2b94e7cdc5814b93f40283b62e60e, type: 2}
@@ -981,9 +1125,9 @@ MonoBehaviour:
     triggerWords:
     - Copper-Ore
   - tooltipName: Culture
-    tooltipText: 'A Research Resource used to unlock new Things.
-
-      WIP'
+    tooltipText: "A Research Resource used to unlock new Things. \nYou can have a
+      maximum of {maxAmount} Culture at the Moment.\nYou can get this from Culture-generating
+      Resources."
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 9c927899ba5ffa34381bb79173006d6d, type: 2}
@@ -1011,8 +1155,11 @@ MonoBehaviour:
   - tooltipName: Faith
     tooltipText: 'A Research Resource used to unlock new Things.
 
-      You can get
-      this from Soothsayer.'
+      You can have
+      a maximum of {maxAmount} Faith at the Moment.
+
+      You can get this from
+      Soothsayer.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: cc3c0560b25a72840879e507f6b0f28c, type: 2}
@@ -1128,8 +1275,11 @@ MonoBehaviour:
   - tooltipName: Science
     tooltipText: 'A Research Resource used to unlock new Things.
 
-      You can get
-      this from Dreamer.'
+      You can have
+      a maximum of {maxAmount} Science at the Moment.
+
+      You can get this from
+      Dreamer.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 7834aae14dcbd354ab267083c7bc7e16, type: 2}
@@ -1195,11 +1345,15 @@ MonoBehaviour:
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 74d23df5ebb808441a0e58966b8d177a, type: 2}
     triggerWords: []
-  - tooltipName: 
-    tooltipText: 
+  - tooltipName: Culture Generating Resources
+    tooltipText: 'Culture is generated every 20 Secounds by using up some Resources.
+
+      Cultre
+      Generating Resources: Carved-Statues '
     tooltipImage: {fileID: 0}
     tooltipValueElementObject: []
-    triggerWords: []
+    triggerWords:
+    - Cultrue-generating
   - tooltipName: 
     tooltipText: 
     tooltipImage: {fileID: 0}
@@ -1234,7 +1388,7 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.'
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 9a3a5145d8692f541a14efe9ddbe1c89, type: 2}
@@ -1246,10 +1400,10 @@ MonoBehaviour:
       You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: cec7eb07f41104646bb64b8b219227ec, type: 2}
@@ -1259,10 +1413,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 549d7a4cbe1ffbb4cb61f0205d56216b, type: 2}
@@ -1272,10 +1426,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 70fc9ed3d367cc14da76b2ba8926c7b6, type: 2}
@@ -1285,10 +1439,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 98c6d31dfcb2dd649ac38b6b48b5a9c3, type: 2}
@@ -1298,10 +1452,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 577e72fd74a124a40bc68cd221404e28, type: 2}
@@ -1314,10 +1468,10 @@ MonoBehaviour:
       You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 054eec9ccc8da49428aea7d3e46a7285, type: 2}
@@ -1327,7 +1481,7 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}'
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 6b3f11513d7b3104999921fd9b92c70e, type: 2}
@@ -1336,10 +1490,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 3cf734143e3d4d146a3f40436635c7ab, type: 2}
@@ -1351,10 +1505,10 @@ MonoBehaviour:
       You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: cf7682c549bd82b4b9ff13e7a378ecc4, type: 2}
@@ -1367,10 +1521,10 @@ MonoBehaviour:
       You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: c61e856ed5e999446a416d740beed26b, type: 2}
@@ -1380,10 +1534,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: d4650c171df59014faae63f803e395ba, type: 2}
@@ -1393,10 +1547,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 4f69d983e9dba2f4fbe07ed5662367f1, type: 2}
@@ -1406,7 +1560,7 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}'
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 612acba42b22a3c40a6db8eb0976bfa6, type: 2}
@@ -1418,10 +1572,10 @@ MonoBehaviour:
       You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 433fbdb7414842c4c954122f894859e8, type: 2}
@@ -1432,10 +1586,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 09a616dd10358f446a6b0359ab6f9108, type: 2}
@@ -1448,10 +1602,10 @@ MonoBehaviour:
       You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: af6396565925b48408fdab5602b03b0c, type: 2}
@@ -1468,10 +1622,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 994cd3a32972b464b9a505d0ec5ca42f, type: 2}
@@ -1481,10 +1635,10 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can get: {gatheringMaterials}.
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
 
-      You will need {craftingMaterials}
-      to work here.'
+      You
+      will need {craftingMaterials} to work here.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 461f4bdebccadce4892363c7aabf219c, type: 2}
@@ -1530,10 +1684,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7f132913726555449b62b422c6e2baa4, type: 2}
     triggerWords:
     - cure
-  - tooltipName: 
-    tooltipText: 
+  - tooltipName: Shamanism
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
     tooltipImage: {fileID: 0}
-    tooltipValueElementObject: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: bdf94636e2ba9cb4d8998772726c1f63, type: 2}
     triggerWords: []
   - tooltipName: Fire Making
     tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
@@ -1542,10 +1697,14 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0aa455de633970f4080c8c7545ff64fa, type: 2}
     triggerWords:
     - Fire-Making
-  - tooltipName: 
-    tooltipText: 
+  - tooltipName: Shaman
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}'
     tooltipImage: {fileID: 0}
-    tooltipValueElementObject: []
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: d0bae362501a7e147b4d6a4748863b20, type: 2}
     triggerWords: []
   - tooltipName: 
     tooltipText: 
@@ -1788,7 +1947,7 @@ RectTransform:
   m_Children:
   - {fileID: 1376102758}
   m_Father: {fileID: 313619597}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2827,7 +2986,7 @@ GameObject:
   - component: {fileID: 840721552}
   - component: {fileID: 840721551}
   m_Layer: 5
-  m_Name: Button
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2846,7 +3005,7 @@ RectTransform:
   m_Children:
   - {fileID: 889108826}
   m_Father: {fileID: 313619597}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3606,6 +3765,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089785552}
   m_CullTransparentMesh: 0
+--- !u!1 &1107070731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107070732}
+  - component: {fileID: 1107070734}
+  - component: {fileID: 1107070733}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1107070732
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107070731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 292913480}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1107070733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107070731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Pause
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1107070734
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107070731}
+  m_CullTransparentMesh: 0
 --- !u!1 &1128151954
 GameObject:
   m_ObjectHideFlags: 0
@@ -4051,6 +4343,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7a350b972d1f0f744abe32c52fd98f33, type: 2}
   - {fileID: 11400000, guid: 4f6db9f9b5f12ec43861f319559cf015, type: 2}
   - {fileID: 11400000, guid: 7ff3dd898603497409732750516dc830, type: 2}
+  - {fileID: 11400000, guid: 872ec83b22cc6e443accad66acbcdd31, type: 2}
 --- !u!4 &1356590833
 Transform:
   m_ObjectHideFlags: 0
@@ -4660,6 +4953,7 @@ GameObject:
   - component: {fileID: 1596311940}
   - component: {fileID: 1596311939}
   - component: {fileID: 1596311941}
+  - component: {fileID: 1596311942}
   m_Layer: 0
   m_Name: ResourceManager
   m_TagString: Untagged
@@ -4716,6 +5010,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 723f93d661560a64985d127d5f8a0efc, type: 2}
   - {fileID: 11400000, guid: 8f86e182da9013e48853834d5c5b6af5, type: 2}
   - {fileID: 11400000, guid: 74d23df5ebb808441a0e58966b8d177a, type: 2}
+  resourceDisplayGroupPrefab: {fileID: 7722182083476858156, guid: 80467c8fc7da0af499cd947d4a154359,
+    type: 3}
   resourceDisplayPrefab: {fileID: 3709490408999646742, guid: 764cc9e50642606408497e8965d555cd,
     type: 3}
   resourceDisplayParent: {fileID: 1765953225}
@@ -4752,6 +5048,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2bba01ee75d2dd9409e7cc41e3573b2d, type: 2}
   - {fileID: 11400000, guid: 96882a2ccd9600a4c93c31f5641486b3, type: 2}
   failGameEvent: {fileID: 11400000, guid: 7ff3dd898603497409732750516dc830, type: 2}
+--- !u!114 &1596311942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596311938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695db35c71020d840b942ee4ea6bb17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cultureResource: {fileID: 11400000, guid: 9c927899ba5ffa34381bb79173006d6d, type: 2}
+  cultureChangingResources:
+  - {fileID: 11400000, guid: b1c2b94e7cdc5814b93f40283b62e60e, type: 2}
+  timeBetweenCultureTicks: 20
 --- !u!224 &1604500786 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
@@ -4803,8 +5115,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1765953225}
-  - component: {fileID: 1765953226}
   - component: {fileID: 1765953227}
+  - component: {fileID: 1765953226}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -4840,21 +5152,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1765953224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
-    m_Right: 10
-    m_Top: 10
-    m_Bottom: 10
+    m_Left: 2
+    m_Right: 2
+    m_Top: 5
+    m_Bottom: 5
   m_ChildAlignment: 1
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 5, y: 5}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
 --- !u!114 &1765953227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5276,6 +5589,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e310f1dadb4d1904a89805f4dca8cee8, type: 2}
   - {fileID: 11400000, guid: 0ee320a7b9ab3c84dad1ca161c741d5c, type: 2}
   - {fileID: 11400000, guid: 51ca439c5eda54a468fa6340836bbe07, type: 2}
+  - {fileID: 11400000, guid: 61411e48739badd438a5c3b471458841, type: 2}
+  - {fileID: 11400000, guid: 96a0e2fbc09f9344b8c590e4ee7e0475, type: 2}
+  - {fileID: 11400000, guid: bdf94636e2ba9cb4d8998772726c1f63, type: 2}
   techCardPrefab: {fileID: 7146562861746841900, guid: c5187bb5307a81f4ab71ff11ceb678dd,
     type: 3}
   techCardContainer: {fileID: 2134653585}

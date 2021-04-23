@@ -86,9 +86,13 @@ namespace trollschmiede.Generic.Tooltip
 
         public void RemoveTooltip(GameObject _tooltip)
         {
+            if (_tooltip == null)
+            {
+                return;
+            }
             _tooltip.transform.SetParent(tooltipStorage, false);
             TooltipDisplay tooltipDisplay = _tooltip.GetComponent<TooltipDisplay>();
-            tooltipDisplay.isInUse = false;
+            tooltipDisplay.SetDisplayOff();
             activeTooltips.Remove(_tooltip);
         }
 

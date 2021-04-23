@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.Events;
 using trollschmiede.CivIdle.GameEvents;
@@ -24,6 +25,7 @@ namespace trollschmiede.CivIdle.Resources
         #endregion
 
         public Resource[] allResources = null;
+        [SerializeField] GameObject resourceDisplayGroupPrefab = null;
         [SerializeField] GameObject resourceDisplayPrefab = null;
         [SerializeField] Transform resourceDisplayParent = null;
         [SerializeField] PeopleManager peopleManager = null;
@@ -41,22 +43,45 @@ namespace trollschmiede.CivIdle.Resources
         private bool isPeopleAmountRunning = false;
         private List<ResoureRequierment> requiermentsMeet;
         private List<GatheringObjectDisplay> gatheringObjects;
+        private List<ResourceDisplayGroup> resourceDisplayGroups;
+        private List<ResourceCategory> resourceCategories;
 
         private void Start()
         {
+            resourceDisplayGroups = new List<ResourceDisplayGroup>();
+            resourceCategories = new List<ResourceCategory>();
             System.Array.Sort(allResources, delegate (Resource x, Resource y) { return x.resourceCategory.CompareTo(y.resourceCategory); });
 
+            for (int i = 0; i < allResources.Length; i++)
+            {
+                Resource item = allResources[i];
+                if (!resourceCategories.Contains(item.resourceCategory))
+                {
+                    GameObject gO = Instantiate(resourceDisplayGroupPrefab, resourceDisplayParent) as GameObject;
+                    ResourceDisplayGroup group = gO.GetComponent<ResourceDisplayGroup>();
+                    string title = item.resourceCategory.ToString();
+                    title = title.Replace("_", " ");
+                    group.SetTitleText(title);
+                    group.resourceCategory = item.resourceCategory;
+                    resourceDisplayGroups.Add(group);
+                    resourceCategories.Add(item.resourceCategory);
+                    gO.SetActive(false);
+                }
+            }
             foreach (var item in allResources)
             {
                 if (item.isEnabled)
                 {
-                    GameObject gO = Instantiate(resourceDisplayPrefab, resourceDisplayParent) as GameObject;
+                    int index = resourceCategories.IndexOf(item.resourceCategory);
+                    resourceDisplayGroups[index].gameObject.SetActive(true);
+                    GameObject gO = Instantiate(resourceDisplayPrefab, resourceDisplayGroups[index].GetContentTransform()) as GameObject;
                     gO.GetComponent<ResourceDisplay>().SetResource(item);
                 }
                 item.RegisterListener(this);
             }
             requiermentsMeet = new List<ResoureRequierment>();
             requiermentsMeet.Add(ResoureRequierment.Start);
+            StartCoroutine(ResetLayout());
         }
 
         void OnDisable()
@@ -72,8 +97,21 @@ namespace trollschmiede.CivIdle.Resources
             if (!_resource.isEnabled)
             {
                 _resource.isEnabled = true;
-                GameObject gO = Instantiate(resourceDisplayPrefab, resourceDisplayParent) as GameObject;
+                ResourceDisplayGroup displayGroup = null;
+                foreach (var group in resourceDisplayGroups)
+                {
+                    if (group.resourceCategory == _resource.resourceCategory)
+                    {
+                        displayGroup = group;
+                        displayGroup.gameObject.SetActive(true);
+                    }
+                }
+                if (displayGroup == null)
+                    return;
+                GameObject gO = Instantiate(resourceDisplayPrefab, displayGroup.GetContentTransform()) as GameObject;
                 gO.GetComponent<ResourceDisplay>().SetResource(_resource);
+
+                StartCoroutine(ResetLayout());
             }
         }
 
@@ -120,6 +158,12 @@ namespace trollschmiede.CivIdle.Resources
                 yield return new WaitForSeconds(1f);
             }
             isPeopleAmountRunning = false;
+        }
+        IEnumerator ResetLayout()
+        {
+            resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = false;
+            yield return new WaitForEndOfFrame();
+            resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = true;
         }
     }
 }

@@ -71,7 +71,9 @@ namespace trollschmiede.CivIdle.Science
             for (int i = 0; i < unlockRequierments.Length; i++)
             {
                 Requierment item = (Requierment)unlockRequierments[i];
-                unlockRequ = unlockRequ + item.GetRequiermentString() + ((i == unlockRequierments.Length - 1) ? "" : ", ");
+                if (item.GetRequiermentString() == string.Empty)
+                    continue;
+                unlockRequ = unlockRequ + ((i == 0) ? "" : ", ") + item.GetRequiermentString();
             }
             keyValuePairs.Add("unlockRequierments", unlockRequ);
 
@@ -79,7 +81,9 @@ namespace trollschmiede.CivIdle.Science
             for (int i = 0; i < showRequierments.Length; i++)
             {
                 Requierment item = (Requierment)showRequierments[i];
-                showRequ = showRequ + item.GetRequiermentString() + ((i == showRequierments.Length - 1) ? "" : ", ");
+                if (item.GetRequiermentString() == string.Empty)
+                    continue;
+                showRequ = showRequ + ((i == 0) ? "" : ", ") + item.GetRequiermentString();
             }
             keyValuePairs.Add("showRequierments", showRequ);
 
@@ -87,7 +91,9 @@ namespace trollschmiede.CivIdle.Science
             for (int i = 0; i < unlocks.Length; i++)
             {
                 Action item = (Action)unlocks[i];
-                unlocksString = unlocksString + item.GetActionString() + ((i == unlocks.Length - 1) ? "" : ", ");
+                if (item.GetActionString() == string.Empty)
+                    continue;
+                unlocksString = unlocksString + ((i == 0) ? "" : ", ") + item.GetActionString();
             }
             keyValuePairs.Add("unlocks", unlocksString);
 

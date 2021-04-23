@@ -15,6 +15,7 @@ namespace trollschmiede.Generic.Tooltip
         [SerializeField] Image tooltipImage = null;
         [SerializeField] LayoutElement layoutElement = null;
         public TooltipHoverElement hoverElement = null;
+        [SerializeField] Animator animator = null;
         [Header("Event Setup for Fixed Tooltip")]
         [SerializeField] UnityEvent onTooltipFixed = null;
         [SerializeField] UnityEvent onTooltipUnFixed = null;
@@ -41,6 +42,12 @@ namespace trollschmiede.Generic.Tooltip
             tooltipText.text = TextEdit(_tooltip.tooltipText);
             hoverElement.SetSelfTooltip(_tooltip);
             SetLayoutElement();
+        }
+
+        public void SetDisplayOff()
+        {
+            isInUse = false;
+            animator.SetBool("FadeIn", false);
         }
 
         void SetLayoutElement()
@@ -143,18 +150,26 @@ namespace trollschmiede.Generic.Tooltip
 
         IEnumerator AlignPositionCo()
         {
-            yield return new WaitForSeconds(.01f);
+            yield return new WaitForEndOfFrame();
             RectTransform rect = this.GetComponent<RectTransform>();
             rect.anchorMin = new Vector2(0, 1);
             rect.anchorMax = new Vector2(0, 1);
             rect.anchoredPosition = new Vector2(0, 0);
 
-            if (rect.rect.height > Screen.height - rect.position.y)
+            if (rect.rect.height + 30 > Screen.height - rect.position.y)
             {
-                rect.anchorMin = new Vector2(0, 0);
-                rect.anchorMax = new Vector2(0, 0);
-                rect.anchoredPosition = new Vector2(0, -rect.rect.height);
+                rect.anchorMin = new Vector2(rect.anchorMin.x, 0);
+                rect.anchorMax = new Vector2(rect.anchorMax.x, 0);
+                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, -rect.rect.height);
             }
+            if (rect.rect.width + 30 > Screen.width - rect.position.x)
+            {
+                rect.anchorMin = new Vector2(1, rect.anchorMin.y);
+                rect.anchorMax = new Vector2(1, rect.anchorMax.y);
+                rect.anchoredPosition = new Vector2(-rect.rect.width, rect.anchoredPosition.y);
+            }
+            yield return new WaitForEndOfFrame();
+            animator.SetBool("FadeIn", true);
         }
     }
 }

@@ -52,7 +52,7 @@ namespace trollschmiede.CivIdle.UI
         public void Evoke(GameEvent gameEvent)
         {
             string text = gameEvent.GetGameEventText();
-            if (text == "")
+            if (text == string.Empty)
                 return;
 
             if (logDisplayItems.Count >= maxLogs)

@@ -6,6 +6,18 @@ namespace trollschmiede.CivIdle.Resources
 {
     public class PeopleManager : MonoBehaviour
     {
+        #region Singleton
+        public static PeopleManager instance;
+        private void Awake()
+        {
+            if (instance != null)
+            {
+                return;
+            }
+            instance = this;
+        }
+        #endregion
+
         public Resource peopleResource = null;
         [SerializeField] int peopleNeedsUpdateTime = 5;
         [SerializeField] Action[] peopleNeeds = new Action[0];

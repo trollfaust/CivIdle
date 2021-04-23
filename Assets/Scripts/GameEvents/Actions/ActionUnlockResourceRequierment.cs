@@ -15,7 +15,8 @@ namespace trollschmiede.CivIdle.GameEvents
         }
         public override string GetActionString()
         {
-            return "Unlocks Resource Requierment " + resoureRequierment.ToString();
+            //return "Unlocks Resource Requierment " + resoureRequierment.ToString().Replace("_", "-");
+            return string.Empty;
         }
     }
 }

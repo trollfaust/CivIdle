@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LogDisplayItem.cs" />
     <Compile Include="Assets\Scripts\Events\IEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IGameEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IResourceEventListener.cs" />
@@ -86,6 +85,7 @@
     <Compile Include="Assets\Scripts\Gathering\GatheringManager.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObject.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObjectDisplay.cs" />
+    <Compile Include="Assets\Scripts\Resources\CultureManager.cs" />
     <Compile Include="Assets\Scripts\Resources\PeopleManager.cs" />
     <Compile Include="Assets\Scripts\Resources\Reset.cs" />
     <Compile Include="Assets\Scripts\Resources\Resource.cs" />
@@ -103,8 +103,11 @@
     <Compile Include="Assets\Scripts\Tooltip\TooltipManager.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipSettings.cs" />
     <Compile Include="Assets\Scripts\UI\LogDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\LogDisplayItem.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseButton.cs" />
     <Compile Include="Assets\Scripts\UI\QuitButton.cs" />
     <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
+    <Compile Include="Assets\Scripts\UI\ResourceDisplayGroup.cs" />
     <Compile Include="Assets\Scripts\UI\TabSwitch.cs" />
     <Compile Include="Assets\Scripts\UI\TechnologyCardDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\TechnologyRequiermentCostDisplay.cs" />

@@ -2,8 +2,9 @@
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.GameEvents;
 using trollschmiede.CivIdle.Science;
+using trollschmiede.CivIdle.Resources;
 
-namespace trollschmiede.CivIdle.Resources
+namespace trollschmiede.CivIdle.Generic
 {
     public class Reset
     {

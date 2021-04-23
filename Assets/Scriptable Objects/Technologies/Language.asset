@@ -15,9 +15,10 @@ MonoBehaviour:
   name: Language
   showRequierments:
   - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
-  - {fileID: 11400000, guid: 2676d97c250cf2f4a8f67475ea4d613e, type: 2}
+  - {fileID: 11400000, guid: 8278ab8d4b3abd84ab10c898219def88, type: 2}
   unlockRequierments:
-  - {fileID: 11400000, guid: 4312ef33ee51f9e4ebcf87553eaa476b, type: 2}
-  unlocks: []
+  - {fileID: 11400000, guid: 616cb48633e622248be6df7c268bdd2f, type: 2}
+  unlocks:
+  - {fileID: 11400000, guid: eba0d8f19307a6b47a40098146cc773a, type: 2}
   sprite: {fileID: 21300000, guid: 0acf5b24a51cc444691a3fdf35ff60b5, type: 3}
   isDone: 0

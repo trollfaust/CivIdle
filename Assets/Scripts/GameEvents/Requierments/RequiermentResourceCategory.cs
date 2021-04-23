@@ -14,7 +14,10 @@ namespace trollschmiede.CivIdle.GameEvents
             int amount = 0;
             foreach (var resource in ResourceManager.instance.allResources)
             {
-                amount += resource.amount;
+                if (resource.resourceCategory == resourceCategory)
+                {
+                    amount += resource.amount;
+                }
             }
             if (amount >= resourceAmount)
             {

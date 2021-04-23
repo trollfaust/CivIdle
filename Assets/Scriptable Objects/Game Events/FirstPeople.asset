@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requierments:
   - {fileID: 11400000, guid: 94e2dd8e2e3cef24dbba6647949f26ae, type: 2}
-  - {fileID: 11400000, guid: 35abd7735cc9c8a40abd3a653dfeaccb, type: 2}
+  - {fileID: 11400000, guid: b47d8f867d3162c4db037bf0738f46c8, type: 2}
   repeatCountMax: 1
   baseChanceToPass: 100
   timeBetweenChecks: 1

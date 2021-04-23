@@ -17,24 +17,32 @@ namespace trollschmiede.CivIdle.UI {
         public Resource resource { get; private set; }
 
         public void Evoke() => resourceText.text = resource.name + ": " + resource.amount.ToString();
-        public void Evoke(Resource resource)
+        public void Evoke(Resource _resource)
         {
-            resourceText.text = resource.name + ": " + ((resource.hasAmountOpen) ? resource.amountOpen.ToString() + "/" : "") + resource.amount.ToString();
+            string text = _resource.name + ": ";
+            if (_resource.hasAmountOpen)
+                text = text + _resource.amountOpen.ToString() + "/" + _resource.amount.ToString();
+            else if (_resource.maxAmount > 0)
+                text = text + _resource.amount.ToString() + "/" + _resource.maxAmount.ToString();
+            else
+                text = text + _resource.amount.ToString();
+
+            resourceText.text = text;
         }
 
-        public void SetResource(Resource resource)
+        public void SetResource(Resource _resource)
         {
-            this.resource = resource;
-            resourceText.text = resource.name + ": " + ((resource.hasAmountOpen) ? resource.amountOpen.ToString() + "/" : "") + resource.amount.ToString();
-            iconImage.sprite = resource.iconSprite;
-            hoverElement.TooltipInitialize(resource.name);
-            StartCoroutine(AddListener(resource));
+            this.resource = _resource;
+            Evoke(_resource);
+            iconImage.sprite = _resource.iconSprite;
+            hoverElement.TooltipInitialize(_resource.name);
+            StartCoroutine(AddListener(_resource));
         }
 
-        IEnumerator AddListener(Resource resource)
+        IEnumerator AddListener(Resource _resource)
         {
             yield return new WaitForEndOfFrame();
-            resource.RegisterListener(this);
+            _resource.RegisterListener(this);
         }
 
         void OnEnable()
