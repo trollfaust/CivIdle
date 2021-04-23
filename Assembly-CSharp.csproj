@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
     <Compile Include="Assets\Scripts\UI\ResourceDisplayGroup.cs" />
     <Compile Include="Assets\Scripts\UI\TabSwitch.cs" />
+    <Compile Include="Assets\Scripts\UI\TechRerollButton.cs" />
     <Compile Include="Assets\Scripts\UI\TechnologyCardDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\TechnologyRequiermentCostDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\TooltipTimeSlider.cs" />

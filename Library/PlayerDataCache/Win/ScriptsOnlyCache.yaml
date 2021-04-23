@@ -31,6 +31,7 @@ ScriptsOnlyBuild:
     - trollschmiede.CivIdle.UI.ResourceDisplay
     - trollschmiede.CivIdle.UI.ResourceDisplayGroup
     - trollschmiede.CivIdle.UI.TabSwitch
+    - trollschmiede.CivIdle.UI.TechRerollButton
     - trollschmiede.CivIdle.UI.TechnologyCardDisplay
     - trollschmiede.CivIdle.UI.TechnologyRequiermentCostDisplay
     - trollschmiede.CivIdle.UI.TooltipTimeSlider
@@ -59,10 +60,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -119,115 +118,117 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11286}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11270}
     - Class: 114
-      Script: {instanceID: 11420}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11554}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11588}
+      Script: {instanceID: 11478}
     - Class: 114
-      Script: {instanceID: 11638}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11736}
+      Script: {instanceID: 11592}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11832}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 12110}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12112}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 12138}
     - Class: 114
-      Script: {instanceID: 12196}
+      Script: {instanceID: 12152}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 12368}
+      Script: {instanceID: 12360}
     - Class: 114
-      Script: {instanceID: 12414}
+      Script: {instanceID: 12370}
     - Class: 114
-      Script: {instanceID: 12588}
+      Script: {instanceID: 12416}
     - Class: 114
-      Script: {instanceID: 12610}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12672}
+      Script: {instanceID: 12612}
     - Class: 114
-      Script: {instanceID: 12686}
+      Script: {instanceID: 12674}
     - Class: 114
-      Script: {instanceID: 12746}
+      Script: {instanceID: 12688}
     - Class: 114
-      Script: {instanceID: 12794}
+      Script: {instanceID: 12748}
     - Class: 114
-      Script: {instanceID: 12800}
+      Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 12808}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12900}
     - Class: 114
-      Script: {instanceID: 12968}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 12970}
     - Class: 114
-      Script: {instanceID: 13058}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13060}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 13166}
     - Class: 114
-      Script: {instanceID: 13394}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 13396}
     - Class: 114
-      Script: {instanceID: 13414}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 13488}
+      Script: {instanceID: 13416}
     - Class: 114
-      Script: {instanceID: 13716}
+      Script: {instanceID: 13490}
     - Class: 114
-      Script: {instanceID: 13806}
+      Script: {instanceID: 13718}
     - Class: 114
-      Script: {instanceID: 13820}
+      Script: {instanceID: 13808}
     - Class: 114
-      Script: {instanceID: 13894}
+      Script: {instanceID: 13822}
     - Class: 114
-      Script: {instanceID: 13920}
+      Script: {instanceID: 13828}
     - Class: 114
-      Script: {instanceID: 13928}
+      Script: {instanceID: 13898}
     - Class: 114
-      Script: {instanceID: 14014}
+      Script: {instanceID: 13906}
     - Class: 114
-      Script: {instanceID: 14036}
+      Script: {instanceID: 13926}
     - Class: 114
-      Script: {instanceID: 14040}
+      Script: {instanceID: 13934}
     - Class: 114
-      Script: {instanceID: 14108}
+      Script: {instanceID: 14020}
     - Class: 114
-      Script: {instanceID: 14136}
+      Script: {instanceID: 14042}
     - Class: 114
-      Script: {instanceID: 14306}
+      Script: {instanceID: 14046}
     - Class: 114
-      Script: {instanceID: 14368}
+      Script: {instanceID: 14114}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14142}
     - Class: 114
-      Script: {instanceID: 29890}
+      Script: {instanceID: 14312}
     - Class: 114
-      Script: {instanceID: 31778}
+      Script: {instanceID: 14374}
     - Class: 114
-      Script: {instanceID: 39796}
+      Script: {instanceID: 14460}
+    - Class: 114
+      Script: {instanceID: 16454}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -261,6 +262,12 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -271,6 +278,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseButton
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -391,12 +404,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
-  - hash:
-      serializedVersion: 2
-      Hash: 7ab0e790220bdca831fdd886b339039d
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GridLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 0ef5af2dbbc57a64e555f780c7dfba0c
@@ -801,6 +808,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 2ff852200466d89bbfdea6e1efa0ae2b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.Resources
+    className: CultureManager
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -811,6 +824,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.Generic.Tooltip
     className: TooltipDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: ac4e519a11abf2055022d305b61e2f83
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: ResourceDisplayGroup
   - hash:
       serializedVersion: 2
       Hash: 3d571381fd326cba32f879a29d03b0a4
@@ -969,23 +988,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseButton
-  - hash:
-      serializedVersion: 2
-      Hash: 2ff852200466d89bbfdea6e1efa0ae2b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.Resources
-    className: CultureManager
-  - hash:
-      serializedVersion: 2
-      Hash: ac4e519a11abf2055022d305b61e2f83
+      Hash: bc33269e73f3127cc8ef21d07fa3969f
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.UI
-    className: ResourceDisplayGroup
+    className: TechRerollButton
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: E:/Unity/CivIdle/build/InDev-23.04.21a/CivIdle.exe
+  playerPath: E:/Unity/CivIdle/build/InDev-23.04.21b/CivIdle.exe

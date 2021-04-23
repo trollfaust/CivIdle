@@ -108,7 +108,6 @@ namespace trollschmiede.CivIdle.Science
                 {
                     TooltipManager.Instance.RemoveTooltip(item.GetComponent<TooltipHoverElement>().currentTooltip);
                     Destroy(item.gameObject);
-                    //item.gameObject.SetActive(false);
                 }
 
                 SetTechCards(techCardsToChoose);
@@ -124,6 +123,16 @@ namespace trollschmiede.CivIdle.Science
             foreach (var item in allTechnologies)
             {
                 item.isDone = false;
+            }
+            SetTechCards(techCardsToChoose);
+        }
+
+        public void Reroll()
+        {
+            foreach (var item in techCardContainer.GetComponentsInChildren<TechnologyCardDisplay>())
+            {
+                TooltipManager.Instance.RemoveTooltip(item.GetComponent<TooltipHoverElement>().currentTooltip);
+                Destroy(item.gameObject);
             }
             SetTechCards(techCardsToChoose);
         }

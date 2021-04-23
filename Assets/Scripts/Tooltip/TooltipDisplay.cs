@@ -150,7 +150,7 @@ namespace trollschmiede.Generic.Tooltip
 
         IEnumerator AlignPositionCo()
         {
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(0.01f);
             RectTransform rect = this.GetComponent<RectTransform>();
             rect.anchorMin = new Vector2(0, 1);
             rect.anchorMax = new Vector2(0, 1);
