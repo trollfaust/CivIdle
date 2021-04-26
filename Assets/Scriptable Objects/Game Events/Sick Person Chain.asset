@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82df00455046b944a9a64b59bbf856c, type: 3}
+  m_Name: Sick Person Chain
+  m_EditorClassIdentifier: 
+  requierments:
+  - {fileID: 11400000, guid: 8007c97e8e59bd243a486384128760db, type: 2}
+  - {fileID: 11400000, guid: d614e8d3cb522e14bbcd5e9408ebb1e4, type: 2}
+  repeatCountMax: 0
+  baseChanceToPass: 5
+  timeBetweenChecks: 60
+  isSpecialTriggered: 0
+  gameEventActions:
+  - {fileID: 11400000, guid: f033c0f8aedf2b943adfd2e89d4f4037, type: 2}
+  - {fileID: 11400000, guid: 65a6cbe71a4a6204fb81b0683632112a, type: 2}
+  gameEventText: 1 Person got Sick.
+  emptyIfZero: 1
+  isDone: 0

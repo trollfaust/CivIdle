@@ -10,19 +10,27 @@ namespace trollschmiede.CivIdle.Resources
     {
         public int id;
         public new string name;
+        [HideInInspector]
         public bool isEnabled;
+        [HideInInspector]
         public int amount;
         public bool hasAmountOpen;
+        [HideInInspector]
         public int amountOpen;
+        [HideInInspector]
         public int maxAmount;
         public int baseMaxAmount;
         public ResourceCategory resourceCategory;
         public ResoureRequierment resoureRequierment;
         public Sprite iconSprite;
+        
         [Range(0,5f)]
-        public float saturationValue = 0f;
+        public float typeAmountMultiplier = 1f;
         [Range(0,5)]
         public int cultureValue = 0;
+
+        public Resource[] overflowResources;
+
 
         private List<IResourceEventListener> listeners;
 
@@ -43,6 +51,9 @@ namespace trollschmiede.CivIdle.Resources
 
         public void EvokeAll()
         {
+            if (listeners == null)
+                return;
+
             foreach (var listener in listeners)
             {
                 listener.Evoke(this);
@@ -55,12 +66,26 @@ namespace trollschmiede.CivIdle.Resources
         {
             if (value == 0)
                 return;
+
             amount = amount + value;
             if (hasAmountOpen)
                 amountOpen = amountOpen + value;
-            if (amount > maxAmount && maxAmount > 0)
-                amount = maxAmount;
+            if (amount > GetTempMaxAmount() && GetTempMaxAmount() > 0)
+                amount = GetTempMaxAmount();
             EvokeAll();
+        }
+
+        public int GetTempMaxAmount()
+        {
+            int tempMaxAmount = maxAmount;
+            if (overflowResources != null && overflowResources.Length != 0)
+            {
+                foreach (var item in overflowResources)
+                {
+                    tempMaxAmount -= item.amount;
+                }
+            }
+            return tempMaxAmount;
         }
 
         public void AmountOpenChange(int value)
@@ -111,7 +136,7 @@ namespace trollschmiede.CivIdle.Resources
             keyValuePairs.Add("amount", amount.ToString());
             keyValuePairs.Add("amountOpen", amountOpen.ToString());
             keyValuePairs.Add("maxAmount", maxAmount.ToString());
-            keyValuePairs.Add("saturationValue", saturationValue.ToString());
+            keyValuePairs.Add("saturationValue", typeAmountMultiplier.ToString());
             keyValuePairs.Add("cultureValue", cultureValue.ToString());
 
             return keyValuePairs;

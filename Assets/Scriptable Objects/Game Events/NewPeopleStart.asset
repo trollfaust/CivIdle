@@ -16,8 +16,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f82f61c192a7d34582f289ed02eda9e, type: 2}
   - {fileID: 11400000, guid: e45abfa59c42ae247843f45137f6e2ba, type: 2}
   - {fileID: 11400000, guid: 597ee72a2a3362848a3a551fd0a26d59, type: 2}
+  - {fileID: 11400000, guid: d55721364f7cc5f44a47638def3dab5e, type: 2}
+  - {fileID: 11400000, guid: 08bf9d5b5a2de5042a9516fabff20654, type: 2}
   repeatCountMax: 0
-  baseChanceToPass: 5
+  baseChanceToPass: 20
   timeBetweenChecks: 15
   isSpecialTriggered: 0
   gameEventActions:
@@ -25,3 +27,4 @@ MonoBehaviour:
   gameEventText: "New People arrived, $0 People have joined you\xA7."
   emptyIfZero: 1
   isDone: 0
+  isOnHold: 1

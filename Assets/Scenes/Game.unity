@@ -1818,7 +1818,7 @@ MonoBehaviour:
   logDisplayContentTransform: {fileID: 1417839661}
   gameEventManager: {fileID: 1356590832}
   scrollBar: {fileID: 837320913}
-  maxLogs: 10
+  maxLogs: 20
 --- !u!224 &385579034 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
@@ -4759,6 +4759,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4f6db9f9b5f12ec43861f319559cf015, type: 2}
   - {fileID: 11400000, guid: 7ff3dd898603497409732750516dc830, type: 2}
   - {fileID: 11400000, guid: 872ec83b22cc6e443accad66acbcdd31, type: 2}
+  - {fileID: 11400000, guid: 6d42b8c68f697c94ea12b52c173a0386, type: 2}
+  - {fileID: 11400000, guid: 75c58c96f1525be42a2ba3700cb561ef, type: 2}
+  - {fileID: 11400000, guid: c685c07b91a55634182799f459c09265, type: 2}
+  - {fileID: 11400000, guid: d09be0004b7aeed44be2e8bdaf6033a8, type: 2}
+  - {fileID: 11400000, guid: a7c687631a363084d8d2940aaedb2502, type: 2}
+  - {fileID: 11400000, guid: d03fd4dade6075840a338b2b0ab813e9, type: 2}
+  - {fileID: 11400000, guid: 6e299e697e3778f429a89f43f2b5ceec, type: 2}
+  - {fileID: 11400000, guid: 106c4b8df10d7ad4999fd21988066b14, type: 2}
+  - {fileID: 11400000, guid: f1e98dc1bc870294095a4f660bba927c, type: 2}
+  - {fileID: 11400000, guid: 4838324477949634cbb19fef522dcb44, type: 2}
+  - {fileID: 11400000, guid: c799771ae8364f84494c662e70debe40, type: 2}
+  - {fileID: 11400000, guid: b8d2294d28d8b8b47bbaa7928d8228a6, type: 2}
 --- !u!4 &1356590833
 Transform:
   m_ObjectHideFlags: 0
@@ -5045,7 +5057,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000022888184}
-  m_SizeDelta: {x: -503, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1417839662
 MonoBehaviour:
@@ -5082,7 +5094,7 @@ MonoBehaviour:
   m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -5425,12 +5437,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 723f93d661560a64985d127d5f8a0efc, type: 2}
   - {fileID: 11400000, guid: 8f86e182da9013e48853834d5c5b6af5, type: 2}
   - {fileID: 11400000, guid: 74d23df5ebb808441a0e58966b8d177a, type: 2}
+  - {fileID: 11400000, guid: bc99c39fe5320fa41ae583833e9ebb7d, type: 2}
   resourceDisplayGroupPrefab: {fileID: 7722182083476858156, guid: 80467c8fc7da0af499cd947d4a154359,
     type: 3}
   resourceDisplayPrefab: {fileID: 3709490408999646742, guid: 764cc9e50642606408497e8965d555cd,
     type: 3}
   resourceDisplayParent: {fileID: 1765953225}
-  peopleManager: {fileID: 1596311941}
 --- !u!4 &1596311940
 Transform:
   m_ObjectHideFlags: 0
@@ -5458,6 +5470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   peopleResource: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
+  sickPeopleResource: {fileID: 0}
   peopleNeedsUpdateTime: 5
   peopleNeeds:
   - {fileID: 11400000, guid: 2bba01ee75d2dd9409e7cc41e3573b2d, type: 2}

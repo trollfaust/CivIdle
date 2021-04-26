@@ -18,6 +18,7 @@ namespace trollschmiede.CivIdle.UI
 
         private GatheringObject gatheringObject;
         private int count = 0;
+        private int wishedCount = 0;
 
         private void Update()
         {
@@ -43,15 +44,41 @@ namespace trollschmiede.CivIdle.UI
         {
             gatheringObject = _gatheringObject;
             gatheringButton.SetGatheringObjectDisplay(this, gatheringObject);
-            ResourceManager.instance.NewGatheringObj(this);
+            PeopleManager.instance.NewGatheringObj(this);
             hoverElement.TooltipInitialize(gatheringObject.name);
+        }
+
+        public void OnPeopleGained()
+        {
+            if (gatheringObject == null)
+                return;
+            if (wishedCount == count)
+                return;
+
+            int tempCount = count;
+            for (int i = 0; i < (wishedCount - tempCount); i++)
+            {
+                if (resourcePeople.amountOpen < gatheringObject.peopleNeededToWork)
+                    return;
+                count++;
+                CountText.text = (wishedCount != count) ? count.ToString() + " / " + wishedCount.ToString() : count.ToString();
+                resourcePeople.AmountOpenChange(-gatheringObject.peopleNeededToWork);
+                if (count == 1)
+                {
+                    StartCoroutine(AutoGatheringCo());
+                }
+            }
         }
 
         public void OnAddButtonPressed()
         {
             if (gatheringObject == null)
                 return;
+            if (resourcePeople.amountOpen < gatheringObject.peopleNeededToWork)
+                return;
+
             count++;
+            wishedCount = count;
             CountText.text = count.ToString();
             resourcePeople.AmountOpenChange(-gatheringObject.peopleNeededToWork);
             if (count == 1)
@@ -64,11 +91,32 @@ namespace trollschmiede.CivIdle.UI
         {
             if (gatheringObject == null)
                 return;
+            if (count <= 0)
+                return;
+
             count--;
+            wishedCount = count;
             CountText.text = count.ToString();
             resourcePeople.AmountOpenChange(gatheringObject.peopleNeededToWork);
         }
         
+        public void OnPeopleLost()
+        {
+            if (gatheringObject == null)
+                return;
+            if (count <= 0)
+                return;
+
+            count--;
+            CountText.text = (wishedCount != count) ? count.ToString() + " / " + wishedCount.ToString() : count.ToString();
+            resourcePeople.AmountOpenChange(gatheringObject.peopleNeededToWork);
+        }
+
+        public int GetPriorityValue()
+        {
+            return gatheringObject.priorityValueSubstract;
+        }
+
         IEnumerator AutoGatheringCo()
         {
             while (count > 0)
@@ -122,6 +170,10 @@ namespace trollschmiede.CivIdle.UI
         public int GetCount()
         {
             return count;
+        }
+        public int GetWishCount()
+        {
+            return wishedCount;
         }
     }
 }

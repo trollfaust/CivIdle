@@ -15,11 +15,15 @@ MonoBehaviour:
   id: 0
   name: People
   isEnabled: 1
-  amount: 19
+  amount: 10
   hasAmountOpen: 1
-  amountOpen: 4
-  maxAmount: 25
+  amountOpen: 0
+  maxAmount: 10
   baseMaxAmount: 10
   resourceCategory: 0
   resoureRequierment: 0
   iconSprite: {fileID: 21300000, guid: c1832186a8a59c04c82514ad6742f8de, type: 3}
+  typeAmountMultiplier: 1
+  cultureValue: 0
+  overflowResources:
+  - {fileID: 11400000, guid: bc99c39fe5320fa41ae583833e9ebb7d, type: 2}

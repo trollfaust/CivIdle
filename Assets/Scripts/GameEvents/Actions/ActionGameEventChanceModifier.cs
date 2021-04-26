@@ -10,7 +10,7 @@ namespace trollschmiede.CivIdle.GameEvents
 
         public override int EvokeAction()
         {
-            gameEvent.AddChanceMultiplier(multiplier);
+            gameEvent.SetChanceMultiplier(multiplier);
             return 0;
         }
         public override string GetActionString()

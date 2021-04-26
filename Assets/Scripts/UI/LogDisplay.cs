@@ -64,6 +64,7 @@ namespace trollschmiede.CivIdle.UI
                 item.transform.SetAsFirstSibling();
                 logDisplayContentTransform.GetComponent<VerticalLayoutGroup>().enabled = false;
                 logDisplayContentTransform.GetComponent<VerticalLayoutGroup>().enabled = true;
+                Canvas.ForceUpdateCanvases();
             } else
             {
                 GameObject newItem = Instantiate(logDisplayItemPrefab, logDisplayContentTransform, false) as GameObject;

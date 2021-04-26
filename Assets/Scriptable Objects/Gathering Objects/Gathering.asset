@@ -43,3 +43,4 @@ MonoBehaviour:
   peopleNeededToWork: 1
   isManuelGatherable: 1
   buttonCooldownTime: 5
+  priorityValueSubstract: 2

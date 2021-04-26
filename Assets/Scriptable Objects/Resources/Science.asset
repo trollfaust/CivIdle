@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 0
   name: Science
   isEnabled: 1
-  amount: 0
+  amount: 10
   hasAmountOpen: 0
   amountOpen: 0
   maxAmount: 10
@@ -23,5 +23,5 @@ MonoBehaviour:
   resourceCategory: 0
   resoureRequierment: 6
   iconSprite: {fileID: 21300000, guid: 2e42014f397f7724491fc43a053dd14b, type: 3}
-  saturationValue: 0
+  typeAmountMultiplier: 1
   cultureValue: 0

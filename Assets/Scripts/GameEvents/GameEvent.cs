@@ -25,22 +25,23 @@ namespace trollschmiede.CivIdle.GameEvents
         char cutSeperator = '§';
         public bool emptyIfZero = false;
 
-        //[HideInInspector]
+        [HideInInspector]
         public bool isDone;
         private List<IGameEventListener> listeners;
-        private bool isOnHold = false;
-        private int chanceToPass;
+        [HideInInspector]
+        public bool isOnHold = false;
 
         private List<int> returnActionValues;
 
         private int repeatCount = 0;
+        private float chanceMultiplier = 1f;
 
         public void Reset()
         {
             repeatCount = 0;
             isDone = false;
             isOnHold = false;
-            chanceToPass = baseChanceToPass;
+            chanceMultiplier = 1f;
         }
 
         public IEnumerator WaitTime()
@@ -98,16 +99,21 @@ namespace trollschmiede.CivIdle.GameEvents
         /// <summary>
         /// Modifies the Chance by the multiplier
         /// </summary>
-        /// <param name="multiplier"></param>
-        public void AddChanceMultiplier(float multiplier)
+        /// <param name="_multiplier"></param>
+        public void SetChanceMultiplier(float _multiplier)
         {
-            float f = chanceToPass * multiplier;
+            chanceMultiplier = _multiplier;
+        }
+
+        int GetCurrentChance()
+        {
+            float f = baseChanceToPass * chanceMultiplier;
             f = Mathf.RoundToInt(f);
             if (f > 100f)
                 f = 100f;
             if (f < 0f)
                 f = 0f;
-            chanceToPass = (int)f;
+            return (int)f;
         }
 
         private int GetValueById(int i)
@@ -120,6 +126,11 @@ namespace trollschmiede.CivIdle.GameEvents
             {
                 return 0;
             }
+        }
+
+        public float GetMultiplier()
+        {
+            return chanceMultiplier;
         }
 
         public int GetCountDone()
@@ -147,9 +158,6 @@ namespace trollschmiede.CivIdle.GameEvents
             if (isDone || isOnHold)
                 return false;
 
-            if (Random.Range(0,100) > chanceToPass)
-                return false;
-
             foreach (var requierment in requierments)
             {
                 if (!requierment.CheckRequierment())
@@ -157,6 +165,11 @@ namespace trollschmiede.CivIdle.GameEvents
                     return false;
                 }
             }
+
+            int rng = Random.Range(0, 100);
+            if (rng > (float)GetCurrentChance())
+                return false;
+
             repeatCount++;
             if (repeatCountMax <= repeatCount && repeatCountMax != 0)
                 isDone = true;

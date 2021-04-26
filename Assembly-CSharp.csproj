@@ -76,8 +76,10 @@
     <Compile Include="Assets\Scripts\GameEvents\GameEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEventManager.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\Requierment.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentGameEventChanceMultiplier.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentGameEventCount.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentResource.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentResourceBelowMax.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentResourceCategory.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentResourceRequierment.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentTechnology.cs" />

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82df00455046b944a9a64b59bbf856c, type: 3}
+  m_Name: NewPeopleFirstTime
+  m_EditorClassIdentifier: 
+  requierments:
+  - {fileID: 11400000, guid: e45abfa59c42ae247843f45137f6e2ba, type: 2}
+  - {fileID: 11400000, guid: 8f82f61c192a7d34582f289ed02eda9e, type: 2}
+  - {fileID: 11400000, guid: d55721364f7cc5f44a47638def3dab5e, type: 2}
+  repeatCountMax: 1
+  baseChanceToPass: 90
+  timeBetweenChecks: 10
+  isSpecialTriggered: 0
+  gameEventActions:
+  - {fileID: 11400000, guid: f4dd38144188d3d41b35c9de8c5064f0, type: 2}
+  gameEventText: "New People arrived, $0 Person has joined you\xA7."
+  emptyIfZero: 1
+  isDone: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82df00455046b944a9a64b59bbf856c, type: 3}
+  m_Name: Found Resources Sticks
+  m_EditorClassIdentifier: 
+  requierments:
+  - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
+  repeatCountMax: 2
+  baseChanceToPass: 1
+  timeBetweenChecks: 120
+  isSpecialTriggered: 0
+  gameEventActions:
+  - {fileID: 11400000, guid: 8e9e6063b1aea5e438e2c2dc78887d52, type: 2}
+  gameEventText: You found $0 Sticks in the wild.
+  emptyIfZero: 0
+  isDone: 0

@@ -28,21 +28,15 @@ namespace trollschmiede.CivIdle.Resources
         [SerializeField] GameObject resourceDisplayGroupPrefab = null;
         [SerializeField] GameObject resourceDisplayPrefab = null;
         [SerializeField] Transform resourceDisplayParent = null;
-        [SerializeField] PeopleManager peopleManager = null;
         
         public void Evoke() { }
         public void Evoke(Resource _resource)
         {
-            if (_resource == peopleManager.peopleResource && !isPeopleAmountRunning)
-            {
-                StartCoroutine(PeopleAmountCheck());
-            }
             ActivateResource(_resource);
         }
 
-        private bool isPeopleAmountRunning = false;
+        
         private List<ResoureRequierment> requiermentsMeet;
-        private List<GatheringObjectDisplay> gatheringObjects;
         private List<ResourceDisplayGroup> resourceDisplayGroups;
         private List<ResourceCategory> resourceCategories;
 
@@ -129,36 +123,7 @@ namespace trollschmiede.CivIdle.Resources
             requiermentsMeet.Add(_requierment);
         }
 
-        public void NewGatheringObj(GatheringObjectDisplay _gatheringObjectDisplay)
-        {
-            if (gatheringObjects == null)
-            {
-                gatheringObjects = new List<GatheringObjectDisplay>();
-            }
-            gatheringObjects.Add(_gatheringObjectDisplay);
-        }
-
-        IEnumerator PeopleAmountCheck()
-        {
-            isPeopleAmountRunning = true;
-            while (peopleManager.peopleResource.amount > 0 && gatheringObjects != null)
-            {
-                while (peopleManager.peopleResource.amountOpen < 0)
-                {
-                    foreach (var item in gatheringObjects)
-                    {
-                        if (item.GetCount() > 0)
-                        {
-                            item.OnSubstructButtonPressed();
-                            break;
-                        }
-                    }
-                }
-
-                yield return new WaitForSeconds(1f);
-            }
-            isPeopleAmountRunning = false;
-        }
+        
         IEnumerator ResetLayout()
         {
             resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = false;

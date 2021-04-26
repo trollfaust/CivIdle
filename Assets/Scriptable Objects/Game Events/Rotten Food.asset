@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82df00455046b944a9a64b59bbf856c, type: 3}
+  m_Name: Rotten Food
+  m_EditorClassIdentifier: 
+  requierments:
+  - {fileID: 11400000, guid: 87c9fe2c80c9c514f9e6772cebfdc852, type: 2}
+  repeatCountMax: 0
+  baseChanceToPass: 2
+  timeBetweenChecks: 180
+  isSpecialTriggered: 0
+  gameEventActions:
+  - {fileID: 11400000, guid: 1e2825f07bf1b9a47b7e52f9bc6f9f3a, type: 2}
+  gameEventText: You've found $0 Food rotten in your Storage.
+  emptyIfZero: 1
+  isDone: 0

@@ -23,4 +23,5 @@ MonoBehaviour:
   resourceCategory: 0
   resoureRequierment: 6
   iconSprite: {fileID: 21300000, guid: 9c71b2bbf178ec047afbb641c04cd9c7, type: 3}
-  saturationValue: 0
+  typeAmountMultiplier: 1
+  cultureValue: 0
