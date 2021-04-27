@@ -16,18 +16,12 @@ namespace trollschmiede.CivIdle.Generic
                 resource.Reset();
             }
 
-            foreach (var resourceDisplay in GameObject.FindObjectsOfType<ResourceDisplay>())
-            {
-                if (!resourceDisplay.resource.isEnabled)
-                {
-                    MonoBehaviour.Destroy(resourceDisplay.gameObject);
-                }
-            }
-
             foreach (var gameEvent in GameEventManager.instance.gameEvents)
             {
                 gameEvent.Reset();
             }
+
+            ResourceManager.instance.Reset();
 
             LogDisplay.instance.Reset();
 

@@ -62,6 +62,17 @@ namespace trollschmiede.CivIdle.Resources
                     gO.SetActive(false);
                 }
             }
+            requiermentsMeet = new List<ResoureRequierment>();
+            requiermentsMeet.Add(ResoureRequierment.Start);          
+        }
+
+
+        public void Reset()
+        {
+            foreach (var resourceDisplay in GameObject.FindObjectsOfType<ResourceDisplay>())
+            {
+                Destroy(resourceDisplay.gameObject);
+            }
             foreach (var item in allResources)
             {
                 if (item.isEnabled)
@@ -73,8 +84,6 @@ namespace trollschmiede.CivIdle.Resources
                 }
                 item.RegisterListener(this);
             }
-            requiermentsMeet = new List<ResoureRequierment>();
-            requiermentsMeet.Add(ResoureRequierment.Start);
             StartCoroutine(ResetLayout());
         }
 
