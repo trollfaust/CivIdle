@@ -15,7 +15,7 @@ MonoBehaviour:
   requierments:
   - {fileID: 11400000, guid: d614e8d3cb522e14bbcd5e9408ebb1e4, type: 2}
   repeatCountMax: 0
-  baseChanceToPass: 40
+  baseChanceToPass: 20
   timeBetweenChecks: 15
   isSpecialTriggered: 0
   gameEventActions:
@@ -24,3 +24,4 @@ MonoBehaviour:
   gameEventText: 1 Sick Person recovered.
   emptyIfZero: 1
   isDone: 0
+  isOnHold: 1

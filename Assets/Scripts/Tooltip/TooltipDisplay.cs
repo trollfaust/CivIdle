@@ -16,9 +16,11 @@ namespace trollschmiede.Generic.Tooltip
         [SerializeField] LayoutElement layoutElement = null;
         public TooltipHoverElement hoverElement = null;
         [SerializeField] Animator animator = null;
+        BoxCollider2D ownCollider;
         [Header("Event Setup for Fixed Tooltip")]
         [SerializeField] UnityEvent onTooltipFixed = null;
         [SerializeField] UnityEvent onTooltipUnFixed = null;
+
 
         [HideInInspector] public bool isInUse = false;
         [HideInInspector] public bool isFixed = false;
@@ -28,6 +30,10 @@ namespace trollschmiede.Generic.Tooltip
         private float timeStamp;
         private bool isInvokedFixed = false;
         private bool isInvokedUnFixed = false;
+        [HideInInspector]
+        public TooltipHoverElement parentHoverElement;
+
+        private int slot = 0;
 
         /// <summary>
         /// Setup the Tooltip for Display
@@ -138,6 +144,7 @@ namespace trollschmiede.Generic.Tooltip
         private void Start()
         {
             timeStamp = Time.time;
+            ownCollider = gameObject.GetComponent<BoxCollider2D>();
         }
 
         /// <summary>
@@ -148,28 +155,113 @@ namespace trollschmiede.Generic.Tooltip
             StartCoroutine(AlignPositionCo());
         }
 
+        bool inCalc = false;
+
         IEnumerator AlignPositionCo()
         {
-            yield return new WaitForSeconds(0.01f);
+            slot = 0;
+            yield return new WaitForEndOfFrame();
             RectTransform rect = this.GetComponent<RectTransform>();
-            rect.anchorMin = new Vector2(0, 1);
-            rect.anchorMax = new Vector2(0, 1);
-            rect.anchoredPosition = new Vector2(0, 0);
+            ownCollider.offset = new Vector2(rect.rect.width / 2, rect.rect.height / 2);
+            ownCollider.size = new Vector2(rect.rect.width - 1, rect.rect.height - 1);
 
-            if (rect.rect.height + 30 > Screen.height - rect.position.y)
+            SetPositon(rect);
+            
+            for (int i = 0; i < 4; i++)
             {
-                rect.anchorMin = new Vector2(rect.anchorMin.x, 0);
-                rect.anchorMax = new Vector2(rect.anchorMax.x, 0);
-                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, -rect.rect.height);
+                bool checkOne = false;
+                for (int j = 0; j < 4; j++)
+                {
+                    yield return new WaitForSeconds(0.1f);
+                    checkOne = CalcPositonOutOfScreen(rect);
+                    inCalc = false;
+                    if (checkOne)
+                    {
+                        break;
+                    }
+                }
+                if (checkOne )
+                {
+                    break;
+                }
             }
-            if (rect.rect.width + 30 > Screen.width - rect.position.x)
-            {
-                rect.anchorMin = new Vector2(1, rect.anchorMin.y);
-                rect.anchorMax = new Vector2(1, rect.anchorMax.y);
-                rect.anchoredPosition = new Vector2(-rect.rect.width, rect.anchoredPosition.y);
-            }
+
             yield return new WaitForEndOfFrame();
             animator.SetBool("FadeIn", true);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (!isFixed && !inCalc)
+            {
+                if (collision.tag == "Tooltip")
+                {
+                    slot = (slot < 3) ? slot + 1 : 0;
+                    inCalc = true;
+                    SetPositon(this.GetComponent<RectTransform>());
+                }
+            }
+        }
+
+        void SetPositon(RectTransform rect)
+        {
+            switch (slot)
+            {
+                case 0:
+                    rect.anchorMin = new Vector2(0, 1);
+                    rect.anchorMax = new Vector2(0, 1);
+                    rect.anchoredPosition = new Vector2(0, 0);
+                    break;
+                case 1:
+                    rect.anchorMin = new Vector2(0, 0);
+                    rect.anchorMax = new Vector2(0, 0);
+                    rect.anchoredPosition = new Vector2(0, -rect.rect.height);
+                    break;
+                case 2:
+                    rect.anchorMin = new Vector2(1, 1);
+                    rect.anchorMax = new Vector2(1, 1);
+                    rect.anchoredPosition = new Vector2(0, -rect.rect.height);
+                    break;
+                case 3:
+                    rect.anchorMin = new Vector2(0, 1);
+                    rect.anchorMax = new Vector2(0, 1);
+                    rect.anchoredPosition = new Vector2(-rect.rect.width, -rect.rect.height);
+                    break;
+                default:
+                    rect.anchorMin = new Vector2(0, 1);
+                    rect.anchorMax = new Vector2(0, 1);
+                    rect.anchoredPosition = new Vector2(0, rect.rect.height);
+                    break;
+            }
+        }
+
+        bool CalcPositonOutOfScreen(RectTransform rect)
+        {
+            if (rect.rect.height + 30 > Screen.height - rect.position.y && slot == 0)
+            {
+                slot = 1;
+                SetPositon(rect);
+                return false;
+            }
+            if (rect.position.y - rect.rect.height <= 30 && slot == 1)
+            {
+                slot = 2;
+                SetPositon(rect);
+                return false;
+            }
+            if (rect.rect.width + 30 > Screen.width - rect.position.x && slot == 2)
+            {
+                slot = 3;
+                SetPositon(rect);
+                return false;
+            }
+            if (rect.position.x - rect.rect.width <= 30 && slot == 3)
+            {
+                slot = 0;
+                SetPositon(rect);
+                return false;
+            }
+            return true;
         }
     }
 }

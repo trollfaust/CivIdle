@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.GameEvents;
 using trollschmiede.Generic.Tooltip;
+using trollschmiede.CivIdle.Events;
 
 namespace trollschmiede.CivIdle.Science
 {
@@ -24,11 +25,13 @@ namespace trollschmiede.CivIdle.Science
         [SerializeField] Technology[] allTechnologies = new Technology[0];
         [SerializeField] GameObject techCardPrefab = null;
         [SerializeField] Transform techCardContainer = null;
-        [SerializeField] int techCardsToChoose = 0;
+        [SerializeField] int baseTechCardsToChoose = 0;
         private List<Technology> doneTechnologies;
+        private int techCardsToChoose;
 
         private void Start()
         {
+            techCardsToChoose = baseTechCardsToChoose;
             SetTechCards(techCardsToChoose);
         }
 
@@ -85,6 +88,11 @@ namespace trollschmiede.CivIdle.Science
             return false;
         }
 
+        public void ChangeTechCardsToChoose(int amount)
+        {
+            techCardsToChoose += amount;
+        }
+
         public void ResearchTechnology(Technology tech)
         {
             if (tech.Research())
@@ -135,6 +143,22 @@ namespace trollschmiede.CivIdle.Science
                 Destroy(item.gameObject);
             }
             SetTechCards(techCardsToChoose);
+        }
+
+        public void RegisterToAll(ITechnologyListener _listener)
+        {
+            foreach (var item in allTechnologies)
+            {
+                item.RegisterListener(_listener);
+            }
+        }
+
+        public void UnregisterFromAll(ITechnologyListener _listener)
+        {
+            foreach (var item in allTechnologies)
+            {
+                item.UnregisterListener(_listener);
+            }
         }
     }
 }

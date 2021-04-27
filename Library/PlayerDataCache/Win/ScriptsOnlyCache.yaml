@@ -3,6 +3,9 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - LogDisplayItem
     - PauseButton
+    - trollschmiede.CivIdle.GameEvents.ActionGameEventChanceModifier
+    - trollschmiede.CivIdle.GameEvents.ActionGameEventCountReset
+    - trollschmiede.CivIdle.GameEvents.ActionMultipleActions
     - trollschmiede.CivIdle.GameEvents.ActionResourceAmount
     - trollschmiede.CivIdle.GameEvents.ActionResourceMaxAmount
     - trollschmiede.CivIdle.GameEvents.ActionResourceTypeAmount
@@ -24,6 +27,7 @@ ScriptsOnlyBuild:
     - trollschmiede.CivIdle.Resources.ResourceManager
     - trollschmiede.CivIdle.Science.ScienceManager
     - trollschmiede.CivIdle.Science.Technology
+    - trollschmiede.CivIdle.UI.FullscreenSelector
     - trollschmiede.CivIdle.UI.GatheringButton
     - trollschmiede.CivIdle.UI.GatheringObjectDisplay
     - trollschmiede.CivIdle.UI.LogDisplay
@@ -53,6 +57,7 @@ ScriptsOnlyBuild:
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
+    - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
@@ -83,6 +88,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Slider
+    - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/Game.unity:
@@ -100,6 +106,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -109,6 +119,8 @@ ScriptsOnlyBuild:
     - Class: 95
       Script: {instanceID: 0}
     - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11258}
@@ -124,6 +136,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11270}
     - Class: 114
       Script: {instanceID: 11290}
+    - Class: 114
+      Script: {instanceID: 11360}
     - Class: 114
       Script: {instanceID: 11414}
     - Class: 114
@@ -187,6 +201,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13064}
     - Class: 114
+      Script: {instanceID: 13136}
+    - Class: 114
       Script: {instanceID: 13170}
     - Class: 114
       Script: {instanceID: 13186}
@@ -232,6 +248,14 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14380}
     - Class: 114
       Script: {instanceID: 14466}
+    - Class: 114
+      Script: {instanceID: 14486}
+    - Class: 114
+      Script: {instanceID: 16530}
+    - Class: 114
+      Script: {instanceID: 20930}
+    - Class: 114
+      Script: {instanceID: 79292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -313,7 +337,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: bb501e037b423ad5d2197e50a7e357ef
+      Hash: 80a0df1b12257cdab0f35f1f184ff93e
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionResourceMaxAmount
@@ -415,7 +439,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 0ef5af2dbbc57a64e555f780c7dfba0c
+      Hash: 0461b032210158f2983be42d1f625000
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.UI
     className: LogDisplay
@@ -517,7 +541,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 7e20338a23adf0621474e609a14243ce
+      Hash: 3ca8fc3455caf00caf79dce450dff757
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Science
     className: ScienceManager
@@ -607,7 +631,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 45a4351f3fc0939b978daa7024cb5c72
+      Hash: b5dc36207afca0f41721a4a318779ec2
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionUnlockResourceRequierment
@@ -631,7 +655,7 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: b1f3bccfe0e3dcb15cc8c07e8b26cc20
+      Hash: e5a85730aebe9cdb5f92a186eef5a576
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionResourceTypeAmount
@@ -673,7 +697,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 4866d6fff9ae4d3b6fd2d24759eba4a4
+      Hash: 4b50012126167f008cc5bda8f93959d6
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionUnlockGatheringObject
@@ -685,7 +709,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: b70d094da9f6e51f8a5b5cb1f0260cf5
+      Hash: 452a9453e7e16bbed920b256966c8a28
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionUnlockResource
@@ -703,7 +727,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 4151d3212e07507dba02296f1bf55d44
+      Hash: f98886185f77a546c55b04c7926a083b
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionGameEventChanceModifier
@@ -799,7 +823,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 1622544e6f91da1f49226468b82463a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: Action
@@ -841,7 +865,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 1ae1b701485ca6731b77709a129c3ee2
+      Hash: bfdef0f278bc87eb981965f77aeb9739
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.Generic.Tooltip
     className: TooltipDisplay
@@ -871,13 +895,13 @@ ScriptsOnlyBuild:
     className: VersionNumber
   - hash:
       serializedVersion: 2
-      Hash: c3a2fc0dd11f55a9e4a9bbcb48129030
+      Hash: 2e7280d9ae2b1cb5533937d0b3cf5379
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Resources
     className: PeopleManager
   - hash:
       serializedVersion: 2
-      Hash: bb501e037b423ad5d2197e50a7e357ef
+      Hash: 80a0df1b12257cdab0f35f1f184ff93e
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionResourceAmount
@@ -1007,7 +1031,31 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: FullscreenSelector
+  - hash:
+      serializedVersion: 2
+      Hash: c102bfe041cb8e796a8370a18c5734d1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEvents
+    className: ActionMultipleActions
+  - hash:
+      serializedVersion: 2
+      Hash: 758267e395bdc53cea3f8323237cb7ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEvents
+    className: ActionTechCardAmount
+  - hash:
+      serializedVersion: 2
+      Hash: 70de9d1ece76e9342da368f7fe18981f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEvents
+    className: ActionGameEventCountReset
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: E:/Unity/CivIdle/build/InDev-27.04.21a/CivIdle.exe
+  playerPath: E:/Unity/CivIdle/build/InDev-27.04.21c/CivIdle.exe

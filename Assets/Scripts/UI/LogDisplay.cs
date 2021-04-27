@@ -5,11 +5,12 @@ using trollschmiede.CivIdle.Events;
 using trollschmiede.CivIdle.GameEvents;
 using TMPro;
 using UnityEngine.UI;
+using trollschmiede.CivIdle.Science;
 
 namespace trollschmiede.CivIdle.UI
 {
 
-    public class LogDisplay : MonoBehaviour, IGameEventListener
+    public class LogDisplay : MonoBehaviour, IGameEventListener, ITechnologyListener
     {
         #region Singleton
         public static LogDisplay instance;
@@ -26,27 +27,23 @@ namespace trollschmiede.CivIdle.UI
 
         [SerializeField] GameObject logDisplayItemPrefab = null;
         [SerializeField] Transform logDisplayContentTransform = null;
-        [SerializeField] GameEventManager gameEventManager = null;
         [SerializeField] Scrollbar scrollBar = null;
         [SerializeField] int maxLogs = 10;
 
         private List<GameObject> logDisplayItems;
-        private List<GameEvent> gameEvents;
 
         void Start()
         {
-            gameEventManager.RegisterToAllGameEvents(this);
+            GameEventManager.instance.RegisterToAllGameEvents(this);
+            ScienceManager.instance.RegisterToAll(this);
             logDisplayItems = new List<GameObject>();
-            gameEvents = new List<GameEvent>();
         }
 
-        void OnDisable()
+        void OnDestroy()
         {
-            gameEventManager.UnregisterFromAllGameEvents(this);
-            foreach (var item in gameEvents)
-            {
-                item.UnregisterListener(this);
-            }
+            GameEventManager.instance.UnregisterFromAllGameEvents(this);
+            ScienceManager.instance.UnregisterFromAll(this);
+
         }
 
         public void Evoke(GameEvent gameEvent)
@@ -55,6 +52,31 @@ namespace trollschmiede.CivIdle.UI
             if (text == string.Empty)
                 return;
 
+            SetDisplayItem(text);
+        }
+
+        public void Evoke() { }
+
+        public void Reset()
+        {
+            foreach (var item in logDisplayContentTransform.GetComponentsInChildren<LogDisplayItem>())
+            {
+                Destroy(item.gameObject);
+            }
+            logDisplayItems = new List<GameObject>();
+        }
+
+        public void Evoke(Technology technology)
+        {
+            string text = "Unlocked " + technology.name;
+            if (technology.name == string.Empty)
+                return;
+
+            SetDisplayItem(text);
+        }
+
+        void SetDisplayItem(string text)
+        {
             if (logDisplayItems.Count >= maxLogs)
             {
                 GameObject item = logDisplayItems[0];
@@ -65,7 +87,8 @@ namespace trollschmiede.CivIdle.UI
                 logDisplayContentTransform.GetComponent<VerticalLayoutGroup>().enabled = false;
                 logDisplayContentTransform.GetComponent<VerticalLayoutGroup>().enabled = true;
                 Canvas.ForceUpdateCanvases();
-            } else
+            }
+            else
             {
                 GameObject newItem = Instantiate(logDisplayItemPrefab, logDisplayContentTransform, false) as GameObject;
                 logDisplayItems.Add(newItem);
@@ -73,28 +96,6 @@ namespace trollschmiede.CivIdle.UI
                 newItem.transform.SetAsFirstSibling();
             }
             scrollBar.value = 1f;
-        }
-
-        public void Evoke() { }
-
-        public void RegisterForGameEvent(GameEvent _gameEvent)
-        {
-            if (gameEvents.Contains(_gameEvent))
-            {
-                return;
-            }
-            _gameEvent.RegisterListener(this);
-            gameEvents.Add(_gameEvent);
-        }
-
-        public void Reset()
-        {
-            foreach (var item in logDisplayContentTransform.GetComponentsInChildren<LogDisplayItem>())
-            {
-                Destroy(item.gameObject);
-            }
-            logDisplayItems = new List<GameObject>();
-            gameEvents = new List<GameEvent>();
         }
     }
 }

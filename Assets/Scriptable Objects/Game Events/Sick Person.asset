@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requierments:
   - {fileID: 11400000, guid: 8007c97e8e59bd243a486384128760db, type: 2}
+  - {fileID: 11400000, guid: a9fa99d6fff0ff14aa2e67f70d04125f, type: 2}
   - {fileID: 11400000, guid: 2769632077527cf49a9aa3106f6d357c, type: 2}
   repeatCountMax: 0
-  baseChanceToPass: 1
+  baseChanceToPass: 3
   timeBetweenChecks: 60
   isSpecialTriggered: 0
   gameEventActions:
@@ -25,3 +26,4 @@ MonoBehaviour:
   gameEventText: 1 Person got Sick.
   emptyIfZero: 1
   isDone: 0
+  isOnHold: 1

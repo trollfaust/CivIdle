@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82df00455046b944a9a64b59bbf856c, type: 3}
+  m_Name: No Fireplaces
+  m_EditorClassIdentifier: 
+  requierments: []
+  repeatCountMax: 1
+  baseChanceToPass: 100
+  timeBetweenChecks: 1
+  isSpecialTriggered: 1
+  gameEventActions:
+  - {fileID: 11400000, guid: 02a11f942fb39b445a557b374055a7c3, type: 2}
+  gameEventText: 
+  emptyIfZero: 0
+  isDone: 0
+  isOnHold: 0

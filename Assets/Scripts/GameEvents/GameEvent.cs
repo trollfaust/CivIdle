@@ -44,6 +44,11 @@ namespace trollschmiede.CivIdle.GameEvents
             chanceMultiplier = 1f;
         }
 
+        public void ResetCount()
+        {
+            repeatCount = 0;
+        }
+
         public IEnumerator WaitTime()
         {
             isOnHold = true;

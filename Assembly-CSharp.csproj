@@ -65,11 +65,15 @@
     <Compile Include="Assets\Scripts\Events\IEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IGameEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IResourceEventListener.cs" />
+    <Compile Include="Assets\Scripts\Events\ITechnologyListener.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\Action.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionGameEventChanceModifier.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionGameEventCountReset.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionMultipleActions.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceAmount.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceMaxAmount.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionResourceTypeAmount.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionTechCardAmount.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockGatheringObject.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockResource.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockResourceRequierment.cs" />
@@ -104,6 +108,7 @@
     <Compile Include="Assets\Scripts\Tooltip\TooltipHoverElement.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipManager.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipSettings.cs" />
+    <Compile Include="Assets\Scripts\UI\FullscreenSelector.cs" />
     <Compile Include="Assets\Scripts\UI\LogDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\LogDisplayItem.cs" />
     <Compile Include="Assets\Scripts\UI\PauseButton.cs" />

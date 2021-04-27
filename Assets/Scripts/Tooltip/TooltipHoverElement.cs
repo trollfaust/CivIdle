@@ -161,8 +161,9 @@ namespace trollschmiede.Generic.Tooltip
             currentTooltip = TooltipManager.Instance.GetNewTooltip();
             currentTooltip.transform.SetParent(tooltipParent, false);
             TooltipDisplay tooltipDisplay = currentTooltip.GetComponent<TooltipDisplay>();
-            tooltipDisplay.AlignPosition();
+            tooltipDisplay.parentHoverElement = this;
             tooltipDisplay.SetTooltip(_tooltip);
+            tooltipDisplay.AlignPosition();
 
             Canvas.ForceUpdateCanvases(); // Update Canvas and VerticalLayoutGroup for correct Tooltip size
             tooltipDisplay.GetComponent<VerticalLayoutGroup>().enabled = false;

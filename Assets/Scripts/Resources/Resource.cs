@@ -62,10 +62,12 @@ namespace trollschmiede.CivIdle.Resources
         #endregion
 
         #region Resource Changes
-        public void AmountChange(int value)
+        public bool AmountChange(int value)
         {
             if (value == 0)
-                return;
+                return true;
+            if (value < 0 && amount + value < 0)
+                return false;
 
             amount = amount + value;
             if (hasAmountOpen)
@@ -73,6 +75,7 @@ namespace trollschmiede.CivIdle.Resources
             if (amount > GetTempMaxAmount() && GetTempMaxAmount() > 0)
                 amount = GetTempMaxAmount();
             EvokeAll();
+            return true;
         }
 
         public int GetTempMaxAmount()

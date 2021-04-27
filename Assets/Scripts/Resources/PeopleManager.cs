@@ -22,8 +22,9 @@ namespace trollschmiede.CivIdle.Resources
         [SerializeField] Resource peopleResource = null;
         [SerializeField] Resource sickPeopleResource = null;
         [SerializeField] int peopleNeedsUpdateTime = 5;
-        [SerializeField] Action[] peopleNeeds = new Action[0];
-        [SerializeField] GameEvent failGameEvent = null;
+        [SerializeField] Action[] peopleNeedsEachPerson = new Action[0];
+        [SerializeField] Action[] peopleNeedsAllPersons = new Action[0];
+        [SerializeField] GameEvent[] failGameEvent = null;
         public delegate void OnPeopleAmountChange();
         public event OnPeopleAmountChange onPeopleAmountChange;
 
@@ -58,16 +59,25 @@ namespace trollschmiede.CivIdle.Resources
                 List<int> output = new List<int>();
                 for (int i = 0; i < peopleResource.amount; i++)
                 {
-                    foreach (var item in peopleNeeds)
+                    for (int j = 0; j < peopleNeedsEachPerson.Length; j++)
                     {
-                        output.Add(item.EvokeAction());
+                        Action item = peopleNeedsEachPerson[j];
+                        int value = item.EvokeAction();
+                        if (value == 0)
+                        {
+                            failGameEvent[j]?.Evoke();
+                            break;
+                        }
                     }
                 }
-                foreach (int value in output)
+
+                for (int j = 0; j < peopleNeedsAllPersons.Length; j++)
                 {
+                    Action item = peopleNeedsAllPersons[j];
+                    int value = item.EvokeAction();
                     if (value == 0)
                     {
-                        failGameEvent.Evoke();
+                        failGameEvent[j + peopleNeedsEachPerson.Length]?.Evoke();
                         break;
                     }
                 }

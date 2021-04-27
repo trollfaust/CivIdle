@@ -2,6 +2,7 @@
 using trollschmiede.CivIdle.GameEvents;
 using trollschmiede.Generic.Tooltip;
 using System.Collections.Generic;
+using trollschmiede.CivIdle.Events;
 
 namespace trollschmiede.CivIdle.Science
 {
@@ -14,6 +15,8 @@ namespace trollschmiede.CivIdle.Science
         [SerializeField] Action[] unlocks = new Action[0];
         [SerializeField] Sprite sprite = null;
         public bool isDone = false;
+
+        private List<ITechnologyListener> listeners;
 
         bool CheckUnlockRequierments()
         {
@@ -51,6 +54,7 @@ namespace trollschmiede.CivIdle.Science
             {
                 item.EvokeAction();
             }
+            Evoke();
             isDone = true;
             return true;
         }
@@ -99,5 +103,33 @@ namespace trollschmiede.CivIdle.Science
 
             return keyValuePairs;
         }
+
+        #region Event Managment
+        public void RegisterListener(ITechnologyListener _listener)
+        {
+            if (listeners == null)
+            {
+                listeners = new List<ITechnologyListener>();
+            }
+            listeners.Add(_listener);
+        }
+
+        public void UnregisterListener(ITechnologyListener _listener)
+        {
+            listeners.Remove(_listener);
+        }
+
+        bool Evoke()
+        {
+            if (listeners != null)
+            {
+                foreach (var listener in listeners)
+                {
+                    listener.Evoke(this);
+                }
+            }
+            return true;
+        }
+        #endregion
     }
 }

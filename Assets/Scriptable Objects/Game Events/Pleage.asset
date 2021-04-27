@@ -20,8 +20,8 @@ MonoBehaviour:
   timeBetweenChecks: 120
   isSpecialTriggered: 0
   gameEventActions:
-  - {fileID: 11400000, guid: 791452210b0eb1e4083baf8d49b4ea36, type: 2}
-  - {fileID: 11400000, guid: 107ed5d3fa0de13488d5409516db8066, type: 2}
+  - {fileID: 11400000, guid: 6735e495d7056f44ca780ec5e02b3b59, type: 2}
   gameEventText: A Pleage has broken out, $0 People are now sick.
   emptyIfZero: 1
   isDone: 0
+  isOnHold: 0
