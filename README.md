@@ -1,2 +1,2 @@
 # CivIdle
-A small Game Dev Project
+A small Game Dev Project by Trollfaust
