@@ -571,7 +571,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: fa79299e45d1782431f8dd441725087a
+      Hash: 4bf4c60421b7a562c2f13c58ae6355fe
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Resources
     className: GatheringObject
@@ -1058,4 +1058,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: E:/Unity/CivIdle/build/InDev-28.04.21a/CivIdle.exe
+  playerPath: E:/Unity/CivIdle/build/InDev-28.04.21b/CivIdle.exe

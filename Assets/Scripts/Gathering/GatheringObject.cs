@@ -16,6 +16,11 @@ namespace trollschmiede.CivIdle.Resources
         public bool isManuelGatherable = true;
         public float buttonCooldownTime = 5f;
         public int priorityValueSubstract = 0;
+        public bool isEnabled = false;
+        [HideInInspector]
+        public int peopleWorking = 0;
+        [HideInInspector]
+        public int peopleWishedWorking = 0;
 
         public Dictionary<string, string> GetTooltipValues()
         {
