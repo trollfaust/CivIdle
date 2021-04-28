@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.Events;
 using trollschmiede.CivIdle.GameEvents;
+using System;
 
 namespace trollschmiede.CivIdle.Resources
 {
@@ -24,11 +25,14 @@ namespace trollschmiede.CivIdle.Resources
         }
         #endregion
 
+        private string requierementMeetKey = "REQUIERMENTMEET";
         public Resource[] allResources = null;
         [SerializeField] GameObject resourceDisplayGroupPrefab = null;
         [SerializeField] GameObject resourceDisplayPrefab = null;
         [SerializeField] Transform resourceDisplayParent = null;
-        
+
+        char requSeperator = '$';
+
         public void Evoke() { }
         public void Evoke(Resource _resource)
         {
@@ -63,7 +67,25 @@ namespace trollschmiede.CivIdle.Resources
                 }
             }
             requiermentsMeet = new List<ResoureRequierment>();
-            requiermentsMeet.Add(ResoureRequierment.Start);          
+            requiermentsMeet.Add(ResoureRequierment.Start);
+
+            string safeString = PlayerPrefs.GetString(requierementMeetKey);
+            if (safeString != string.Empty)
+            {
+                string[] cut = safeString.Split(requSeperator);
+                for (int i = 0; i < cut.Length; i++)
+                {
+                    foreach (ResoureRequierment requierment in Enum.GetValues(typeof(ResoureRequierment)))
+                    {
+                        if (requierment.ToString() == cut[i])
+                        {
+                            AddRequierment(requierment);
+                        }
+                    }
+                }
+            }
+
+            Reset();
         }
 
 
@@ -84,7 +106,8 @@ namespace trollschmiede.CivIdle.Resources
                 }
                 item.RegisterListener(this);
             }
-            StartCoroutine(ResetLayout());
+
+            ResetLayout();
         }
 
         void OnDisable()
@@ -114,7 +137,7 @@ namespace trollschmiede.CivIdle.Resources
                 GameObject gO = Instantiate(resourceDisplayPrefab, displayGroup.GetContentTransform()) as GameObject;
                 gO.GetComponent<ResourceDisplay>().SetResource(_resource);
 
-                StartCoroutine(ResetLayout());
+                ResetLayout();
             }
         }
 
@@ -130,13 +153,16 @@ namespace trollschmiede.CivIdle.Resources
         public void AddRequierment(ResoureRequierment _requierment)
         {
             requiermentsMeet.Add(_requierment);
+            string safeString = PlayerPrefs.GetString(requierementMeetKey);
+            safeString = safeString + _requierment.ToString() + requSeperator;
+            PlayerPrefs.SetString(requierementMeetKey, safeString);
         }
 
         
-        IEnumerator ResetLayout()
+        void ResetLayout()
         {
+            Canvas.ForceUpdateCanvases();
             resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = false;
-            yield return new WaitForEndOfFrame();
             resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = true;
         }
     }

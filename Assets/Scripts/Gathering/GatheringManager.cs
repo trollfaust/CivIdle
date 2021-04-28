@@ -26,6 +26,17 @@ namespace trollschmiede.CivIdle.Resources
 
         private List<GatheringObject> enabledGatheringObjects;
 
+        private void Start()
+        {
+            foreach (var item in allGatheringObjects)
+            {
+                if (item.isEnabled)
+                {
+                    EnableGatheringObject(item);
+                }
+            }
+        }
+
         public void EnableGatheringObject(GatheringObject _gatheringObject)
         {
             if (enabledGatheringObjects == null)
@@ -37,6 +48,7 @@ namespace trollschmiede.CivIdle.Resources
                 return;
             }
             enabledGatheringObjects.Add(_gatheringObject);
+            _gatheringObject.isEnabled = true;
 
             GameObject newGO = Instantiate(gatheringObjectPrefab, gatheringObjectContainer, false) as GameObject;
             newGO.GetComponent<GatheringObjectDisplay>().Setup(_gatheringObject);
@@ -44,6 +56,13 @@ namespace trollschmiede.CivIdle.Resources
 
         public void Reset()
         {
+            foreach (GatheringObject item in allGatheringObjects)
+            {
+                item.isEnabled = false;
+                item.peopleWorking = 0;
+                item.peopleWishedWorking = 0;
+            }
+
             foreach (var item in gatheringObjectContainer.GetComponentsInChildren<GatheringObjectDisplay>())
             {
                 Destroy(item.gameObject);

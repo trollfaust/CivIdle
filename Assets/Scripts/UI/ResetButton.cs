@@ -7,8 +7,15 @@ namespace trollschmiede.CivIdle.UI
 {
     public class ResetButton : MonoBehaviour
     {
+        private string firstLaunchKey = "FIRSTLAUNCHDONE";
+
         private void Start()
         {
+            if (PlayerPrefs.GetInt(firstLaunchKey) >= 1)
+            {
+                return;
+            }
+            PlayerPrefs.SetInt(firstLaunchKey, 1);
             StartCoroutine(OnStartUp());
         }
 
