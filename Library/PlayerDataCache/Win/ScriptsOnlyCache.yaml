@@ -137,125 +137,125 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11414}
+      Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 11416}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11426}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11560}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11644}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11646}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 12114}
+      Script: {instanceID: 11838}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12116}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 12320}
+      Script: {instanceID: 12162}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12374}
+      Script: {instanceID: 12326}
     - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 12370}
     - Class: 114
-      Script: {instanceID: 12594}
+      Script: {instanceID: 12380}
     - Class: 114
-      Script: {instanceID: 12616}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 12678}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12692}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12752}
+      Script: {instanceID: 12686}
     - Class: 114
-      Script: {instanceID: 12800}
+      Script: {instanceID: 12700}
     - Class: 114
-      Script: {instanceID: 12806}
+      Script: {instanceID: 12730}
     - Class: 114
-      Script: {instanceID: 12814}
+      Script: {instanceID: 12762}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12810}
+    - Class: 114
+      Script: {instanceID: 12816}
+    - Class: 114
+      Script: {instanceID: 12824}
     - Class: 114
       Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 13028}
+      Script: {instanceID: 12984}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 13136}
+      Script: {instanceID: 13074}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 13146}
     - Class: 114
-      Script: {instanceID: 13186}
+      Script: {instanceID: 13180}
     - Class: 114
-      Script: {instanceID: 13316}
+      Script: {instanceID: 13196}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13326}
     - Class: 114
-      Script: {instanceID: 13416}
+      Script: {instanceID: 13412}
     - Class: 114
-      Script: {instanceID: 13422}
+      Script: {instanceID: 13426}
     - Class: 114
-      Script: {instanceID: 13496}
+      Script: {instanceID: 13432}
     - Class: 114
-      Script: {instanceID: 13724}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13814}
+      Script: {instanceID: 13734}
     - Class: 114
-      Script: {instanceID: 13828}
+      Script: {instanceID: 13824}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 13838}
     - Class: 114
-      Script: {instanceID: 13904}
+      Script: {instanceID: 13844}
     - Class: 114
-      Script: {instanceID: 13912}
+      Script: {instanceID: 13914}
     - Class: 114
-      Script: {instanceID: 13932}
+      Script: {instanceID: 13922}
     - Class: 114
-      Script: {instanceID: 13940}
+      Script: {instanceID: 13942}
     - Class: 114
-      Script: {instanceID: 14026}
+      Script: {instanceID: 13950}
     - Class: 114
-      Script: {instanceID: 14048}
+      Script: {instanceID: 14036}
     - Class: 114
-      Script: {instanceID: 14052}
+      Script: {instanceID: 14058}
     - Class: 114
-      Script: {instanceID: 14120}
+      Script: {instanceID: 14062}
     - Class: 114
-      Script: {instanceID: 14148}
+      Script: {instanceID: 14130}
     - Class: 114
-      Script: {instanceID: 14318}
+      Script: {instanceID: 14158}
     - Class: 114
-      Script: {instanceID: 14380}
+      Script: {instanceID: 14328}
     - Class: 114
-      Script: {instanceID: 14466}
+      Script: {instanceID: 14390}
     - Class: 114
-      Script: {instanceID: 14486}
+      Script: {instanceID: 14476}
     - Class: 114
-      Script: {instanceID: 16530}
-    - Class: 114
-      Script: {instanceID: 20930}
-    - Class: 114
-      Script: {instanceID: 79292}
+      Script: {instanceID: 14496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -323,6 +323,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 70de9d1ece76e9342da368f7fe18981f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEvents
+    className: ActionGameEventCountReset
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -523,6 +529,18 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 758267e395bdc53cea3f8323237cb7ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEvents
+    className: ActionTechCardAmount
+  - hash:
+      serializedVersion: 2
+      Hash: c102bfe041cb8e796a8370a18c5734d1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEvents
+    className: ActionMultipleActions
+  - hash:
+      serializedVersion: 2
       Hash: ce7bf35bf39fdf495a0973e232957514
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
@@ -635,6 +653,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionUnlockResourceRequierment
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: FullscreenSelector
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1031,31 +1055,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.UI
-    className: FullscreenSelector
-  - hash:
-      serializedVersion: 2
-      Hash: c102bfe041cb8e796a8370a18c5734d1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.GameEvents
-    className: ActionMultipleActions
-  - hash:
-      serializedVersion: 2
-      Hash: 758267e395bdc53cea3f8323237cb7ad
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.GameEvents
-    className: ActionTechCardAmount
-  - hash:
-      serializedVersion: 2
-      Hash: 70de9d1ece76e9342da368f7fe18981f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.GameEvents
-    className: ActionGameEventCountReset
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: E:/Unity/CivIdle/build/InDev-27.04.21c/CivIdle.exe
+  playerPath: E:/Unity/CivIdle/build/InDev-28.04.21a/CivIdle.exe
