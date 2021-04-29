@@ -21,7 +21,7 @@ namespace trollschmiede.CivIdle.UI {
         {
             string text = _resource.name + ": ";
             if (_resource.hasAmountOpen)
-                text = text + _resource.amountOpen.ToString() + "/" + _resource.amount.ToString();
+                text = text + _resource.openAmount.ToString() + "/" + _resource.amount.ToString();
             else if (_resource.maxAmount > 0)
                 text = text + _resource.amount.ToString() + "/" + _resource.maxAmount.ToString();
             else

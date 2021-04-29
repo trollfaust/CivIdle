@@ -20,10 +20,19 @@ namespace trollschmiede.CivIdle.GameEvents
         }
         #endregion
 
+        private string gameEventKey = "GAMEEVENT";
         public GameEvent[] gameEvents;
 
         private void Start()
         {
+            foreach (var item in gameEvents)
+            {
+                item.repeatCount = PlayerPrefs.GetInt(gameEventKey + item.name + "COUNT");
+                item.chanceMultiplier = PlayerPrefs.GetFloat(gameEventKey + item.name + "MULTIPLIER");
+                item.isDone = (PlayerPrefs.GetInt(gameEventKey + item.name + "ISDONE") == 0) ? false : true;
+            }
+
+
             StartCoroutine(GameEventLoop());
         }
 
@@ -48,8 +57,24 @@ namespace trollschmiede.CivIdle.GameEvents
                             }
                         }
                     }
+                    Debug.Log("loop" + gameEvent.name);
+                    PlayerPrefs.SetInt(gameEventKey + gameEvent.name + "COUNT", gameEvent.repeatCount);
+                    PlayerPrefs.SetFloat(gameEventKey + gameEvent.name + "MULTIPLIER", gameEvent.chanceMultiplier);
+                    PlayerPrefs.SetInt(gameEventKey + gameEvent.name + "ISDONE", (gameEvent.isDone) ? 1 : 0);
                 }
                 yield return new WaitForSeconds(1f);
+            }
+        }
+
+        public void Reset()
+        {
+            foreach (var gameEvent in gameEvents)
+            {
+                gameEvent.Reset();
+
+                PlayerPrefs.SetInt(gameEventKey + gameEvent.name + "COUNT", gameEvent.repeatCount);
+                PlayerPrefs.SetFloat(gameEventKey + gameEvent.name + "MULTIPLIER", gameEvent.chanceMultiplier);
+                PlayerPrefs.SetInt(gameEventKey + gameEvent.name + "ISDONE", (gameEvent.isDone) ? 1 : 0);
             }
         }
 

@@ -82,7 +82,7 @@ namespace trollschmiede.CivIdle.GameEvents
 
             if (safeCount >= 20)
             {
-                while (count > 0)
+                while (count > 0 && safeCount > 0)
                 {
                     foreach (Resource resource in resourceOfType)
                     {
@@ -97,6 +97,7 @@ namespace trollschmiede.CivIdle.GameEvents
                             }
                         }
                     }
+                    safeCount--;
                 }
             }
 

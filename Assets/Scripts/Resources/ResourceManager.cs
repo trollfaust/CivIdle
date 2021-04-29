@@ -26,6 +26,7 @@ namespace trollschmiede.CivIdle.Resources
         #endregion
 
         private string requierementMeetKey = "REQUIERMENTMEET";
+        private string resourceKey = "RESOURCE";
         public Resource[] allResources = null;
         [SerializeField] GameObject resourceDisplayGroupPrefab = null;
         [SerializeField] GameObject resourceDisplayPrefab = null;
@@ -65,6 +66,11 @@ namespace trollschmiede.CivIdle.Resources
                     resourceCategories.Add(item.resourceCategory);
                     gO.SetActive(false);
                 }
+
+                item.amount = PlayerPrefs.GetInt(resourceKey + item.name + "AMOUNT");
+                item.maxAmount = PlayerPrefs.GetInt(resourceKey + item.name + "MAXAMOUNT");
+                item.openAmount = PlayerPrefs.GetInt(resourceKey + item.name + "OPENAMOUNT");
+                item.isEnabled = (PlayerPrefs.GetInt(resourceKey + item.name + "ISENABLED") == 0) ? false : true;
             }
             requiermentsMeet = new List<ResoureRequierment>();
             requiermentsMeet.Add(ResoureRequierment.Start);
@@ -97,6 +103,13 @@ namespace trollschmiede.CivIdle.Resources
             }
             foreach (var item in allResources)
             {
+                item.Reset();
+
+                PlayerPrefs.SetInt(resourceKey + item.name + "AMOUNT", item.amount);
+                PlayerPrefs.SetInt(resourceKey + item.name + "MAXAMOUNT", item.maxAmount);
+                PlayerPrefs.SetInt(resourceKey + item.name + "OPENAMOUNT", item.openAmount);
+                PlayerPrefs.SetInt(resourceKey + item.name + "ISENABLED", (item.isEnabled) ? 1 : 0);
+
                 if (item.isEnabled)
                 {
                     int index = resourceCategories.IndexOf(item.resourceCategory);
@@ -137,8 +150,21 @@ namespace trollschmiede.CivIdle.Resources
                 GameObject gO = Instantiate(resourceDisplayPrefab, displayGroup.GetContentTransform()) as GameObject;
                 gO.GetComponent<ResourceDisplay>().SetResource(_resource);
 
+                PlayerPrefs.SetInt(resourceKey + _resource.name + "AMOUNT", _resource.amount);
+                PlayerPrefs.SetInt(resourceKey + _resource.name + "MAXAMOUNT", _resource.maxAmount);
+                PlayerPrefs.SetInt(resourceKey + _resource.name + "OPENAMOUNT", _resource.openAmount);
+                PlayerPrefs.SetInt(resourceKey + _resource.name + "ISENABLED", (_resource.isEnabled) ? 1 : 0);
+
                 ResetLayout();
             }
+        }
+
+        public void SaveResource(Resource _resource)
+        {
+            PlayerPrefs.SetInt(resourceKey + _resource.name + "AMOUNT", _resource.amount);
+            PlayerPrefs.SetInt(resourceKey + _resource.name + "MAXAMOUNT", _resource.maxAmount);
+            PlayerPrefs.SetInt(resourceKey + _resource.name + "OPENAMOUNT", _resource.openAmount);
+            PlayerPrefs.SetInt(resourceKey + _resource.name + "ISENABLED", (_resource.isEnabled) ? 1 : 0);
         }
 
         public bool CheckRequirement(ResoureRequierment _requierment)

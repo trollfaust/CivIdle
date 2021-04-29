@@ -100,8 +100,10 @@ namespace trollschmiede.CivIdle.Resources
 
             gatheringObjects.Sort((x, y) => x.GetPriorityValue().CompareTo(y.GetPriorityValue()));
 
-            while (peopleResource.amountOpen < 0)
+            while (peopleResource.openAmount < 0)
             {
+                if (gatheringObjects == null || gatheringObjects.Count == 0)
+                    break;
                 foreach (var item in gatheringObjects)
                 {
                     if (item.GetCount() > 0)
@@ -113,7 +115,7 @@ namespace trollschmiede.CivIdle.Resources
             }
 
 
-            if (peopleResource.amountOpen > 0)
+            if (peopleResource.openAmount > 0)
             {
                 gatheringObjects.Sort((x, y) => y.GetPriorityValue().CompareTo(x.GetPriorityValue()));
                 foreach (var item in gatheringObjects)

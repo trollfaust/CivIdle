@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Resources;
 using System.Collections;
 using trollschmiede.CivIdle.Generic;
 
@@ -15,8 +14,8 @@ namespace trollschmiede.CivIdle.UI
             {
                 return;
             }
-            PlayerPrefs.SetInt(firstLaunchKey, 1);
             StartCoroutine(OnStartUp());
+            PlayerPrefs.SetInt(firstLaunchKey, 1);
         }
 
         public void OnButtonPressed()

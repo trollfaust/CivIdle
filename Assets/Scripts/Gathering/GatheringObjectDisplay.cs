@@ -31,7 +31,7 @@ namespace trollschmiede.CivIdle.UI
             {
                 substructButton.interactable = true;
             }
-            if (resourcePeople.amountOpen < gatheringObject.peopleNeededToWork)
+            if (resourcePeople.openAmount < gatheringObject.peopleNeededToWork)
             {
                 addButton.interactable = false;
             } else
@@ -63,7 +63,7 @@ namespace trollschmiede.CivIdle.UI
             int tempCount = gatheringObject.peopleWorking;
             for (int i = 0; i < (gatheringObject.peopleWishedWorking - tempCount); i++)
             {
-                if (resourcePeople.amountOpen < gatheringObject.peopleNeededToWork)
+                if (resourcePeople.openAmount < gatheringObject.peopleNeededToWork)
                     return;
                 gatheringObject.peopleWorking++;
                 CountText.text = (gatheringObject.peopleWishedWorking != gatheringObject.peopleWorking) ? gatheringObject.peopleWorking.ToString() + " / " + gatheringObject.peopleWishedWorking.ToString() : gatheringObject.peopleWorking.ToString();
@@ -79,7 +79,7 @@ namespace trollschmiede.CivIdle.UI
         {
             if (gatheringObject == null)
                 return;
-            if (resourcePeople.amountOpen < gatheringObject.peopleNeededToWork)
+            if (resourcePeople.openAmount < gatheringObject.peopleNeededToWork)
                 return;
 
             gatheringObject.peopleWorking++;
