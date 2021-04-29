@@ -20,6 +20,7 @@ namespace trollschmiede.CivIdle.Resources
         }
         #endregion
 
+        private string gatheringObjectKey = "GATHERINGOBJECT";
         [SerializeField] GatheringObject[] allGatheringObjects = new GatheringObject[0];
         [SerializeField] GameObject gatheringObjectPrefab = null;
         [SerializeField] Transform gatheringObjectContainer = null;
@@ -30,6 +31,10 @@ namespace trollschmiede.CivIdle.Resources
         {
             foreach (var item in allGatheringObjects)
             {
+                item.peopleWorking = PlayerPrefs.GetInt(gatheringObjectKey + item.name + "PEOPLEWORKING");
+                item.peopleWishedWorking = PlayerPrefs.GetInt(gatheringObjectKey + item.name + "PEOPLEWISHEDWORKING");
+                item.isEnabled = (PlayerPrefs.GetInt(gatheringObjectKey + item.name + "ISENABLED") == 0) ? false : true;
+
                 if (item.isEnabled)
                 {
                     EnableGatheringObject(item);
@@ -52,6 +57,10 @@ namespace trollschmiede.CivIdle.Resources
 
             GameObject newGO = Instantiate(gatheringObjectPrefab, gatheringObjectContainer, false) as GameObject;
             newGO.GetComponent<GatheringObjectDisplay>().Setup(_gatheringObject);
+
+            PlayerPrefs.SetInt(gatheringObjectKey + _gatheringObject.name + "PEOPLEWORKING", _gatheringObject.peopleWorking);
+            PlayerPrefs.SetInt(gatheringObjectKey + _gatheringObject.name + "PEOPLEWISHEDWORKING", _gatheringObject.peopleWishedWorking);
+            PlayerPrefs.SetInt(gatheringObjectKey + _gatheringObject.name + "ISENABLED", (_gatheringObject.isEnabled) ? 1 : 0);
         }
 
         public void Reset()
@@ -61,6 +70,10 @@ namespace trollschmiede.CivIdle.Resources
                 item.isEnabled = false;
                 item.peopleWorking = 0;
                 item.peopleWishedWorking = 0;
+
+                PlayerPrefs.SetInt(gatheringObjectKey + item.name + "PEOPLEWORKING", item.peopleWorking);
+                PlayerPrefs.SetInt(gatheringObjectKey + item.name + "PEOPLEWISHEDWORKING", item.peopleWishedWorking);
+                PlayerPrefs.SetInt(gatheringObjectKey + item.name + "ISENABLED", (item.isEnabled) ? 1 : 0);
             }
 
             foreach (var item in gatheringObjectContainer.GetComponentsInChildren<GatheringObjectDisplay>())

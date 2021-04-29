@@ -10,16 +10,7 @@ namespace trollschmiede.CivIdle.Generic
     {
         public static void ResetData()
         {
-
-            foreach (var resource in ResourceManager.instance.allResources)
-            {
-                resource.Reset();
-            }
-
-            foreach (var gameEvent in GameEventManager.instance.gameEvents)
-            {
-                gameEvent.Reset();
-            }
+            GameEventManager.instance.Reset();
 
             ResourceManager.instance.Reset();
 

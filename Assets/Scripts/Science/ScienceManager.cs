@@ -23,6 +23,7 @@ namespace trollschmiede.CivIdle.Science
         #endregion
 
         private string currentTechKey = "CURRENTTECH";
+        private string techKey = "TECH";
         [SerializeField] Technology[] allTechnologies = new Technology[0];
         [SerializeField] GameObject techCardPrefab = null;
         [SerializeField] Transform techCardContainer = null;
@@ -36,6 +37,11 @@ namespace trollschmiede.CivIdle.Science
         {
             techCardsToChoose = baseTechCardsToChoose;
             string safeString = PlayerPrefs.GetString(currentTechKey);
+            foreach (var item in allTechnologies)
+            {
+                item.isDone = (PlayerPrefs.GetInt(techKey + item.name + "ISDONE") != 1) ? false : true; 
+            }
+
             if (safeString == string.Empty)
             {
                 SetTechCards(techCardsToChoose);
@@ -142,6 +148,8 @@ namespace trollschmiede.CivIdle.Science
                     Destroy(item.gameObject);
                 }
 
+                PlayerPrefs.SetInt(techKey + tech.name + "ISDONE", 1);
+
                 SetTechCards(techCardsToChoose);
             }
         }
@@ -155,6 +163,7 @@ namespace trollschmiede.CivIdle.Science
             foreach (var item in allTechnologies)
             {
                 item.isDone = false;
+                PlayerPrefs.SetInt(techKey + item.name + "ISDONE", 0);
             }
             SetTechCards(techCardsToChoose);
         }

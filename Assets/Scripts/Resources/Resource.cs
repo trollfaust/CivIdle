@@ -16,7 +16,7 @@ namespace trollschmiede.CivIdle.Resources
         public int amount;
         public bool hasAmountOpen;
         [HideInInspector]
-        public int amountOpen;
+        public int openAmount;
         [HideInInspector]
         public int maxAmount;
         public int baseMaxAmount;
@@ -71,10 +71,11 @@ namespace trollschmiede.CivIdle.Resources
 
             amount = amount + value;
             if (hasAmountOpen)
-                amountOpen = amountOpen + value;
+                openAmount = openAmount + value;
             if (amount > GetTempMaxAmount() && GetTempMaxAmount() > 0)
                 amount = GetTempMaxAmount();
             EvokeAll();
+            ResourceManager.instance.SaveResource(this);
             return true;
         }
 
@@ -96,8 +97,9 @@ namespace trollschmiede.CivIdle.Resources
             if (value == 0)
                 return;
             if (hasAmountOpen)
-                amountOpen = amountOpen + value;
+                openAmount = openAmount + value;
             EvokeAll();
+            ResourceManager.instance.SaveResource(this);
         }
 
         public void MaxAmountChange(int value)
@@ -110,19 +112,14 @@ namespace trollschmiede.CivIdle.Resources
                 amount = maxAmount;
             }
             EvokeAll();
-        }
-
-        public void EnableResource()
-        {
-            isEnabled = true;
-            EvokeAll();
+            ResourceManager.instance.SaveResource(this);
         }
 
         public void Reset()
         {
             maxAmount = baseMaxAmount;
             amount = 0;
-            amountOpen = 0;
+            openAmount = 0;
             isEnabled = false;
             if (resoureRequierment == ResoureRequierment.Start)
             {
@@ -137,7 +134,7 @@ namespace trollschmiede.CivIdle.Resources
 
             keyValuePairs.Add("name", name);
             keyValuePairs.Add("amount", amount.ToString());
-            keyValuePairs.Add("amountOpen", amountOpen.ToString());
+            keyValuePairs.Add("amountOpen", openAmount.ToString());
             keyValuePairs.Add("maxAmount", maxAmount.ToString());
             keyValuePairs.Add("saturationValue", typeAmountMultiplier.ToString());
             keyValuePairs.Add("cultureValue", cultureValue.ToString());

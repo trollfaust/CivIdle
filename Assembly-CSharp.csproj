@@ -108,6 +108,7 @@
     <Compile Include="Assets\Scripts\Tooltip\TooltipHoverElement.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipManager.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipSettings.cs" />
+    <Compile Include="Assets\Scripts\UI\FloatingText.cs" />
     <Compile Include="Assets\Scripts\UI\FullscreenSelector.cs" />
     <Compile Include="Assets\Scripts\UI\LogDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\LogDisplayItem.cs" />

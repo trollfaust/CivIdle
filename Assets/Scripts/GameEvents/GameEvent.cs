@@ -25,7 +25,7 @@ namespace trollschmiede.CivIdle.GameEvents
         char cutSeperator = '§';
         public bool emptyIfZero = false;
 
-        [HideInInspector]
+        //[HideInInspector]
         public bool isDone;
         private List<IGameEventListener> listeners;
         [HideInInspector]
@@ -33,8 +33,10 @@ namespace trollschmiede.CivIdle.GameEvents
 
         private List<int> returnActionValues;
 
-        private int repeatCount = 0;
-        private float chanceMultiplier = 1f;
+        //[HideInInspector]
+        public int repeatCount = 0;
+        //[HideInInspector]
+        public float chanceMultiplier = 1f;
 
         public void Reset()
         {
