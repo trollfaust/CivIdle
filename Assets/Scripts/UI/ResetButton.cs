@@ -14,6 +14,10 @@ namespace trollschmiede.CivIdle.UI
             {
                 return;
             }
+<<<<<<< HEAD
+=======
+            PlayerPrefs.SetInt(firstLaunchKey, 1);
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
             StartCoroutine(OnStartUp());
             PlayerPrefs.SetInt(firstLaunchKey, 1);
         }

@@ -26,7 +26,10 @@ namespace trollschmiede.CivIdle.Resources
         #endregion
 
         private string requierementMeetKey = "REQUIERMENTMEET";
+<<<<<<< HEAD
         private string resourceKey = "RESOURCE";
+=======
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
         public Resource[] allResources = null;
         [SerializeField] GameObject resourceDisplayGroupPrefab = null;
         [SerializeField] GameObject resourceDisplayPrefab = null;
@@ -150,11 +153,14 @@ namespace trollschmiede.CivIdle.Resources
                 GameObject gO = Instantiate(resourceDisplayPrefab, displayGroup.GetContentTransform()) as GameObject;
                 gO.GetComponent<ResourceDisplay>().SetResource(_resource);
 
+<<<<<<< HEAD
                 PlayerPrefs.SetInt(resourceKey + _resource.name + "AMOUNT", _resource.amount);
                 PlayerPrefs.SetInt(resourceKey + _resource.name + "MAXAMOUNT", _resource.maxAmount);
                 PlayerPrefs.SetInt(resourceKey + _resource.name + "OPENAMOUNT", _resource.openAmount);
                 PlayerPrefs.SetInt(resourceKey + _resource.name + "ISENABLED", (_resource.isEnabled) ? 1 : 0);
 
+=======
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
                 ResetLayout();
             }
         }

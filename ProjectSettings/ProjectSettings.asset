@@ -124,7 +124,11 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
+<<<<<<< HEAD
   bundleVersion: InDev-29.04.21a
+=======
+  bundleVersion: InDev-28.04.21b
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

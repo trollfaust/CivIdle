@@ -31,10 +31,13 @@ namespace trollschmiede.CivIdle.Resources
         {
             foreach (var item in allGatheringObjects)
             {
+<<<<<<< HEAD
                 item.peopleWorking = PlayerPrefs.GetInt(gatheringObjectKey + item.name + "PEOPLEWORKING");
                 item.peopleWishedWorking = PlayerPrefs.GetInt(gatheringObjectKey + item.name + "PEOPLEWISHEDWORKING");
                 item.isEnabled = (PlayerPrefs.GetInt(gatheringObjectKey + item.name + "ISENABLED") == 0) ? false : true;
 
+=======
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
                 if (item.isEnabled)
                 {
                     EnableGatheringObject(item);
@@ -70,10 +73,13 @@ namespace trollschmiede.CivIdle.Resources
                 item.isEnabled = false;
                 item.peopleWorking = 0;
                 item.peopleWishedWorking = 0;
+<<<<<<< HEAD
 
                 PlayerPrefs.SetInt(gatheringObjectKey + item.name + "PEOPLEWORKING", item.peopleWorking);
                 PlayerPrefs.SetInt(gatheringObjectKey + item.name + "PEOPLEWISHEDWORKING", item.peopleWishedWorking);
                 PlayerPrefs.SetInt(gatheringObjectKey + item.name + "ISENABLED", (item.isEnabled) ? 1 : 0);
+=======
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
             }
 
             foreach (var item in gatheringObjectContainer.GetComponentsInChildren<GatheringObjectDisplay>())

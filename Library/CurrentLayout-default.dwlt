@@ -112,10 +112,17 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 987
+<<<<<<< HEAD
   m_MinSize: {x: 881, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
   controlID: 189
+=======
+  m_MinSize: {x: 905, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
+  vertical: 0
+  controlID: 191
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1997
     height: 987
-  m_MinSize: {x: 605, y: 492}
+  m_MinSize: {x: 604, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
   controlID: 85
@@ -162,9 +169,15 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1997
+<<<<<<< HEAD
     height: 711
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
+=======
+    height: 716
+  m_MinSize: {x: 604, y: 221}
+  m_MaxSize: {x: 12004, y: 4021}
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
   vertical: 0
   controlID: 86
 --- !u!114 &8
@@ -184,8 +197,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 300
     height: 711
+=======
+    width: 370
+    height: 716
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
@@ -273,7 +291,11 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 152
+=======
+  controlID: 153
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -478,7 +500,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 9c3c0000
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 5efbffff
+=======
+      m_ExpandedIDs: 9c74ffffb074ffff9e75ffff5efbffff
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -759,7 +785,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 02400000
     m_LastClickedID: 16386
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000904000009240000094400000
+=======
+    m_ExpandedIDs: 000000008c4000008e40000090400000
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -787,7 +817,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000904000009240000094400000
+=======
+    m_ExpandedIDs: 000000008c4000008e40000090400000
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -920,20 +954,35 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scriptable Objects/Game Events
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
   - Assets/Scriptable Objects/Game Events
+=======
+    - Assets/Scriptable Objects/Technologies
+  m_ViewMode: 1
+  m_StartGridSize: 16
+  m_LastFolders:
+  - Assets/Scriptable Objects/Technologies
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Unity\CivIdle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 65}
     m_SelectedIDs: aa400000
     m_LastClickedID: 16554
     m_ExpandedIDs: 00000000904000009240000094400000
+=======
+    scrollPos: {x: 0, y: 120}
+    m_SelectedIDs: aa400000
+    m_LastClickedID: 16554
+    m_ExpandedIDs: 000000008c4000008e40000090400000
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -961,7 +1010,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000904000009240000094400000
+=======
+    m_ExpandedIDs: 000000008c4000008e40000090400000
+>>>>>>> 72f39e707d2661234c37f87e39a009cfdbe1ced0
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
