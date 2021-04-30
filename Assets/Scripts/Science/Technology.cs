@@ -104,6 +104,11 @@ namespace trollschmiede.CivIdle.Science
             return keyValuePairs;
         }
 
+        public void Reset()
+        {
+            isDone = false;
+        }
+
         #region Event Managment
         public void RegisterListener(ITechnologyListener _listener)
         {

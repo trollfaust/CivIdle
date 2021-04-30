@@ -52,7 +52,9 @@ namespace trollschmiede.Generic.Tooltip
 
         public void SetDisplayOff()
         {
+            hoverElement.RemoveTooltip();
             isInUse = false;
+            isFixed = false;
             animator.SetBool("FadeIn", false);
         }
 
@@ -63,7 +65,7 @@ namespace trollschmiede.Generic.Tooltip
             int titleLenght = titleText.text.Length;
             int contentLenght = tooltipText.text.Length;
 
-            layoutElement.enabled = (titleLenght > TooltipManager.Instance.settings.characterWrapLimit || contentLenght > TooltipManager.Instance.settings.characterWrapLimit) ? true : false;
+            layoutElement.enabled = (titleLenght > TooltipManager.instance.settings.characterWrapLimit || contentLenght > TooltipManager.instance.settings.characterWrapLimit) ? true : false;
         }
 
         string TextEdit(string text)
@@ -88,7 +90,7 @@ namespace trollschmiede.Generic.Tooltip
             }
 
             char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
-            string colorCode = ColorUtility.ToHtmlStringRGB(TooltipManager.Instance.settings.highlightColor);
+            string colorCode = ColorUtility.ToHtmlStringRGB(TooltipManager.instance.settings.highlightColor);
 
             string[] words = text.Split(delimiterChars);
             for (int i = 0; i < words.Length; i++)
@@ -132,7 +134,7 @@ namespace trollschmiede.Generic.Tooltip
             if (!isInUse)
                 return;
 
-            if (timeStamp + TooltipManager.Instance.settings.updateTextTime >= Time.time)
+            if (timeStamp + TooltipManager.instance.settings.updateTextTime >= Time.time)
                 return;
 
             timeStamp = Time.time;

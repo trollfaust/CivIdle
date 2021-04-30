@@ -17,18 +17,33 @@ namespace trollschmiede.CivIdle.Resources
         #endregion
 
         [SerializeField] Resource cultureResource = null;
-        [SerializeField] Resource[] cultureChangingResources = new Resource[0];
-        [SerializeField] float timeBetweenCultureTicks = 0f;
+        [SerializeField] float timeBetweenCultureTicks = 1f;
 
+        Resource[] cultureChangingResources;
         private float timeStamp;
 
-        private void Start()
+        #region Setup
+        bool isSetup = false;
+        public bool Setup()
         {
-            timeStamp = Time.time;
-        }
+            cultureChangingResources = ResourceManager.instance.GetCultureGeneratingResources();
+            if (cultureChangingResources == null || cultureChangingResources.Length == 0)
+            {
+                return false;
+            }
 
-        private void Update()
+            timeStamp = Time.time;
+            isSetup = true;
+            return isSetup;
+        }
+        #endregion
+
+        #region Update Tick
+        public void Tick()
         {
+            if (isSetup == false)
+                return;
+
             if (timeStamp + timeBetweenCultureTicks <= Time.time)
             {
                 timeStamp = Time.time;
@@ -36,8 +51,11 @@ namespace trollschmiede.CivIdle.Resources
                 OnCultureTick();
             }
         }
+        #endregion
 
-
+        /// <summary>
+        /// Uses one of each of the Culture Generating Resources to generate Culture
+        /// </summary>
         void OnCultureTick()
         {
             foreach (Resource resource in cultureChangingResources)
@@ -49,6 +67,5 @@ namespace trollschmiede.CivIdle.Resources
                 }
             }
         }
-
     }
 }

@@ -31,12 +31,12 @@ namespace trollschmiede.Generic.Tooltip
 
         void Update()
         {
-            if (isOverUI && !hasTooltipOn && timeStamp + TooltipManager.Instance.settings.hoverTimeToShow <= Time.time)
+            if (isOverUI && !hasTooltipOn && timeStamp + TooltipManager.instance.settings.hoverTimeToShow <= Time.time)
             {
                 if (text == null)
                 {
-                    SetTooltip(TooltipManager.Instance.GetTooltipDataByString(tooltipName));
-                    TooltipManager.Instance.SetActiveBaseHoverElement(this);
+                    SetTooltip(TooltipManager.instance.GetTooltipDataByString(tooltipName));
+                    TooltipManager.instance.SetActiveBaseHoverElement(this);
                 }
                 if (text != null) // If you have Hovertext and no Tooltip, set Tooltip if available
                 {
@@ -58,7 +58,7 @@ namespace trollschmiede.Generic.Tooltip
                             selfCheck = true;
 
 
-                        Tooltip tooltip = TooltipManager.Instance.GetTooltipDataByString(LastHoveredWord);
+                        Tooltip tooltip = TooltipManager.instance.GetTooltipDataByString(LastHoveredWord);
                         if (tooltip != null && !selfCheck)
                         {
                             if (currentTooltip != null && tooltip != currentTooltip.GetComponent<TooltipDisplay>().tooltip)
@@ -73,7 +73,7 @@ namespace trollschmiede.Generic.Tooltip
 
             if (currentTooltip != null) // If Tooltip on, check if it needs to be locked
             {
-                if (Input.GetKeyDown(TooltipManager.Instance.settings.lockKey) && isOverUI)
+                if (Input.GetKeyDown(TooltipManager.instance.settings.lockKey) && isOverUI)
                 {
                     tooltipFixed = !tooltipFixed;
                     currentTooltip.GetComponent<TooltipDisplay>().isFixed = tooltipFixed;
@@ -96,7 +96,7 @@ namespace trollschmiede.Generic.Tooltip
 
         void RemoveTooltipSelf()
         {
-            TooltipManager.Instance.RemoveTooltip(currentTooltip);
+            TooltipManager.instance.DeactivateTooltip(currentTooltip);
             currentTooltip = null;
             hasTooltipOn = false;
         }
@@ -158,7 +158,7 @@ namespace trollschmiede.Generic.Tooltip
             
             hasTooltipOn = true;
 
-            currentTooltip = TooltipManager.Instance.GetNewTooltip();
+            currentTooltip = TooltipManager.instance.GetNewTooltip();
             currentTooltip.transform.SetParent(tooltipParent, false);
             TooltipDisplay tooltipDisplay = currentTooltip.GetComponent<TooltipDisplay>();
             tooltipDisplay.parentHoverElement = this;
@@ -169,9 +169,9 @@ namespace trollschmiede.Generic.Tooltip
             tooltipDisplay.GetComponent<VerticalLayoutGroup>().enabled = false;
             tooltipDisplay.GetComponent<VerticalLayoutGroup>().enabled = true;
 
-            if (TooltipManager.Instance.settings.useHoverTimerToLock)
+            if (TooltipManager.instance.settings.useHoverTimerToLock)
             {
-                coroutine = StartCoroutine(StartTooltipLocking(TooltipManager.Instance.settings.hoverTimeToLock));
+                coroutine = StartCoroutine(StartTooltipLocking(TooltipManager.instance.settings.hoverTimeToLock));
             }
         }
     }

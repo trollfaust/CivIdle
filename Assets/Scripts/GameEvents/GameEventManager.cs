@@ -23,7 +23,9 @@ namespace trollschmiede.CivIdle.GameEvents
         private string gameEventKey = "GAMEEVENT";
         public GameEvent[] gameEvents;
 
-        private void Start()
+        #region Setup
+        bool isSetup = false;
+        public bool Setup()
         {
             foreach (var item in gameEvents)
             {
@@ -34,7 +36,18 @@ namespace trollschmiede.CivIdle.GameEvents
 
 
             StartCoroutine(GameEventLoop());
+            isSetup = true;
+            return isSetup;
         }
+        #endregion
+
+        #region Update Tick
+        public void Tick()
+        {
+
+        }
+        #endregion
+
 
         IEnumerator GameEventLoop()
         {

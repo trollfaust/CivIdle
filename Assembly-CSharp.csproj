@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentResourceCategory.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentResourceRequierment.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\RequiermentTechnology.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringButton.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringManager.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObject.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Assets\Scripts\Resources\ResourceDisplay.cs" />
     <Compile Include="Assets\Scripts\Resources\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\Resources\ResoureRequierment.cs" />
+    <Compile Include="Assets\Scripts\SafeLoadManager.cs" />
     <Compile Include="Assets\Scripts\Science\ScienceManager.cs" />
     <Compile Include="Assets\Scripts\Science\Technology.cs" />
     <Compile Include="Assets\Scripts\Tooltip\ITooltipValueElement.cs" />

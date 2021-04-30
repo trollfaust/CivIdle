@@ -45,7 +45,9 @@ namespace trollschmiede.CivIdle.Resources
         private List<ResourceDisplayGroup> resourceDisplayGroups;
         private List<ResourceCategory> resourceCategories;
 
-        private void Start()
+        #region Setup
+        bool isSetup = false;
+        public bool Setup()
         {
             resourceDisplayGroups = new List<ResourceDisplayGroup>();
             resourceCategories = new List<ResourceCategory>();
@@ -92,8 +94,17 @@ namespace trollschmiede.CivIdle.Resources
             }
 
             Reset();
+            isSetup = true;
+            return isSetup;
         }
+        #endregion
 
+        #region Update Tick
+        public void Tick()
+        {
+
+        }
+        #endregion
 
         public void Reset()
         {
@@ -182,6 +193,19 @@ namespace trollschmiede.CivIdle.Resources
             string safeString = PlayerPrefs.GetString(requierementMeetKey);
             safeString = safeString + _requierment.ToString() + requSeperator;
             PlayerPrefs.SetString(requierementMeetKey, safeString);
+        }
+
+        public Resource[] GetCultureGeneratingResources()
+        {
+            List<Resource> output = new List<Resource>();
+            foreach (Resource resource in allResources)
+            {
+                if (resource.cultureValue > 0)
+                {
+                    output.Add(resource);
+                }
+            }
+            return output.ToArray();
         }
 
         

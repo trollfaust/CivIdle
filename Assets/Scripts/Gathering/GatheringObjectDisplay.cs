@@ -40,17 +40,19 @@ namespace trollschmiede.CivIdle.UI
             }
         }
 
-        public void Setup(GatheringObject _gatheringObject)
+        //TODO: Return false if failed
+        public bool Setup(GatheringObject _gatheringObject)
         {
             gatheringObject = _gatheringObject;
             gatheringButton.SetGatheringObjectDisplay(this, gatheringObject);
-            PeopleManager.instance.NewGatheringObj(this);
+            PeopleManager.instance.AddGatheringObject(this);
             hoverElement.TooltipInitialize(gatheringObject.name);
             CountText.text = (gatheringObject.peopleWishedWorking != gatheringObject.peopleWorking) ? gatheringObject.peopleWorking.ToString() + " / " + gatheringObject.peopleWishedWorking.ToString() : gatheringObject.peopleWorking.ToString();
             if (gatheringObject.peopleWorking >= 1 && autoGathering == null)
             {
                 autoGathering = StartCoroutine(AutoGatheringCo());
             }
+            return true;
         }
 
         public void OnPeopleGained()

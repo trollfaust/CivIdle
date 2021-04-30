@@ -6,19 +6,20 @@ namespace trollschmiede.Generic.Tooltip
     public class TooltipManager : MonoBehaviour
     {
         #region Singleton
-        public static TooltipManager Instance;
+        public static TooltipManager instance;
         private void Awake()
         {
-            if (Instance != null)
+            if (instance != null)
             {
                 Destroy(gameObject);
                 return;
             }
-            Instance = this;
+            instance = this;
         }
         #endregion
 
-        [Header("Setup")][Tooltip("Create a TooltipSetting Object and set it here")]
+        [Header("Setup")]
+        [Tooltip("Create a TooltipSetting Object and set it here")]
         public TooltipSettings settings;
         [Tooltip("The Prefab for a Tooltip")]
         [SerializeField] GameObject tooltipPrefab = null;
@@ -29,14 +30,23 @@ namespace trollschmiede.Generic.Tooltip
         private List<GameObject> activeTooltips;
         private TooltipHoverElement baseActiveHoverElement;
 
+        #region Setup
+        bool isSetup = false;
         private void Start()
         {
             tooltips = new List<GameObject>();
             activeTooltips = new List<GameObject>();
+            isSetup = true;
+            return;
         }
+        #endregion
 
+        // Needs Update for Input of Player
         private void Update()
         {
+            if (isSetup == false)
+                return;
+            
             if (Input.GetKeyDown(settings.unlockKey)) // Removes all Tooltips if the Unlock Key is pressed and not over any Tooltip
             {
                 bool isOverAny = false;
@@ -50,7 +60,7 @@ namespace trollschmiede.Generic.Tooltip
                 }
                 if (!isOverAny)
                 {
-                    RemoveAllTooltips();
+                    DeactivateAllTooltips();
                 }
             }
         }
@@ -79,41 +89,49 @@ namespace trollschmiede.Generic.Tooltip
             return newTooltip;
         }
 
+        /// <summary>
+        /// Sets the Base HoverElement for RemoveAllTooltips if needed
+        /// </summary>
+        /// <param name="_hoverElement"></param>
         public void SetActiveBaseHoverElement(TooltipHoverElement _hoverElement)
         {
             baseActiveHoverElement = _hoverElement;
         }
 
-        public void RemoveTooltip(GameObject _tooltip)
+        /// <summary>
+        /// Deactivates one specific Tooltip
+        /// </summary>
+        /// <param name="_tooltip"></param>
+        public void DeactivateTooltip(GameObject _tooltip)
         {
             if (_tooltip == null)
-            {
                 return;
-            }
+            
             _tooltip.transform.SetParent(tooltipStorage, false);
             TooltipDisplay tooltipDisplay = _tooltip.GetComponent<TooltipDisplay>();
             tooltipDisplay.SetDisplayOff();
             activeTooltips.Remove(_tooltip);
         }
 
-        public void RemoveAllTooltips() // TODO Base Hoverelement reset (Done?)
+        /// <summary>
+        /// Deactivates all active Tooltips
+        /// </summary>
+        private void DeactivateAllTooltips()
         {
             GameObject[] activeTooltipArray = activeTooltips.ToArray();
 
             for (int i = activeTooltipArray.Length - 1; i >= 0; i--)
             {
                 GameObject tooltip = activeTooltipArray[i];
-                tooltip.transform.SetParent(tooltipStorage, false);
-                TooltipDisplay tooltipDisplay = tooltip.GetComponent<TooltipDisplay>();
-                tooltipDisplay.hoverElement.RemoveTooltip();
-                tooltipDisplay.isFixed = false;
-                tooltipDisplay.isInUse = false;
+                DeactivateTooltip(tooltip);
             }
+
             if (baseActiveHoverElement != null)
             {
                 baseActiveHoverElement.RemoveTooltip();
                 baseActiveHoverElement = null;
             }
+
             activeTooltips = new List<GameObject>();
         }
 
@@ -130,6 +148,7 @@ namespace trollschmiede.Generic.Tooltip
                 {
                     return tooltip;
                 }
+
                 foreach (var triggerWord in tooltip.triggerWords)
                 {
                     if (triggerWord == _textToTest)
@@ -138,6 +157,7 @@ namespace trollschmiede.Generic.Tooltip
                     }
                 }
             }
+
             return null;
         }
     }

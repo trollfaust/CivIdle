@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using trollschmiede.CivIdle.UI;
+using trollschmiede.CivIdle.Generic;
 
 namespace trollschmiede.CivIdle.Resources
 {
@@ -20,29 +20,53 @@ namespace trollschmiede.CivIdle.Resources
         }
         #endregion
 
-        private string gatheringObjectKey = "GATHERINGOBJECT";
         [SerializeField] GatheringObject[] allGatheringObjects = new GatheringObject[0];
         [SerializeField] GameObject gatheringObjectPrefab = null;
         [SerializeField] Transform gatheringObjectContainer = null;
 
         private List<GatheringObject> enabledGatheringObjects;
 
-        private void Start()
+        #region Setup
+        bool isSetup = false;
+        public bool Setup()
         {
+            bool checkAll = true;
             foreach (var item in allGatheringObjects)
             {
-                item.peopleWorking = PlayerPrefs.GetInt(gatheringObjectKey + item.name + "PEOPLEWORKING");
-                item.peopleWishedWorking = PlayerPrefs.GetInt(gatheringObjectKey + item.name + "PEOPLEWISHEDWORKING");
-                item.isEnabled = (PlayerPrefs.GetInt(gatheringObjectKey + item.name + "ISENABLED") == 0) ? false : true;
-
                 if (item.isEnabled)
                 {
-                    EnableGatheringObject(item);
+                    bool check = EnableGatheringObject(item);
+                    if (check == false)
+                        checkAll = false;
                 }
             }
-        }
 
-        public void EnableGatheringObject(GatheringObject _gatheringObject)
+            if (checkAll == false)
+            {
+                return false;
+            }
+
+            isSetup = true;
+            return isSetup;
+        }
+        #endregion
+
+        #region Update Tick
+        public void Tick()
+        {
+            if (isSetup == false)
+                return;
+
+        }
+        #endregion
+
+
+        /// <summary>
+        /// Instantiates a Gathering Object as GameObject and set it up
+        /// </summary>
+        /// <param name="_gatheringObject"></param>
+        /// <returns></returns>
+        public bool EnableGatheringObject(GatheringObject _gatheringObject)
         {
             if (enabledGatheringObjects == null)
             {
@@ -50,36 +74,36 @@ namespace trollschmiede.CivIdle.Resources
             }
             if (enabledGatheringObjects.Contains(_gatheringObject))
             {
-                return;
+                GameManager.instance.CheckLogWarning(_gatheringObject.name + " already exists in enabledGatheringObjects!");
+                return false;
             }
+
             enabledGatheringObjects.Add(_gatheringObject);
             _gatheringObject.isEnabled = true;
 
             GameObject newGO = Instantiate(gatheringObjectPrefab, gatheringObjectContainer, false) as GameObject;
-            newGO.GetComponent<GatheringObjectDisplay>().Setup(_gatheringObject);
+            bool check = newGO.GetComponent<GatheringObjectDisplay>().Setup(_gatheringObject);
 
-            PlayerPrefs.SetInt(gatheringObjectKey + _gatheringObject.name + "PEOPLEWORKING", _gatheringObject.peopleWorking);
-            PlayerPrefs.SetInt(gatheringObjectKey + _gatheringObject.name + "PEOPLEWISHEDWORKING", _gatheringObject.peopleWishedWorking);
-            PlayerPrefs.SetInt(gatheringObjectKey + _gatheringObject.name + "ISENABLED", (_gatheringObject.isEnabled) ? 1 : 0);
+            GameManager.instance.CheckLogWarning(check, "Gathering Object " + _gatheringObject.name + " failed to Instantiate!");
+
+            return check;
         }
 
+        /// <summary>
+        /// Resets All Gethering Objects
+        /// </summary>
         public void Reset()
         {
             foreach (GatheringObject item in allGatheringObjects)
             {
-                item.isEnabled = false;
-                item.peopleWorking = 0;
-                item.peopleWishedWorking = 0;
-
-                PlayerPrefs.SetInt(gatheringObjectKey + item.name + "PEOPLEWORKING", item.peopleWorking);
-                PlayerPrefs.SetInt(gatheringObjectKey + item.name + "PEOPLEWISHEDWORKING", item.peopleWishedWorking);
-                PlayerPrefs.SetInt(gatheringObjectKey + item.name + "ISENABLED", (item.isEnabled) ? 1 : 0);
+                item.Reset();
             }
 
             foreach (var item in gatheringObjectContainer.GetComponentsInChildren<GatheringObjectDisplay>())
             {
                 Destroy(item.gameObject);
             }
+
             enabledGatheringObjects = new List<GatheringObject>();
         }
     }

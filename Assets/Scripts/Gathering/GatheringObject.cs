@@ -58,5 +58,12 @@ namespace trollschmiede.CivIdle.Resources
 
             return keyValuePairs;
         }
+
+        public void Reset()
+        {
+            isEnabled = false;
+            peopleWorking = 0;
+            peopleWishedWorking = 0;
+        }
     }
 }
