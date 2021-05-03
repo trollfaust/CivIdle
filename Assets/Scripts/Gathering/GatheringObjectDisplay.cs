@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using trollschmiede.CivIdle.Resources;
@@ -10,7 +9,6 @@ namespace trollschmiede.CivIdle.UI
     public class GatheringObjectDisplay : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI CountText = null;
-        [SerializeField] Button addButton = null;
         [SerializeField] Button substructButton = null;
         [SerializeField] GatheringButton gatheringButton = null;
         [SerializeField] Resource resourcePeople = null;
@@ -18,28 +16,22 @@ namespace trollschmiede.CivIdle.UI
 
         private GatheringObject gatheringObject;
 
-        Coroutine autoGathering;
+        float timeStamp = 0f;
 
         private void Update()
         {
             if (gatheringObject == null)
                 return;
-            if (gatheringObject.peopleWorking <= 0)
+            if (gatheringObject.peopleWishedWorking <= 0)
             {
                 substructButton.interactable = false;
             } else
             {
                 substructButton.interactable = true;
             }
-            if (resourcePeople.openAmount < gatheringObject.peopleNeededToWork)
-            {
-                addButton.interactable = false;
-            } else
-            {
-                addButton.interactable = true;
-            }
         }
 
+        bool isSetup = false;
         //TODO: Return false if failed
         public bool Setup(GatheringObject _gatheringObject)
         {
@@ -47,51 +39,75 @@ namespace trollschmiede.CivIdle.UI
             gatheringButton.SetGatheringObjectDisplay(this, gatheringObject);
             PeopleManager.instance.AddGatheringObject(this);
             hoverElement.TooltipInitialize(gatheringObject.name);
-            CountText.text = (gatheringObject.peopleWishedWorking != gatheringObject.peopleWorking) ? gatheringObject.peopleWorking.ToString() + " / " + gatheringObject.peopleWishedWorking.ToString() : gatheringObject.peopleWorking.ToString();
-            if (gatheringObject.peopleWorking >= 1 && autoGathering == null)
+            UpdateCountText();
+
+            timeStamp = Time.time;
+
+            isSetup = true;
+            return isSetup;
+        }
+
+        public void Tick()
+        {
+            if (isSetup == false)
+                return;
+
+            AutoGatheringTick();
+
+            CheckPeopleWorking();
+        }
+
+        void AutoGatheringTick()
+        {
+            if (timeStamp + gatheringObject.timeBetweenAutoGathering > Time.time)
+                return;
+
+            timeStamp = Time.time;
+
+            for (int i = 0; i < gatheringObject.peopleWorking; i++)
             {
-                autoGathering = StartCoroutine(AutoGatheringCo());
+                Gathering();
             }
-            return true;
+        }
+
+        void CheckPeopleWorking()
+        {
+            if (gatheringObject.peopleWishedWorking == gatheringObject.peopleWorking)
+                return;
+
+            int diff = gatheringObject.peopleWishedWorking - gatheringObject.peopleWorking;
+
+            ChangePeopleWorking(diff);
+            
+        }
+
+        void ChangePeopleWorking(int _differance)
+        {
+            for (int i = 0; i < Mathf.Abs(_differance); i++)
+            {
+                if (resourcePeople.openAmount < gatheringObject.peopleNeededToWork && _differance > 0)
+                    return;
+                gatheringObject.peopleWorking += Mathf.RoundToInt(Mathf.Sign((float)_differance) * 1);
+                resourcePeople.AmountOpenChange(Mathf.RoundToInt(Mathf.Sign((float)_differance) * gatheringObject.peopleNeededToWork * -1));
+                UpdateCountText();
+            }
         }
 
         public void OnPeopleGained()
         {
             if (gatheringObject == null)
                 return;
-            if (gatheringObject.peopleWishedWorking == gatheringObject.peopleWorking)
-                return;
 
-            int tempCount = gatheringObject.peopleWorking;
-            for (int i = 0; i < (gatheringObject.peopleWishedWorking - tempCount); i++)
-            {
-                if (resourcePeople.openAmount < gatheringObject.peopleNeededToWork)
-                    return;
-                gatheringObject.peopleWorking++;
-                CountText.text = (gatheringObject.peopleWishedWorking != gatheringObject.peopleWorking) ? gatheringObject.peopleWorking.ToString() + " / " + gatheringObject.peopleWishedWorking.ToString() : gatheringObject.peopleWorking.ToString();
-                resourcePeople.AmountOpenChange(-gatheringObject.peopleNeededToWork);
-                if (gatheringObject.peopleWorking == 1 && autoGathering == null)
-                {
-                    autoGathering = StartCoroutine(AutoGatheringCo());
-                }
-            }
+            CheckPeopleWorking();
         }
 
         public void OnAddButtonPressed()
         {
             if (gatheringObject == null)
                 return;
-            if (resourcePeople.openAmount < gatheringObject.peopleNeededToWork)
-                return;
-
-            gatheringObject.peopleWorking++;
-            gatheringObject.peopleWishedWorking = gatheringObject.peopleWorking;
-            CountText.text = gatheringObject.peopleWorking.ToString();
-            resourcePeople.AmountOpenChange(-gatheringObject.peopleNeededToWork);
-            if (gatheringObject.peopleWorking == 1 && autoGathering == null)
-            {
-                autoGathering = StartCoroutine(AutoGatheringCo());
-            }
+            
+            gatheringObject.peopleWishedWorking++;
+            UpdateCountText();
         }
 
         public void OnSubstructButtonPressed()
@@ -101,39 +117,21 @@ namespace trollschmiede.CivIdle.UI
             if (gatheringObject.peopleWorking <= 0)
                 return;
 
-            gatheringObject.peopleWorking--;
-            gatheringObject.peopleWishedWorking = gatheringObject.peopleWorking;
-            CountText.text = gatheringObject.peopleWorking.ToString();
-            resourcePeople.AmountOpenChange(gatheringObject.peopleNeededToWork);
+            gatheringObject.peopleWishedWorking--;
+            UpdateCountText();
         }
         
         public void OnPeopleLost()
         {
             if (gatheringObject == null)
                 return;
-            if (gatheringObject.peopleWorking <= 0)
-                return;
 
-            gatheringObject.peopleWorking--;
-            CountText.text = (gatheringObject.peopleWishedWorking != gatheringObject.peopleWorking) ? gatheringObject.peopleWorking.ToString() + " / " + gatheringObject.peopleWishedWorking.ToString() : gatheringObject.peopleWorking.ToString();
-            resourcePeople.AmountOpenChange(gatheringObject.peopleNeededToWork);
+            CheckPeopleWorking();
         }
 
         public int GetPriorityValue()
         {
             return gatheringObject.priorityValueSubstract;
-        }
-
-        IEnumerator AutoGatheringCo()
-        {
-            while (gatheringObject.peopleWorking > 0)
-            {
-                for (int i = 0; i < gatheringObject.peopleWorking; i++)
-                {
-                    Gathering();
-                }
-                yield return new WaitForSeconds(gatheringObject.timeBetweenAutoGathering);
-            }
         }
 
         public void Gathering()
@@ -172,6 +170,11 @@ namespace trollschmiede.CivIdle.UI
                     pair.resource.AmountChange(value);
                 }
             }
+        }
+
+        void UpdateCountText()
+        {
+            CountText.text = (gatheringObject.peopleWishedWorking != gatheringObject.peopleWorking) ? gatheringObject.peopleWorking.ToString() + " / " + gatheringObject.peopleWishedWorking.ToString() : gatheringObject.peopleWorking.ToString();
         }
 
         public int GetCount()

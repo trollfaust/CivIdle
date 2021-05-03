@@ -25,26 +25,13 @@ namespace trollschmiede.CivIdle.Resources
         [SerializeField] Transform gatheringObjectContainer = null;
 
         private List<GatheringObject> enabledGatheringObjects;
+        private List<GatheringObjectDisplay> gatheringObjectDisplays = null;
 
         #region Setup
         bool isSetup = false;
         public bool Setup()
         {
-            bool checkAll = true;
-            foreach (var item in allGatheringObjects)
-            {
-                if (item.isEnabled)
-                {
-                    bool check = EnableGatheringObject(item);
-                    if (check == false)
-                        checkAll = false;
-                }
-            }
-
-            if (checkAll == false)
-            {
-                return false;
-            }
+            gatheringObjectDisplays = new List<GatheringObjectDisplay>();
 
             isSetup = true;
             return isSetup;
@@ -57,6 +44,10 @@ namespace trollschmiede.CivIdle.Resources
             if (isSetup == false)
                 return;
 
+            foreach (GatheringObjectDisplay gatheringObjectDisplay in gatheringObjectDisplays)
+            {
+                gatheringObjectDisplay.Tick();
+            }
         }
         #endregion
 
@@ -82,9 +73,14 @@ namespace trollschmiede.CivIdle.Resources
             _gatheringObject.isEnabled = true;
 
             GameObject newGO = Instantiate(gatheringObjectPrefab, gatheringObjectContainer, false) as GameObject;
-            bool check = newGO.GetComponent<GatheringObjectDisplay>().Setup(_gatheringObject);
+            GatheringObjectDisplay gatheringObjectDisplay = newGO.GetComponent<GatheringObjectDisplay>();
+            bool check = gatheringObjectDisplay.Setup(_gatheringObject);
 
             GameManager.instance.CheckLogWarning(check, "Gathering Object " + _gatheringObject.name + " failed to Instantiate!");
+
+            if (check)
+                gatheringObjectDisplays.Add(gatheringObjectDisplay);
+            
 
             return check;
         }
@@ -94,9 +90,9 @@ namespace trollschmiede.CivIdle.Resources
         /// </summary>
         public void Reset()
         {
-            foreach (GatheringObject item in allGatheringObjects)
+            foreach (GatheringObject gatheringObject in allGatheringObjects)
             {
-                item.Reset();
+                gatheringObject.Reset();
             }
 
             foreach (var item in gatheringObjectContainer.GetComponentsInChildren<GatheringObjectDisplay>())
@@ -104,6 +100,7 @@ namespace trollschmiede.CivIdle.Resources
                 Destroy(item.gameObject);
             }
 
+            gatheringObjectDisplays = new List<GatheringObjectDisplay>();
             enabledGatheringObjects = new List<GatheringObject>();
         }
     }

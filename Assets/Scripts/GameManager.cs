@@ -22,20 +22,31 @@ namespace trollschmiede.CivIdle.Generic
 
         [SerializeField] float mainLoopTimeBetweenTicks = 1f;
 
-        SafeLoadManager safeLoadManager = SafeLoadManager.instance;
-        ScienceManager scienceManager = ScienceManager.instance;
-        ResourceManager resourceManager = ResourceManager.instance;
-        GatheringManager gatheringManager = GatheringManager.instance;
-        GameEventManager gameEventManager = GameEventManager.instance;
-        CultureManager cultureManager = CultureManager.instance;
-        PeopleManager peopleManager = PeopleManager.instance;
+        SafeLoadManager safeLoadManager;
+        ScienceManager scienceManager;
+        ResourceManager resourceManager;
+        GatheringManager gatheringManager;
+        GameEventManager gameEventManager;
+        CultureManager cultureManager;
+        PeopleManager peopleManager;
 
         #region Setup all the Stuff
         private void Start()
         {
+            safeLoadManager = SafeLoadManager.instance;
+            scienceManager = ScienceManager.instance;
+            resourceManager = ResourceManager.instance;
+            gatheringManager = GatheringManager.instance;
+            gameEventManager = GameEventManager.instance;
+            cultureManager = CultureManager.instance;
+            peopleManager = PeopleManager.instance;
+
             bool allIsSetup = SetupManagers();
             if (allIsSetup)
+            {
+                Reset.ResetData();
                 StartMainLoop();
+            }
         }
 
         /// <summary>
@@ -102,7 +113,7 @@ namespace trollschmiede.CivIdle.Generic
             if (timeStamp + mainLoopTimeBetweenTicks < Time.time)
             {
                 timeStamp = Time.time;
-
+                
                 gatheringManager.Tick();
 
                 resourceManager.Tick();

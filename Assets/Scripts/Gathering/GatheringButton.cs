@@ -25,7 +25,7 @@ namespace trollschmiede.CivIdle.UI
             isOnCooldown = true;
             startTimestamp = Time.time;
             timePassed = 0f;
-            button.interactable = false;
+            SetButtonInteractable(false);
             gatheringObjectDisplay.Gathering();
         }
 
@@ -45,19 +45,32 @@ namespace trollschmiede.CivIdle.UI
                 if (Time.time > startTimestamp + gatheringObject.buttonCooldownTime)
                 {
                     isOnCooldown = false;
-                    button.interactable = true;
+                    SetButtonInteractable(true);
                 }
             }
             if (!isOnCooldown)
             {
-                button.interactable = true;
+                SetButtonInteractable(true);
                 foreach (var item in gatheringObject.craftingMaterials)
                 {
                     if (item.maxValue > item.resource.amount)
                     {
-                        button.interactable = false;
+                        SetButtonInteractable(false);
                     }
                 }
+            }
+        }
+
+        void SetButtonInteractable(bool _interactable)
+        {
+            button.interactable = _interactable;
+            Image buttonImage = button.GetComponent<Image>();
+            if (_interactable)
+            {
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 0);
+            } else
+            {
+                buttonImage.color = new Color(buttonImage.color.r, buttonImage.color.g, buttonImage.color.b, 1);
             }
         }
 
@@ -69,7 +82,7 @@ namespace trollschmiede.CivIdle.UI
             if (!gatheringObject.isManuelGatherable)
             {
                 slider.value = 0;
-                button.interactable = false;
+                SetButtonInteractable(false);
             }
             buttonText.text = gatheringObject.buttonName;
         }

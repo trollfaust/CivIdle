@@ -35,18 +35,23 @@ namespace trollschmiede.CivIdle.Resources
         private List<IResourceEventListener> listeners;
 
         #region Event Managment
-        public void RegisterListener(IResourceEventListener listener)
+        public void RegisterListener(IResourceEventListener _listener)
         {
+            if (_listener == null)
+                return;
+            
             if (listeners == null)
-            {
                 listeners = new List<IResourceEventListener>();
-            }
-            listeners.Add(listener);
+            
+            listeners.Add(_listener);
         }
 
-        public void UnregisterListener(IResourceEventListener listener)
+        public void UnregisterListener(IResourceEventListener _listener)
         {
-            listeners.Remove(listener);
+            if (_listener == null)
+                return;
+            
+            listeners?.Remove(_listener);
         }
 
         public void EvokeAll()

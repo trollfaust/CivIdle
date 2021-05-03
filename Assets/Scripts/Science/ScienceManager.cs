@@ -33,6 +33,11 @@ namespace trollschmiede.CivIdle.Science
         bool isSetup = false;
         public bool Setup()
         {
+            foreach (Technology technology in allTechnologies)
+            {
+                technology.Reset();
+            }
+
             techCardsToChoose = baseTechCardsToChoose;
             bool check = SetRandomTechCards(techCardsToChoose);
             if (check == false)
@@ -56,9 +61,9 @@ namespace trollschmiede.CivIdle.Science
         /// <summary>
         /// Sets [amount] random Technologies active that are available, returns false if no technologies are available
         /// </summary>
-        /// <param name="amount"></param>
+        /// <param name="_amount"></param>
         /// <returns></returns>
-        public bool SetRandomTechCards(int amount)
+        public bool SetRandomTechCards(int _amount)
         {
             List<Technology> availableTechs = new List<Technology>();
             foreach (var item in allTechnologies)
@@ -74,8 +79,11 @@ namespace trollschmiede.CivIdle.Science
 
             availableTechs = ShuffleTechs(availableTechs);
 
-            for (int i = 0; i < amount; i++)
+            for (int i = 0; i < _amount; i++)
             {
+                if (availableTechs.Count <= 0)
+                    break;
+                
                 Technology tech = availableTechs[0];
                 if (tech != null)
                 {
@@ -170,9 +178,9 @@ namespace trollschmiede.CivIdle.Science
         /// </summary>
         public void Reset()
         {
-            foreach (var item in allTechnologies)
+            foreach (Technology technology in allTechnologies)
             {
-                item.Reset();
+                technology.Reset();
             }
 
             techCardsToChoose = baseTechCardsToChoose;
@@ -188,7 +196,7 @@ namespace trollschmiede.CivIdle.Science
             return _technologies;
         }
 
-        void DestroyOldAndNewTechCards(int amount)
+        void DestroyOldAndNewTechCards(int _amount)
         {
             foreach (var item in techCardContainer.GetComponentsInChildren<TechnologyCardDisplay>())
             {
@@ -196,7 +204,7 @@ namespace trollschmiede.CivIdle.Science
                 Destroy(item.gameObject);
             }
 
-            SetRandomTechCards(amount);
+            SetRandomTechCards(_amount);
         }
         #endregion
 

@@ -624,10 +624,3 @@ MonoBehaviour:
   slider: {fileID: 9093503333319249678}
   button: {fileID: 9093503333066783258}
   buttonText: {fileID: 9093503332970732178}
-  cooldownTime: 5
-  resources:
-  - {fileID: 11400000, guid: 1eef26b33b641254180afddc2bcde8fa, type: 2}
-  - {fileID: 11400000, guid: 7662620a16f391c4b9345e61b8e51978, type: 2}
-  - {fileID: 11400000, guid: 3ab89ffa2d2b796489c22cf2f5e8cc0d, type: 2}
-  - {fileID: 11400000, guid: 0b4ada013579dfb42b7b4aada735a348, type: 2}
-  - {fileID: 11400000, guid: 7eb69ba3b5729a84984e75a96158fcad, type: 2}

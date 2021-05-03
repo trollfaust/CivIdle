@@ -45,6 +45,7 @@ namespace trollschmiede.CivIdle.Resources
 
             Reset();
 
+            RegisterToAllResources();
             isSetup = true;
             return isSetup;
         }
@@ -90,6 +91,14 @@ namespace trollschmiede.CivIdle.Resources
             _displayGroup.SetTitleText(title);
 
             _displayGroup.resourceCategory = _resource.resourceCategory;
+        }
+
+        void RegisterToAllResources()
+        {
+            foreach (Resource resource in allResources)
+            {
+                resource.RegisterListener(this);
+            }
         }
         #endregion
 
@@ -169,14 +178,13 @@ namespace trollschmiede.CivIdle.Resources
 
             InstatiateResourceAtGroup(_resource, displayGroup);
 
-            _resource.RegisterListener(this);
             activeResources.Add(_resource);
         }
 
         ResourceDisplayGroup GetResourceGroup(Resource _resource)
         {
             ResourceDisplayGroup displayGroup = null;
-            foreach (var group in resourceDisplayGroups)
+            foreach (ResourceDisplayGroup group in resourceDisplayGroups)
             {
                 if (group.resourceCategory == _resource.resourceCategory)
                 {

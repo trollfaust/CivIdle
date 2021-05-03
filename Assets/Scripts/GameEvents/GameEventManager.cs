@@ -26,6 +26,8 @@ namespace trollschmiede.CivIdle.GameEvents
         bool isSetup = false;
         public bool Setup()
         {
+            Reset();
+
             isSetup = true;
             return isSetup;
         }
@@ -48,9 +50,9 @@ namespace trollschmiede.CivIdle.GameEvents
         {
             if (_gameEvent.isDone || _gameEvent.isSpecialTriggered)
                 return;
-
+            
             _gameEvent.Evoke();
-            if (!_gameEvent.isOnHold)
+            if (_gameEvent.isOnHold == false && _gameEvent.isDone == false)
             {
                 StartCoroutine(_gameEvent.WaitTime());
             }
@@ -67,19 +69,19 @@ namespace trollschmiede.CivIdle.GameEvents
             }
         }
 
-        public void RegisterToAllGameEvents(IGameEventListener eventListener)
+        public void RegisterToAllGameEvents(IGameEventListener _eventListener)
         {
             foreach (var item in gameEvents)
             {
-                item.RegisterListener(eventListener);
+                item.RegisterListener(_eventListener);
             }
         }
 
-        public void UnregisterFromAllGameEvents(IGameEventListener eventListener)
+        public void UnregisterFromAllGameEvents(IGameEventListener _eventListener)
         {
             foreach (var item in gameEvents)
             {
-                item.UnregisterListener(eventListener);
+                item.UnregisterListener(_eventListener);
             }
         }
     }
