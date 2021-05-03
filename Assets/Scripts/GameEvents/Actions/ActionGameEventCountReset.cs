@@ -7,14 +7,18 @@ namespace trollschmiede.CivIdle.GameEvents
     {
         [SerializeField] GameEvent gameEvent = null;
 
-        public override int EvokeAction()
+        public override bool EvokeAction()
         {
             gameEvent.ResetCount();
-            return 0;
+            return true;
         }
         public override string GetActionString()
         {
             return "Resets the count of " + gameEvent.name;
+        }
+        public override int GetLastValue()
+        {
+            return base.GetLastValue();
         }
     }
 }

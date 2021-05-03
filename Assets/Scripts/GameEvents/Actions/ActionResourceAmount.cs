@@ -10,7 +10,9 @@ namespace trollschmiede.CivIdle.GameEvents
         public int resourceChangeAmountMin;
         public int resourceChangeAmountMax;
 
-        public override int EvokeAction()
+        int lastValue = 0;
+
+        public override bool EvokeAction()
         {
             int tempResourceChangeAmountMin = resourceChangeAmountMin;
             int tempResourceChangeAmountMax = resourceChangeAmountMax;
@@ -19,18 +21,26 @@ namespace trollschmiede.CivIdle.GameEvents
                 tempResourceChangeAmountMin = overrideValue;
                 tempResourceChangeAmountMax = overrideValue;
             }
-            int i = Random.Range(tempResourceChangeAmountMin, tempResourceChangeAmountMax + 1);
-            if (resourcesToChange.maxAmount > 0 && resourcesToChange.amount + i > resourcesToChange.GetTempMaxAmount())
+            int randomAmount = Random.Range(tempResourceChangeAmountMin, tempResourceChangeAmountMax + 1);
+            if (resourcesToChange.maxAmount > 0 && resourcesToChange.amount + randomAmount > resourcesToChange.GetTempMaxAmount())
             {
-                i = resourcesToChange.GetTempMaxAmount() - resourcesToChange.amount;
+                randomAmount = resourcesToChange.GetTempMaxAmount() - resourcesToChange.amount;
             }
-            if (resourcesToChange.AmountChange(i))
-                return i;
-            return 0;
+            if (resourcesToChange.AmountChange(randomAmount))
+            {
+                lastValue = randomAmount;
+                return true;
+            }
+            lastValue = 0;
+            return false;
         }
         public override string GetActionString()
         {
             return "Changes " + resourcesToChange.name + " Amount by min " + resourceChangeAmountMin.ToString() + " and max " + resourceChangeAmountMax.ToString();
+        }
+        public override int GetLastValue()
+        {
+            return lastValue;
         }
     }
 }

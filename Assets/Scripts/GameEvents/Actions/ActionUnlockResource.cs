@@ -8,14 +8,18 @@ namespace trollschmiede.CivIdle.GameEvents
     {
         [SerializeField] Resource resource = null;
 
-        public override int EvokeAction()
+        public override bool EvokeAction()
         {
             ResourceManager.instance.ActivateResource(resource);
-            return 0;
+            return true;
         }
         public override string GetActionString()
         {
             return "Unlocks Resource " + resource.name;
+        }
+        public override int GetLastValue()
+        {
+            return base.GetLastValue();
         }
     }
 }

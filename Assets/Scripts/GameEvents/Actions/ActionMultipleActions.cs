@@ -8,21 +8,26 @@ namespace trollschmiede.CivIdle.GameEvents
         [SerializeField] Action[] actions = null;
         [SerializeField] bool invertOverrideValue = false;
 
-        public override int EvokeAction()
+        int lastValue = 0;
+
+        public override bool EvokeAction()
         {
-            int tempValue = 0;
+            lastValue = 0;
             if (actions == null)
             {
-                return 0;
+                return false;
             }
             for (int index = 0; index < actions.Length; index++)
             {
                 Action action = actions[index];
-                action.overrideValue = tempValue;
-                int output = action.EvokeAction();
-                tempValue = (invertOverrideValue) ? -output : output;           
+                action.overrideValue = lastValue;
+                if (action.EvokeAction())
+                {
+                    int output = action.GetLastValue();
+                    lastValue = (invertOverrideValue) ? -output : output;
+                }
             }
-            return tempValue;
+            return true;
         }
         public override string GetActionString()
         {
@@ -33,6 +38,10 @@ namespace trollschmiede.CivIdle.GameEvents
             }
 
             return actionsString;
+        }
+        public override int GetLastValue()
+        {
+            return lastValue;
         }
     }
 }

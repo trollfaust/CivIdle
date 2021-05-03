@@ -12,7 +12,7 @@ namespace trollschmiede.CivIdle.GameEvents
         public override bool CheckRequierment()
         {
             int amount = 0;
-            foreach (var resource in ResourceManager.instance.allResources)
+            foreach (var resource in ResourceManager.instance.GetAllResources())
             {
                 if (resource.resourceCategory == resourceCategory)
                 {

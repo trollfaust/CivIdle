@@ -10,15 +10,22 @@ namespace trollschmiede.CivIdle.GameEvents
         public int resourceChangeAmountMin;
         public int resourceChangeAmountMax;
 
-        public override int EvokeAction()
+        int lastValue = 0;
+
+        public override bool EvokeAction()
         {
-            int i = Random.Range(resourceChangeAmountMin, resourceChangeAmountMax + 1);
-            resourcesToChange.MaxAmountChange(i);
-            return i;
+            int randomAmount = Random.Range(resourceChangeAmountMin, resourceChangeAmountMax + 1);
+            resourcesToChange.MaxAmountChange(randomAmount);
+            lastValue = randomAmount;
+            return true;
         }
         public override string GetActionString()
         {
             return "Changes " + resourcesToChange.name + " max Amount by min " + resourceChangeAmountMin.ToString() + " and max " + resourceChangeAmountMax.ToString();
+        }
+        public override int GetLastValue()
+        {
+            return lastValue;
         }
     }
 }

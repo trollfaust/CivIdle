@@ -2885,6 +2885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38dcbd791162fc44845757045cd13a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainLoopTimeBetweenTicks: 0.1
 --- !u!4 &708824466
 Transform:
   m_ObjectHideFlags: 0
@@ -6313,16 +6314,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   peopleResource: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
   sickPeopleResource: {fileID: 11400000, guid: bc99c39fe5320fa41ae583833e9ebb7d, type: 2}
-  peopleNeedsUpdateTime: 5
-  peopleNeedsEachPerson:
-  - {fileID: 11400000, guid: 96882a2ccd9600a4c93c31f5641486b3, type: 2}
-  - {fileID: 11400000, guid: 2bba01ee75d2dd9409e7cc41e3573b2d, type: 2}
-  peopleNeedsAllPersons:
-  - {fileID: 11400000, guid: dc505d38383223f4f85d158ca98b270b, type: 2}
-  failGameEvent:
-  - {fileID: 11400000, guid: 7ff3dd898603497409732750516dc830, type: 2}
-  - {fileID: 11400000, guid: 4642e5e545bc55b4184f4bca96a4528a, type: 2}
-  - {fileID: 11400000, guid: 5584b6d5eb68e6b419dd2559747c9c96, type: 2}
+  allPeopleNeeds:
+  - need: {fileID: 11400000, guid: 96882a2ccd9600a4c93c31f5641486b3, type: 2}
+    isAllPeople: 0
+    failedGameEvent: {fileID: 11400000, guid: 7ff3dd898603497409732750516dc830, type: 2}
+    successGameEvent: {fileID: 0}
+    timeToCheckInSecounds: 5
+  - need: {fileID: 11400000, guid: 2bba01ee75d2dd9409e7cc41e3573b2d, type: 2}
+    isAllPeople: 0
+    failedGameEvent: {fileID: 11400000, guid: 4642e5e545bc55b4184f4bca96a4528a, type: 2}
+    successGameEvent: {fileID: 0}
+    timeToCheckInSecounds: 5
+  - need: {fileID: 11400000, guid: dc505d38383223f4f85d158ca98b270b, type: 2}
+    isAllPeople: 1
+    failedGameEvent: {fileID: 11400000, guid: 5584b6d5eb68e6b419dd2559747c9c96, type: 2}
+    successGameEvent: {fileID: 0}
+    timeToCheckInSecounds: 15
 --- !u!114 &1596311942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6336,8 +6343,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cultureResource: {fileID: 11400000, guid: 9c927899ba5ffa34381bb79173006d6d, type: 2}
-  cultureChangingResources:
-  - {fileID: 11400000, guid: b1c2b94e7cdc5814b93f40283b62e60e, type: 2}
   timeBetweenCultureTicks: 20
 --- !u!224 &1604500786 stripped
 RectTransform:

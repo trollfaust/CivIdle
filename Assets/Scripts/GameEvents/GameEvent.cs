@@ -184,8 +184,9 @@ namespace trollschmiede.CivIdle.GameEvents
             returnActionValues = new List<int>();
             foreach (var action in gameEventActions)
             {
-                int i = action.EvokeAction();
-                returnActionValues.Add(i);
+                action.EvokeAction();
+                int value = action.GetLastValue();
+                returnActionValues.Add(value);
             }
 
             if (listeners != null)

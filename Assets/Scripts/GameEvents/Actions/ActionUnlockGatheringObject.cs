@@ -8,14 +8,18 @@ namespace trollschmiede.CivIdle.GameEvents
     {
         [SerializeField] GatheringObject gatheringObject = null;
 
-        public override int EvokeAction()
+        public override bool EvokeAction()
         {
             GatheringManager.instance.EnableGatheringObject(gatheringObject);
-            return 0;
+            return true;
         }
         public override string GetActionString()
         {
             return "Unlocks Work Task " + gatheringObject.name;
+        }
+        public override int GetLastValue()
+        {
+            return base.GetLastValue();
         }
     }
 }

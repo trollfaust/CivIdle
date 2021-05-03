@@ -7,13 +7,17 @@ namespace trollschmiede.CivIdle.GameEvents
         [HideInInspector]
         public int overrideValue = 0;
 
-        public virtual int EvokeAction()
+        public virtual bool EvokeAction()
         {
-            return 0;
+            return false;
         }
         public virtual string GetActionString()
         {
             return "";
+        }
+        public virtual int GetLastValue()
+        {
+            return 0;
         }
     }
 }

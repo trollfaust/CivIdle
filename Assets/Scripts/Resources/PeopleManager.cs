@@ -23,10 +23,7 @@ namespace trollschmiede.CivIdle.Resources
         [Header("Setup")]
         [SerializeField] Resource peopleResource = null;
         [SerializeField] Resource sickPeopleResource = null;
-        [SerializeField] int peopleNeedsUpdateTime = 5;
-        [SerializeField] Action[] peopleNeedsEachPerson = new Action[0];
-        [SerializeField] Action[] peopleNeedsAllPersons = new Action[0];
-        [SerializeField] GameEvent[] failGameEvent = null;
+        [SerializeField] PeopleNeeds[] allPeopleNeeds = new PeopleNeeds[0];
 
         public delegate void OnPeopleAmountChange();
         public event OnPeopleAmountChange onPeopleAmountChange;
@@ -46,6 +43,12 @@ namespace trollschmiede.CivIdle.Resources
             }
             timeStamp = Time.time;
             oldPeopleAmount = peopleResource.amount;
+
+            foreach (PeopleNeeds peopleNeeds in allPeopleNeeds)
+            {
+                peopleNeeds.Setup();
+            }
+
             isSetup = true;
             return isSetup;
         }
@@ -57,34 +60,9 @@ namespace trollschmiede.CivIdle.Resources
             if (isSetup == false)
                 return;
 
-            if (timeStamp + peopleNeedsUpdateTime < Time.time)
+            foreach (PeopleNeeds peopleNeeds in allPeopleNeeds)
             {
-                timeStamp = Time.time;
-                List<int> output = new List<int>();
-                for (int i = 0; i < peopleResource.amount; i++)
-                {
-                    for (int j = 0; j < peopleNeedsEachPerson.Length; j++)
-                    {
-                        Action item = peopleNeedsEachPerson[j];
-                        int value = item.EvokeAction();
-                        if (value == 0)
-                        {
-                            failGameEvent[j]?.Evoke();
-                            break;
-                        }
-                    }
-                }
-
-                for (int j = 0; j < peopleNeedsAllPersons.Length; j++)
-                {
-                    Action item = peopleNeedsAllPersons[j];
-                    int value = item.EvokeAction();
-                    if (value == 0)
-                    {
-                        failGameEvent[j + peopleNeedsEachPerson.Length]?.Evoke();
-                        break;
-                    }
-                }
+                peopleNeeds.Evoke();
             }
         }
         #endregion
@@ -155,6 +133,11 @@ namespace trollschmiede.CivIdle.Resources
                     }
                 }
             }
+        }
+
+        public Resource GetPeopleResource()
+        {
+            return peopleResource;
         }
     }
 }

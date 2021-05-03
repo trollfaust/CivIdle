@@ -20,22 +20,12 @@ namespace trollschmiede.CivIdle.GameEvents
         }
         #endregion
 
-        private string gameEventKey = "GAMEEVENT";
         public GameEvent[] gameEvents;
 
         #region Setup
         bool isSetup = false;
         public bool Setup()
         {
-            foreach (var item in gameEvents)
-            {
-                item.repeatCount = PlayerPrefs.GetInt(gameEventKey + item.name + "COUNT");
-                item.chanceMultiplier = PlayerPrefs.GetFloat(gameEventKey + item.name + "MULTIPLIER");
-                item.isDone = (PlayerPrefs.GetInt(gameEventKey + item.name + "ISDONE") == 0) ? false : true;
-            }
-
-
-            StartCoroutine(GameEventLoop());
             isSetup = true;
             return isSetup;
         }
@@ -44,50 +34,36 @@ namespace trollschmiede.CivIdle.GameEvents
         #region Update Tick
         public void Tick()
         {
+            if (isSetup == false)
+                return;
 
+            foreach (var gameEvent in gameEvents)
+            {
+                GameEventLoop(gameEvent);
+            }
         }
         #endregion
 
-
-        IEnumerator GameEventLoop()
+        void GameEventLoop(GameEvent _gameEvent)
         {
-            yield return new WaitForEndOfFrame();
-            bool isRunning = true;
-            while (isRunning)
+            if (_gameEvent.isDone || _gameEvent.isSpecialTriggered)
+                return;
+
+            _gameEvent.Evoke();
+            if (!_gameEvent.isOnHold)
             {
-                isRunning = false;
-                foreach (var gameEvent in gameEvents)
-                {
-                    if (!gameEvent.isDone)
-                    {
-                        isRunning = true;
-                        if (!gameEvent.isSpecialTriggered)
-                        {
-                            gameEvent.Evoke();
-                            if (!gameEvent.isOnHold)
-                            {
-                                StartCoroutine(gameEvent.WaitTime());
-                            }
-                        }
-                    }
-                    Debug.Log("loop" + gameEvent.name);
-                    PlayerPrefs.SetInt(gameEventKey + gameEvent.name + "COUNT", gameEvent.repeatCount);
-                    PlayerPrefs.SetFloat(gameEventKey + gameEvent.name + "MULTIPLIER", gameEvent.chanceMultiplier);
-                    PlayerPrefs.SetInt(gameEventKey + gameEvent.name + "ISDONE", (gameEvent.isDone) ? 1 : 0);
-                }
-                yield return new WaitForSeconds(1f);
+                StartCoroutine(_gameEvent.WaitTime());
             }
         }
 
+        /// <summary>
+        /// Restet All GameEvents
+        /// </summary>
         public void Reset()
         {
             foreach (var gameEvent in gameEvents)
             {
                 gameEvent.Reset();
-
-                PlayerPrefs.SetInt(gameEventKey + gameEvent.name + "COUNT", gameEvent.repeatCount);
-                PlayerPrefs.SetFloat(gameEventKey + gameEvent.name + "MULTIPLIER", gameEvent.chanceMultiplier);
-                PlayerPrefs.SetInt(gameEventKey + gameEvent.name + "ISDONE", (gameEvent.isDone) ? 1 : 0);
             }
         }
 

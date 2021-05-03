@@ -8,15 +8,19 @@ namespace trollschmiede.CivIdle.GameEvents
     {
         [SerializeField] ResoureRequierment resoureRequierment = ResoureRequierment.Start;
 
-        public override int EvokeAction()
+        public override bool EvokeAction()
         {
             ResourceManager.instance.AddRequierment(resoureRequierment);
-            return 0;
+            return true;
         }
         public override string GetActionString()
         {
             //return "Unlocks Resource Requierment " + resoureRequierment.ToString().Replace("_", "-");
             return string.Empty;
+        }
+        public override int GetLastValue()
+        {
+            return base.GetLastValue();
         }
     }
 }

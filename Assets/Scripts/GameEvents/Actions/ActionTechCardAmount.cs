@@ -8,15 +8,21 @@ namespace trollschmiede.CivIdle.GameEvents
     {
         [SerializeField] int changeAmount = 0;
 
-        public override int EvokeAction()
+        int lastValue = 0;
+
+        public override bool EvokeAction()
         {
             ScienceManager.instance.ChangeTechCardsToChoose(changeAmount);
-            return changeAmount;
+            lastValue = changeAmount;
+            return true;
         }
         public override string GetActionString()
         {
             return "Techcards to choose " + changeAmount.ToString();
         }
-
+        public override int GetLastValue()
+        {
+            return lastValue;
+        }
     }
 }

@@ -75,7 +75,6 @@ namespace trollschmiede.CivIdle.Resources
             if (amount > GetTempMaxAmount() && GetTempMaxAmount() > 0)
                 amount = GetTempMaxAmount();
             EvokeAll();
-            ResourceManager.instance.SaveResource(this);
             return true;
         }
 
@@ -92,27 +91,31 @@ namespace trollschmiede.CivIdle.Resources
             return tempMaxAmount;
         }
 
-        public void AmountOpenChange(int value)
+        public bool AmountOpenChange(int value)
         {
             if (value == 0)
-                return;
+                return true;
+            if (value < 0 && openAmount + value < 0)
+                return false;
             if (hasAmountOpen)
                 openAmount = openAmount + value;
             EvokeAll();
-            ResourceManager.instance.SaveResource(this);
+            return true;
         }
 
-        public void MaxAmountChange(int value)
+        public bool MaxAmountChange(int value)
         {
             if (value == 0)
-                return;
+                return true;
+            if (value < 0 && maxAmount + value < 0)
+                return false;
             maxAmount = maxAmount + value;
             if (amount > maxAmount)
             {
                 amount = maxAmount;
             }
             EvokeAll();
-            ResourceManager.instance.SaveResource(this);
+            return true;
         }
 
         public void Reset()

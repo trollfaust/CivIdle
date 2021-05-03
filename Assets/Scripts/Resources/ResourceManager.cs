@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.Events;
-using trollschmiede.CivIdle.GameEvents;
 using System;
 
 namespace trollschmiede.CivIdle.Resources
@@ -25,159 +23,189 @@ namespace trollschmiede.CivIdle.Resources
         }
         #endregion
 
-        private string requierementMeetKey = "REQUIERMENTMEET";
-        private string resourceKey = "RESOURCE";
-        public Resource[] allResources = null;
+        [SerializeField] Resource[] allResources = null;
         [SerializeField] GameObject resourceDisplayGroupPrefab = null;
         [SerializeField] GameObject resourceDisplayPrefab = null;
         [SerializeField] Transform resourceDisplayParent = null;
 
-        char requSeperator = '$';
-
-        public void Evoke() { }
-        public void Evoke(Resource _resource)
-        {
-            ActivateResource(_resource);
-        }
-
-        
         private List<ResoureRequierment> requiermentsMeet;
         private List<ResourceDisplayGroup> resourceDisplayGroups;
-        private List<ResourceCategory> resourceCategories;
+        private List<Resource> activeResources;
 
         #region Setup
         bool isSetup = false;
         public bool Setup()
         {
             resourceDisplayGroups = new List<ResourceDisplayGroup>();
-            resourceCategories = new List<ResourceCategory>();
-            System.Array.Sort(allResources, delegate (Resource x, Resource y) { return x.resourceCategory.CompareTo(y.resourceCategory); });
+            Array.Sort(allResources, delegate (Resource x, Resource y) { return x.resourceCategory.CompareTo(y.resourceCategory); });
 
-            for (int i = 0; i < allResources.Length; i++)
-            {
-                Resource item = allResources[i];
-                if (!resourceCategories.Contains(item.resourceCategory))
-                {
-                    GameObject gO = Instantiate(resourceDisplayGroupPrefab, resourceDisplayParent) as GameObject;
-                    ResourceDisplayGroup group = gO.GetComponent<ResourceDisplayGroup>();
-                    string title = item.resourceCategory.ToString();
-                    title = title.Replace("_", " ");
-                    group.SetTitleText(title);
-                    group.resourceCategory = item.resourceCategory;
-                    resourceDisplayGroups.Add(group);
-                    resourceCategories.Add(item.resourceCategory);
-                    gO.SetActive(false);
-                }
+            SetupResourceCategorys();
 
-                item.amount = PlayerPrefs.GetInt(resourceKey + item.name + "AMOUNT");
-                item.maxAmount = PlayerPrefs.GetInt(resourceKey + item.name + "MAXAMOUNT");
-                item.openAmount = PlayerPrefs.GetInt(resourceKey + item.name + "OPENAMOUNT");
-                item.isEnabled = (PlayerPrefs.GetInt(resourceKey + item.name + "ISENABLED") == 0) ? false : true;
-            }
-            requiermentsMeet = new List<ResoureRequierment>();
-            requiermentsMeet.Add(ResoureRequierment.Start);
-
-            string safeString = PlayerPrefs.GetString(requierementMeetKey);
-            if (safeString != string.Empty)
-            {
-                string[] cut = safeString.Split(requSeperator);
-                for (int i = 0; i < cut.Length; i++)
-                {
-                    foreach (ResoureRequierment requierment in Enum.GetValues(typeof(ResoureRequierment)))
-                    {
-                        if (requierment.ToString() == cut[i])
-                        {
-                            AddRequierment(requierment);
-                        }
-                    }
-                }
-            }
+            AddRequierment(ResoureRequierment.Start);
 
             Reset();
+
             isSetup = true;
             return isSetup;
+        }
+
+        void SetupResourceCategorys()
+        {
+            foreach (Resource resource in allResources)
+            {
+                if (CheckDisplayGroupInstantiated(resource.resourceCategory))
+                    continue;
+
+                InstantiateResourceCategory(resource);
+            }
+        }
+
+        bool CheckDisplayGroupInstantiated(ResourceCategory _resourceCategory)
+        {
+            foreach (ResourceDisplayGroup displayGroup in resourceDisplayGroups)
+            {
+                if (displayGroup.resourceCategory == _resourceCategory)
+                    return true;
+            }
+
+            return false;
+        }
+
+        void InstantiateResourceCategory(Resource _resource)
+        {
+            GameObject gO = Instantiate(resourceDisplayGroupPrefab, resourceDisplayParent) as GameObject;
+            ResourceDisplayGroup displayGroup = gO.GetComponent<ResourceDisplayGroup>();
+
+            SetupResourceCategoryDetails(_resource, displayGroup);
+
+            resourceDisplayGroups.Add(displayGroup);
+
+            gO.SetActive(false);
+        }
+
+        void SetupResourceCategoryDetails(Resource _resource, ResourceDisplayGroup _displayGroup)
+        {
+            string title = _resource.resourceCategory.ToString();
+            title = title.Replace("_", " ");
+            _displayGroup.SetTitleText(title);
+
+            _displayGroup.resourceCategory = _resource.resourceCategory;
         }
         #endregion
 
         #region Update Tick
         public void Tick()
         {
+            if (isSetup == false)
+                return;
 
         }
         #endregion
 
+        #region Reset
+        /// <summary>
+        /// Resets all Resources
+        /// </summary>
         public void Reset()
         {
-            foreach (var resourceDisplay in GameObject.FindObjectsOfType<ResourceDisplay>())
-            {
-                Destroy(resourceDisplay.gameObject);
-            }
-            foreach (var item in allResources)
-            {
-                item.Reset();
+            DestroyResourceDisplays();
 
-                PlayerPrefs.SetInt(resourceKey + item.name + "AMOUNT", item.amount);
-                PlayerPrefs.SetInt(resourceKey + item.name + "MAXAMOUNT", item.maxAmount);
-                PlayerPrefs.SetInt(resourceKey + item.name + "OPENAMOUNT", item.openAmount);
-                PlayerPrefs.SetInt(resourceKey + item.name + "ISENABLED", (item.isEnabled) ? 1 : 0);
-
-                if (item.isEnabled)
-                {
-                    int index = resourceCategories.IndexOf(item.resourceCategory);
-                    resourceDisplayGroups[index].gameObject.SetActive(true);
-                    GameObject gO = Instantiate(resourceDisplayPrefab, resourceDisplayGroups[index].GetContentTransform()) as GameObject;
-                    gO.GetComponent<ResourceDisplay>().SetResource(item);
-                }
-                item.RegisterListener(this);
-            }
+            ResetAllResources();
 
             ResetLayout();
         }
 
-        void OnDisable()
+        void DestroyResourceDisplays()
         {
-            foreach (var item in allResources)
+            foreach (var resourceDisplay in GameObject.FindObjectsOfType<ResourceDisplay>())
             {
-                item.UnregisterListener(this);
+                Destroy(resourceDisplay.gameObject);
+            }            
+        }
+
+        void ResetAllResources()
+        {
+            activeResources = new List<Resource>();
+
+            foreach (Resource resource in allResources)
+            {
+                resource.Reset();
+
+                if (resource.isEnabled == false)
+                    continue;
+                
+                ActivateResource(resource);
             }
         }
 
+        void ResetLayout()
+        {
+            Canvas.ForceUpdateCanvases();
+            resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = false;
+            resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = true;
+        }
+        #endregion
+
+        #region Activate Resource
+        /// <summary>
+        /// Activates a given Resource and sets its Position
+        /// </summary>
+        /// <param name="_resource"></param>
         public void ActivateResource(Resource _resource)
         {
-            if (!_resource.isEnabled)
-            {
-                _resource.isEnabled = true;
-                ResourceDisplayGroup displayGroup = null;
-                foreach (var group in resourceDisplayGroups)
-                {
-                    if (group.resourceCategory == _resource.resourceCategory)
-                    {
-                        displayGroup = group;
-                        displayGroup.gameObject.SetActive(true);
-                    }
-                }
-                if (displayGroup == null)
-                    return;
-                GameObject gO = Instantiate(resourceDisplayPrefab, displayGroup.GetContentTransform()) as GameObject;
-                gO.GetComponent<ResourceDisplay>().SetResource(_resource);
+            if (activeResources == null)
+                activeResources = new List<Resource>();
 
-                PlayerPrefs.SetInt(resourceKey + _resource.name + "AMOUNT", _resource.amount);
-                PlayerPrefs.SetInt(resourceKey + _resource.name + "MAXAMOUNT", _resource.maxAmount);
-                PlayerPrefs.SetInt(resourceKey + _resource.name + "OPENAMOUNT", _resource.openAmount);
-                PlayerPrefs.SetInt(resourceKey + _resource.name + "ISENABLED", (_resource.isEnabled) ? 1 : 0);
+            if (activeResources.Contains(_resource))
+                return;
 
-                ResetLayout();
-            }
+            ResourceDisplayGroup displayGroup = GetResourceGroup(_resource);
+            if (displayGroup == null)
+                return;
+
+            EnableResourceDisplayGroup(displayGroup);
+
+            _resource.isEnabled = true;
+
+            InstatiateResourceAtGroup(_resource, displayGroup);
+
+            _resource.RegisterListener(this);
+            activeResources.Add(_resource);
         }
 
-        public void SaveResource(Resource _resource)
+        ResourceDisplayGroup GetResourceGroup(Resource _resource)
         {
-            PlayerPrefs.SetInt(resourceKey + _resource.name + "AMOUNT", _resource.amount);
-            PlayerPrefs.SetInt(resourceKey + _resource.name + "MAXAMOUNT", _resource.maxAmount);
-            PlayerPrefs.SetInt(resourceKey + _resource.name + "OPENAMOUNT", _resource.openAmount);
-            PlayerPrefs.SetInt(resourceKey + _resource.name + "ISENABLED", (_resource.isEnabled) ? 1 : 0);
+            ResourceDisplayGroup displayGroup = null;
+            foreach (var group in resourceDisplayGroups)
+            {
+                if (group.resourceCategory == _resource.resourceCategory)
+                {
+                    displayGroup = group;
+                }
+            }
+            return displayGroup;
         }
 
+        void EnableResourceDisplayGroup(ResourceDisplayGroup _displayGroup)
+        {
+            _displayGroup.gameObject.SetActive(true);
+        }
+
+        void InstatiateResourceAtGroup(Resource _resource, ResourceDisplayGroup _displayGroup)
+        {
+            GameObject gO = Instantiate(resourceDisplayPrefab, _displayGroup.GetContentTransform()) as GameObject;
+            gO.GetComponent<ResourceDisplay>().SetResource(_resource);
+
+            ResetLayout();            
+        }
+        #endregion
+
+        #region Public Helper Functions
+        /// <summary>
+        /// Check if a given ResourceRequierment is meet
+        /// </summary>
+        /// <param name="_requierment"></param>
+        /// <returns></returns>
         public bool CheckRequirement(ResoureRequierment _requierment)
         {
             if (requiermentsMeet.Contains(_requierment))
@@ -187,33 +215,59 @@ namespace trollschmiede.CivIdle.Resources
             return false;
         }
 
+        /// <summary>
+        /// Adds a given Requierment to the meet Requierments
+        /// </summary>
+        /// <param name="_requierment"></param>
         public void AddRequierment(ResoureRequierment _requierment)
         {
+            if (requiermentsMeet == null)
+                requiermentsMeet = new List<ResoureRequierment>();
+            
             requiermentsMeet.Add(_requierment);
-            string safeString = PlayerPrefs.GetString(requierementMeetKey);
-            safeString = safeString + _requierment.ToString() + requSeperator;
-            PlayerPrefs.SetString(requierementMeetKey, safeString);
         }
 
+        /// <summary>
+        /// Returns an Array of all Resources which have a Culture Value greater than 0
+        /// </summary>
+        /// <returns></returns>
         public Resource[] GetCultureGeneratingResources()
         {
             List<Resource> output = new List<Resource>();
             foreach (Resource resource in allResources)
             {
-                if (resource.cultureValue > 0)
-                {
-                    output.Add(resource);
-                }
+                if (resource.cultureValue == 0)
+                    continue;
+                
+                output.Add(resource);
             }
             return output.ToArray();
         }
 
-        
-        void ResetLayout()
+        /// <summary>
+        /// Returns all Resources
+        /// </summary>
+        /// <returns></returns>
+        public Resource[] GetAllResources()
         {
-            Canvas.ForceUpdateCanvases();
-            resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = false;
-            resourceDisplayParent.gameObject.GetComponent<VerticalLayoutGroup>().enabled = true;
+            return allResources;
         }
+        #endregion
+
+        #region Event System
+        public void Evoke() { }
+        public void Evoke(Resource _resource)
+        {
+            ActivateResource(_resource);
+        }
+
+        void OnDisable()
+        {
+            foreach (var item in allResources)
+            {
+                item.UnregisterListener(this);
+            }
+        }
+        #endregion
     }
 }

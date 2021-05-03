@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.Resources;
-using trollschmiede.CivIdle.UI;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace trollschmiede.CivIdle.GameEvents
 {
@@ -17,11 +15,13 @@ namespace trollschmiede.CivIdle.GameEvents
         private List<Resource> resourceOfType;
         private float savedValue;
 
-        public override int EvokeAction()
+        int lastValue = 0;
+
+        public override bool EvokeAction()
         {
-            float i = 0;
+            float availableAmount = 0;
             resourceOfType = new List<Resource>();
-            foreach (Resource resource in ResourceManager.instance.allResources)
+            foreach (Resource resource in ResourceManager.instance.GetAllResources())
             {
                 if (resource.resourceCategory == resourceCategory)
                 {
@@ -30,7 +30,7 @@ namespace trollschmiede.CivIdle.GameEvents
                         continue;
                     }
                     resourceOfType.Add(resource);
-                    i = i + resource.amount * resource.typeAmountMultiplier;
+                    availableAmount = availableAmount + resource.amount * resource.typeAmountMultiplier;
                 }
             }
 
@@ -45,9 +45,10 @@ namespace trollschmiede.CivIdle.GameEvents
             float amount = (float)Random.Range(amountMin, amountMax + 1);
             float count = Mathf.Abs(amount);
 
-            if (i < Mathf.Abs(amount))
+            if (availableAmount < Mathf.Abs(amount))
             {
-                return 0;
+                lastValue = 0;
+                return false;
             }
 
             int countSameMultiplier = 0;
@@ -101,11 +102,16 @@ namespace trollschmiede.CivIdle.GameEvents
                 }
             }
 
-            return Mathf.RoundToInt(amount);
+            lastValue = Mathf.RoundToInt(amount);
+            return true;
         }
         public override string GetActionString()
         {
             return "Change Resource Amounts in Category " + resourceCategory.ToString() + " by min " + amountMin.ToString() + " and max " + amountMax.ToString();
+        }
+        public override int GetLastValue()
+        {
+            return lastValue;
         }
     }
 }

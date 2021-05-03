@@ -8,14 +8,18 @@ namespace trollschmiede.CivIdle.GameEvents
         [SerializeField] GameEvent gameEvent = null;
         [SerializeField] [Range(0f,5f)] float multiplier = 1f;
 
-        public override int EvokeAction()
+        public override bool EvokeAction()
         {
             gameEvent.SetChanceMultiplier(multiplier);
-            return 0;
+            return true;
         }
         public override string GetActionString()
         {
             return "Multiplies " + gameEvent.name + " Chance by " + multiplier.ToString();
+        }
+        public override int GetLastValue()
+        {
+            return base.GetLastValue();
         }
     }
 }
