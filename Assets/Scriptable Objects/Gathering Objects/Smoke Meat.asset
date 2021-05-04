@@ -15,8 +15,8 @@ MonoBehaviour:
   buttonName: Smoke Meat
   craftingMaterials:
   - resource: {fileID: 11400000, guid: 80a1cfd018f21a54aafb07e40d554d8e, type: 2}
-    minValue: 2
-    maxValue: 2
+    minValue: 50
+    maxValue: 50
     chance: 100
   - resource: {fileID: 11400000, guid: 7965b9c714c1eec468f1338d0c309e97, type: 2}
     minValue: 1
@@ -24,11 +24,14 @@ MonoBehaviour:
     chance: 100
   gatheringMaterials:
   - resource: {fileID: 11400000, guid: 25786b1a1e585074996fd882e1f8f274, type: 2}
-    minValue: 2
-    maxValue: 2
+    minValue: 50
+    maxValue: 50
     chance: 100
-  timeBetweenAutoGathering: 20
+  timeBetweenAutoGathering: 30
   peopleNeededToWork: 1
   isManuelGatherable: 0
   buttonCooldownTime: 5
   priorityValueSubstract: 2
+  isEnabled: 0
+  peopleWorking: 0
+  peopleWishedWorking: 0

@@ -17,7 +17,7 @@ MonoBehaviour:
   - resource: {fileID: 11400000, guid: eb6177abc3f12ea4897813dfe7e7a7d9, type: 2}
     minValue: 1
     maxValue: 1
-    chance: 100
+    chance: 90
   gatheringMaterials:
   - resource: {fileID: 11400000, guid: 4491c5dc03c0fc24cab0a2d976f2aa6e, type: 2}
     minValue: 2
@@ -28,11 +28,14 @@ MonoBehaviour:
     maxValue: 9
     chance: 80
   - resource: {fileID: 11400000, guid: 80a1cfd018f21a54aafb07e40d554d8e, type: 2}
-    minValue: 10
-    maxValue: 15
+    minValue: 15
+    maxValue: 22
     chance: 100
   timeBetweenAutoGathering: 15
   peopleNeededToWork: 1
   isManuelGatherable: 0
   buttonCooldownTime: 5
   priorityValueSubstract: 3
+  isEnabled: 1
+  peopleWorking: 1
+  peopleWishedWorking: 1

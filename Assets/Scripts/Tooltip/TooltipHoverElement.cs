@@ -14,7 +14,8 @@ namespace trollschmiede.Generic.Tooltip
         [SerializeField] TextMeshProUGUI text = null;
 
         private string tooltipName;
-        private bool tooltipFixed = false;
+        [HideInInspector]
+        public bool tooltipFixed = false;
         private bool hasTooltipOn = false;
         public GameObject currentTooltip { private set; get; }
         private Coroutine coroutine;
@@ -155,7 +156,7 @@ namespace trollschmiede.Generic.Tooltip
             {
                 return;
             }
-            
+
             hasTooltipOn = true;
 
             currentTooltip = TooltipManager.instance.GetNewTooltip();

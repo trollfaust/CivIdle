@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using trollschmiede.CivIdle.Resources;
@@ -15,8 +14,18 @@ namespace trollschmiede.CivIdle.UI {
         [SerializeField] Image iconImage = null;
 
         public Resource resource { get; private set; }
+        int oldAmount = 0;
 
-        public void Evoke() => resourceText.text = resource.name + ": " + resource.amount.ToString();
+        public void Evoke()
+        {
+            resourceText.text = resource.name + ": " + resource.amount.ToString();
+            if (oldAmount != resource.amount)
+            {
+                FloatingTextManager.instance?.SetFloatingText(this.transform, resource.amount - oldAmount);
+                oldAmount = resource.amount;
+            }
+        }
+
         public void Evoke(Resource _resource)
         {
             string text = _resource.name + ": ";
@@ -28,6 +37,12 @@ namespace trollschmiede.CivIdle.UI {
                 text = text + _resource.amount.ToString();
 
             resourceText.text = text;
+
+            if (oldAmount != _resource.amount)
+            {
+                FloatingTextManager.instance?.SetFloatingText(this.transform, _resource.amount - oldAmount);
+                oldAmount = _resource.amount;
+            }
         }
 
         public void SetResource(Resource _resource)

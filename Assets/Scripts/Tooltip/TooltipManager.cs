@@ -50,15 +50,24 @@ namespace trollschmiede.Generic.Tooltip
             if (Input.GetKeyDown(settings.unlockKey)) // Removes all Tooltips if the Unlock Key is pressed and not over any Tooltip
             {
                 bool isOverAny = false;
+                bool hasLockedTooltip = false;
                 foreach (var tooltip in activeTooltips)
                 {
                     if (tooltip.GetComponent<TooltipDisplay>().hoverElement.isOverUI)
                     {
                         isOverAny = true;
-                        break;
+                    }
+                    if (tooltip.GetComponent<TooltipDisplay>().hoverElement.tooltipFixed)
+                    {
+                        hasLockedTooltip = true;
                     }
                 }
-                if (!isOverAny)
+                if (baseActiveHoverElement != null && baseActiveHoverElement.tooltipFixed)
+                {
+                    hasLockedTooltip = true;
+                }
+                
+                if (!isOverAny && hasLockedTooltip)
                 {
                     DeactivateAllTooltips();
                 }
