@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MapCamera.cs" />
     <Compile Include="Assets\Scripts\Events\IEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IGameEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IResourceEventListener.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\Gathering\GatheringManager.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObject.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObjectDisplay.cs" />
+    <Compile Include="Assets\Scripts\Map\MapMover.cs" />
     <Compile Include="Assets\Scripts\Resources\CultureManager.cs" />
     <Compile Include="Assets\Scripts\Resources\PeopleManager.cs" />
     <Compile Include="Assets\Scripts\Resources\PeopleNeeds.cs" />
@@ -755,6 +757,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/Unity/CivIdle/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>E:/Unity/CivIdle/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>E:/Unity/CivIdle/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
