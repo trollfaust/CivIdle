@@ -3,33 +3,38 @@ using UnityEngine.EventSystems;
 
 public class MapMover : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    [SerializeField] RectTransform parentRect = null;
+    Camera cam;
+    Vector3 origPos;
+    Vector3 deltaValue;
+    Vector3 origPosRect;
 
-    RectTransform rect;
+    float zValue = 0f;
 
     void Start()
     {
-        rect = GetComponent<RectTransform>();
+        cam = Camera.main;
+        zValue = cam.transform.position.z - transform.position.z;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        origPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zValue));
+        origPosRect = transform.position;
+        deltaValue = Vector3.zero;
+        GetComponent<MainMap>().isDragging = true;
     }
 
     //TODO: better calcs & change to map scroll not image
     public void OnDrag(PointerEventData eventData)
     {
-        Vector3 offset = (Vector3)eventData.delta;
+        deltaValue = origPos - cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zValue));
 
-        offset.x = (offset.x / rect.rect.width) * parentRect.rect.width * 4f;
-        offset.y = (offset.y / rect.rect.height) * parentRect.rect.height * 5f;
-
-        transform.position = transform.position + offset;
+        transform.position = origPosRect + deltaValue;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        
+        deltaValue = Vector3.zero;
+        GetComponent<MainMap>().isDragging = false;
     }
 }
