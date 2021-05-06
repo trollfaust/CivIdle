@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using trollschmiede.Generic.Tooltip;
 
 public class PauseButton : MonoBehaviour
@@ -31,4 +29,5 @@ public class PauseButton : MonoBehaviour
             OnButtonPressed();
         }
     }
+
 }

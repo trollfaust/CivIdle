@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 71e22be376fb43b488aae44cf9d6c713, type: 3}
   m_Name: TechCard +1
   m_EditorClassIdentifier: Assembly-CSharp:trollschmiede.CivIdle.GameEvents:ActionTechCardAmount
   overrideValue: 0

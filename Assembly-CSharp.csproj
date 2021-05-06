@@ -62,8 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MainMap.cs" />
-    <Compile Include="Assets\MapCamera.cs" />
     <Compile Include="Assets\Scripts\Events\IEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IGameEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IResourceEventListener.cs" />
@@ -79,6 +77,7 @@
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockGatheringObject.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockResource.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockResourceRequierment.cs" />
+    <Compile Include="Assets\Scripts\GameEvents\Actions\ActionUnlockTab.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEvent.cs" />
     <Compile Include="Assets\Scripts\GameEvents\GameEventManager.cs" />
     <Compile Include="Assets\Scripts\GameEvents\Requierments\Requierment.cs" />
@@ -94,6 +93,8 @@
     <Compile Include="Assets\Scripts\Gathering\GatheringManager.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObject.cs" />
     <Compile Include="Assets\Scripts\Gathering\GatheringObjectDisplay.cs" />
+    <Compile Include="Assets\Scripts\Map\LandTile.cs" />
+    <Compile Include="Assets\Scripts\Map\MainMap.cs" />
     <Compile Include="Assets\Scripts\Map\MapMover.cs" />
     <Compile Include="Assets\Scripts\Resources\CultureManager.cs" />
     <Compile Include="Assets\Scripts\Resources\PeopleManager.cs" />
@@ -104,7 +105,7 @@
     <Compile Include="Assets\Scripts\Resources\ResourceDisplay.cs" />
     <Compile Include="Assets\Scripts\Resources\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\Resources\ResoureRequierment.cs" />
-    <Compile Include="Assets\Scripts\SafeLoadManager.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\SafeLoadManager.cs" />
     <Compile Include="Assets\Scripts\Science\ScienceManager.cs" />
     <Compile Include="Assets\Scripts\Science\Technology.cs" />
     <Compile Include="Assets\Scripts\Tooltip\ITooltipValueElement.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Assets\Scripts\Tooltip\TooltipHoverElement.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipManager.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipSettings.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\TutorialStart.cs" />
     <Compile Include="Assets\Scripts\UI\FloatingText.cs" />
     <Compile Include="Assets\Scripts\UI\FloatingTextManager.cs" />
     <Compile Include="Assets\Scripts\UI\FullscreenSelector.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Assets\Scripts\UI\QuitButton.cs" />
     <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
     <Compile Include="Assets\Scripts\UI\ResourceDisplayGroup.cs" />
+    <Compile Include="Assets\Scripts\UI\TabBar.cs" />
     <Compile Include="Assets\Scripts\UI\TabSwitch.cs" />
     <Compile Include="Assets\Scripts\UI\TechRerollButton.cs" />
     <Compile Include="Assets\Scripts\UI\TechnologyCardDisplay.cs" />

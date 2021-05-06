@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce3d0c098640a54c9f88a4fed4fd656, type: 3}
+  m_Name: Resource MaxAmount Faith Up 10
+  m_EditorClassIdentifier: 
+  overrideValue: 0
+  resourcesToChange: {fileID: 11400000, guid: cc3c0560b25a72840879e507f6b0f28c, type: 2}
+  resourceChangeAmountMin: 10
+  resourceChangeAmountMax: 10

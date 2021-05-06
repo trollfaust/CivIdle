@@ -133,6 +133,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 178566550}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6446107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1701813561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &33754064
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +961,12 @@ PrefabInstance:
 --- !u!224 &180452043 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+    type: 3}
+  m_PrefabInstance: {fileID: 613558303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &191719404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
     type: 3}
   m_PrefabInstance: {fileID: 613558303}
   m_PrefabAsset: {fileID: 0}
@@ -2456,6 +2468,12 @@ RectTransform:
   m_AnchoredPosition: {x: 125, y: 0}
   m_SizeDelta: {x: 250, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &414504811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2154152361989104968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &428586937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,6 +3240,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4327e6f31b58b0e45a4c01f1dd42158c, type: 3}
+--- !u!1 &672846185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+    type: 3}
+  m_PrefabInstance: {fileID: 522937582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &708824464
 GameObject:
   m_ObjectHideFlags: 0
@@ -21186,6 +21210,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309311353}
   m_CullTransparentMesh: 0
+--- !u!1 &1329639456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+    type: 3}
+  m_PrefabInstance: {fileID: 276852204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1354600059
 GameObject:
   m_ObjectHideFlags: 0
@@ -21300,6 +21330,7 @@ GameObject:
   - component: {fileID: 1368836641}
   - component: {fileID: 1368836640}
   - component: {fileID: 1368836639}
+  - component: {fileID: 1368836642}
   m_Layer: 5
   m_Name: TabBar
   m_TagString: Untagged
@@ -21393,6 +21424,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368836637}
   m_CullTransparentMesh: 0
+--- !u!114 &1368836642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368836637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e9ba11c2f382d47a90bf209994c233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabSwitches:
+  - {fileID: 414504811}
+  - {fileID: 672846185}
+  - {fileID: 6446107}
+  - {fileID: 1329639456}
+  - {fileID: 191719404}
 --- !u!1001 &1369774329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22702,7 +22751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651594454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalPosition: {x: -9.58, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 921194496}
@@ -22868,7 +22917,7 @@ PrefabInstance:
     - target: {fileID: 2411303878876377179, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -22928,12 +22977,12 @@ PrefabInstance:
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 258
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -22953,7 +23002,7 @@ PrefabInstance:
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -22963,7 +23012,7 @@ PrefabInstance:
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -25195,8 +25244,8 @@ Tilemap:
   - first: {x: -1, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 7
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -26420,7 +26469,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 43
     m_Data: {fileID: 11400000, guid: 204ddc26e1b2f194c917f0171b23530c, type: 2}
-  - m_RefCount: 49
+  - m_RefCount: 48
     m_Data: {fileID: 11400000, guid: f391afd8aba04b0459c190586f1464f7, type: 2}
   - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 5b31ef01b6d3ad249b1f8d7f251705a4, type: 2}
@@ -26432,10 +26481,12 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 9d7dc458a568da4438d86ef6a2acdb93, type: 2}
   - m_RefCount: 33
     m_Data: {fileID: 11400000, guid: 41730ad8bb5c4ea45be941c8da4db888, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 1ef74c930e1676f40839ddba4dd4bd84, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 43
+  - m_RefCount: 44
     m_Data: {fileID: 21300042, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
-  - m_RefCount: 49
+  - m_RefCount: 48
     m_Data: {fileID: 21300044, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
   - m_RefCount: 23
     m_Data: {fileID: 21300026, guid: 8199c5ef781b3b842a2432aad7077b72, type: 3}
