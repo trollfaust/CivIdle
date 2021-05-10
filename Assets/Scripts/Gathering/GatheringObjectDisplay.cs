@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using trollschmiede.CivIdle.Resources;
 using trollschmiede.Generic.Tooltip;
+using trollschmiede.CivIdle.Map;
 
 namespace trollschmiede.CivIdle.UI
 {
@@ -17,6 +18,7 @@ namespace trollschmiede.CivIdle.UI
         private GatheringObject gatheringObject;
 
         float timeStamp = 0f;
+        int mapValue = 0;
 
         private void Update()
         {
@@ -166,6 +168,19 @@ namespace trollschmiede.CivIdle.UI
                         value = pair.resource.maxAmount - pair.resource.amount;
                     }
                     pair.resource.AmountChange(value);
+                }
+            }
+            if (gatheringObject.mapDiscovery == true)
+            {
+                MainMap mainMap = FindObjectOfType<MainMap>();
+                mainMap.OnTick();
+                mapValue += mainMap.GetLastValue();
+
+                if (mapValue >= 10)
+                {
+                    int amount = Mathf.RoundToInt(Mathf.Floor(mapValue / 10));
+                    gatheringObject.mapResource?.AmountChange(amount);
+                    mapValue -= (amount * 10);
                 }
             }
         }

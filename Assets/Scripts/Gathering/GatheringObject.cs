@@ -11,6 +11,9 @@ namespace trollschmiede.CivIdle.Resources
         [Tooltip("Values should be Negative for Substraction")]
         public ResourceChancePair[] craftingMaterials = new ResourceChancePair[0];
         public ResourceChancePair[] gatheringMaterials = new ResourceChancePair[0];
+        public Resource mapResource = null;
+        [Tooltip("Add MainMap for discovery Land")]
+        public bool mapDiscovery = false;
         public float timeBetweenAutoGathering = 5f;
         public int peopleNeededToWork = 1;
         public bool isManuelGatherable = true;

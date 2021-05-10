@@ -2,7 +2,6 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - LogDisplayItem
-    - PauseButton
     - SafeLoadManager
     - TutorialStart
     - trollschmiede.CivIdle.GameEvents.ActionGameEventChanceModifier
@@ -12,11 +11,14 @@ ScriptsOnlyBuild:
     - trollschmiede.CivIdle.GameEvents.ActionResourceMaxAmount
     - trollschmiede.CivIdle.GameEvents.ActionResourceTypeAmount
     - trollschmiede.CivIdle.GameEvents.ActionTechCardAmount
+    - trollschmiede.CivIdle.GameEvents.ActionTriggerGameEvent
     - trollschmiede.CivIdle.GameEvents.ActionUnlockGatheringObject
     - trollschmiede.CivIdle.GameEvents.ActionUnlockResource
     - trollschmiede.CivIdle.GameEvents.ActionUnlockResourceRequierment
+    - trollschmiede.CivIdle.GameEvents.ActionUnlockTab
     - trollschmiede.CivIdle.GameEvents.GameEvent
     - trollschmiede.CivIdle.GameEvents.GameEventManager
+    - trollschmiede.CivIdle.GameEvents.PopupGameEvent
     - trollschmiede.CivIdle.GameEvents.RequiermentGameEventCount
     - trollschmiede.CivIdle.GameEvents.RequiermentResource
     - trollschmiede.CivIdle.GameEvents.RequiermentResourceBelowMax
@@ -40,6 +42,9 @@ ScriptsOnlyBuild:
     - trollschmiede.CivIdle.UI.GatheringButton
     - trollschmiede.CivIdle.UI.GatheringObjectDisplay
     - trollschmiede.CivIdle.UI.LogDisplay
+    - trollschmiede.CivIdle.UI.PauseButton
+    - trollschmiede.CivIdle.UI.PopupEventButton
+    - trollschmiede.CivIdle.UI.PopupGameEventDisplay
     - trollschmiede.CivIdle.UI.QuitButton
     - trollschmiede.CivIdle.UI.ResetButton
     - trollschmiede.CivIdle.UI.ResourceDisplay
@@ -155,137 +160,147 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11372}
     - Class: 114
-      Script: {instanceID: 11428}
+      Script: {instanceID: 11386}
     - Class: 114
-      Script: {instanceID: 11438}
+      Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11496}
+      Script: {instanceID: 11440}
     - Class: 114
       Script: {instanceID: 11498}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 11584}
+      Script: {instanceID: 11582}
     - Class: 114
-      Script: {instanceID: 11620}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11668}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 11790}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 11886}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 11998}
+    - Class: 114
+      Script: {instanceID: 12166}
     - Class: 114
       Script: {instanceID: 12180}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 12184}
     - Class: 114
-      Script: {instanceID: 12226}
+      Script: {instanceID: 12216}
     - Class: 114
-      Script: {instanceID: 12276}
+      Script: {instanceID: 12230}
     - Class: 114
-      Script: {instanceID: 12402}
+      Script: {instanceID: 12280}
     - Class: 114
-      Script: {instanceID: 12450}
+      Script: {instanceID: 12406}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 12694}
+      Script: {instanceID: 12518}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12698}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12788}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 12804}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12838}
+    - Class: 114
+      Script: {instanceID: 12876}
     - Class: 114
       Script: {instanceID: 12928}
     - Class: 114
-      Script: {instanceID: 12938}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 13012}
+      Script: {instanceID: 12944}
     - Class: 114
-      Script: {instanceID: 13042}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 13124}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 13188}
+      Script: {instanceID: 13130}
     - Class: 114
-      Script: {instanceID: 13228}
+      Script: {instanceID: 13194}
     - Class: 114
-      Script: {instanceID: 13264}
+      Script: {instanceID: 13234}
     - Class: 114
-      Script: {instanceID: 13316}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 13356}
+      Script: {instanceID: 13324}
     - Class: 114
-      Script: {instanceID: 13372}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13374}
+      Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13382}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 13392}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13398}
     - Class: 114
-      Script: {instanceID: 13522}
+      Script: {instanceID: 13492}
     - Class: 114
-      Script: {instanceID: 13614}
+      Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 13630}
+      Script: {instanceID: 13622}
     - Class: 114
-      Script: {instanceID: 13644}
+      Script: {instanceID: 13638}
     - Class: 114
-      Script: {instanceID: 13722}
+      Script: {instanceID: 13652}
     - Class: 114
-      Script: {instanceID: 13856}
+      Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 13984}
+      Script: {instanceID: 13864}
     - Class: 114
-      Script: {instanceID: 14082}
+      Script: {instanceID: 13992}
     - Class: 114
-      Script: {instanceID: 14096}
+      Script: {instanceID: 14090}
     - Class: 114
-      Script: {instanceID: 14102}
+      Script: {instanceID: 14104}
     - Class: 114
-      Script: {instanceID: 14182}
+      Script: {instanceID: 14110}
+    - Class: 114
+      Script: {instanceID: 14178}
     - Class: 114
       Script: {instanceID: 14190}
     - Class: 114
-      Script: {instanceID: 14212}
+      Script: {instanceID: 14198}
     - Class: 114
-      Script: {instanceID: 14222}
+      Script: {instanceID: 14220}
     - Class: 114
-      Script: {instanceID: 14312}
+      Script: {instanceID: 14230}
     - Class: 114
-      Script: {instanceID: 14334}
+      Script: {instanceID: 14320}
     - Class: 114
-      Script: {instanceID: 14338}
+      Script: {instanceID: 14342}
     - Class: 114
-      Script: {instanceID: 14436}
+      Script: {instanceID: 14346}
     - Class: 114
-      Script: {instanceID: 14608}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 14672}
+      Script: {instanceID: 14616}
     - Class: 114
-      Script: {instanceID: 14690}
+      Script: {instanceID: 14648}
     - Class: 114
-      Script: {instanceID: 14764}
+      Script: {instanceID: 14682}
     - Class: 114
-      Script: {instanceID: 14788}
+      Script: {instanceID: 14700}
+    - Class: 114
+      Script: {instanceID: 14774}
+    - Class: 114
+      Script: {instanceID: 14798}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -344,41 +359,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11584}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 11886}
     - Class: 114
-      Script: {instanceID: 12402}
+      Script: {instanceID: 12406}
     - Class: 114
-      Script: {instanceID: 12462}
+      Script: {instanceID: 12466}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 13356}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 13398}
     - Class: 114
-      Script: {instanceID: 13614}
+      Script: {instanceID: 13622}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 13644}
     - Class: 114
-      Script: {instanceID: 13722}
+      Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 13984}
+      Script: {instanceID: 13992}
     - Class: 114
-      Script: {instanceID: 14096}
+      Script: {instanceID: 14104}
     - Class: 114
-      Script: {instanceID: 14182}
+      Script: {instanceID: 14190}
     - Class: 114
-      Script: {instanceID: 14406}
+      Script: {instanceID: 14414}
     - Class: 114
-      Script: {instanceID: 14436}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 14764}
+      Script: {instanceID: 14774}
     - Class: 114
-      Script: {instanceID: 14812}
+      Script: {instanceID: 14822}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -432,7 +447,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: trollschmiede.CivIdle.UI
     className: PauseButton
   - hash:
       serializedVersion: 2
@@ -470,6 +485,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 2a3880b72610aa4bfa9b745d36f774cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEvents
+    className: PopupGameEvent
   - hash:
       serializedVersion: 2
       Hash: 80a0df1b12257cdab0f35f1f184ff93e
@@ -568,6 +589,12 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 05ddf3ea3d365b1b4d22766a67d4dff5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: PopupGameEventDisplay
+  - hash:
+      serializedVersion: 2
       Hash: c80bc562de10fdbf8b2e9bcb89d80421
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -658,7 +685,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 7c1ce5b64f9114a7cdda04d23723bb5f
+      Hash: 81b313a451478aedd37aeb12727b239f
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Map
     className: LandTile
@@ -712,13 +739,13 @@ ScriptsOnlyBuild:
     className: CinemachineFreeLook
   - hash:
       serializedVersion: 2
-      Hash: c102bfe041cb8e796a8370a18c5734d1
+      Hash: 299dd7ae1e6d95eee64f5eb084bde3fe
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: ActionMultipleActions
   - hash:
       serializedVersion: 2
-      Hash: 656b4ccc9ee89e488a448b779c6dc8b5
+      Hash: 476e7f5d037e2c9824445802ca3fd4ad
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: GameEvent
@@ -748,7 +775,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 4bf4c60421b7a562c2f13c58ae6355fe
+      Hash: 587d9fd646eb2cf9ba1bb7eec0332c9c
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Resources
     className: GatheringObject
@@ -848,6 +875,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineOrbitalTransposer
+  - hash:
+      serializedVersion: 2
+      Hash: ee98729079998eb63435f99f41b30b9e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: PopupEventButton
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -1030,7 +1063,7 @@ ScriptsOnlyBuild:
     className: SafeLoadManager
   - hash:
       serializedVersion: 2
-      Hash: b70d094da9f6e51f8a5b5cb1f0260cf5
+      Hash: 2141277ff8ccd014a965d3ebc8341f34
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: RequiermentResourceBelowMax
@@ -1354,7 +1387,7 @@ ScriptsOnlyBuild:
     className: Requierment
   - hash:
       serializedVersion: 2
-      Hash: 2fada43dc054ec22e64c964a5157e950
+      Hash: 5df685cad0623624f853862cab1fa10e
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEvents
     className: GameEventManager
@@ -1370,6 +1403,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 70de9d1ece76e9342da368f7fe18981f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEvents
+    className: ActionTriggerGameEvent
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -1476,4 +1515,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Tutorial.unity
   - Assets/Scenes/Game.unity
-  playerPath: E:/Unity/CivIdle/build/Mac/InDev-06.05.21aMac.app
+  playerPath: E:/Unity/CivIdle/build/Mac/InDev-10.05.21b.app

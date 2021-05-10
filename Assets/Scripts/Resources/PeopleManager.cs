@@ -105,17 +105,19 @@ namespace trollschmiede.CivIdle.Resources
             if (gatheringObjects == null)
                 return;
 
+            int safeCount = 0;
             // Substract People from Gathering Objects if necesary
             gatheringObjects.Sort((x, y) => x.GetPriorityValue().CompareTo(y.GetPriorityValue()));
-            while (peopleResource.openAmount < 0)
+            while (peopleResource.openAmount < 0 && safeCount < 20)
             {
+                safeCount++;
                 if (gatheringObjects == null || gatheringObjects.Count == 0)
                     break;
-                foreach (var item in gatheringObjects)
+                foreach (GatheringObjectDisplay gatheringObjectDisplay in gatheringObjects)
                 {
-                    if (item.GetCount() > 0)
+                    if (gatheringObjectDisplay.GetCount() > 0)
                     {
-                        item.OnPeopleLost();
+                        gatheringObjectDisplay.OnPeopleLost();
                         break;
                     }
                 }
@@ -125,11 +127,11 @@ namespace trollschmiede.CivIdle.Resources
             if (peopleResource.openAmount > 0)
             {
                 gatheringObjects.Sort((x, y) => y.GetPriorityValue().CompareTo(x.GetPriorityValue()));
-                foreach (var item in gatheringObjects)
+                foreach (GatheringObjectDisplay gatheringObjectDisplay in gatheringObjects)
                 {
-                    if (item.GetWishCount() > item.GetCount())
+                    if (gatheringObjectDisplay.GetWishCount() > gatheringObjectDisplay.GetCount())
                     {
-                        item.OnPeopleGained();
+                        gatheringObjectDisplay.OnPeopleGained();
                     }
                 }
             }

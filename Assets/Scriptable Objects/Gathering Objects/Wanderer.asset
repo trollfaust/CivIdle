@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Wanderer
+  m_EditorClassIdentifier: 
+  buttonName: Wanderer
+  craftingMaterials: []
+  gatheringMaterials:
+  - resource: {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
+    minValue: -1
+    maxValue: 0
+    chance: 3
+  mapResource: {fileID: 11400000, guid: 23fb26667bf6a814f8df8667510a22cc, type: 2}
+  mapDiscovery: 1
+  timeBetweenAutoGathering: 10
+  peopleNeededToWork: 1
+  isManuelGatherable: 0
+  buttonCooldownTime: 5
+  priorityValueSubstract: 0
+  isEnabled: 0
+  peopleWorking: 0
+  peopleWishedWorking: 0

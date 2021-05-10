@@ -35,9 +35,56 @@ namespace trollschmiede.CivIdle.Map
         public delegate void OnRevealLandTile();
         public event OnRevealLandTile onRevealLandTile;
 
+        bool isSetup = false;
+        bool hasCellHighlighted = false;
+        int lastValue = 0;
+
         void Start()
         {
             zValue = Camera.main.transform.position.z - transform.position.z;
+            isSetup = true;
+        }
+
+        public void OnTick()
+        {
+            if (isSetup == false)
+                return;
+
+            if ((landMap.GetTile(lastCell) is LandTile) == false || hasCellHighlighted == false)
+                return;
+
+            LandTile tile = (LandTile)landMap.GetTile(lastCell);
+
+            int rng = Random.Range(0, 5);
+
+            if (tile.GetPercentExplored() < 100)
+            {
+                lastValue = tile.ChangeExplored(rng);
+                return;
+            }
+
+            List<Vector3Int> neighbors = Neighbors(lastCell);
+            int neighborsIndexRng = Random.Range(0, neighbors.Count);
+
+            if ((landMap.GetTile(neighbors[neighborsIndexRng]) is LandTile) == false)
+            {
+                fogMap.SetTile(neighbors[neighborsIndexRng], null);
+                return;
+            }
+
+            LandTile neighbor = (LandTile)landMap.GetTile(neighbors[neighborsIndexRng]);
+
+            lastValue = neighbor.ChangeExplored(rng);
+
+            if (neighbor.GetPercentExplored() > 20)
+            {
+                fogMap.SetTile(neighbors[neighborsIndexRng], null);
+            }
+        }
+
+        public int GetLastValue()
+        {
+            return lastValue;
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -50,25 +97,13 @@ namespace trollschmiede.CivIdle.Map
             Vector3Int cell = landMap.WorldToCell(new Vector3(-pos.x, -pos.y, pos.z));
 
             overlayMap.SetTile(lastCell, null);
-            lastCell = cell;
+            hasCellHighlighted = false;
 
             if (landMap.HasTile(cell) == true && fogMap.HasTile(cell) == false)
             {
-                if (landMap.GetTile(cell) is LandTile)
-                {
-                    LandTile tile = (LandTile)landMap.GetTile(cell);
-                }
-
+                lastCell = cell;
                 overlayMap.SetTile(cell, highlightTile);
-
-                List<Vector3Int> neighbors = Neighbors(cell);
-                foreach (Vector3Int neighbor in neighbors)
-                {
-                    if (fogMap.HasTile(neighbor))
-                    {
-                        fogMap.SetTile(neighbor, null);
-                    }
-                }
+                hasCellHighlighted = true;
             }
         }
 

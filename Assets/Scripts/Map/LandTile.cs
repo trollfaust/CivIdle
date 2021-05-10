@@ -9,6 +9,7 @@ namespace trollschmiede.CivIdle.Map
     public class LandTile : Tile
     {
         public bool isLandTile = false;
+        public int percentExplored = 0;
 
         public override bool StartUp(Vector3Int position, ITilemap tilemap, GameObject go)
         {
@@ -30,6 +31,27 @@ namespace trollschmiede.CivIdle.Map
         public override bool GetTileAnimationData(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData)
         {
             return base.GetTileAnimationData(position, tilemap, ref tileAnimationData);
+        }
+
+        public int ChangeExplored(int amount)
+        {
+            if (percentExplored + amount > 100)
+            {
+                amount = 100 - percentExplored;
+            }
+            if (percentExplored + amount < 0)
+            {
+                amount = 0 - percentExplored;
+            }
+
+            percentExplored += amount;
+
+            return amount;
+        }
+
+        public int GetPercentExplored()
+        {
+            return percentExplored;
         }
 
         #if UNITY_EDITOR
