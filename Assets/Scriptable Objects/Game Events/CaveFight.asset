@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82df00455046b944a9a64b59bbf856c, type: 3}
+  m_Name: CaveFight
+  m_EditorClassIdentifier: 
+  requierments: []
+  repeatCountMax: 0
+  baseChanceToPass: 100
+  timeBetweenChecks: 1
+  isSpecialTriggered: 1
+  gameEventActions:
+  - {fileID: 11400000, guid: 42c76157c2cb8e3459e9dd5e3a9887db, type: 2}
+  - {fileID: 11400000, guid: e14aae46b76872a4b88d8acc462f83b8, type: 2}
+  - {fileID: 11400000, guid: 91c9e7a6f4597a94ab03295f2ae47644, type: 2}
+  gameEventText: You found a Beast in the Cave and decide fight it. You've lost 
+    $0 People but gained $1 Meat and $2 Fur.
+  emptyIfZero: 0
+  isDone: 0
+  isOnHold: 0
+  returnActionValues: 
+  repeatCount: 0
+  chanceMultiplier: 1

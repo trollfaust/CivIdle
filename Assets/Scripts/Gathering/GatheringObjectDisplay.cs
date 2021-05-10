@@ -114,8 +114,6 @@ namespace trollschmiede.CivIdle.UI
         {
             if (gatheringObject == null)
                 return;
-            if (gatheringObject.peopleWorking <= 0)
-                return;
 
             gatheringObject.peopleWishedWorking--;
             UpdateCountText();

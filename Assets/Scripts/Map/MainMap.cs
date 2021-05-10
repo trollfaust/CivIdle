@@ -57,7 +57,6 @@ namespace trollschmiede.CivIdle.Map
                 if (landMap.GetTile(cell) is LandTile)
                 {
                     LandTile tile = (LandTile)landMap.GetTile(cell);
-                    Debug.Log(tile.isLandTile);
                 }
 
                 overlayMap.SetTile(cell, highlightTile);

@@ -1,33 +1,28 @@
 ﻿using UnityEngine;
 using trollschmiede.Generic.Tooltip;
+using trollschmiede.CivIdle.Util;
 
-public class PauseButton : MonoBehaviour
+namespace trollschmiede.CivIdle.UI
 {
-    bool isInPause = false;
-    public void OnButtonPressed()
+    public class PauseButton : MonoBehaviour
     {
-        if (isInPause)
+        public void OnButtonPressed()
         {
-            Time.timeScale = 1f;
-            isInPause = false;
-        } else
-        {
-            Time.timeScale = 0f;
-            isInPause = true;
+            Pause.TogglePause();
         }
-    }
 
-    private void Start()
-    {
-        GetComponent<TooltipHoverElement>().TooltipInitialize("Pause");
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
+        private void Start()
         {
-            OnButtonPressed();
+            GetComponent<TooltipHoverElement>().TooltipInitialize("Pause");
         }
-    }
 
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                OnButtonPressed();
+            }
+        }
+
+    }
 }

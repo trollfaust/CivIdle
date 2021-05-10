@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.UI;
+using trollschmiede.CivIdle.Util;
 
 namespace trollschmiede.CivIdle.GameEvents
 {
@@ -21,6 +21,8 @@ namespace trollschmiede.CivIdle.GameEvents
         #endregion
 
         public GameEvent[] gameEvents;
+        [SerializeField] GameObject popupEventPrefab = null;
+        [SerializeField] Transform popupGameEventContainer = null;
 
         #region Setup
         bool isSetup = false;
@@ -50,8 +52,20 @@ namespace trollschmiede.CivIdle.GameEvents
         {
             if (_gameEvent.isDone || _gameEvent.isSpecialTriggered)
                 return;
-            
-            _gameEvent.Evoke();
+
+            TriggerGameEvent(_gameEvent);
+        }
+
+        public void TriggerGameEvent(GameEvent _gameEvent)
+        {
+            bool check = _gameEvent.Evoke();
+            if (_gameEvent is PopupGameEvent && check)
+            {
+                GameObject go = Instantiate(popupEventPrefab, popupGameEventContainer) as GameObject;
+                go.GetComponent<PopupGameEventDisplay>().Setup((PopupGameEvent)_gameEvent);
+                Pause.TogglePause(true);
+            }
+
             if (_gameEvent.isOnHold == false && _gameEvent.isDone == false)
             {
                 StartCoroutine(_gameEvent.WaitTime());

@@ -7,10 +7,11 @@ namespace trollschmiede.CivIdle.GameEvents
     public class RequiermentResourceBelowMax : Requierment
     {
         [SerializeField] Resource resource = null;
+        [SerializeField] int amountBelow = 1;
 
         public override bool CheckRequierment()
         {
-            if (resource.amount < resource.GetTempMaxAmount())
+            if (resource.amount + amountBelow <= resource.GetTempMaxAmount())
             {
                 return true;
             }

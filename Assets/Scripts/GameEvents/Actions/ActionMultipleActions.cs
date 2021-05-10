@@ -7,6 +7,7 @@ namespace trollschmiede.CivIdle.GameEvents
     {
         [SerializeField] Action[] actions = null;
         [SerializeField] bool invertOverrideValue = false;
+        [SerializeField] bool notOverrideValues = false;
 
         int lastValue = 0;
 
@@ -24,6 +25,9 @@ namespace trollschmiede.CivIdle.GameEvents
                 if (action.EvokeAction())
                 {
                     int output = action.GetLastValue();
+                    if (notOverrideValues)
+                        continue;
+                    
                     lastValue = (invertOverrideValue) ? -output : output;
                 }
             }
