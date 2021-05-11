@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161b4380fb44b6d4ea5ef01f06849f8a, type: 3}
+  m_Name: Popup Footprints in the Dark
+  m_EditorClassIdentifier: 
+  requierments:
+  - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
+  - {fileID: 11400000, guid: ccde8f6cc6eb9cb4583c148af542512d, type: 2}
+  repeatCountMax: 0
+  baseChanceToPass: 3
+  timeBetweenChecks: 60
+  isSpecialTriggered: 0
+  gameEventActions:
+  - {fileID: 11400000, guid: 48aa584217da2db45a04666f1b1e8270, type: 2}
+  - {fileID: 0}
+  gameEventText: 
+  emptyIfZero: 0
+  isDone: 0
+  isOnHold: 1
+  returnActionValues: 
+  repeatCount: 0
+  chanceMultiplier: 1
+  title: Footprints in the Dark
+  description: 'You have discoverd strange Footprints near your Storage.
+
+    Do
+    you want to follow them?'
+  answers:
+  - Follow the Foorprints
+  - Leave them be
+  answerRequierments: []

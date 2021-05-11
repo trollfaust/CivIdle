@@ -15,10 +15,9 @@ MonoBehaviour:
   id: 0
   name: Land
   isEnabled: 1
-  amount: 23
+  amount: 0
   hasAmountOpen: 1
   openAmount: 0
-  maxAmount: 0
   baseMaxAmount: 0
   resourceCategory: 0
   resoureRequierment: 6

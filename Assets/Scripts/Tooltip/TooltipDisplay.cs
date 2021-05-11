@@ -93,9 +93,8 @@ namespace trollschmiede.Generic.Tooltip
             string colorCode = ColorUtility.ToHtmlStringRGB(TooltipManager.instance.settings.highlightColor);
 
             string[] words = text.Split(delimiterChars);
-            for (int i = 0; i < words.Length; i++)
+            foreach (string word in words)
             {
-                string word = words[i];
                 bool selfCheck = false;
                 foreach (var item in tooltip.triggerWords)
                 {
@@ -251,7 +250,7 @@ namespace trollschmiede.Generic.Tooltip
                 SetPositon(rect);
                 return false;
             }
-            if (rect.rect.width + 30 > Screen.width - rect.position.x && slot == 2)
+            if ((rect.rect.width) > (Screen.width - rect.position.x) && slot != 3)
             {
                 slot = 3;
                 SetPositon(rect);

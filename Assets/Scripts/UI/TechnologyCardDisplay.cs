@@ -15,7 +15,7 @@ namespace trollschmiede.CivIdle.UI
         [SerializeField] Image iconImage = null;
         [SerializeField] TooltipHoverElement hoverElement = null;
 
-        private Technology tech;
+        public Technology tech;
 
         public void Setup(Technology technology)
         {

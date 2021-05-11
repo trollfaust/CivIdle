@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 13bfcc0b7f50a194096ac468040ef67f, type: 2}
   - {fileID: 11400000, guid: d55721364f7cc5f44a47638def3dab5e, type: 2}
   repeatCountMax: 0
-  baseChanceToPass: 5
+  baseChanceToPass: 10
   timeBetweenChecks: 15
   isSpecialTriggered: 0
   gameEventActions:
@@ -26,3 +26,7 @@ MonoBehaviour:
   gameEventText: "Your Tribe is growing, $0 People have joined you\xA7."
   emptyIfZero: 1
   isDone: 0
+  isOnHold: 1
+  returnActionValues: 03000000
+  repeatCount: 1
+  chanceMultiplier: 1

@@ -45,7 +45,7 @@ namespace trollschmiede.CivIdle.Map
             isSetup = true;
         }
 
-        public void OnTick()
+        public void OnTick(int min, int max)
         {
             if (isSetup == false)
                 return;
@@ -55,7 +55,7 @@ namespace trollschmiede.CivIdle.Map
 
             LandTile tile = (LandTile)landMap.GetTile(lastCell);
 
-            int rng = Random.Range(0, 5);
+            int rng = Random.Range(min, max);
 
             if (tile.GetPercentExplored() < 100)
             {

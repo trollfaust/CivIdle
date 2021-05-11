@@ -126,6 +126,8 @@ namespace trollschmiede.CivIdle.UI
             if (gatheringObject == null)
                 return;
 
+            ChangePeopleWorking(-1);
+
             CheckPeopleWorking();
         }
 
@@ -163,23 +165,27 @@ namespace trollschmiede.CivIdle.UI
                 if (ResourceManager.instance.CheckRequirement(pair.resource.resoureRequierment))
                 {
                     int value = Random.Range(pair.minValue, pair.maxValue + 1);
-                    if (pair.resource.maxAmount > 0 && pair.resource.amount + value > pair.resource.maxAmount)
+                    if (pair.resource.GetMaxAmount() > 0 && pair.resource.amount + value > pair.resource.GetTempMaxAmount())
                     {
-                        value = pair.resource.maxAmount - pair.resource.amount;
+                        value = pair.resource.GetTempMaxAmount() - pair.resource.amount;
                     }
                     pair.resource.AmountChange(value);
                 }
             }
             if (gatheringObject.mapDiscovery == true)
             {
+                int rng = Random.Range(0, 100);
+                if (gatheringObject.mapResource.chance < rng)
+                    return;
+                
                 MainMap mainMap = FindObjectOfType<MainMap>();
-                mainMap.OnTick();
+                mainMap.OnTick(gatheringObject.mapResource.minValue, gatheringObject.mapResource.maxValue);
                 mapValue += mainMap.GetLastValue();
 
                 if (mapValue >= 10)
                 {
                     int amount = Mathf.RoundToInt(Mathf.Floor(mapValue / 10));
-                    gatheringObject.mapResource?.AmountChange(amount);
+                    gatheringObject.mapResource.resource?.AmountChange(amount);
                     mapValue -= (amount * 10);
                 }
             }

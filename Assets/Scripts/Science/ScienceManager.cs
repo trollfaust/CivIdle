@@ -4,6 +4,7 @@ using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.GameEvents;
 using trollschmiede.Generic.Tooltip;
 using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.Generic;
 
 namespace trollschmiede.CivIdle.Science
 {
@@ -77,7 +78,7 @@ namespace trollschmiede.CivIdle.Science
             if (availableTechs.Count == 0)
                 return false;
 
-            availableTechs = ShuffleTechs(availableTechs);
+            availableTechs.ShuffleList();
 
             for (int i = 0; i < _amount; i++)
             {
@@ -191,7 +192,8 @@ namespace trollschmiede.CivIdle.Science
         #region Helperfunctions
         List<Technology> ShuffleTechs(List<Technology> _technologies)
         {
-            _technologies.Sort((x, y) => Random.Range(0, 1000000));
+            System.Random rando = new System.Random();
+            _technologies.Sort((x, y) => rando.Next());
 
             return _technologies;
         }

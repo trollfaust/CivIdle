@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Fire Making
   showRequierments:
   - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
+  - {fileID: 11400000, guid: c7201ef371213654c9a40ad37fd3f9de, type: 2}
   unlockRequierments:
   - {fileID: 11400000, guid: 4312ef33ee51f9e4ebcf87553eaa476b, type: 2}
   unlocks:

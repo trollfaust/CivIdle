@@ -1628,7 +1628,7 @@ MonoBehaviour:
     tooltipValueElementObject:
     - {fileID: 11400000, guid: e598f61d6a11ff349935d3d77877f1e3, type: 2}
     triggerWords: []
-  - tooltipName: Bone
+  - tooltipName: Bones
     tooltipText: 'A basic Crafting Material used for making Bone-Statues.
 
       You
@@ -1636,7 +1636,8 @@ MonoBehaviour:
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 4491c5dc03c0fc24cab0a2d976f2aa6e, type: 2}
-    triggerWords: []
+    triggerWords:
+    - Bone
   - tooltipName: Carved Statues
     tooltipText: 'Made from Stone or Bone with Flint-Tools.
 
@@ -2203,7 +2204,7 @@ MonoBehaviour:
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 8bafbd2dd18889841b111ce106d50c72, type: 2}
     triggerWords: []
-  - tooltipName: Cure Fish
+  - tooltipName: Smoke Fish
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
@@ -2215,8 +2216,8 @@ MonoBehaviour:
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 994cd3a32972b464b9a505d0ec5ca42f, type: 2}
     triggerWords:
-    - Cure-Fish
-  - tooltipName: Cure Meat
+    - Smoke-Fish
+  - tooltipName: Smoke Meat
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
@@ -2228,7 +2229,7 @@ MonoBehaviour:
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 461f4bdebccadce4892363c7aabf219c, type: 2}
     triggerWords:
-    - Cure-Meat
+    - Smoke-Meat
   - tooltipName: Believe
     tooltipText: 'Research: Unlocks Soothsayer for getting Faith. Needs {unlockRequierments}
       to unlock.'
@@ -2387,11 +2388,61 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 466bb2b0df9814849b2a822138b26e18, type: 2}
     triggerWords: []
   - tooltipName: Map
-    tooltipText: 'The Map shows your explored Area.
+    tooltipText: 'The Map shows your explored Area. You explore the Map by selecting
+      a Tile and have a Wanderer or Scout.
 
       You can drag the Map around.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject: []
+    triggerWords: []
+  - tooltipName: Scouting
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here you can explore the Map, if you selected a Tile on the Map.
+
+      By
+      exploring the Map you get Land for Buildings.
+
+      Scouts may get lost occaionally.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: ea803616c59a52a49a40153896407b60, type: 2}
+    - {fileID: 11400000, guid: d1a3879a07e8152488cdef969e37bb67, type: 2}
+    triggerWords:
+    - Scout
+  - tooltipName: Land
+    tooltipText: Land is used to build Buildings (WIP). You get Land by Wanderer
+      ans Scouting.
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 23fb26667bf6a814f8df8667510a22cc, type: 2}
+    triggerWords: []
+  - tooltipName: Sick People
+    tooltipText: 'Sick People can''t work, but still need Food and Drinks.
+
+      For
+      more Info see Sickness.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: bc99c39fe5320fa41ae583833e9ebb7d, type: 2}
+    triggerWords:
+    - Sick-People
+  - tooltipName: Thinker
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: af237c7804eee484bbe836e1bc473d3f, type: 2}
+    - {fileID: 11400000, guid: 5499d3610fb003142a4c939a6bd0bdaf, type: 2}
     triggerWords: []
 --- !u!1 &359511048
 GameObject:
@@ -21322,7 +21373,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4838324477949634cbb19fef522dcb44, type: 2}
   - {fileID: 11400000, guid: c799771ae8364f84494c662e70debe40, type: 2}
   - {fileID: 11400000, guid: b8d2294d28d8b8b47bbaa7928d8228a6, type: 2}
-  - {fileID: 11400000, guid: d668c49f841202b449699dd471b85e3c, type: 2}
+  - {fileID: 11400000, guid: c8087879354c72047b1ca10790356d71, type: 2}
   - {fileID: 11400000, guid: 2ba234a59a557cc409be7acc00eb74c9, type: 2}
   - {fileID: 11400000, guid: befdd7fff18832b458c47d45794e5110, type: 2}
   - {fileID: 11400000, guid: 4642e5e545bc55b4184f4bca96a4528a, type: 2}
@@ -23882,6 +23933,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2caecbf81a4b96c47994d0887407ff10, type: 2}
   - {fileID: 11400000, guid: af6396565925b48408fdab5602b03b0c, type: 2}
   - {fileID: 11400000, guid: 466bb2b0df9814849b2a822138b26e18, type: 2}
+  - {fileID: 11400000, guid: d1a3879a07e8152488cdef969e37bb67, type: 2}
   gatheringObjectPrefab: {fileID: 9104276399538916264, guid: 10eab74487cb15a42876ec3b3eccf841,
     type: 3}
   gatheringObjectContainer: {fileID: 1831215210}
@@ -24275,6 +24327,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bdf94636e2ba9cb4d8998772726c1f63, type: 2}
   - {fileID: 11400000, guid: 4cf9d96e152bb144eb7d5f8a02b6a327, type: 2}
   - {fileID: 11400000, guid: 11d23e6aa95399a4993d83d660275034, type: 2}
+  - {fileID: 11400000, guid: 37fc244000b218a439592ae150874194, type: 2}
+  - {fileID: 11400000, guid: af237c7804eee484bbe836e1bc473d3f, type: 2}
   techCardPrefab: {fileID: 7146562861746841900, guid: c5187bb5307a81f4ab71ff11ceb678dd,
     type: 3}
   techCardContainer: {fileID: 2134653585}

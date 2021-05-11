@@ -22,7 +22,7 @@ namespace trollschmiede.CivIdle.GameEvents
                 tempResourceChangeAmountMax = overrideValue;
             }
             int randomAmount = Random.Range(tempResourceChangeAmountMin, tempResourceChangeAmountMax + 1);
-            if (resourcesToChange.maxAmount > 0 && resourcesToChange.amount + randomAmount > resourcesToChange.GetTempMaxAmount())
+            if (resourcesToChange.GetMaxAmount() > 0 && resourcesToChange.amount + randomAmount > resourcesToChange.GetTempMaxAmount())
             {
                 randomAmount = resourcesToChange.GetTempMaxAmount() - resourcesToChange.amount;
             }

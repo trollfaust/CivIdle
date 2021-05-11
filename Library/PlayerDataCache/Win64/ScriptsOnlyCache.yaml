@@ -775,7 +775,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 587d9fd646eb2cf9ba1bb7eec0332c9c
+      Hash: 3a111bcd7b8be7d59d300cd89062ad96
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Resources
     className: GatheringObject
@@ -811,7 +811,7 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
-      Hash: 90d4578cdb2ce0fc6cfd17c3bf399add
+      Hash: 975dff52e9de66ca92749eb8a7593514
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.UI
     className: TechnologyCardDisplay
@@ -1213,7 +1213,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: c8dec41989d4441c3aff32c349a79969
+      Hash: 2720ab5898556220aa38f3c1b0500300
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.Resources
     className: Resource
@@ -1515,4 +1515,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Tutorial.unity
   - Assets/Scenes/Game.unity
-  playerPath: E:/Unity/CivIdle/build/Windows/InDev-10.05.21b/CivIdle.exe
+  playerPath: E:/Unity/CivIdle/build/Windows/InDev-11.05.21e/CivIdle.exe

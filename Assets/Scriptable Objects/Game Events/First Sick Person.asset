@@ -13,15 +13,18 @@ MonoBehaviour:
   m_Name: First Sick Person
   m_EditorClassIdentifier: 
   requierments:
-  - {fileID: 11400000, guid: 8278ab8d4b3abd84ab10c898219def88, type: 2}
+  - {fileID: 11400000, guid: ccde8f6cc6eb9cb4583c148af542512d, type: 2}
   repeatCountMax: 1
-  baseChanceToPass: 1
-  timeBetweenChecks: 60
+  baseChanceToPass: 50
+  timeBetweenChecks: 30
   isSpecialTriggered: 0
   gameEventActions:
   - {fileID: 11400000, guid: f033c0f8aedf2b943adfd2e89d4f4037, type: 2}
   - {fileID: 11400000, guid: 65a6cbe71a4a6204fb81b0683632112a, type: 2}
   gameEventText: 1 Person got Sick.
   emptyIfZero: 0
-  isDone: 0
+  isDone: 1
   isOnHold: 0
+  returnActionValues: ffffffff01000000
+  repeatCount: 1
+  chanceMultiplier: 1

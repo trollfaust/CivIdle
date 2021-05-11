@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161b4380fb44b6d4ea5ef01f06849f8a, type: 3}
+  m_Name: Popup Better Curing
+  m_EditorClassIdentifier: 
+  requierments:
+  - {fileID: 11400000, guid: b2759eb94ee99754497a7fecdf8d51cd, type: 2}
+  - {fileID: 11400000, guid: d614e8d3cb522e14bbcd5e9408ebb1e4, type: 2}
+  repeatCountMax: 1
+  baseChanceToPass: 100
+  timeBetweenChecks: 1
+  isSpecialTriggered: 0
+  gameEventActions:
+  - {fileID: 11400000, guid: 6a01008953e15e040a9cddc603c4ebfb, type: 2}
+  - {fileID: 11400000, guid: 84732119fd0e71647a96c6f27f0fe4f8, type: 2}
+  - {fileID: 0}
+  gameEventText: 
+  emptyIfZero: 0
+  isDone: 0
+  isOnHold: 1
+  returnActionValues: 22000000
+  repeatCount: 0
+  chanceMultiplier: 1
+  title: Cure with Herbs
+  description: Do you want to help the curing Process of the Sick Person with some
+    Herbs?
+  answers:
+  - Yes use 50 Herbs
+  - Yes use 10 Herbs
+  - No
+  answerRequierments:
+  - {fileID: 11400000, guid: 726baad766c42cc47835089cabb11ec3, type: 2}
+  - {fileID: 11400000, guid: b2759eb94ee99754497a7fecdf8d51cd, type: 2}

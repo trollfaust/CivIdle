@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Language
   showRequierments:
   - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
-  - {fileID: 11400000, guid: 8278ab8d4b3abd84ab10c898219def88, type: 2}
+  - {fileID: 11400000, guid: ccde8f6cc6eb9cb4583c148af542512d, type: 2}
   unlockRequierments:
   - {fileID: 11400000, guid: 616cb48633e622248be6df7c268bdd2f, type: 2}
   unlocks:

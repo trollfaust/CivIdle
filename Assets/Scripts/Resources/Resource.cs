@@ -18,7 +18,7 @@ namespace trollschmiede.CivIdle.Resources
         [HideInInspector]
         public int openAmount;
         [HideInInspector]
-        public int maxAmount;
+        private int maxAmount;
         public int baseMaxAmount;
         public ResourceCategory resourceCategory;
         public ResoureRequierment resoureRequierment;
@@ -94,6 +94,11 @@ namespace trollschmiede.CivIdle.Resources
                 }
             }
             return tempMaxAmount;
+        }
+
+        public int GetMaxAmount()
+        {
+            return maxAmount;
         }
 
         public bool AmountOpenChange(int value)

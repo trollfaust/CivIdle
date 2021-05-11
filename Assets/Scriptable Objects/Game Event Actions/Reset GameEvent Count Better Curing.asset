@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Reset GameEvent Count Better Curing
   m_EditorClassIdentifier: 
   overrideValue: 0
-  gameEvent: {fileID: 11400000, guid: d668c49f841202b449699dd471b85e3c, type: 2}
+  gameEvent: {fileID: 11400000, guid: c8087879354c72047b1ca10790356d71, type: 2}

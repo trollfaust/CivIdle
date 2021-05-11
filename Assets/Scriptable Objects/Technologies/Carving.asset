@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Carving
   showRequierments:
-  - {fileID: 11400000, guid: cab3ad4886275be4d87b597643598e72, type: 2}
+  - {fileID: 11400000, guid: 7acb145b67ef2ce45bd8f71a8920269d, type: 2}
   - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
   - {fileID: 11400000, guid: c7201ef371213654c9a40ad37fd3f9de, type: 2}
   unlockRequierments:

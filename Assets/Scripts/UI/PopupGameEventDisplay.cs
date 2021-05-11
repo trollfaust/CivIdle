@@ -24,7 +24,13 @@ namespace trollschmiede.CivIdle.UI
             {
                 string buttonText = gameEvent.answers[i];
                 GameObject go = Instantiate(buttonPrefab, buttonContainer) as GameObject;
-                go.GetComponent<PopupEventButton>().Setup(this, i, buttonText, gameEvent.answerRequierments[i]);
+                Requierment requierment = null;
+                if (gameEvent.answerRequierments.Length > i)
+                {
+                    requierment = gameEvent.answerRequierments[i];
+                }
+
+                go.GetComponent<PopupEventButton>().Setup(this, i, buttonText, requierment);
             }
         }
 

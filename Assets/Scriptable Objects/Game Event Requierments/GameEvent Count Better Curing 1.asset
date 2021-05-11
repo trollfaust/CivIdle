@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4e0b3689a125246835881ed491f9a6, type: 3}
   m_Name: GameEvent Count Better Curing 1
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: d668c49f841202b449699dd471b85e3c, type: 2}
+  gameEvent: {fileID: 11400000, guid: c8087879354c72047b1ca10790356d71, type: 2}
   countDone: 1
