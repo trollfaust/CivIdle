@@ -17,8 +17,10 @@ namespace trollschmiede.Generic.Tooltip
             instance = this;
         }
 
+        [HideInInspector]
         public List<string> allTriggerWords;
         public Tooltip[] database;
+        public string searchString;
 
         private void Start()
         {

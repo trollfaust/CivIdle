@@ -62,6 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Building\Building.cs" />
+    <Compile Include="Assets\Scripts\Building\BuildingDisplay.cs" />
     <Compile Include="Assets\Scripts\Events\IEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IGameEventListener.cs" />
     <Compile Include="Assets\Scripts\Events\IResourceEventListener.cs" />
@@ -114,6 +116,7 @@
     <Compile Include="Assets\Scripts\Tooltip\ITooltipValueElement.cs" />
     <Compile Include="Assets\Scripts\Tooltip\Tooltip.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipDatabase.cs" />
+    <Compile Include="Assets\Scripts\Tooltip\TooltipDatabaseEditor.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipDisplay.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipHoverElement.cs" />
     <Compile Include="Assets\Scripts\Tooltip\TooltipManager.cs" />

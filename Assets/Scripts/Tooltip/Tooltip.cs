@@ -34,5 +34,7 @@ namespace trollschmiede.Generic.Tooltip
             
             return null;
         }
+
+        public Tooltip() { }
     }
 }
