@@ -326,8 +326,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OnAddButtonPressed
+      - m_Target: {fileID: 4978354925465045972}
+        m_MethodName: OnAddButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -781,8 +781,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OnSubstructButtonPressed
+      - m_Target: {fileID: 4978354925465045972}
+        m_MethodName: OnSubstractButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1221,3 +1221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acd3b3e54b18d74688aa96ad0632794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CountText: {fileID: 3230406957700034519}
+  substructButton: {fileID: 1449222178310737994}
+  resourceLand: {fileID: 11400000, guid: 23fb26667bf6a814f8df8667510a22cc, type: 2}
+  hoverElement: {fileID: 3368824065644758686}

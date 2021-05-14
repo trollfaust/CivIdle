@@ -2,6 +2,7 @@
 using trollschmiede.CivIdle.GameEvents;
 using trollschmiede.CivIdle.Resources;
 using trollschmiede.CivIdle.Science;
+using trollschmiede.CivIdle.Building;
 
 namespace trollschmiede.CivIdle.Generic
 {
@@ -29,6 +30,7 @@ namespace trollschmiede.CivIdle.Generic
         GameEventManager gameEventManager;
         CultureManager cultureManager;
         PeopleManager peopleManager;
+        BuildingManager buildingManager;
 
         #region Setup all the Stuff
         private void Start()
@@ -40,6 +42,7 @@ namespace trollschmiede.CivIdle.Generic
             gameEventManager = GameEventManager.instance;
             cultureManager = CultureManager.instance;
             peopleManager = PeopleManager.instance;
+            buildingManager = BuildingManager.instance;
 
             bool allIsSetup = SetupManagers();
             if (allIsSetup)
@@ -76,8 +79,11 @@ namespace trollschmiede.CivIdle.Generic
             bool gameEventManagerIsSetup = gameEventManager.Setup();
             CheckLogWarning(gameEventManagerIsSetup, "GameEvent Manager Setup Error!");
 
+            bool buildingManagerIsSetup = buildingManager.Setup();
+            CheckLogWarning(buildingManagerIsSetup, "Building Manager Setup Error!");
+
             // Check if all is Setup
-            if (saveLoadManagerIsSetup && scienceManagerIsSetup && resourceManagerIsSetup && gatheringManagerIsSetup && gameEventManagerIsSetup && cultureManagerIsSetup && peopleManagerIsSetup)
+            if (saveLoadManagerIsSetup && scienceManagerIsSetup && resourceManagerIsSetup && gatheringManagerIsSetup && gameEventManagerIsSetup && cultureManagerIsSetup && peopleManagerIsSetup && buildingManagerIsSetup)
                 return true;
             
             return false;
@@ -115,6 +121,7 @@ namespace trollschmiede.CivIdle.Generic
                 timeStamp = Time.time;
                 
                 gatheringManager.Tick();
+                buildingManager.Tick();
 
                 resourceManager.Tick();
                 peopleManager.Tick();

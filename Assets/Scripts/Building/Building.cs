@@ -2,6 +2,7 @@
 using trollschmiede.Generic.Tooltip;
 using System.Collections.Generic;
 using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.Resources;
 
 namespace trollschmiede.CivIdle.Building
 {
@@ -9,10 +10,15 @@ namespace trollschmiede.CivIdle.Building
     public class Building : ScriptableObject, ITooltipValueElement
     {
         public new string name;
-        [HideInInspector]
+        public ResourceChancePair[] buildingMaterials = new ResourceChancePair[0];
+        public int landNeeded = 1;
+
+        //[HideInInspector]
         public bool isEnabled;
         [HideInInspector]
-        public int amount;
+        public int buildingCount = 0;
+        [HideInInspector]
+        public int buildingWishedCount = 0;
 
         public Sprite iconSprite;
 
@@ -23,7 +29,8 @@ namespace trollschmiede.CivIdle.Building
 
         public void Reset()
         {
-            amount = 0;
+            buildingCount = 0;
+            buildingWishedCount = 0;
             isEnabled = false;
         }
 
