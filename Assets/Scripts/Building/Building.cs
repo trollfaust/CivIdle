@@ -29,6 +29,7 @@ namespace trollschmiede.CivIdle.BuildingSys
             Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
             keyValuePairs.Add("name", name);
             keyValuePairs.Add("landNeeded", landNeeded.ToString() + " Land");
+            keyValuePairs.Add("housingValue", housingValue.ToString() + " People");
 
             string buildingMats = "";
             for (int i = 0; i < buildingMaterials.Length; i++)

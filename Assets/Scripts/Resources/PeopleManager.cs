@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.GameEventSys;
 using System.Collections.Generic;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.Generic;
+using trollschmiede.CivIdle.ScienceSys;
+using trollschmiede.CivIdle.BuildingSys;
 
 namespace trollschmiede.CivIdle.ResourceSys
 {
@@ -24,6 +25,7 @@ namespace trollschmiede.CivIdle.ResourceSys
         [SerializeField] Resource peopleResource = null;
         [SerializeField] Resource sickPeopleResource = null;
         [SerializeField] PeopleNeeds[] allPeopleNeeds = new PeopleNeeds[0];
+        [SerializeField] HappinessNeed[] happinessNeeds = new HappinessNeed[0];
 
         public delegate void OnPeopleAmountChange();
         public event OnPeopleAmountChange onPeopleAmountChange;
@@ -31,6 +33,7 @@ namespace trollschmiede.CivIdle.ResourceSys
         private float timeStamp;
         private List<GatheringObjectDisplay> gatheringObjects;
         private int oldPeopleAmount;
+        private float happiness = 0f;
 
         #region Setup
         bool isSetup = false;
@@ -59,6 +62,8 @@ namespace trollschmiede.CivIdle.ResourceSys
         {
             if (isSetup == false)
                 return;
+
+            CalcHappiness();
 
             foreach (PeopleNeeds peopleNeeds in allPeopleNeeds)
             {
@@ -135,6 +140,85 @@ namespace trollschmiede.CivIdle.ResourceSys
                     }
                 }
             }
+        }
+
+        float GetNeedsPercent()
+        {
+            float calc = 1 / happinessNeeds.Length;
+            float output = Mathf.Lerp(0f, 100f, calc);
+            return output;
+        }
+
+        float CalcHappinessNeedsResource()
+        {
+            if (happinessNeeds == null || happinessNeeds.Length == 0)
+                return 0f;
+
+            float calc = 0f;
+            foreach (HappinessNeed need in happinessNeeds)
+            {
+                if (need.isForAll)
+                {
+                    if (need.resource.amount >= need.amount)
+                    {
+                        calc += GetNeedsPercent();
+                    } else
+                    {
+                        calc -= GetNeedsPercent();
+                    }
+                }
+                else
+                {
+                    if (need.resource.amount >= need.amount * peopleResource.amount)
+                    {
+                        calc += GetNeedsPercent();
+                    } else
+                    {
+                        calc -= GetNeedsPercent();
+                    }
+                }
+            }
+            return calc;
+        }
+
+        float CalcHousingHappiness()
+        {
+            float calc = BuildingManager.instance.GetHousingValues() / peopleResource.amount;
+            if (calc > 1f)
+            {
+                calc = 1f;
+            }
+            calc = Mathf.Lerp(0f, 30f, calc);
+
+            return calc;
+        }
+
+        public void CalcHappiness()
+        {
+            float calc = 0f;
+
+            calc -= ScienceManager.instance.GetPercentDone();
+            calc += CalcHappinessNeedsResource();
+            calc += CalcHousingHappiness();
+
+            if (calc > 100f)
+            {
+                calc = 100f;
+            }
+            if (calc < -100f)
+            {
+                calc = -100f;
+            }
+            happiness = calc;
+        }
+
+        /// <summary>
+        /// Returns the People Happiness in Percent (-100 to 100)
+        /// </summary>
+        /// <returns></returns>
+        public float GetHappiness()
+        {
+            return happiness;
         }
 
         public Resource GetPeopleResource()

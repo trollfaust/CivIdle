@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de4c1b8f99726d45ad964e9dbd3dc78, type: 3}
+  m_Name: Village
+  m_EditorClassIdentifier: 
+  name: Village
+  showRequierments:
+  - {fileID: 11400000, guid: f2c033ea8fd58884ca3cb3278294fbb9, type: 2}
+  - {fileID: 11400000, guid: 10cae695553b8a64eb768b355e163c8d, type: 2}
+  unlockRequierments:
+  - {fileID: 11400000, guid: d4c09751214e4534990661f411c5f615, type: 2}
+  unlocks:
+  - {fileID: 11400000, guid: 3b058bbc4613de0499f994610eb2ab5c, type: 2}
+  sprite: {fileID: 21300000, guid: 0faec607998044949b18a91988c1f99e, type: 3}
+  isDone: 0

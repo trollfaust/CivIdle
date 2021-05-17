@@ -38,7 +38,7 @@ MonoBehaviour:
   peopleNeededToWork: 1
   isManuelGatherable: 0
   buttonCooldownTime: 5
-  priorityValueSubstract: 0
+  priorityValueSubstract: 1
   isEnabled: 0
   peopleWorking: 0
   peopleWishedWorking: 0

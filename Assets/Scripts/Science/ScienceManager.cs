@@ -171,6 +171,17 @@ namespace trollschmiede.CivIdle.ScienceSys
         {
             techCardsToChoose += amount;
         }
+
+        /// <summary>
+        /// Returns the Percentage of Done Technologies (0-100)
+        /// </summary>
+        /// <returns></returns>
+        public float GetPercentDone()
+        {
+            float division = doneTechnologies.Count / allTechnologies.Length;
+            float output = Mathf.Lerp(0f, 100f, division);
+            return output;
+        }
         #endregion
 
         #region Reset

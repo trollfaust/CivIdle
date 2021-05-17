@@ -1554,8 +1554,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326210276}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -750.5334, y: -497.54413, z: 104.21843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1709797950}
@@ -1575,11 +1575,223 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allTriggerWords: []
   database:
-  - tooltipName: Bricks
-    tooltipText: 'A normal Building-Material used for WIP.
+  - tooltipName: Village
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 8a8539a45c0c06246bd5f828cfd10e8c, type: 2}
+    triggerWords: []
+  - tooltipName: Wooden House
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Building:
+      Gives housing to {housingValue}.
+
+      To build you need {buildingMaterials}.
+      Every {name} needs {landNeeded} to be build on.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: e302823cbd5bfad4b8c808983353c6f4, type: 2}
+    - {fileID: 11400000, guid: 65f021a5f2bfcb74088af8bead874139, type: 2}
+    triggerWords:
+    - Wooden-House
+    - Wooden-Houses
+    - Wooden Houses
+  - tooltipName: Wooden Shack
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Building:
+      Gives housing to {housingValue}.
+
+      To build you need {buildingMaterials}.
+      Every {name} needs {landNeeded} to be build on.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: bd91df0285441d747b0f66ba359ff22e, type: 2}
+    - {fileID: 11400000, guid: 9b46f32d713c9b8448bda92777b3735e, type: 2}
+    triggerWords:
+    - Wooden-Shack
+    - Wooden-Shacks
+    - Wooden Shacks
+  - tooltipName: Shelter
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Building:
+      Gives housing to {housingValue}.
+
+      To build you need {buildingMaterials}.
+      Every {name} needs {landNeeded} to be build on.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 197d58d7c5b1f894e8b7757bb9e77260, type: 2}
+    - {fileID: 11400000, guid: 222eef2b51ac73841ae9867e55016f1e, type: 2}
+    triggerWords:
+    - Shelters
+  - tooltipName: Stone Cutting
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
+
+      You
+      will need {craftingMaterials} to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 07629614a4442f149b40eea9311b4c48, type: 2}
+    - {fileID: 11400000, guid: 608944e9ae995094b8dae9fdc46c3b5e, type: 2}
+    triggerWords:
+    - Stone-Cutting
+  - tooltipName: Baking
+    tooltipText: '{unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: dd549e5d63e0ad94ca4c1567c04c7ec9, type: 2}
+    triggerWords: []
+  - tooltipName: Planting
+    tooltipText: '{unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: f49c713efc79e57469478062fdfc6b2d, type: 2}
+    triggerWords: []
+  - tooltipName: Baker
+    tooltipText: 'You can assign People here, if you have a Bakery, to work this
+      Task. {isManuelGatherable}
+
+      By working here, every {timeBetweenAutoGathering}
+      you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 01907085970bf6947ad6160c700b8bab, type: 2}
+    triggerWords:
+    - Backers
+  - tooltipName: Farmer
+    tooltipText: 'You can assign People here, if you have a Farm, to work this Task.
+      {isManuelGatherable}
+
+      By working here, every {timeBetweenAutoGathering}
+      you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 07225d518c98c544faa8ae5369696c99, type: 2}
+    triggerWords:
+    - Farmers
+  - tooltipName: Miller
+    tooltipText: 'You can assign People here, if you have a Mill, to work this Task.
+      {isManuelGatherable}
+
+      By working here, every {timeBetweenAutoGathering}
+      you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 8a935eced2ace8e45a938a12cc7e673c, type: 2}
+    triggerWords:
+    - Millers
+  - tooltipName: Cut Stone
+    tooltipText: 'A normal Building-Material used for Mills.
 
       You can get them
-      from Brick-Burning.'
+      from Stone-Cutting.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: a0cbc8e5feac0564db2f0f915cedb51b, type: 2}
+    triggerWords:
+    - Cut-Stone
+  - tooltipName: Bakery
+    tooltipText: 'You need {name} to assign Bakers to work.
+
+      To build you need
+      {buildingMaterials}. Every {name} needs {landNeeded} to be build on.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 73ca30813d2a3074abb573cbb29f853d, type: 2}
+    triggerWords:
+    - Bakeries
+  - tooltipName: Mill
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Building:
+      You need {name} to assign Millers to work.
+
+      To build you need {buildingMaterials}.
+      Every {name} needs {landNeeded} to be build on.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 17e163a67a3092d4fb349469ac21ad3c, type: 2}
+    - {fileID: 11400000, guid: c5ca3f77b8a29fc4d833b228c03355c3, type: 2}
+    triggerWords:
+    - Mills
+  - tooltipName: Farm
+    tooltipText: 'You need {name} to assign Farmers to work.
+
+      To build you
+      need {buildingMaterials}. Every {name} needs {landNeeded} to be build on.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 13823578ee6fd1540b7d91a9bed797b8, type: 2}
+    triggerWords:
+    - Farms
+  - tooltipName: Bread
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      You
+      can get them from Bakers.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 4b269ae16f7cbb14f8016c8a2a0da8b7, type: 2}
+    triggerWords: []
+  - tooltipName: Flour
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      You
+      can get them from Millers.
+
+      Used to make Bread.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: d3ebd2332ea683a479f51ebe75d905e5, type: 2}
+    triggerWords: []
+  - tooltipName: Wheat
+    tooltipText: 'A Food item with a Saturation of {saturationValue}.
+
+      You
+      can get them from Farmers.
+
+      Used to make Flour.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: b1258a9072c8db246ada19597b5a6ad5, type: 2}
+    triggerWords: []
+  - tooltipName: Building Material
+    tooltipText: Building Materials are used for building Buildings.
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject: []
+    triggerWords:
+    - Building-Material
+    - Building-Materials
+    - Building Materials
+  - tooltipName: Exploring
+    tooltipText: '{unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 11d23e6aa95399a4993d83d660275034, type: 2}
+    triggerWords: []
+  - tooltipName: Bricks
+    tooltipText: 'A normal Building-Material used for Bakeries.
+
+      You can get
+      them from Brick-Burning.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 5f6c4c80627ac6a478e290b8c3c04d21, type: 2}
@@ -1589,7 +1801,7 @@ MonoBehaviour:
     tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
 
       Task:
-      You can assign People here to work this Task. {isManuelGatherable}
+      You can assign People here, if you have a Kiln, to work this Task. {isManuelGatherable}
 
       By
       working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.'
@@ -21435,6 +21647,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dfb92b86498e34b47bea07c6307f321d, type: 2}
   - {fileID: 11400000, guid: 282adc05e9070dd47a8e5b8aa506f1ad, type: 2}
   - {fileID: 11400000, guid: 87e586ecb6ec76447bbc8283f07dc6f2, type: 2}
+  - {fileID: 11400000, guid: ef6f09f761b5700439d711cb975e2288, type: 2}
   popupEventPrefab: {fileID: 5155006827038999532, guid: 2ad4a7a575009de479baa4bce0f25091,
     type: 3}
   popupGameEventContainer: {fileID: 1846852664}
@@ -21445,8 +21658,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356590831}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -750.5334, y: -497.54413, z: 104.21843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1709797950}
@@ -22724,6 +22937,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 74d23df5ebb808441a0e58966b8d177a, type: 2}
   - {fileID: 11400000, guid: bc99c39fe5320fa41ae583833e9ebb7d, type: 2}
   - {fileID: 11400000, guid: 5f6c4c80627ac6a478e290b8c3c04d21, type: 2}
+  - {fileID: 11400000, guid: b1258a9072c8db246ada19597b5a6ad5, type: 2}
+  - {fileID: 11400000, guid: d3ebd2332ea683a479f51ebe75d905e5, type: 2}
+  - {fileID: 11400000, guid: 4b269ae16f7cbb14f8016c8a2a0da8b7, type: 2}
+  - {fileID: 11400000, guid: a0cbc8e5feac0564db2f0f915cedb51b, type: 2}
   resourceDisplayGroupPrefab: {fileID: 7722182083476858156, guid: 80467c8fc7da0af499cd947d4a154359,
     type: 3}
   resourceDisplayPrefab: {fileID: 3709490408999646742, guid: 764cc9e50642606408497e8965d555cd,
@@ -22768,11 +22985,13 @@ MonoBehaviour:
     failedGameEvent: {fileID: 11400000, guid: 4642e5e545bc55b4184f4bca96a4528a, type: 2}
     successGameEvent: {fileID: 0}
     timeToCheckInSecounds: 5
-  - need: {fileID: 11400000, guid: dc505d38383223f4f85d158ca98b270b, type: 2}
-    isAllPeople: 1
-    failedGameEvent: {fileID: 11400000, guid: 5584b6d5eb68e6b419dd2559747c9c96, type: 2}
-    successGameEvent: {fileID: 0}
-    timeToCheckInSecounds: 15
+  happinessNeeds:
+  - resource: {fileID: 11400000, guid: 7965b9c714c1eec468f1338d0c309e97, type: 2}
+    amount: 1
+    isForAll: 1
+  - resource: {fileID: 11400000, guid: 6d578d3220ccca046850ac5d8fbd5e1e, type: 2}
+    amount: 1
+    isForAll: 0
 --- !u!114 &1596311942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23310,6 +23529,11 @@ MonoBehaviour:
   allBuildings:
   - {fileID: 11400000, guid: 5fbce164d107d6c4eb3d2977825e5221, type: 2}
   - {fileID: 11400000, guid: 4c96b16087b246a42806a7928a907f37, type: 2}
+  - {fileID: 11400000, guid: 13823578ee6fd1540b7d91a9bed797b8, type: 2}
+  - {fileID: 11400000, guid: 17e163a67a3092d4fb349469ac21ad3c, type: 2}
+  - {fileID: 11400000, guid: 197d58d7c5b1f894e8b7757bb9e77260, type: 2}
+  - {fileID: 11400000, guid: e302823cbd5bfad4b8c808983353c6f4, type: 2}
+  - {fileID: 11400000, guid: bd91df0285441d747b0f66ba359ff22e, type: 2}
 --- !u!1 &1719197987
 GameObject:
   m_ObjectHideFlags: 0
@@ -24070,6 +24294,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 466bb2b0df9814849b2a822138b26e18, type: 2}
   - {fileID: 11400000, guid: d1a3879a07e8152488cdef969e37bb67, type: 2}
   - {fileID: 11400000, guid: a6de7e2a39004c44f865b8c9369c72a5, type: 2}
+  - {fileID: 11400000, guid: 01907085970bf6947ad6160c700b8bab, type: 2}
+  - {fileID: 11400000, guid: 8a935eced2ace8e45a938a12cc7e673c, type: 2}
+  - {fileID: 11400000, guid: 07225d518c98c544faa8ae5369696c99, type: 2}
+  - {fileID: 11400000, guid: 07629614a4442f149b40eea9311b4c48, type: 2}
   gatheringObjectPrefab: {fileID: 9104276399538916264, guid: 10eab74487cb15a42876ec3b3eccf841,
     type: 3}
   gatheringObjectContainer: {fileID: 1831215210}
@@ -24466,6 +24694,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 37fc244000b218a439592ae150874194, type: 2}
   - {fileID: 11400000, guid: af237c7804eee484bbe836e1bc473d3f, type: 2}
   - {fileID: 11400000, guid: 72ce3e906032d484e98f2a121b9ab8dd, type: 2}
+  - {fileID: 11400000, guid: 608944e9ae995094b8dae9fdc46c3b5e, type: 2}
+  - {fileID: 11400000, guid: f49c713efc79e57469478062fdfc6b2d, type: 2}
+  - {fileID: 11400000, guid: c5ca3f77b8a29fc4d833b228c03355c3, type: 2}
+  - {fileID: 11400000, guid: dd549e5d63e0ad94ca4c1567c04c7ec9, type: 2}
+  - {fileID: 11400000, guid: 222eef2b51ac73841ae9867e55016f1e, type: 2}
+  - {fileID: 11400000, guid: 9b46f32d713c9b8448bda92777b3735e, type: 2}
+  - {fileID: 11400000, guid: 65f021a5f2bfcb74088af8bead874139, type: 2}
+  - {fileID: 11400000, guid: 8a8539a45c0c06246bd5f828cfd10e8c, type: 2}
   techCardPrefab: {fileID: 7146562861746841900, guid: c5187bb5307a81f4ab71ff11ceb678dd,
     type: 3}
   techCardContainer: {fileID: 2134653585}

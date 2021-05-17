@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Settlement
   showRequierments:
-  - {fileID: 11400000, guid: 13bfcc0b7f50a194096ac468040ef67f, type: 2}
+  - {fileID: 11400000, guid: 1607929649bbae8458b9404df95a11b3, type: 2}
   - {fileID: 11400000, guid: f6b1c6d0e544d3c42adc4f55ce0e9b15, type: 2}
   unlockRequierments:
   - {fileID: 11400000, guid: 98dab82a2a54faf41abcb3059bd4ec0f, type: 2}

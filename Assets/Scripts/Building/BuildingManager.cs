@@ -101,5 +101,23 @@ namespace trollschmiede.CivIdle.BuildingSys
                 building.Reset();
             }
         }
+
+        /// <summary>
+        /// Returns the HousingValue for all Buildings together
+        /// </summary>
+        /// <returns></returns>
+        public int GetHousingValues()
+        {
+            int calc = 0;
+            foreach (Building building in allBuildings)
+            {
+                if (building.housingValue == 0)
+                    continue;
+
+                calc += building.housingValue * building.buildingCount;
+            }
+
+            return calc;
+        }
     }
 }

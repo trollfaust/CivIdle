@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Miller
+  m_EditorClassIdentifier: 
+  buttonName: Miller
+  craftingMaterials:
+  - resource: {fileID: 11400000, guid: b1258a9072c8db246ada19597b5a6ad5, type: 2}
+    minValue: -20
+    maxValue: -20
+    chance: 100
+  gatheringMaterials:
+  - resource: {fileID: 11400000, guid: d3ebd2332ea683a479f51ebe75d905e5, type: 2}
+    minValue: 40
+    maxValue: 40
+    chance: 100
+  mapResource:
+    resource: {fileID: 0}
+    minValue: 0
+    maxValue: 0
+    chance: 0
+  workBuilding: {fileID: 11400000, guid: 17e163a67a3092d4fb349469ac21ad3c, type: 2}
+  mapDiscovery: 0
+  timeBetweenAutoGathering: 15
+  peopleNeededToWork: 1
+  isManuelGatherable: 0
+  buttonCooldownTime: 5
+  priorityValueSubstract: 0
+  isEnabled: 0
+  peopleWorking: 0
+  peopleWishedWorking: 0
