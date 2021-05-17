@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.CivIdle.GameEventSys;
 using trollschmiede.Generic.Tooltip;
 using System.Collections.Generic;
-using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.EventSys;
 
-namespace trollschmiede.CivIdle.Science
+namespace trollschmiede.CivIdle.ScienceSys
 {
     [CreateAssetMenu(fileName ="New Technology", menuName = "Scriptable Objects/Science/Technology")]
     public class Technology : ScriptableObject, ITooltipValueElement

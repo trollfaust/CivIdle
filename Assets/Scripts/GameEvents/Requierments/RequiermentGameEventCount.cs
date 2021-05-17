@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Requirement GameEvent Count", menuName = "Scriptable Objects/Requierments/Requierment GameEvent Count")]
     public class RequiermentGameEventCount : Requierment

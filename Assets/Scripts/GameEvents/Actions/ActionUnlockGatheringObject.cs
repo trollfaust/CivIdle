@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ResourceSys;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action Unlock Gathering Object", menuName = "Scriptable Objects/Actions/Action Unlock Gathering Object")]
     public class ActionUnlockGatheringObject : Action

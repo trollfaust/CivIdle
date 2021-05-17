@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.CivIdle.GameEventSys;
 using System.Collections.Generic;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.Generic;
 
-namespace trollschmiede.CivIdle.Resources
+namespace trollschmiede.CivIdle.ResourceSys
 {
     public class PeopleManager : MonoBehaviour
     {

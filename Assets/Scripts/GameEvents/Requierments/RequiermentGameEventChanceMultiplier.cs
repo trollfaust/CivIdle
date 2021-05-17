@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Requirement GameEvent Chance Multiplier", menuName = "Scriptable Objects/Requierments/Requierment GameEvent Chance Multiplier")]
     public class RequiermentGameEventChanceMultiplier : Requierment

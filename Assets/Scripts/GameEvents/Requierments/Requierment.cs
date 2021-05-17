@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ResourceSys;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     public class Requierment : ScriptableObject
     {

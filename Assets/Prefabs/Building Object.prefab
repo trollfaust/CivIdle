@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 4305454026750400697}
   - component: {fileID: 3993735197490567751}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,6 +1221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acd3b3e54b18d74688aa96ad0632794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  title: {fileID: 5023357334267948004}
+  icon: {fileID: 3993735197490567751}
   CountText: {fileID: 3230406957700034519}
   substructButton: {fileID: 1449222178310737994}
   resourceLand: {fileID: 11400000, guid: 23fb26667bf6a814f8df8667510a22cc, type: 2}

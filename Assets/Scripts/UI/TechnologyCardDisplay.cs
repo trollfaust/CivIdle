@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using trollschmiede.CivIdle.Science;
-using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.CivIdle.ScienceSys;
+using trollschmiede.CivIdle.GameEventSys;
 using trollschmiede.Generic.Tooltip;
 
 namespace trollschmiede.CivIdle.UI

@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 using TMPro;
-using trollschmiede.CivIdle.Resources;
-using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.ResourceSys;
+using trollschmiede.CivIdle.EventSys;
 using trollschmiede.Generic.Tooltip;
 using UnityEngine.UI;
 

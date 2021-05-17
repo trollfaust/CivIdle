@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.GameEvents;
-using trollschmiede.CivIdle.Resources;
-using trollschmiede.CivIdle.Science;
-using trollschmiede.CivIdle.Building;
+using trollschmiede.CivIdle.GameEventSys;
+using trollschmiede.CivIdle.ResourceSys;
+using trollschmiede.CivIdle.ScienceSys;
+using trollschmiede.CivIdle.BuildingSys;
 
 namespace trollschmiede.CivIdle.Generic
 {

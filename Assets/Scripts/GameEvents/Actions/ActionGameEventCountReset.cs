@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action GameEvent Count Reset", menuName = "Scriptable Objects/Actions/Action GameEvent Count Reset")]
     public class ActionGameEventCountReset : Action

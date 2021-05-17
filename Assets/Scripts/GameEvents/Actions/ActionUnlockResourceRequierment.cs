@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ResourceSys;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action Unlock Resource Requierment", menuName = "Scriptable Objects/Actions/Action Unlock Resource Requierment")]
     public class ActionUnlockResourceRequierment : Action

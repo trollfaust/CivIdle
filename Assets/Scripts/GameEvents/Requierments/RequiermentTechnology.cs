@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Science;
+using trollschmiede.CivIdle.ScienceSys;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Requirement Technology", menuName = "Scriptable Objects/Requierments/Requierment Technology")]
     public class RequiermentTechnology : Requierment

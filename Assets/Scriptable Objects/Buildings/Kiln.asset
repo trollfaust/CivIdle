@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a1ac2a89b38884fb307c985aa51d67, type: 3}
+  m_Name: Kiln
+  m_EditorClassIdentifier: 
+  name: Kiln
+  buildingMaterials:
+  - resource: {fileID: 11400000, guid: 7662620a16f391c4b9345e61b8e51978, type: 2}
+    minValue: -50
+    maxValue: -50
+    chance: 100
+  - resource: {fileID: 11400000, guid: 7965b9c714c1eec468f1338d0c309e97, type: 2}
+    minValue: -1
+    maxValue: -1
+    chance: 100
+  landNeeded: 1
+  housingValue: 0
+  isEnabled: 0
+  buildingCount: 0
+  buildingWishedCount: 0
+  iconSprite: {fileID: 21300000, guid: 319cdf2f4c5569748a4a9ddb23dd98cf, type: 3}

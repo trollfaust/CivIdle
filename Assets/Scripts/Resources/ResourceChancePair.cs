@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-namespace trollschmiede.CivIdle.Resources
+namespace trollschmiede.CivIdle.ResourceSys
 {
     [System.Serializable]
     public class ResourceChancePair

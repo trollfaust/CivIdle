@@ -3,7 +3,7 @@ using UnityEngine;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.Generic;
 
-namespace trollschmiede.CivIdle.Resources
+namespace trollschmiede.CivIdle.ResourceSys
 {
     public class GatheringManager : MonoBehaviour
     {

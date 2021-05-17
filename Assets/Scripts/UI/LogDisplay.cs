@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using trollschmiede.CivIdle.Events;
-using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.CivIdle.EventSys;
+using trollschmiede.CivIdle.GameEventSys;
 using TMPro;
 using UnityEngine.UI;
-using trollschmiede.CivIdle.Science;
+using trollschmiede.CivIdle.ScienceSys;
 
 namespace trollschmiede.CivIdle.UI
 {

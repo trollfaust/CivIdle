@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
-namespace trollschmiede.CivIdle.Map
+namespace trollschmiede.CivIdle.MapSys
 {
     public class MainMap : MonoBehaviour, IPointerClickHandler
     {

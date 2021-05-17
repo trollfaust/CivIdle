@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace trollschmiede.CivIdle.Map
+namespace trollschmiede.CivIdle.MapSys
 {
     public class MapMover : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
     {

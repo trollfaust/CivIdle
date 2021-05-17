@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.EventSys;
 using System.Collections.Generic;
 using trollschmiede.Generic.Tooltip;
 
-namespace trollschmiede.CivIdle.Resources
+namespace trollschmiede.CivIdle.ResourceSys
 {
     [CreateAssetMenu(fileName = "New Resource", menuName = "Scriptable Objects/Resources/Resource")]
     public class Resource : ScriptableObject, ITooltipValueElement

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using trollschmiede.Generic.Tooltip;
 using System.Collections.Generic;
+using trollschmiede.CivIdle.BuildingSys;
 
-namespace trollschmiede.CivIdle.Resources
+namespace trollschmiede.CivIdle.ResourceSys
 {
     [CreateAssetMenu(fileName = "New Gathering Object", menuName = "Scriptable Objects/Gathering/Gathering Object")]
     public class GatheringObject : ScriptableObject, ITooltipValueElement
@@ -12,6 +13,7 @@ namespace trollschmiede.CivIdle.Resources
         public ResourceChancePair[] craftingMaterials = new ResourceChancePair[0];
         public ResourceChancePair[] gatheringMaterials = new ResourceChancePair[0];
         public ResourceChancePair mapResource = null;
+        public Building workBuilding = null;
         [Tooltip("Add MainMap for discovery Land")]
         public bool mapDiscovery = false;
         public float timeBetweenAutoGathering = 5f;
@@ -42,7 +44,7 @@ namespace trollschmiede.CivIdle.Resources
                 string maxAmount = item.maxValue.ToString();
                 string chance = item.chance.ToString();
 
-                craftingMats = craftingMats + minAmount + ((maxAmount == minAmount) ? "" : "-" + maxAmount) + " " + itemName + " at a " + chance + "% Chance" + ((i == craftingMaterials.Length - 1) ? "" : ", ");
+                craftingMats = craftingMats + minAmount + ((maxAmount == minAmount) ? "" : "-" + maxAmount) + " " + itemName + ((item.chance < 100) ? " at a " + chance + "% Chance" : "") + ((i == craftingMaterials.Length - 1) ? "" : ", ");
             }
             keyValuePairs.Add("craftingMaterials", craftingMats);
 
@@ -55,7 +57,7 @@ namespace trollschmiede.CivIdle.Resources
                 string maxAmount = item.maxValue.ToString();
                 string chance = item.chance.ToString();
 
-                gatheringMats = gatheringMats + minAmount + ((maxAmount == minAmount) ? "": "-" + maxAmount) + " " + itemName + " at a " + chance + "% Chance" + ((i == gatheringMaterials.Length - 1) ? "" : ", ");
+                gatheringMats = gatheringMats + minAmount + ((maxAmount == minAmount) ? "": "-" + maxAmount) + " " + itemName + ((item.chance < 100) ? " at a " + chance + "% Chance" : "") + ((i == gatheringMaterials.Length - 1) ? "" : ", ");
             }
             keyValuePairs.Add("gatheringMaterials", gatheringMats);
 

@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEngine;
 
 namespace trollschmiede.Generic.Tooltip
@@ -78,3 +79,4 @@ namespace trollschmiede.Generic.Tooltip
         }
     }
 }
+#endif

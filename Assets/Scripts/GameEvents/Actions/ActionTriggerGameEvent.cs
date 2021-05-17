@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action Trigger GameEvent", menuName = "Scriptable Objects/Actions/Action Trigger GameEvent")]
     public class ActionTriggerGameEvent : Action

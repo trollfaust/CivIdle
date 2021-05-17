@@ -1,7 +1,7 @@
-﻿using trollschmiede.CivIdle.Resources;
+﻿using trollschmiede.CivIdle.ResourceSys;
 using UnityEngine;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Requirement Resource is below Max", menuName = "Scriptable Objects/Requierments/Requierment Resource is below Max")]
     public class RequiermentResourceBelowMax : Requierment

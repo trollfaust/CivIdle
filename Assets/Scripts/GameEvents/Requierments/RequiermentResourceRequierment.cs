@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ResourceSys;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Requirement Resource Requierment", menuName = "Scriptable Objects/Requierments/Requierment Resource Requierment")]
     public class RequiermentResourceRequierment : Requierment

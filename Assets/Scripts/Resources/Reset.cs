@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.UI;
-using trollschmiede.CivIdle.GameEvents;
-using trollschmiede.CivIdle.Science;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.GameEventSys;
+using trollschmiede.CivIdle.ScienceSys;
+using trollschmiede.CivIdle.ResourceSys;
+using trollschmiede.CivIdle.BuildingSys;
 
 namespace trollschmiede.CivIdle.Generic
 {
@@ -19,6 +20,8 @@ namespace trollschmiede.CivIdle.Generic
             GatheringManager.instance.Reset();
 
             ScienceManager.instance.Reset();
+
+            BuildingManager.instance.Reset();
         }
     }
 }

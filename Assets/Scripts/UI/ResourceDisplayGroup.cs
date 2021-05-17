@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ResourceSys;
 
 namespace trollschmiede.CivIdle.UI
 {

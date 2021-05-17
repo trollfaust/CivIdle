@@ -1,6 +1,6 @@
-﻿using trollschmiede.CivIdle.Resources;
+﻿using trollschmiede.CivIdle.ResourceSys;
 
-namespace trollschmiede.CivIdle.Events
+namespace trollschmiede.CivIdle.EventSys
 {
     public interface IResourceEventListener : IEventListener
     {

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de4c1b8f99726d45ad964e9dbd3dc78, type: 3}
+  m_Name: Brick Burning
+  m_EditorClassIdentifier: 
+  name: Brick Burning
+  showRequierments:
+  - {fileID: 11400000, guid: 7587b1361e9b2504699bab1e1900ab3a, type: 2}
+  - {fileID: 11400000, guid: 53a5d9d9e44b8e641aa695405c688936, type: 2}
+  - {fileID: 11400000, guid: 2676d97c250cf2f4a8f67475ea4d613e, type: 2}
+  unlockRequierments:
+  - {fileID: 11400000, guid: 4312ef33ee51f9e4ebcf87553eaa476b, type: 2}
+  unlocks:
+  - {fileID: 11400000, guid: e935166d5b76653499c989510069248a, type: 2}
+  - {fileID: 11400000, guid: 100a425239ac19c4db8930d431a153e4, type: 2}
+  - {fileID: 11400000, guid: 0991e463be6995543b3439234ba3d24f, type: 2}
+  sprite: {fileID: 21300000, guid: 319cdf2f4c5569748a4a9ddb23dd98cf, type: 3}
+  isDone: 0

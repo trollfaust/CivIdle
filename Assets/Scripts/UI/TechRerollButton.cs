@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Science;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ScienceSys;
+using trollschmiede.CivIdle.ResourceSys;
 using trollschmiede.Generic.Tooltip;
 
 namespace trollschmiede.CivIdle.UI

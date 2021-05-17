@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using trollschmiede.CivIdle.UI;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action Unlock Tab", menuName = "Scriptable Objects/Actions/Action Unlock Tab")]
     public class ActionUnlockTab : Action

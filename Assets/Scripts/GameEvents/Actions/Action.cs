@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     public class Action : ScriptableObject
     {

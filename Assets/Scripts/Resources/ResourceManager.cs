@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 using trollschmiede.CivIdle.UI;
-using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.EventSys;
 using System;
 
-namespace trollschmiede.CivIdle.Resources
+namespace trollschmiede.CivIdle.ResourceSys
 {
     public class ResourceManager : MonoBehaviour, IResourceEventListener
     {

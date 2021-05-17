@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Science;
+using trollschmiede.CivIdle.ScienceSys;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action Tech Card Amount", menuName = "Scriptable Objects/Actions/Action Tech Card Amount")]
     public class ActionTechCardAmount : Action

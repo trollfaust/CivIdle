@@ -1575,6 +1575,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allTriggerWords: []
   database:
+  - tooltipName: Bricks
+    tooltipText: 'A normal Building-Material used for WIP.
+
+      You can get them
+      from Brick-Burning.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 5f6c4c80627ac6a478e290b8c3c04d21, type: 2}
+    triggerWords:
+    - Brick
+  - tooltipName: Brick Burning
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: a6de7e2a39004c44f865b8c9369c72a5, type: 2}
+    - {fileID: 11400000, guid: 72ce3e906032d484e98f2a121b9ab8dd, type: 2}
+    triggerWords:
+    - Brick-Burning
+  - tooltipName: Kiln
+    tooltipText: 'You need {name} to assign Brick-Burning to work.
+
+      To build
+      you need {buildingMaterials}. Every {name} needs {landNeeded} to be build on.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 4c96b16087b246a42806a7928a907f37, type: 2}
+    triggerWords: []
   - tooltipName: Sticks
     tooltipText: 'A basic Crafting Material used for making Fireplaces and Stone-Tools.
 
@@ -2314,22 +2347,37 @@ MonoBehaviour:
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 4cf9d96e152bb144eb7d5f8a02b6a327, type: 2}
     triggerWords: []
-  - tooltipName: Water Wells
-    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
-
-      Task:
-      You can assign People here to work this Task. {isManuelGatherable}
+  - tooltipName: Water Drawer
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
       working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
-    - {fileID: 11400000, guid: 37fc244000b218a439592ae150874194, type: 2}
     - {fileID: 11400000, guid: 2caecbf81a4b96c47994d0887407ff10, type: 2}
+    triggerWords:
+    - Water Drawer
+    - Water-Drawer
+  - tooltipName: Water Well
+    tooltipText: 'You need {name} to assign Water-Drawer to work.
+
+      To build
+      you need {buildingMaterials}. Every {name} needs {landNeeded} to be build on.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 5fbce164d107d6c4eb3d2977825e5221, type: 2}
     triggerWords:
     - Water Well
     - Water-Well
     - Water-Wells
+  - tooltipName: Well Digging
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 37fc244000b218a439592ae150874194, type: 2}
+    triggerWords:
+    - Well Digging
+    - Well-Digging
   - tooltipName: Sewing
     tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
     tooltipImage: {fileID: 0}
@@ -2415,8 +2463,7 @@ MonoBehaviour:
     triggerWords:
     - Scout
   - tooltipName: Land
-    tooltipText: Land is used to build Buildings (WIP). You get Land by Wanderer
-      ans Scouting.
+    tooltipText: Land is used to build Buildings. You get Land by Wanderer and Scouting.
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 23fb26667bf6a814f8df8667510a22cc, type: 2}
@@ -22676,6 +22723,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f86e182da9013e48853834d5c5b6af5, type: 2}
   - {fileID: 11400000, guid: 74d23df5ebb808441a0e58966b8d177a, type: 2}
   - {fileID: 11400000, guid: bc99c39fe5320fa41ae583833e9ebb7d, type: 2}
+  - {fileID: 11400000, guid: 5f6c4c80627ac6a478e290b8c3c04d21, type: 2}
   resourceDisplayGroupPrefab: {fileID: 7722182083476858156, guid: 80467c8fc7da0af499cd947d4a154359,
     type: 3}
   resourceDisplayPrefab: {fileID: 3709490408999646742, guid: 764cc9e50642606408497e8965d555cd,
@@ -23259,8 +23307,9 @@ MonoBehaviour:
   buildingDisplayPrefab: {fileID: 9104276399538916264, guid: 1be10349fddfb6e4c8126f4093d61e35,
     type: 3}
   buildingContainer: {fileID: 995829688}
-  buildings:
+  allBuildings:
   - {fileID: 11400000, guid: 5fbce164d107d6c4eb3d2977825e5221, type: 2}
+  - {fileID: 11400000, guid: 4c96b16087b246a42806a7928a907f37, type: 2}
 --- !u!1 &1719197987
 GameObject:
   m_ObjectHideFlags: 0
@@ -24020,6 +24069,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af6396565925b48408fdab5602b03b0c, type: 2}
   - {fileID: 11400000, guid: 466bb2b0df9814849b2a822138b26e18, type: 2}
   - {fileID: 11400000, guid: d1a3879a07e8152488cdef969e37bb67, type: 2}
+  - {fileID: 11400000, guid: a6de7e2a39004c44f865b8c9369c72a5, type: 2}
   gatheringObjectPrefab: {fileID: 9104276399538916264, guid: 10eab74487cb15a42876ec3b3eccf841,
     type: 3}
   gatheringObjectContainer: {fileID: 1831215210}
@@ -24415,6 +24465,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 11d23e6aa95399a4993d83d660275034, type: 2}
   - {fileID: 11400000, guid: 37fc244000b218a439592ae150874194, type: 2}
   - {fileID: 11400000, guid: af237c7804eee484bbe836e1bc473d3f, type: 2}
+  - {fileID: 11400000, guid: 72ce3e906032d484e98f2a121b9ab8dd, type: 2}
   techCardPrefab: {fileID: 7146562861746841900, guid: c5187bb5307a81f4ab71ff11ceb678dd,
     type: 3}
   techCardContainer: {fileID: 2134653585}

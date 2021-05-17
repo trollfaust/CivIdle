@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a1ac2a89b38884fb307c985aa51d67, type: 3}
+  m_Name: WaterWell
+  m_EditorClassIdentifier: 
+  name: Water Well
+  buildingMaterials:
+  - resource: {fileID: 11400000, guid: 7662620a16f391c4b9345e61b8e51978, type: 2}
+    minValue: -50
+    maxValue: -50
+    chance: 100
+  - resource: {fileID: 11400000, guid: 1eef26b33b641254180afddc2bcde8fa, type: 2}
+    minValue: -80
+    maxValue: -80
+    chance: 100
+  - resource: {fileID: 11400000, guid: 6fcfd22040c129d48a31909b2aba6cab, type: 2}
+    minValue: -2
+    maxValue: -2
+    chance: 100
+  landNeeded: 1
+  housingValue: 0
+  isEnabled: 1
+  buildingCount: 3
+  buildingWishedCount: 3
+  iconSprite: {fileID: 21300000, guid: 213cd8b448cfbfe46b470205ef012ace, type: 3}

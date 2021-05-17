@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action GameEvent Chance Modifier", menuName = "Scriptable Objects/Actions/Action GameEvent Chance Modifier")]
     public class ActionGameEventChanceModifier : Action

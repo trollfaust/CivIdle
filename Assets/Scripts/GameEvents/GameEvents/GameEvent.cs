@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.EventSys;
 using System.Collections.Generic;
 using System.Collections;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New GameEvent", menuName = "Scriptable Objects/Game Events/Game Event")]
     public class GameEvent : ScriptableObject

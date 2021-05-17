@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using trollschmiede.CivIdle.UI;
-using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.CivIdle.GameEventSys;
 using trollschmiede.Generic.Tooltip;
-using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.EventSys;
 using trollschmiede.CivIdle.Generic;
 
-namespace trollschmiede.CivIdle.Science
+namespace trollschmiede.CivIdle.ScienceSys
 {
     public class ScienceManager : MonoBehaviour
     {

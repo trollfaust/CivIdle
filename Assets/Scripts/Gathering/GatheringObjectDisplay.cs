@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ResourceSys;
 using trollschmiede.Generic.Tooltip;
-using trollschmiede.CivIdle.Map;
+using trollschmiede.CivIdle.MapSys;
 
 namespace trollschmiede.CivIdle.UI
 {
@@ -11,6 +11,7 @@ namespace trollschmiede.CivIdle.UI
     {
         [SerializeField] TextMeshProUGUI CountText = null;
         [SerializeField] Button substructButton = null;
+        [SerializeField] Button addButton = null;
         [SerializeField] GatheringButton gatheringButton = null;
         [SerializeField] Resource resourcePeople = null;
         [SerializeField] TooltipHoverElement hoverElement = null;
@@ -22,16 +23,44 @@ namespace trollschmiede.CivIdle.UI
 
         private void Update()
         {
-            if (gatheringObject == null)
+            if (SubstractButtonChange() == false)
                 return;
+            
+            AddButtonChange();
+        }
+
+        #region Buttons On/Off
+        private bool SubstractButtonChange()
+        {
+            if (gatheringObject == null)
+                return false;
             if (gatheringObject.peopleWishedWorking <= 0)
             {
                 substructButton.interactable = false;
-            } else
+            }
+            else
             {
                 substructButton.interactable = true;
             }
+            return true;
         }
+
+        private void AddButtonChange()
+        {
+            if (gatheringObject.workBuilding == null)
+            {
+                return;
+            }
+            if (gatheringObject.workBuilding.buildingCount > gatheringObject.peopleWorking)
+            {
+                addButton.interactable = true;
+            }
+            else
+            {
+                addButton.interactable = false;
+            }
+        }
+        #endregion
 
         bool isSetup = false;
         //TODO: Return false if failed

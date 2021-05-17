@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using trollschmiede.CivIdle.Generic;
 using UnityEngine;
 
-namespace trollschmiede.CivIdle.Building
+namespace trollschmiede.CivIdle.BuildingSys
 {
     public class BuildingManager : MonoBehaviour
     {
@@ -20,9 +21,10 @@ namespace trollschmiede.CivIdle.Building
 
         public GameObject buildingDisplayPrefab = null;
         public Transform buildingContainer = null;
-        public Building[] buildings = new Building[0];
+        public Building[] allBuildings = new Building[0];
 
         List<BuildingDisplay> buildingDisplays;
+        List<Building> enabledBuildings;
 
         bool isSetup = false;
         public bool Setup()
@@ -30,7 +32,7 @@ namespace trollschmiede.CivIdle.Building
             buildingDisplays = new List<BuildingDisplay>();
 
             bool check = true;
-            foreach (Building building in buildings)
+            foreach (Building building in allBuildings)
             {
                 if (building.isEnabled)
                 {
@@ -56,6 +58,28 @@ namespace trollschmiede.CivIdle.Building
             }
         }
 
+        public bool EnableBuilding(Building _building)
+        {
+            if (enabledBuildings == null)
+            {
+                enabledBuildings = new List<Building>();
+            }
+            if (enabledBuildings.Contains(_building))
+            {
+                GameManager.instance.CheckLogWarning(_building.name + " already exists in enabledBuildings!");
+                return false;
+            }
+
+            enabledBuildings.Add(_building);
+            _building.isEnabled = true;
+
+            bool check = InitBuilding(_building);
+
+            GameManager.instance.CheckLogWarning(check, "Building " + _building.name + " failed to Instantiate!");
+
+            return check;
+        }
+
         bool InitBuilding(Building _building)
         {
             if (buildingDisplays == null)
@@ -70,5 +94,12 @@ namespace trollschmiede.CivIdle.Building
             return check;
         }
 
+        public void Reset()
+        {
+            foreach (Building building in allBuildings)
+            {
+                building.Reset();
+            }
+        }
     }
 }

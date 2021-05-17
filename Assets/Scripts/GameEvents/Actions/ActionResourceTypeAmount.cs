@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ResourceSys;
 using System.Collections.Generic;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action Resource Type Amount", menuName = "Scriptable Objects/Actions/Action Resource Type Amount")]
     public class ActionResourceTypeAmount : Action

@@ -20,8 +20,8 @@ MonoBehaviour:
     maxValue: 5
     chance: 100
   - resource: {fileID: 11400000, guid: 7eb69ba3b5729a84984e75a96158fcad, type: 2}
-    minValue: 1
-    maxValue: 3
+    minValue: 2
+    maxValue: 4
     chance: 100
   - resource: {fileID: 11400000, guid: 1eef26b33b641254180afddc2bcde8fa, type: 2}
     minValue: 1
@@ -39,8 +39,18 @@ MonoBehaviour:
     minValue: 2
     maxValue: 6
     chance: 100
+  mapResource:
+    resource: {fileID: 0}
+    minValue: 0
+    maxValue: 0
+    chance: 0
+  workBuilding: {fileID: 0}
+  mapDiscovery: 0
   timeBetweenAutoGathering: 5
   peopleNeededToWork: 1
   isManuelGatherable: 1
   buttonCooldownTime: 5
   priorityValueSubstract: 2
+  isEnabled: 1
+  peopleWorking: 2
+  peopleWishedWorking: 2

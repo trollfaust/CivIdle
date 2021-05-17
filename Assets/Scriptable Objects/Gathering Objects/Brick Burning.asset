@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1acb44245707b438bfabfb4b7af67c, type: 3}
+  m_Name: Brick Burning
+  m_EditorClassIdentifier: 
+  buttonName: Brick Burning
+  craftingMaterials:
+  - resource: {fileID: 11400000, guid: a8aa36a8277d2314c9c121113d417bb6, type: 2}
+    minValue: -30
+    maxValue: -30
+    chance: 100
+  - resource: {fileID: 11400000, guid: 7965b9c714c1eec468f1338d0c309e97, type: 2}
+    minValue: -1
+    maxValue: -1
+    chance: 50
+  gatheringMaterials:
+  - resource: {fileID: 11400000, guid: 5f6c4c80627ac6a478e290b8c3c04d21, type: 2}
+    minValue: 8
+    maxValue: 12
+    chance: 100
+  mapResource:
+    resource: {fileID: 0}
+    minValue: 0
+    maxValue: 0
+    chance: 0
+  workBuilding: {fileID: 11400000, guid: 4c96b16087b246a42806a7928a907f37, type: 2}
+  mapDiscovery: 0
+  timeBetweenAutoGathering: 15
+  peopleNeededToWork: 1
+  isManuelGatherable: 0
+  buttonCooldownTime: 5
+  priorityValueSubstract: 0
+  isEnabled: 0
+  peopleWorking: 0
+  peopleWishedWorking: 0

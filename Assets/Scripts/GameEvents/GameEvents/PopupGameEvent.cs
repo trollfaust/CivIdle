@@ -2,7 +2,7 @@
 using UnityEngine;
 using trollschmiede.CivIdle.Util;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Popup GameEvent", menuName = "Scriptable Objects/Game Events/Popup Game Event")]
     public class PopupGameEvent : GameEvent

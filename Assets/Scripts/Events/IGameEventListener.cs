@@ -1,6 +1,6 @@
-﻿using trollschmiede.CivIdle.GameEvents;
+﻿using trollschmiede.CivIdle.GameEventSys;
 
-namespace trollschmiede.CivIdle.Events
+namespace trollschmiede.CivIdle.EventSys
 {
     public interface IGameEventListener : IEventListener
     {

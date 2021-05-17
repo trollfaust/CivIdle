@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
-using trollschmiede.CivIdle.GameEvents;
+using trollschmiede.CivIdle.GameEventSys;
 using UnityEngine.UI;
 
 namespace trollschmiede.CivIdle.UI

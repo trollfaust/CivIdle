@@ -1,6 +1,6 @@
-﻿using trollschmiede.CivIdle.Science;
+﻿using trollschmiede.CivIdle.ScienceSys;
 
-namespace trollschmiede.CivIdle.Events
+namespace trollschmiede.CivIdle.EventSys
 {
     public interface ITechnologyListener : IEventListener
     {

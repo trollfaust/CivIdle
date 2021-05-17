@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using trollschmiede.Generic.Tooltip;
 using System.Collections.Generic;
-using trollschmiede.CivIdle.Events;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.EventSys;
+using trollschmiede.CivIdle.ResourceSys;
 
-namespace trollschmiede.CivIdle.Building
+namespace trollschmiede.CivIdle.BuildingSys
 {
     [CreateAssetMenu(fileName = "New Building", menuName = "Scriptable Objects/Building/Building")]
     public class Building : ScriptableObject, ITooltipValueElement
@@ -12,6 +12,8 @@ namespace trollschmiede.CivIdle.Building
         public new string name;
         public ResourceChancePair[] buildingMaterials = new ResourceChancePair[0];
         public int landNeeded = 1;
+
+        public int housingValue = 0;
 
         //[HideInInspector]
         public bool isEnabled;
@@ -24,7 +26,24 @@ namespace trollschmiede.CivIdle.Building
 
         public Dictionary<string, string> GetTooltipValues()
         {
-            throw new System.NotImplementedException();
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            keyValuePairs.Add("name", name);
+            keyValuePairs.Add("landNeeded", landNeeded.ToString() + " Land");
+
+            string buildingMats = "";
+            for (int i = 0; i < buildingMaterials.Length; i++)
+            {
+                ResourceChancePair item = buildingMaterials[i];
+                string itemName = item.resource.name;
+                string minAmount = item.minValue.ToString();
+                string maxAmount = item.maxValue.ToString();
+                string chance = item.chance.ToString();
+
+                buildingMats = buildingMats + minAmount + ((maxAmount == minAmount) ? "" : "-" + maxAmount) + " " + itemName + ((item.chance < 100) ? " at a " + chance + "% Chance" : "") + ((i == buildingMaterials.Length - 1) ? "" : ", ");
+            }
+            keyValuePairs.Add("buildingMaterials", buildingMats);
+
+            return keyValuePairs;
         }
 
         public void Reset()

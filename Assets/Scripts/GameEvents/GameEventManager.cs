@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using trollschmiede.CivIdle.Events;
+using trollschmiede.CivIdle.EventSys;
 using trollschmiede.CivIdle.UI;
 using trollschmiede.CivIdle.Util;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     public class GameEventManager : MonoBehaviour
     {

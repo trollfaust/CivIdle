@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 using UnityEditor;
 #endif
 
-namespace trollschmiede.CivIdle.Map
+namespace trollschmiede.CivIdle.MapSys
 {
     public class LandTile : Tile
     {

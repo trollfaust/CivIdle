@@ -1,13 +1,15 @@
 ﻿using TMPro;
-using trollschmiede.CivIdle.Resources;
+using trollschmiede.CivIdle.ResourceSys;
 using trollschmiede.Generic.Tooltip;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace trollschmiede.CivIdle.Building
+namespace trollschmiede.CivIdle.BuildingSys
 {
     public class BuildingDisplay : MonoBehaviour
     {
+        [SerializeField] TextMeshProUGUI title = null;
+        [SerializeField] Image icon = null;
         [SerializeField] TextMeshProUGUI CountText = null;
         [SerializeField] Button substructButton = null;
         [SerializeField] Resource resourceLand = null;
@@ -22,6 +24,9 @@ namespace trollschmiede.CivIdle.Building
             building = _building;
             hoverElement.TooltipInitialize(building.name);
             UpdateCountText();
+
+            title.text = building.name;
+            icon.sprite = building.iconSprite;
 
             isSetup = true;
             return isSetup;
@@ -74,6 +79,11 @@ namespace trollschmiede.CivIdle.Building
         {
             foreach (ResourceChancePair pair in building.buildingMaterials)
             {
+                if (Random.Range(0, 100) > pair.chance)
+                {
+                    continue;
+                }
+
                 int rng = Random.Range(pair.minValue, pair.maxValue + 1);
                 pair.resource.AmountChange(rng);
             }

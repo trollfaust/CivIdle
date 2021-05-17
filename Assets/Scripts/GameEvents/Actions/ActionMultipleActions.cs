@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace trollschmiede.CivIdle.GameEvents
+namespace trollschmiede.CivIdle.GameEventSys
 {
     [CreateAssetMenu(fileName = "New Action multiple Actions", menuName = "Scriptable Objects/Actions/Action multiple Actions")]
     public class ActionMultipleActions : Action
