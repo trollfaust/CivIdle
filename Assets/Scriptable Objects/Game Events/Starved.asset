@@ -14,10 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requierments: []
   repeatCountMax: 0
-  baseChanceToPass: 50
+  baseChanceToPass: 30
+  useHappinessAsModifier: 0
   timeBetweenChecks: 1
   isSpecialTriggered: 1
   gameEventActions:
   - {fileID: 11400000, guid: f033c0f8aedf2b943adfd2e89d4f4037, type: 2}
   gameEventText: You lost $0 People from starvation.
+  emptyIfZero: 0
   isDone: 0
+  isOnHold: 0
+  returnActionValues: 
+  repeatCount: 0
+  chanceMultiplier: 1

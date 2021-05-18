@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Hamlet
   showRequierments:
   - {fileID: 11400000, guid: 8ba56ca8862ca564d80c17a5829a4688, type: 2}
-  - {fileID: 11400000, guid: c7a7dde0649ad9f4d9b2d80aace0b849, type: 2}
+  - {fileID: 11400000, guid: 5e5c5adad8f675d46b677d4640e96e81, type: 2}
   unlockRequierments:
   - {fileID: 11400000, guid: d4c09751214e4534990661f411c5f615, type: 2}
   unlocks:

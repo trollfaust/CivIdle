@@ -2,6 +2,7 @@
 using trollschmiede.CivIdle.EventSys;
 using System.Collections.Generic;
 using System.Collections;
+using trollschmiede.CivIdle.ResourceSys;
 
 namespace trollschmiede.CivIdle.GameEventSys
 {
@@ -15,6 +16,7 @@ namespace trollschmiede.CivIdle.GameEventSys
         public int repeatCountMax;
         [Range(0,100)]
         public int baseChanceToPass = 50;
+        public bool useHappinessAsModifier = false;
         public float timeBetweenChecks = 1f;
         public bool isSpecialTriggered = false;
         [Header("Actions")]
@@ -117,6 +119,10 @@ namespace trollschmiede.CivIdle.GameEventSys
         public int GetCurrentChance()
         {
             float f = baseChanceToPass * chanceMultiplier;
+            if (useHappinessAsModifier)
+            {
+                f = f * Mathf.Lerp(0.5f, 1.5f, ((PeopleManager.instance.GetHappiness() + 100) / 200));
+            }
             f = Mathf.RoundToInt(f);
             if (f > 100f)
                 f = 100f;

@@ -56,7 +56,7 @@ namespace trollschmiede.CivIdle.BuildingSys
             {
                 if ((resourceLand.openAmount < building.landNeeded && _differance > 0) || CheckResources() == false)
                     return;
-                building.buildingCount += Mathf.RoundToInt(Mathf.Sign((float)_differance) * 1);
+                building.ChangeBuildingCount(Mathf.RoundToInt(Mathf.Sign((float)_differance) * 1));
                 resourceLand.AmountOpenChange(Mathf.RoundToInt(Mathf.Sign((float)_differance) * building.landNeeded * -1));
                 ChangeResources();
                 UpdateCountText();

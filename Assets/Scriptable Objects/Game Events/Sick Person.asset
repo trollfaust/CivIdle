@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2769632077527cf49a9aa3106f6d357c, type: 2}
   repeatCountMax: 0
   baseChanceToPass: 3
+  useHappinessAsModifier: 1
   timeBetweenChecks: 60
   isSpecialTriggered: 0
   gameEventActions:
@@ -27,3 +28,6 @@ MonoBehaviour:
   emptyIfZero: 1
   isDone: 0
   isOnHold: 1
+  returnActionValues: 
+  repeatCount: 0
+  chanceMultiplier: 1

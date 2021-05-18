@@ -15,7 +15,6 @@ MonoBehaviour:
   name: Carving
   showRequierments:
   - {fileID: 11400000, guid: 7acb145b67ef2ce45bd8f71a8920269d, type: 2}
-  - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
   - {fileID: 11400000, guid: c7201ef371213654c9a40ad37fd3f9de, type: 2}
   unlockRequierments:
   - {fileID: 11400000, guid: 228f4136487f6e04786edba3fd6d7fee, type: 2}
@@ -23,4 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4084d7bbd8af06048a1291ba686ebc3c, type: 2}
   - {fileID: 11400000, guid: e3ec9c79374328d4982ef1898f2cddd7, type: 2}
   sprite: {fileID: 21300000, guid: 8d458c46ab64fd04599078fa8d61ee4e, type: 3}
-  isDone: 1
+  isDone: 0

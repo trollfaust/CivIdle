@@ -12,6 +12,8 @@ namespace trollschmiede.CivIdle.UI {
         [SerializeField] TextMeshProUGUI resourceText = null;
         [SerializeField] TooltipHoverElement hoverElement = null;
         [SerializeField] Image iconImage = null;
+        [SerializeField] GameObject happinessTextPrefab = null;
+        [SerializeField] Transform happinessContainer = null;
 
         public Resource resource { get; private set; }
         int oldAmount = 0;
@@ -51,6 +53,12 @@ namespace trollschmiede.CivIdle.UI {
             Evoke(_resource);
             iconImage.sprite = _resource.iconSprite;
             hoverElement.TooltipInitialize(_resource.name);
+            if (_resource == PeopleManager.instance.GetPeopleResource())
+            {
+                GameObject go = Instantiate(happinessTextPrefab, happinessContainer) as GameObject;
+                HappinessDisplay happinessDisplay = go.GetComponent<HappinessDisplay>();
+                happinessDisplay.Setup();
+            }
             StartCoroutine(AddListener(_resource));
         }
 

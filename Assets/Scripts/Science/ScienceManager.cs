@@ -178,7 +178,11 @@ namespace trollschmiede.CivIdle.ScienceSys
         /// <returns></returns>
         public float GetPercentDone()
         {
-            float division = doneTechnologies.Count / allTechnologies.Length;
+            if (doneTechnologies == null)
+            {
+                doneTechnologies = new List<Technology>();
+            }
+            float division = (float)doneTechnologies.Count / (float)allTechnologies.Length;
             float output = Mathf.Lerp(0f, 100f, division);
             return output;
         }

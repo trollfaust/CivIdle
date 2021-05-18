@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Village
   showRequierments:
-  - {fileID: 11400000, guid: f2c033ea8fd58884ca3cb3278294fbb9, type: 2}
+  - {fileID: 11400000, guid: c7a7dde0649ad9f4d9b2d80aace0b849, type: 2}
   - {fileID: 11400000, guid: 10cae695553b8a64eb768b355e163c8d, type: 2}
+  - {fileID: 11400000, guid: d8e24f5f0ff1b154989416b4c0a3a832, type: 2}
   unlockRequierments:
   - {fileID: 11400000, guid: d4c09751214e4534990661f411c5f615, type: 2}
   unlocks:

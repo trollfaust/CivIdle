@@ -183,7 +183,7 @@ namespace trollschmiede.CivIdle.ResourceSys
 
         float CalcHousingHappiness()
         {
-            float calc = BuildingManager.instance.GetHousingValues() / peopleResource.amount;
+            float calc = BuildingManager.instance.GetHousingValues() / ((peopleResource.amount == 0) ? 1 : peopleResource.amount);
             if (calc > 1f)
             {
                 calc = 1f;
@@ -218,6 +218,7 @@ namespace trollschmiede.CivIdle.ResourceSys
         /// <returns></returns>
         public float GetHappiness()
         {
+            CalcHappiness();
             return happiness;
         }
 

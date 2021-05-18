@@ -51,7 +51,7 @@ namespace trollschmiede.CivIdle.UI
             {
                 return;
             }
-            if (gatheringObject.workBuilding.buildingCount > gatheringObject.peopleWorking)
+            if (gatheringObject.workBuilding.GetOpenCount() >= gatheringObject.peopleNeededToWork)
             {
                 addButton.interactable = true;
             }
@@ -103,7 +103,7 @@ namespace trollschmiede.CivIdle.UI
 
         void CheckPeopleWorking()
         {
-            if (gatheringObject.peopleWishedWorking == gatheringObject.peopleWorking)
+            if (gatheringObject.peopleWishedWorking == gatheringObject.peopleWorking || (gatheringObject.workBuilding != null && gatheringObject.workBuilding.GetOpenCount() <= 0))
                 return;
 
             int diff = gatheringObject.peopleWishedWorking - gatheringObject.peopleWorking;
@@ -136,7 +136,12 @@ namespace trollschmiede.CivIdle.UI
         {
             if (gatheringObject == null)
                 return;
-            
+
+            if (gatheringObject.workBuilding != null)
+            {
+                gatheringObject.workBuilding.ChangeOpenCount(-gatheringObject.peopleNeededToWork);
+            }
+
             gatheringObject.peopleWishedWorking++;
             UpdateCountText();
         }
@@ -145,6 +150,11 @@ namespace trollschmiede.CivIdle.UI
         {
             if (gatheringObject == null)
                 return;
+
+            if (gatheringObject.workBuilding != null)
+            {
+                gatheringObject.workBuilding.ChangeOpenCount(gatheringObject.peopleNeededToWork);
+            }
 
             gatheringObject.peopleWishedWorking--;
             UpdateCountText();

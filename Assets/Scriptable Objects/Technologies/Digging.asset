@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Digging
   showRequierments:
-  - {fileID: 11400000, guid: 620f8c8994a938248a015082d908c994, type: 2}
   - {fileID: 11400000, guid: 0ea81aff8d9676344a3ec6257ca7c9ea, type: 2}
   unlockRequierments:
   - {fileID: 11400000, guid: 616cb48633e622248be6df7c268bdd2f, type: 2}

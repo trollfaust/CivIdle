@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Smoking Food
   showRequierments:
-  - {fileID: 11400000, guid: 7587b1361e9b2504699bab1e1900ab3a, type: 2}
   - {fileID: 11400000, guid: 1569a734f09015746b1bdb74bc8ed739, type: 2}
   unlockRequierments:
   - {fileID: 11400000, guid: a60eaa2d7bb0cae4db6439921f37acdc, type: 2}

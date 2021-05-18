@@ -21,6 +21,8 @@ namespace trollschmiede.CivIdle.BuildingSys
         public int buildingCount = 0;
         [HideInInspector]
         public int buildingWishedCount = 0;
+        [HideInInspector]
+        int buildingOpenCount = 0;
 
         public Sprite iconSprite;
 
@@ -52,6 +54,22 @@ namespace trollschmiede.CivIdle.BuildingSys
             buildingCount = 0;
             buildingWishedCount = 0;
             isEnabled = false;
+        }
+
+        public int GetOpenCount()
+        {
+            return buildingOpenCount;
+        }
+
+        public void ChangeOpenCount(int _amount)
+        {
+            buildingOpenCount += _amount;
+        }
+
+        public void ChangeBuildingCount(int _amount)
+        {
+            buildingCount += _amount;
+            buildingOpenCount += _amount;
         }
 
         #region Event Managment
