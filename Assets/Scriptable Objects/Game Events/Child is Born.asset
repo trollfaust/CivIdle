@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82df00455046b944a9a64b59bbf856c, type: 3}
+  m_Name: Child is Born
+  m_EditorClassIdentifier: 
+  requierments:
+  - {fileID: 11400000, guid: d55721364f7cc5f44a47638def3dab5e, type: 2}
+  - {fileID: 11400000, guid: 13bfcc0b7f50a194096ac468040ef67f, type: 2}
+  repeatCountMax: 0
+  baseChanceToPass: 2
+  useHappinessAsModifier: 1
+  happinessModifier: {x: 0, y: 0}
+  timeBetweenChecks: 10
+  isSpecialTriggered: 0
+  gameEventActions:
+  - {fileID: 11400000, guid: f4dd38144188d3d41b35c9de8c5064f0, type: 2}
+  gameEventText: A new Child was born.
+  emptyIfZero: 0
+  isDone: 0
+  isOnHold: 0
+  returnActionValues: 
+  repeatCount: 0
+  chanceMultiplier: 1

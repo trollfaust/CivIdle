@@ -18,6 +18,7 @@ MonoBehaviour:
   repeatCountMax: 0
   baseChanceToPass: 5
   useHappinessAsModifier: 1
+  happinessModifier: {x: 1.5, y: 0.5}
   timeBetweenChecks: 60
   isSpecialTriggered: 0
   gameEventActions:

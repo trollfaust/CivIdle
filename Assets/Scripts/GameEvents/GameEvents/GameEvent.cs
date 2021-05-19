@@ -17,6 +17,8 @@ namespace trollschmiede.CivIdle.GameEventSys
         [Range(0,100)]
         public int baseChanceToPass = 50;
         public bool useHappinessAsModifier = false;
+        [Tooltip("x = -100% Happiness, y = 100% Happiness")]
+        public Vector2 happinessModifier = new Vector2();
         public float timeBetweenChecks = 1f;
         public bool isSpecialTriggered = false;
         [Header("Actions")]
@@ -121,7 +123,7 @@ namespace trollschmiede.CivIdle.GameEventSys
             float f = baseChanceToPass * chanceMultiplier;
             if (useHappinessAsModifier)
             {
-                f = f * Mathf.Lerp(0.5f, 1.5f, ((PeopleManager.instance.GetHappiness() + 100) / 200));
+                f = f * Mathf.Lerp(happinessModifier.x, happinessModifier.y, ((PeopleManager.instance.GetHappiness() + 100) / 200));
             }
             f = Mathf.RoundToInt(f);
             if (f > 100f)

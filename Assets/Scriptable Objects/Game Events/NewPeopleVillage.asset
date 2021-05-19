@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82df00455046b944a9a64b59bbf856c, type: 3}
+  m_Name: NewPeopleVillage
+  m_EditorClassIdentifier: 
+  requierments:
+  - {fileID: 11400000, guid: 8f82f61c192a7d34582f289ed02eda9e, type: 2}
+  - {fileID: 11400000, guid: e45abfa59c42ae247843f45137f6e2ba, type: 2}
+  - {fileID: 11400000, guid: 2a2cfeeaa9ca20e42b97d0b6aaf362d3, type: 2}
+  - {fileID: 11400000, guid: d55721364f7cc5f44a47638def3dab5e, type: 2}
+  repeatCountMax: 0
+  baseChanceToPass: 10
+  useHappinessAsModifier: 0
+  happinessModifier: {x: 0, y: 0}
+  timeBetweenChecks: 15
+  isSpecialTriggered: 0
+  gameEventActions:
+  - {fileID: 11400000, guid: d0bcfd4044f22124ebbf1d91d92d9e84, type: 2}
+  gameEventText: "Your Village is growing, $0 People have joined you\xA7."
+  emptyIfZero: 1
+  isDone: 0
+  isOnHold: 1
+  returnActionValues: 03000000
+  repeatCount: 1
+  chanceMultiplier: 1

@@ -72,7 +72,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -236,93 +235,93 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 13062}
+      Script: {instanceID: 13054}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 13064}
     - Class: 114
-      Script: {instanceID: 13198}
+      Script: {instanceID: 13136}
     - Class: 114
-      Script: {instanceID: 13238}
+      Script: {instanceID: 13200}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 13240}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 13276}
     - Class: 114
-      Script: {instanceID: 13368}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13370}
     - Class: 114
       Script: {instanceID: 13386}
     - Class: 114
-      Script: {instanceID: 13396}
+      Script: {instanceID: 13388}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13398}
     - Class: 114
-      Script: {instanceID: 13498}
+      Script: {instanceID: 13406}
     - Class: 114
-      Script: {instanceID: 13536}
+      Script: {instanceID: 13500}
     - Class: 114
-      Script: {instanceID: 13616}
+      Script: {instanceID: 13538}
     - Class: 114
-      Script: {instanceID: 13630}
+      Script: {instanceID: 13618}
     - Class: 114
-      Script: {instanceID: 13646}
+      Script: {instanceID: 13632}
     - Class: 114
-      Script: {instanceID: 13660}
+      Script: {instanceID: 13648}
     - Class: 114
-      Script: {instanceID: 13738}
+      Script: {instanceID: 13662}
     - Class: 114
-      Script: {instanceID: 13872}
+      Script: {instanceID: 13740}
     - Class: 114
-      Script: {instanceID: 13968}
+      Script: {instanceID: 13874}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 13970}
     - Class: 114
-      Script: {instanceID: 14100}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 14114}
+      Script: {instanceID: 14102}
     - Class: 114
-      Script: {instanceID: 14120}
+      Script: {instanceID: 14116}
     - Class: 114
-      Script: {instanceID: 14188}
+      Script: {instanceID: 14122}
     - Class: 114
-      Script: {instanceID: 14200}
+      Script: {instanceID: 14190}
     - Class: 114
-      Script: {instanceID: 14208}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 14230}
+      Script: {instanceID: 14210}
     - Class: 114
-      Script: {instanceID: 14240}
+      Script: {instanceID: 14232}
     - Class: 114
-      Script: {instanceID: 14330}
+      Script: {instanceID: 14242}
     - Class: 114
-      Script: {instanceID: 14352}
+      Script: {instanceID: 14332}
     - Class: 114
-      Script: {instanceID: 14356}
+      Script: {instanceID: 14354}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14358}
     - Class: 114
-      Script: {instanceID: 14556}
+      Script: {instanceID: 14456}
     - Class: 114
-      Script: {instanceID: 14628}
+      Script: {instanceID: 14558}
     - Class: 114
-      Script: {instanceID: 14660}
+      Script: {instanceID: 14630}
     - Class: 114
-      Script: {instanceID: 14694}
+      Script: {instanceID: 14662}
     - Class: 114
-      Script: {instanceID: 14712}
+      Script: {instanceID: 14696}
     - Class: 114
-      Script: {instanceID: 14788}
+      Script: {instanceID: 14714}
     - Class: 114
-      Script: {instanceID: 14812}
+      Script: {instanceID: 14790}
     - Class: 114
-      Script: {instanceID: 20962}
+      Script: {instanceID: 14792}
     - Class: 114
-      Script: {instanceID: 28076}
+      Script: {instanceID: 14816}
     - Class: 114
-      Script: {instanceID: 28092}
+      Script: {instanceID: 14858}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -391,31 +390,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12468}
     - Class: 114
-      Script: {instanceID: 13062}
+      Script: {instanceID: 13064}
     - Class: 114
-      Script: {instanceID: 13368}
+      Script: {instanceID: 13370}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13406}
     - Class: 114
-      Script: {instanceID: 13630}
+      Script: {instanceID: 13632}
     - Class: 114
-      Script: {instanceID: 13652}
+      Script: {instanceID: 13654}
     - Class: 114
-      Script: {instanceID: 13738}
+      Script: {instanceID: 13740}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 14114}
+      Script: {instanceID: 14116}
     - Class: 114
-      Script: {instanceID: 14200}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 14424}
+      Script: {instanceID: 14426}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14456}
     - Class: 114
-      Script: {instanceID: 14788}
+      Script: {instanceID: 14792}
     - Class: 114
-      Script: {instanceID: 14836}
+      Script: {instanceID: 14840}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -515,7 +514,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 3114164bd0ac8c1bea94e7c2dd2e8516
+      Hash: 7d5bd2f1590ab592273f7dee0d8f85a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEventSys
     className: PopupGameEvent
@@ -773,7 +772,7 @@ ScriptsOnlyBuild:
     className: ActionMultipleActions
   - hash:
       serializedVersion: 2
-      Hash: 3ff9d9790aa7739a648e92b5fba20af4
+      Hash: e5a504a97d2f10fd6798dceee1def6d5
     assemblyName: Assembly-CSharp.dll
     namespaceName: trollschmiede.CivIdle.GameEventSys
     className: GameEvent
@@ -1005,6 +1004,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePipeline
+  - hash:
+      serializedVersion: 2
+      Hash: 5cf03783ed86c4cab0652963faf2e37f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEventSys
+    className: RequiermentHousingPercent
   - hash:
       serializedVersion: 2
       Hash: a3cd29bb5257800cf4e8305d961ba1a1
@@ -1517,6 +1522,12 @@ ScriptsOnlyBuild:
     className: CinemachineHardLockToTarget
   - hash:
       serializedVersion: 2
+      Hash: 43cf70dbec1f2b6167d9baa7347e8996
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.GameEventSys
+    className: RequiermentHousingValue
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1553,6 +1564,12 @@ ScriptsOnlyBuild:
     className: TutorialStart
   - hash:
       serializedVersion: 2
+      Hash: ee98729079998eb63435f99f41b30b9e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: trollschmiede.CivIdle.UI
+    className: HappinessDisplay
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1563,26 +1580,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ee98729079998eb63435f99f41b30b9e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.UI
-    className: HappinessDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: 5cf03783ed86c4cab0652963faf2e37f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.GameEventSys
-    className: RequiermentHousingPercent
-  - hash:
-      serializedVersion: 2
-      Hash: 43cf70dbec1f2b6167d9baa7347e8996
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: trollschmiede.CivIdle.GameEventSys
-    className: RequiermentHousingValue
   platform: 19
   scenePathNames:
   - Assets/Scenes/Tutorial.unity
   - Assets/Scenes/Game.unity
-  playerPath: E:/Unity/CivIdle/build/Windows/InDev-18.05.21a/CivIdle.exe
+  playerPath: E:/Unity/CivIdle/build/Windows/InDev-19.05.21a/CivIdle.exe

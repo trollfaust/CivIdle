@@ -1246,12 +1246,12 @@ PrefabInstance:
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 208
+      value: 290
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20
+      value: -17.5
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -1293,6 +1293,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6709447191167576242, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 644d2c1a10a8591458ee1e97022b0d1e,
+        type: 3}
     - target: {fileID: 6877344164619657362, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: tab
@@ -1585,6 +1591,125 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allTriggerWords: []
   database:
+  - tooltipName: Coke Burning
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
+
+      You
+      will need {craftingMaterials} to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: c3d29904b94f7024689b300fdb84658f, type: 2}
+    - {fileID: 11400000, guid: ae12ebe14fedd6440a4742cea4bf1b64, type: 2}
+    triggerWords:
+    - Coke-Burning
+  - tooltipName: Tin Smelting
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
+
+      You
+      will need {craftingMaterials} to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: aee0a8ab7187c204e9c1843564169215, type: 2}
+    triggerWords:
+    - Tin-Smelting
+  - tooltipName: Copper Smelting
+    tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
+
+      You
+      will need {craftingMaterials} to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 20f05cc617902e24b8d623c8d16c38c2, type: 2}
+    triggerWords:
+    - Copper-Smelting
+  - tooltipName: Coke Coal
+    tooltipText: 'A Crafting Material used for making Tin and Copper.
+
+      Made
+      from Wood with Fireplaces.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 805488d347caeb24da148dece25bc79b, type: 2}
+    triggerWords:
+    - Coke-Coal
+  - tooltipName: Ore Smelting
+    tooltipText: '{unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: e7b6b0637ad3f5448a666a8941855181, type: 2}
+    triggerWords:
+    - Ore-Smelting
+  - tooltipName: Writing
+    tooltipText: '{unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: a930016450e74e5488861482bcfc24ae, type: 2}
+    triggerWords: []
+  - tooltipName: Pots
+    tooltipText: 'A Crafting Material used for making Vases.
+
+      Made from Clay
+      and Water.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: c780566c03169fb4493665c7fb867b31, type: 2}
+    triggerWords: []
+  - tooltipName: Vases
+    tooltipText: 'Made from Pots with Fireplaces in a Kiln.
+
+      Are used every
+      20 Secounds for generating {cultureValue} Culture.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 8900fa99ca2b2324dbf1938fb01a2b2a, type: 2}
+    triggerWords: []
+  - tooltipName: Ceramics
+    tooltipText: '{unlocks}. Needs {unlockRequierments} to unlock.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 42846eb601e23ad41ab9878f5068ed7e, type: 2}
+    triggerWords: []
+  - tooltipName: Vase Burning
+    tooltipText: 'You can assign People here, if you have a Kiln, to work this Task.
+      {isManuelGatherable}
+
+      By working here, every {timeBetweenAutoGathering}
+      you can get: {gatheringMaterials}.
+
+      You will need {craftingMaterials}
+      to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: 0281abf94c3960d43a6a6742e5a019b3, type: 2}
+    triggerWords: []
+  - tooltipName: Pottery
+    tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.
+
+      Task:
+      You can assign People here to work this Task. {isManuelGatherable}
+
+      By
+      working here, every {timeBetweenAutoGathering} you can get: {gatheringMaterials}.
+
+      You
+      will need {craftingMaterials} to work here.'
+    tooltipImage: {fileID: 0}
+    tooltipValueElementObject:
+    - {fileID: 11400000, guid: d115d88db05141e499a02469467bd371, type: 2}
+    - {fileID: 11400000, guid: 6c05ce0bfdb6f4b44b465b958030db40, type: 2}
+    triggerWords: []
   - tooltipName: Village
     tooltipText: 'Research: {unlocks}. Needs {unlockRequierments} to unlock.'
     tooltipImage: {fileID: 0}
@@ -1956,10 +2081,9 @@ MonoBehaviour:
     triggerWords:
     - Cooked-Meat
   - tooltipName: Copper Ore
-    tooltipText: 'An Ore used to be smelted down. (WIP)
+    tooltipText: 'An Ore used in Copper-Smelting.
 
-      You can get them from
-      Mining.'
+      You can get them from Mining.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 907796746a54bdc4fabed9790535247a, type: 2}
@@ -2087,7 +2211,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3424c14c4b357db408b724fb043a1b8b, type: 2}
     triggerWords: []
   - tooltipName: Copper
-    tooltipText: TODO
+    tooltipText: 'A soft Metal (WIP)
+
+      You can get it from Copper-Smelting.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 18842b7cd4ea2e449a7f6850a55bddc5, type: 2}
@@ -2156,17 +2282,18 @@ MonoBehaviour:
     - Stone-Tools
     - Stone-Tool
   - tooltipName: Tin Ore
-    tooltipText: 'An Ore used to be smelted down. (WIP)
+    tooltipText: 'An Ore used in Tin-Smelting.
 
-      You can get them from
-      Mining.'
+      You can get them from Mining.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 63e1ac5054db563499e17cf3b0acd855, type: 2}
     triggerWords:
     - Tin-Ore
   - tooltipName: Tin
-    tooltipText: TODO
+    tooltipText: 'A soft Metal (WIP)
+
+      You can get it from Copper-Smelting.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 723f93d661560a64985d127d5f8a0efc, type: 2}
@@ -2650,13 +2777,13 @@ MonoBehaviour:
     tooltipText: 'You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can explore the Map, if you selected a Tile on the Map.
+      working here you can explore the Map, you need to selected a Tile on the Map
+      to explore it and the surrounding Tiles.
 
-      By
-      exploring the Map you get Land for Buildings.
+      By exploring the Map you get
+      Land for Buildings.
 
-      Wanderers may get lost
-      occaionally.'
+      Wanderers may get lost occaionally.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 466bb2b0df9814849b2a822138b26e18, type: 2}
@@ -2676,10 +2803,11 @@ MonoBehaviour:
       You can assign People here to work this Task. {isManuelGatherable}
 
       By
-      working here you can explore the Map, if you selected a Tile on the Map.
+      working here you can explore the Map, you need to selected a Tile on the Map
+      to explore it and the surrounding Tiles.
 
-      By
-      exploring the Map you get Land for Buildings.
+      By exploring the Map you get
+      Land for Buildings.
 
       Scouts may get lost occaionally.'
     tooltipImage: {fileID: 0}
@@ -2689,7 +2817,10 @@ MonoBehaviour:
     triggerWords:
     - Scout
   - tooltipName: Land
-    tooltipText: Land is used to build Buildings. You get Land by Wanderer and Scouting.
+    tooltipText: 'Land is used to build Buildings.
+
+      You get Land by Wanderer
+      and Scouting.'
     tooltipImage: {fileID: 0}
     tooltipValueElementObject:
     - {fileID: 11400000, guid: 23fb26667bf6a814f8df8667510a22cc, type: 2}
@@ -2717,7 +2848,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: af237c7804eee484bbe836e1bc473d3f, type: 2}
     - {fileID: 11400000, guid: 5499d3610fb003142a4c939a6bd0bdaf, type: 2}
     triggerWords: []
-  searchString: peo
+  searchString: 
 --- !u!1 &359511048
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,6 +3691,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6709447191167576242, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b32a7d0bff9ef2646bf2ccad310d20ff,
+        type: 3}
     - target: {fileID: 6877344164619657362, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: tab
@@ -21662,6 +21799,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 282adc05e9070dd47a8e5b8aa506f1ad, type: 2}
   - {fileID: 11400000, guid: 87e586ecb6ec76447bbc8283f07dc6f2, type: 2}
   - {fileID: 11400000, guid: ef6f09f761b5700439d711cb975e2288, type: 2}
+  - {fileID: 11400000, guid: 842f53078d4f9c449a264293224ed897, type: 2}
+  - {fileID: 11400000, guid: f81fc6441de37fd4d8397596a70d53f3, type: 2}
+  - {fileID: 11400000, guid: d8576fe6b4400f847b72b051f827f23c, type: 2}
   popupEventPrefab: {fileID: 5155006827038999532, guid: 2ad4a7a575009de479baa4bce0f25091,
     type: 3}
   popupGameEventContainer: {fileID: 1846852664}
@@ -22955,6 +23095,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d3ebd2332ea683a479f51ebe75d905e5, type: 2}
   - {fileID: 11400000, guid: 4b269ae16f7cbb14f8016c8a2a0da8b7, type: 2}
   - {fileID: 11400000, guid: a0cbc8e5feac0564db2f0f915cedb51b, type: 2}
+  - {fileID: 11400000, guid: 8900fa99ca2b2324dbf1938fb01a2b2a, type: 2}
+  - {fileID: 11400000, guid: c780566c03169fb4493665c7fb867b31, type: 2}
+  - {fileID: 11400000, guid: 805488d347caeb24da148dece25bc79b, type: 2}
   resourceDisplayGroupPrefab: {fileID: 7722182083476858156, guid: 80467c8fc7da0af499cd947d4a154359,
     type: 3}
   resourceDisplayPrefab: {fileID: 3709490408999646742, guid: 764cc9e50642606408497e8965d555cd,
@@ -23350,7 +23493,7 @@ PrefabInstance:
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20
+      value: -17.5
       objectReference: {fileID: 0}
     - target: {fileID: 3243211443576208091, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
@@ -23392,6 +23535,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6709447191167576242, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c8bf2bd0b290fae40bed3ef030704120,
+        type: 3}
     - target: {fileID: 6877344164619657362, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: tab
@@ -24312,6 +24461,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a935eced2ace8e45a938a12cc7e673c, type: 2}
   - {fileID: 11400000, guid: 07225d518c98c544faa8ae5369696c99, type: 2}
   - {fileID: 11400000, guid: 07629614a4442f149b40eea9311b4c48, type: 2}
+  - {fileID: 11400000, guid: d115d88db05141e499a02469467bd371, type: 2}
+  - {fileID: 11400000, guid: 0281abf94c3960d43a6a6742e5a019b3, type: 2}
+  - {fileID: 11400000, guid: c3d29904b94f7024689b300fdb84658f, type: 2}
+  - {fileID: 11400000, guid: 20f05cc617902e24b8d623c8d16c38c2, type: 2}
+  - {fileID: 11400000, guid: aee0a8ab7187c204e9c1843564169215, type: 2}
   gatheringObjectPrefab: {fileID: 9104276399538916264, guid: 10eab74487cb15a42876ec3b3eccf841,
     type: 3}
   gatheringObjectContainer: {fileID: 1831215210}
@@ -24716,6 +24870,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9b46f32d713c9b8448bda92777b3735e, type: 2}
   - {fileID: 11400000, guid: 65f021a5f2bfcb74088af8bead874139, type: 2}
   - {fileID: 11400000, guid: 8a8539a45c0c06246bd5f828cfd10e8c, type: 2}
+  - {fileID: 11400000, guid: 42846eb601e23ad41ab9878f5068ed7e, type: 2}
+  - {fileID: 11400000, guid: 6c05ce0bfdb6f4b44b465b958030db40, type: 2}
+  - {fileID: 11400000, guid: a930016450e74e5488861482bcfc24ae, type: 2}
+  - {fileID: 11400000, guid: ae12ebe14fedd6440a4742cea4bf1b64, type: 2}
+  - {fileID: 11400000, guid: e7b6b0637ad3f5448a666a8941855181, type: 2}
   techCardPrefab: {fileID: 7146562861746841900, guid: c5187bb5307a81f4ab71ff11ceb678dd,
     type: 3}
   techCardContainer: {fileID: 2134653585}
@@ -27283,6 +27442,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6709447191167576242, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2d08e3fa8e4255c408d383c4f5acc218,
+        type: 3}
     - target: {fileID: 6877344164619657362, guid: 4327e6f31b58b0e45a4c01f1dd42158c,
         type: 3}
       propertyPath: tab

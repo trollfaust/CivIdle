@@ -17,8 +17,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e45abfa59c42ae247843f45137f6e2ba, type: 2}
   - {fileID: 11400000, guid: 13bfcc0b7f50a194096ac468040ef67f, type: 2}
   - {fileID: 11400000, guid: d55721364f7cc5f44a47638def3dab5e, type: 2}
+  - {fileID: 11400000, guid: 5d616575fd8107844a75822acac697c6, type: 2}
   repeatCountMax: 0
   baseChanceToPass: 10
+  useHappinessAsModifier: 0
+  happinessModifier: {x: 0, y: 0}
   timeBetweenChecks: 15
   isSpecialTriggered: 0
   gameEventActions:
