@@ -59,7 +59,7 @@ namespace trollschmiede.CivIdle.GameEventSys
                     listener.Evoke(this);
                 }
             }
-            Pause.TogglePause(false);
+            GameTime.TogglePause(false);
         }
     }
 }

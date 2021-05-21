@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using trollschmiede.Generic.Tooltip;
 using UnityEngine.SceneManagement;
 
@@ -16,11 +14,11 @@ public class TutorialStart : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(TooltipManager.instance.keySettings.unlockKey))
         {
             if (hasClicked == true)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
 
             hasClicked = true;

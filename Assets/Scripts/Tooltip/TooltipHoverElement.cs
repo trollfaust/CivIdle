@@ -74,7 +74,7 @@ namespace trollschmiede.Generic.Tooltip
 
             if (currentTooltip != null) // If Tooltip on, check if it needs to be locked
             {
-                if (Input.GetKeyDown(TooltipManager.instance.settings.lockKey) && isOverUI)
+                if (Input.GetKeyDown(TooltipManager.instance.keySettings.lockKey) && isOverUI)
                 {
                     tooltipFixed = !tooltipFixed;
                     currentTooltip.GetComponent<TooltipDisplay>().isFixed = tooltipFixed;

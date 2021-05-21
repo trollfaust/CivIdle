@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: 6dacab8881b77b4499bd0cc5c52efd37, type: 2}
+  keySettings: {fileID: 11400000, guid: 384df132108f9c44a93d987e90cd1ff7, type: 2}
   tooltipPrefab: {fileID: 2045200498427442936, guid: 0218e29d4507daf40a99be99ed91c3d5,
     type: 3}
   tooltipStorage: {fileID: 783564295}
@@ -501,6 +502,7 @@ MonoBehaviour:
     tooltipValueElementObject: []
     triggerWords:
     - this
+  searchString: 
 --- !u!1 &1338520863
 GameObject:
   m_ObjectHideFlags: 0

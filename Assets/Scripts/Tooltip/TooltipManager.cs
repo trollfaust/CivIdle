@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using trollschmiede.CivIdle.Util;
 
 namespace trollschmiede.Generic.Tooltip
 {
@@ -21,6 +22,7 @@ namespace trollschmiede.Generic.Tooltip
         [Header("Setup")]
         [Tooltip("Create a TooltipSetting Object and set it here")]
         public TooltipSettings settings;
+        public KeySettings keySettings;
         [Tooltip("The Prefab for a Tooltip")]
         [SerializeField] GameObject tooltipPrefab = null;
         [Tooltip("The Transform where all unused Tooltips go")]
@@ -47,7 +49,7 @@ namespace trollschmiede.Generic.Tooltip
             if (isSetup == false)
                 return;
             
-            if (Input.GetKeyDown(settings.unlockKey)) // Removes all Tooltips if the Unlock Key is pressed and not over any Tooltip
+            if (Input.GetKeyDown(keySettings.unlockKey)) // Removes all Tooltips if the Unlock Key is pressed and not over any Tooltip
             {
                 bool isOverAny = false;
                 bool hasLockedTooltip = false;

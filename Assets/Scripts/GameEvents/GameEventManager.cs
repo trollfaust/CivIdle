@@ -63,7 +63,7 @@ namespace trollschmiede.CivIdle.GameEventSys
             {
                 GameObject go = Instantiate(popupEventPrefab, popupGameEventContainer) as GameObject;
                 go.GetComponent<PopupGameEventDisplay>().Setup((PopupGameEvent)_gameEvent);
-                Pause.TogglePause(true);
+                GameTime.TogglePause(true);
             }
 
             if (_gameEvent.isOnHold == false && _gameEvent.isDone == false)

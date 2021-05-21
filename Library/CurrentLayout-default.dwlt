@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 592}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 987
-  m_MinSize: {x: 934, y: 542}
+  m_MinSize: {x: 909, y: 542}
   m_MaxSize: {x: 22004, y: 20042}
   vertical: 0
-  controlID: 219
+  controlID: 348
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 633, y: 542}
   m_MaxSize: {x: 18003, y: 20042}
   vertical: 1
-  controlID: 116
+  controlID: 97
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 633, y: 271}
   m_MaxSize: {x: 18003, y: 10021}
   vertical: 0
-  controlID: 117
+  controlID: 98
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 182
+  controlID: 165
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectSettingsWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -348,14 +348,14 @@ MonoBehaviour:
     y: 0
     width: 559
     height: 987
-  m_MinSize: {x: 301, y: 221}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 28}
+  m_ActualView: {fileID: 27}
   m_Panes:
   - {fileID: 27}
   - {fileID: 28}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -479,7 +479,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d292ffffe692ffff3e94ffff4694ffff1a96ffff2e96ffff8697ffff8e97ffffa499ffffb899ffff109bffff189bffffbcf8ffffd2f8ffff12f9ffff3ef9ffff6af9fffff0f9ffff5efbffff3c4b00000a4c0000304c0000
+      m_ExpandedIDs: 36ecffffbaecffff2aeeffff4ceeffff64efffff0cf4ffff1ef4ffff22f5ffff28f5ffff30f5ffffaaf5ffffbcf5ffff42f8ffff48f8ffff5af8ffffc0f9ffff52fbffffb0550000ba550000c2550000145c0000b85c0000c25c0000ca5c0000ec5c00000c5d0000325d0000005e0000265f0000b45f00003a6000007e600000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -539,9 +539,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 553.3109, y: 270.23666, z: -352.125}
+    m_Target: {x: 536.14453, y: 523.3619, z: -384.6875}
     speed: 2
-    m_Value: {x: 553.3109, y: 270.23666, z: -352.125}
+    m_Value: {x: 536.14453, y: 523.3619, z: -384.6875}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -591,9 +591,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 481.61874
+    m_Target: 198.33548
     speed: 2
-    m_Value: 481.61874
+    m_Value: 198.33548
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -747,20 +747,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scriptable Objects/Game Events
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scriptable Objects/Game Events
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Unity\CivIdle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 94470000
-    m_LastClickedID: 18324
-    m_ExpandedIDs: 00000000724700007447000076470000a0470000
+    m_SelectedIDs: 1e480000
+    m_LastClickedID: 18462
+    m_ExpandedIDs: 000000001e4800002048000022480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -788,7 +788,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000724700007447000076470000
+    m_ExpandedIDs: 000000001e4800002048000022480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -952,20 +952,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scriptable Objects/Game Events
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scriptable Objects/Game Events
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Unity\CivIdle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 42}
-    m_SelectedIDs: 94470000
-    m_LastClickedID: 18324
-    m_ExpandedIDs: 00000000724700007447000076470000a0470000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 1e480000
+    m_LastClickedID: 18462
+    m_ExpandedIDs: 000000001e4800002048000022480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -993,7 +993,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000724700007447000076470000
+    m_ExpandedIDs: 000000001e4800002048000022480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 15878
+  m_LastSelectedObjectID: 23788
 --- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52

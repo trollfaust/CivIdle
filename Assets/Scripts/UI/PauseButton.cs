@@ -8,7 +8,7 @@ namespace trollschmiede.CivIdle.UI
     {
         public void OnButtonPressed()
         {
-            Pause.TogglePause();
+            GameTime.TogglePause();
         }
 
         private void Start()

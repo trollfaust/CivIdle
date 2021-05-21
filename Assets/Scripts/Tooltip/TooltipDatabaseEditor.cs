@@ -39,12 +39,20 @@ namespace trollschmiede.Generic.Tooltip
 
         void DrawList(SerializedProperty list, TooltipDatabase tooltipDatabase)
         {
+            if (tooltipDatabase == null || tooltipDatabase.database == null || tooltipDatabase.database.Length == 0)
+            {
+                return;
+            }
             list.isExpanded = EditorGUILayout.ToggleLeft(list.name, list.isExpanded);
             EditorGUI.indentLevel += 2;
             if (list.isExpanded)
             {
                 for (int i = 0; i < list.arraySize; i++)
                 {
+                    if (tooltipDatabase.database[i].tooltipName == null || tooltipDatabase.database[i].tooltipName == "")
+                    {
+                        continue;
+                    }
                     if (!tooltipDatabase.database[i].tooltipName.ToLower().Contains(tooltipDatabase.searchString.ToLower()))
                     {
                         continue;
